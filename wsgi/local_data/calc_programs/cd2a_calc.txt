@@ -1,0 +1,488 @@
+socialcalc:version:1.0
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary=SocialCalcSpreadsheetControlSave
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+# SocialCalc Spreadsheet Control Save
+version:1.0
+part:sheet
+part:edit
+part:audit
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+version:1.5
+cell:A1:t:cd2a
+cell:A2:t:學號
+cell:B2:t:姓名
+cell:C2:t:自我評量
+cell:D2:t:第八週考試
+cell:E2:t:期中考試
+cell:F2:t:期中報告
+cell:G2:t:期中成績
+cell:A3:v:40023143
+cell:B3:t:楊登麟
+cell:C3:vtc:::
+cell:D3:vtc:::
+cell:E3:vtc:::
+cell:F3:vtc:::
+cell:G3:vtc:::
+cell:A4:v:40023207
+cell:B4:t:傅彥綺
+cell:C4:vtc:::
+cell:D4:vtc:::
+cell:E4:vtc:::
+cell:F4:vtc:::
+cell:G4:vtc:::
+cell:A5:v:40123101
+cell:B5:t:王若庭
+cell:C5:vtc:::
+cell:D5:vtc:::
+cell:E5:vtc:::
+cell:F5:vtc:::
+cell:G5:vtc:::
+cell:A6:v:40123102
+cell:B6:t:吳佳潔
+cell:C6:vtc:::
+cell:D6:vtc:::
+cell:E6:vtc:::
+cell:F6:vtc:::
+cell:G6:vtc:::
+cell:A7:v:40123103
+cell:B7:t:周于婷
+cell:C7:vtc:::
+cell:D7:vtc:::
+cell:E7:vtc:::
+cell:F7:vtc:::
+cell:G7:vtc:::
+cell:A8:v:40123104
+cell:B8:t:林宣吟
+cell:C8:vtc:::
+cell:D8:vtc:::
+cell:E8:vtc:::
+cell:F8:vtc:::
+cell:G8:vtc:::
+cell:A9:v:40123105
+cell:B9:t:林詩容
+cell:C9:vtc:::
+cell:D9:vtc:::
+cell:E9:vtc:::
+cell:F9:vtc:::
+cell:G9:vtc:::
+cell:A10:v:40123106
+cell:B10:t:張絲語
+cell:C10:vtc:::
+cell:D10:vtc:::
+cell:E10:vtc:::
+cell:F10:vtc:::
+cell:G10:vtc:::
+cell:A11:v:40123107
+cell:B11:t:陳于加
+cell:C11:vtc:::
+cell:D11:vtc:::
+cell:E11:vtc:::
+cell:F11:vtc:::
+cell:G11:vtc:::
+cell:A12:v:40123108
+cell:B12:t:陳怡樺
+cell:C12:vtc:::
+cell:D12:vtc:::
+cell:E12:vtc:::
+cell:F12:vtc:::
+cell:G12:vtc:::
+cell:A13:v:40123109
+cell:B13:t:黃芯庭
+cell:C13:vtc:::
+cell:D13:vtc:::
+cell:E13:vtc:::
+cell:F13:vtc:::
+cell:G13:vtc:::
+cell:A14:v:40123110
+cell:B14:t:劉翼瑄
+cell:C14:vtc:::
+cell:D14:vtc:::
+cell:E14:vtc:::
+cell:F14:vtc:::
+cell:G14:vtc:::
+cell:A15:v:40123111
+cell:B15:t:鄭妍希
+cell:C15:vtc:::
+cell:D15:vtc:::
+cell:E15:vtc:::
+cell:F15:vtc:::
+cell:G15:vtc:::
+cell:A16:v:40123112
+cell:B16:t:賴湘焄
+cell:C16:vtc:::
+cell:D16:vtc:::
+cell:E16:vtc:::
+cell:F16:vtc:::
+cell:G16:vtc:::
+cell:A17:v:40123113
+cell:B17:t:王若嘉
+cell:C17:vtc:::
+cell:D17:vtc:::
+cell:E17:vtc:::
+cell:F17:vtc:::
+cell:G17:vtc:::
+cell:A18:v:40123114
+cell:B18:t:王瑞豪
+cell:C18:vtc:::
+cell:D18:vtc:::
+cell:E18:vtc:::
+cell:F18:vtc:::
+cell:G18:vtc:::
+cell:A19:v:40123116
+cell:B19:t:吳羽閔
+cell:C19:vtc:::
+cell:D19:vtc:::
+cell:E19:vtc:::
+cell:F19:vtc:::
+cell:G19:vtc:::
+cell:A20:v:40123117
+cell:B20:t:吳昱緯
+cell:C20:vtc:::
+cell:D20:vtc:::
+cell:E20:vtc:::
+cell:F20:vtc:::
+cell:G20:vtc:::
+cell:A21:v:40123118
+cell:B21:t:吳謦麟
+cell:C21:vtc:::
+cell:D21:vtc:::
+cell:E21:vtc:::
+cell:F21:vtc:::
+cell:G21:vtc:::
+cell:A22:v:40123119
+cell:B22:t:呂冠緯
+cell:C22:vtc:::
+cell:D22:vtc:::
+cell:E22:vtc:::
+cell:F22:vtc:::
+cell:G22:vtc:::
+cell:A23:v:40123120
+cell:B23:t:李念融
+cell:C23:vtc:::
+cell:D23:vtc:::
+cell:E23:vtc:::
+cell:F23:vtc:::
+cell:G23:vtc:::
+cell:A24:v:40123121
+cell:B24:t:李啟揚
+cell:C24:vtc:::
+cell:D24:vtc:::
+cell:E24:vtc:::
+cell:F24:vtc:::
+cell:G24:vtc:::
+cell:A25:v:40123122
+cell:B25:t:林子航
+cell:C25:vtc:::
+cell:D25:vtc:::
+cell:E25:vtc:::
+cell:F25:vtc:::
+cell:G25:vtc:::
+cell:A26:v:40123123
+cell:B26:t:林育民
+cell:C26:vtc:::
+cell:D26:vtc:::
+cell:E26:vtc:::
+cell:F26:vtc:::
+cell:G26:vtc:::
+cell:A27:v:40123124
+cell:B27:t:林家弘
+cell:C27:vtc:::
+cell:D27:vtc:::
+cell:E27:vtc:::
+cell:F27:vtc:::
+cell:G27:vtc:::
+cell:A28:v:40123125
+cell:B28:t:林登峰
+cell:C28:vtc:::
+cell:D28:vtc:::
+cell:E28:vtc:::
+cell:F28:vtc:::
+cell:G28:vtc:::
+cell:A29:v:40123126
+cell:B29:t:柯嘉洋
+cell:C29:vtc:::
+cell:D29:vtc:::
+cell:E29:vtc:::
+cell:F29:vtc:::
+cell:G29:vtc:::
+cell:A30:v:40123127
+cell:B30:t:洪宗佑
+cell:C30:vtc:::
+cell:D30:vtc:::
+cell:E30:vtc:::
+cell:F30:vtc:::
+cell:G30:vtc:::
+cell:A31:v:40123128
+cell:B31:t:胡瀚中
+cell:C31:vtc:::
+cell:D31:vtc:::
+cell:E31:vtc:::
+cell:F31:vtc:::
+cell:G31:vtc:::
+cell:A32:v:40123129
+cell:B32:t:高永城
+cell:C32:vtc:::
+cell:D32:vtc:::
+cell:E32:vtc:::
+cell:F32:vtc:::
+cell:G32:vtc:::
+cell:A33:v:40123130
+cell:B33:t:康庭瑋
+cell:C33:vtc:::
+cell:D33:vtc:::
+cell:E33:vtc:::
+cell:F33:vtc:::
+cell:G33:vtc:::
+cell:A34:v:40123131
+cell:B34:t:張凱傑
+cell:C34:vtc:::
+cell:D34:vtc:::
+cell:E34:vtc:::
+cell:F34:vtc:::
+cell:G34:vtc:::
+cell:A35:v:40123132
+cell:B35:t:曹鈞凱
+cell:C35:vtc:::
+cell:D35:vtc:::
+cell:E35:vtc:::
+cell:F35:vtc:::
+cell:G35:vtc:::
+cell:A36:v:40123133
+cell:B36:t:梁智皓
+cell:C36:vtc:::
+cell:D36:vtc:::
+cell:E36:vtc:::
+cell:F36:vtc:::
+cell:G36:vtc:::
+cell:A37:v:40123134
+cell:B37:t:莊凱翔
+cell:C37:vtc:::
+cell:D37:vtc:::
+cell:E37:vtc:::
+cell:F37:vtc:::
+cell:G37:vtc:::
+cell:A38:v:40123135
+cell:B38:t:陳俊安
+cell:C38:vtc:::
+cell:D38:vtc:::
+cell:E38:vtc:::
+cell:F38:vtc:::
+cell:G38:vtc:::
+cell:A39:v:40123136
+cell:B39:t:陳建成
+cell:C39:vtc:::
+cell:D39:vtc:::
+cell:E39:vtc:::
+cell:F39:vtc:::
+cell:G39:vtc:::
+cell:A40:v:40123137
+cell:B40:t:陳家暐
+cell:C40:vtc:::
+cell:D40:vtc:::
+cell:E40:vtc:::
+cell:F40:vtc:::
+cell:G40:vtc:::
+cell:A41:v:40123138
+cell:B41:t:陳靖之
+cell:C41:vtc:::
+cell:D41:vtc:::
+cell:E41:vtc:::
+cell:F41:vtc:::
+cell:G41:vtc:::
+cell:A42:v:40123139
+cell:B42:t:賀廣明
+cell:C42:vtc:::
+cell:D42:vtc:::
+cell:E42:vtc:::
+cell:F42:vtc:::
+cell:G42:vtc:::
+cell:A43:v:40123141
+cell:B43:t:黃柏良
+cell:C43:vtc:::
+cell:D43:vtc:::
+cell:E43:vtc:::
+cell:F43:vtc:::
+cell:G43:vtc:::
+cell:A44:v:40123142
+cell:B44:t:楊佳致
+cell:C44:vtc:::
+cell:D44:vtc:::
+cell:E44:vtc:::
+cell:F44:vtc:::
+cell:G44:vtc:::
+cell:A45:v:40123143
+cell:B45:t:楊鎮豪
+cell:C45:vtc:::
+cell:D45:vtc:::
+cell:E45:vtc:::
+cell:F45:vtc:::
+cell:G45:vtc:::
+cell:A46:v:40123144
+cell:B46:t:鄒萬興
+cell:C46:vtc:::
+cell:D46:vtc:::
+cell:E46:vtc:::
+cell:F46:vtc:::
+cell:G46:vtc:::
+cell:A47:v:40123145
+cell:B47:t:廖宗浩
+cell:C47:vtc:::
+cell:D47:vtc:::
+cell:E47:vtc:::
+cell:F47:vtc:::
+cell:G47:vtc:::
+cell:A48:v:40123146
+cell:B48:t:廖振弦
+cell:C48:vtc:::
+cell:D48:vtc:::
+cell:E48:vtc:::
+cell:F48:vtc:::
+cell:G48:vtc:::
+cell:A49:v:40123148
+cell:B49:t:蔡宗霖
+cell:C49:vtc:::
+cell:D49:vtc:::
+cell:E49:vtc:::
+cell:F49:vtc:::
+cell:G49:vtc:::
+cell:A50:v:40123149
+cell:B50:t:蔡東維
+cell:C50:vtc:::
+cell:D50:vtc:::
+cell:E50:vtc:::
+cell:F50:vtc:::
+cell:G50:vtc:::
+cell:A51:v:40123150
+cell:B51:t:蔡朝仁
+cell:C51:vtc:::
+cell:D51:vtc:::
+cell:E51:vtc:::
+cell:F51:vtc:::
+cell:G51:vtc:::
+cell:A52:v:40123151
+cell:B52:t:鄭羽
+cell:C52:vtc:::
+cell:D52:vtc:::
+cell:E52:vtc:::
+cell:F52:vtc:::
+cell:G52:vtc:::
+cell:A53:v:40123153
+cell:B53:t:戴志軒
+cell:C53:vtc:::
+cell:D53:vtc:::
+cell:E53:vtc:::
+cell:F53:vtc:::
+cell:G53:vtc:::
+cell:A54:v:40123154
+cell:B54:t:謝正利
+cell:C54:vtc:::
+cell:D54:vtc:::
+cell:E54:vtc:::
+cell:F54:vtc:::
+cell:G54:vtc:::
+cell:A55:v:40123155
+cell:B55:t:鍾宇翔
+cell:C55:vtc:::
+cell:D55:vtc:::
+cell:E55:vtc:::
+cell:F55:vtc:::
+cell:G55:vtc:::
+cell:A56:v:40123156
+cell:B56:t:羅冠霖
+cell:C56:vtc:::
+cell:D56:vtc:::
+cell:E56:vtc:::
+cell:F56:vtc:::
+cell:G56:vtc:::
+cell:A57:v:40123157
+cell:B57:t:盧毅民
+cell:C57:vtc:::
+cell:D57:vtc:::
+cell:E57:vtc:::
+cell:F57:vtc:::
+cell:G57:vtc:::
+cell:A58:v:40123158
+cell:B58:t:蔡宗霖
+cell:C58:vtc:::
+cell:D58:vtc:::
+cell:E58:vtc:::
+cell:F58:vtc:::
+cell:G58:vtc:::
+cell:A59:v:49823207
+cell:B59:t:賴思綺
+cell:C59:vtc:::
+cell:D59:vtc:::
+cell:E59:vtc:::
+cell:F59:vtc:::
+cell:G59:vtc:::
+sheet:c:7:r:59
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+version:1.0
+rowpane:0:1:21
+colpane:0:1:12
+ecell:G3
+sort::-1:up::::
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+loadclipboard version\c1.5\ncell\cA1\ct\c學號\ncell\cB1\ct\c姓名\ncell\cC1\ct\c日常考查\ncell\cD1\ct\c實作成績\ncell\cE1\ct\c期中成績\ncell\cF1\ct\c作品成績\ncell\cG1\ct\c學期成績\ncell\cA2\cv\c40023234\ncell\cB2\ct\c陳奕捷(復)\ncell\cC2\cvtc\c\c\c\ncell\cD2\cvtc\c\c\c\ncell\cE2\cvtc\c\c\c\ncell\cF2\cvtc\c\c\c\ncell\cG2\cvtc\c\c\c\ncell\cA3\cv\c40123201\ncell\cB3\ct\c江玟菱(女)\ncell\cC3\cvtc\c\c\c\ncell\cD3\cvtc\c\c\c\ncell\cE3\cvtc\c\c\c\ncell\cF3\cvtc\c\c\c\ncell\cG3\cvtc\c\c\c\ncell\cA4\cv\c40123202\ncell\cB4\ct\c吳逸鈞(女)\ncell\cC4\cvtc\c\c\c\ncell\cD4\cvtc\c\c\c\ncell\cE4\cvtc\c\c\c\ncell\cF4\cvtc\c\c\c\ncell\cG4\cvtc\c\c\c\ncell\cA5\cv\c40123203\ncell\cB5\ct\c林佩妤(女)\ncell\cC5\cvtc\c\c\c\ncell\cD5\cvtc\c\c\c\ncell\cE5\cvtc\c\c\c\ncell\cF5\cvtc\c\c\c\ncell\cG5\cvtc\c\c\c\ncell\cA6\cv\c40123204\ncell\cB6\ct\c林昱岑(女)\ncell\cC6\cvtc\c\c\c\ncell\cD6\cvtc\c\c\c\ncell\cE6\cvtc\c\c\c\ncell\cF6\cvtc\c\c\c\ncell\cG6\cvtc\c\c\c\ncell\cA7\cv\c40123205\ncell\cB7\ct\c洪宜君(女)\ncell\cC7\cvtc\c\c\c\ncell\cD7\cvtc\c\c\c\ncell\cE7\cvtc\c\c\c\ncell\cF7\cvtc\c\c\c\ncell\cG7\cvtc\c\c\c\ncell\cA8\cv\c40123206\ncell\cB8\ct\c郭晏妤(女)\ncell\cC8\cvtc\c\c\c\ncell\cD8\cvtc\c\c\c\ncell\cE8\cvtc\c\c\c\ncell\cF8\cvtc\c\c\c\ncell\cG8\cvtc\c\c\c\ncell\cA9\cv\c40123207\ncell\cB9\ct\c陳令宛(女)\ncell\cC9\cvtc\c\c\c\ncell\cD9\cvtc\c\c\c\ncell\cE9\cvtc\c\c\c\ncell\cF9\cvtc\c\c\c\ncell\cG9\cvtc\c\c\c\ncell\cA10\cv\c40123208\ncell\cB10\ct\c程千育(女)\ncell\cC10\cvtc\c\c\c\ncell\cD10\cvtc\c\c\c\ncell\cE10\cvtc\c\c\c\ncell\cF10\cvtc\c\c\c\ncell\cG10\cvtc\c\c\c\ncell\cA11\cv\c40123209\ncell\cB11\ct\c劉凱盈(女)\ncell\cC11\cvtc\c\c\c\ncell\cD11\cvtc\c\c\c\ncell\cE11\cvtc\c\c\c\ncell\cF11\cvtc\c\c\c\ncell\cG11\cvtc\c\c\c\ncell\cA12\cv\c40123210\ncell\cB12\ct\c蔡依靜(女)\ncell\cC12\cvtc\c\c\c\ncell\cD12\cvtc\c\c\c\ncell\cE12\cvtc\c\c\c\ncell\cF12\cvtc\c\c\c\ncell\cG12\cvtc\c\c\c\ncell\cA13\cv\c40123211\ncell\cB13\ct\c蕭莉蓉(女)\ncell\cC13\cvtc\c\c\c\ncell\cD13\cvtc\c\c\c\ncell\cE13\cvtc\c\c\c\ncell\cF13\cvtc\c\c\c\ncell\cG13\cvtc\c\c\c\ncell\cA14\cv\c40123212\ncell\cB14\ct\c簡珮羽(女)\ncell\cC14\cvtc\c\c\c\ncell\cD14\cvtc\c\c\c\ncell\cE14\cvtc\c\c\c\ncell\cF14\cvtc\c\c\c\ncell\cG14\cvtc\c\c\c\ncell\cA15\cv\c40123214\ncell\cB15\ct\c石安裕\ncell\cC15\cvtc\c\c\c\ncell\cD15\cvtc\c\c\c\ncell\cE15\cvtc\c\c\c\ncell\cF15\cvtc\c\c\c\ncell\cG15\cvtc\c\c\c\ncell\cA16\cv\c40123215\ncell\cB16\ct\c朱穎晟\ncell\cC16\cvtc\c\c\c\ncell\cD16\cvtc\c\c\c\ncell\cE16\cvtc\c\c\c\ncell\cF16\cvtc\c\c\c\ncell\cG16\cvtc\c\c\c\ncell\cA17\cv\c40123216\ncell\cB17\ct\c吳承燁\ncell\cC17\cvtc\c\c\c\ncell\cD17\cvtc\c\c\c\ncell\cE17\cvtc\c\c\c\ncell\cF17\cvtc\c\c\c\ncell\cG17\cvtc\c\c\c\ncell\cA18\cv\c40123217\ncell\cB18\ct\c吳柏叡\ncell\cC18\cvtc\c\c\c\ncell\cD18\cvtc\c\c\c\ncell\cE18\cvtc\c\c\c\ncell\cF18\cvtc\c\c\c\ncell\cG18\cvtc\c\c\c\ncell\cA19\cv\c40123218\ncell\cB19\ct\c呂少甫\ncell\cC19\cvtc\c\c\c\ncell\cD19\cvtc\c\c\c\ncell\cE19\cvtc\c\c\c\ncell\cF19\cvtc\c\c\c\ncell\cG19\cvtc\c\c\c\ncell\cA20\cv\c40123219\ncell\cB20\ct\c呂政融\ncell\cC20\cvtc\c\c\c\ncell\cD20\cvtc\c\c\c\ncell\cE20\cvtc\c\c\c\ncell\cF20\cvtc\c\c\c\ncell\cG20\cvtc\c\c\c\ncell\cA21\cv\c40123220\ncell\cB21\ct\c李晉杰\ncell\cC21\cvtc\c\c\c\ncell\cD21\cvtc\c\c\c\ncell\cE21\cvtc\c\c\c\ncell\cF21\cvtc\c\c\c\ncell\cG21\cvtc\c\c\c\ncell\cA22\cv\c40123221\ncell\cB22\ct\c周杰\ncell\cC22\cvtc\c\c\c\ncell\cD22\cvtc\c\c\c\ncell\cE22\cvtc\c\c\c\ncell\cF22\cvtc\c\c\c\ncell\cG22\cvtc\c\c\c\ncell\cA23\cv\c40123222\ncell\cB23\ct\c林立程\ncell\cC23\cvtc\c\c\c\ncell\cD23\cvtc\c\c\c\ncell\cE23\cvtc\c\c\c\ncell\cF23\cvtc\c\c\c\ncell\cG23\cvtc\c\c\c\ncell\cA24\cv\c40123223\ncell\cB24\ct\c林重佑\ncell\cC24\cvtc\c\c\c\ncell\cD24\cvtc\c\c\c\ncell\cE24\cvtc\c\c\c\ncell\cF24\cvtc\c\c\c\ncell\cG24\cvtc\c\c\c\ncell\cA25\cv\c40123224\ncell\cB25\ct\c林峻宇\ncell\cC25\cvtc\c\c\c\ncell\cD25\cvtc\c\c\c\ncell\cE25\cvtc\c\c\c\ncell\cF25\cvtc\c\c\c\ncell\cG25\cvtc\c\c\c\ncell\cA26\cv\c40123225\ncell\cB26\ct\c邱大騫\ncell\cC26\cvtc\c\c\c\ncell\cD26\cvtc\c\c\c\ncell\cE26\cvtc\c\c\c\ncell\cF26\cvtc\c\c\c\ncell\cG26\cvtc\c\c\c\ncell\cA27\cv\c40123226\ncell\cB27\ct\c洪宗宇\ncell\cC27\cvtc\c\c\c\ncell\cD27\cvtc\c\c\c\ncell\cE27\cvtc\c\c\c\ncell\cF27\cvtc\c\c\c\ncell\cG27\cvtc\c\c\c\ncell\cA28\cv\c40123227\ncell\cB28\ct\c紀培俞\ncell\cC28\cvtc\c\c\c\ncell\cD28\cvtc\c\c\c\ncell\cE28\cvtc\c\c\c\ncell\cF28\cvtc\c\c\c\ncell\cG28\cvtc\c\c\c\ncell\cA29\cv\c40123228\ncell\cB29\ct\c徐敬軒\ncell\cC29\cvtc\c\c\c\ncell\cD29\cvtc\c\c\c\ncell\cE29\cvtc\c\c\c\ncell\cF29\cvtc\c\c\c\ncell\cG29\cvtc\c\c\c\ncell\cA30\cv\c40123229\ncell\cB30\ct\c高英彥\ncell\cC30\cvtc\c\c\c\ncell\cD30\cvtc\c\c\c\ncell\cE30\cvtc\c\c\c\ncell\cF30\cvtc\c\c\c\ncell\cG30\cvtc\c\c\c\ncell\cA31\cv\c40123230\ncell\cB31\ct\c張宏仁\ncell\cC31\cvtc\c\c\c\ncell\cD31\cvtc\c\c\c\ncell\cE31\cvtc\c\c\c\ncell\cF31\cvtc\c\c\c\ncell\cG31\cvtc\c\c\c\ncell\cA32\cv\c40123231\ncell\cB32\ct\c張智閔\ncell\cC32\cvtc\c\c\c\ncell\cD32\cvtc\c\c\c\ncell\cE32\cvtc\c\c\c\ncell\cF32\cvtc\c\c\c\ncell\cG32\cvtc\c\c\c\ncell\cA33\cv\c40123232\ncell\cB33\ct\c梁冠緯\ncell\cC33\cvtc\c\c\c\ncell\cD33\cvtc\c\c\c\ncell\cE33\cvtc\c\c\c\ncell\cF33\cvtc\c\c\c\ncell\cG33\cvtc\c\c\c\ncell\cA34\cv\c40123233\ncell\cB34\ct\c莊育德\ncell\cC34\cvtc\c\c\c\ncell\cD34\cvtc\c\c\c\ncell\cE34\cvtc\c\c\c\ncell\cF34\cvtc\c\c\c\ncell\cG34\cvtc\c\c\c\ncell\cA35\cv\c40123234\ncell\cB35\ct\c郭重佑\ncell\cC35\cvtc\c\c\c\ncell\cD35\cvtc\c\c\c\ncell\cE35\cvtc\c\c\c\ncell\cF35\cvtc\c\c\c\ncell\cG35\cvtc\c\c\c\ncell\cA36\cv\c40123235\ncell\cB36\ct\c陳奕宏\ncell\cC36\cvtc\c\c\c\ncell\cD36\cvtc\c\c\c\ncell\cE36\cvtc\c\c\c\ncell\cF36\cvtc\c\c\c\ncell\cG36\cvtc\c\c\c\ncell\cA37\cv\c40123237\ncell\cB37\ct\c陳琨揚\ncell\cC37\cvtc\c\c\c\ncell\cD37\cvtc\c\c\c\ncell\cE37\cvtc\c\c\c\ncell\cF37\cvtc\c\c\c\ncell\cG37\cvtc\c\c\c\ncell\cA38\cv\c40123238\ncell\cB38\ct\c曾柏文\ncell\cC38\cvtc\c\c\c\ncell\cD38\cvtc\c\c\c\ncell\cE38\cvtc\c\c\c\ncell\cF38\cvtc\c\c\c\ncell\cG38\cvtc\c\c\c\ncell\cA39\cv\c40123239\ncell\cB39\ct\c黃永昌\ncell\cC39\cvtc\c\c\c\ncell\cD39\cvtc\c\c\c\ncell\cE39\cvtc\c\c\c\ncell\cF39\cvtc\c\c\c\ncell\cG39\cvtc\c\c\c\ncell\cA40\cv\c40123240\ncell\cB40\ct\c黃君德\ncell\cC40\cvtc\c\c\c\ncell\cD40\cvtc\c\c\c\ncell\cE40\cvtc\c\c\c\ncell\cF40\cvtc\c\c\c\ncell\cG40\cvtc\c\c\c\ncell\cA41\cv\c40123241\ncell\cB41\ct\c黃郁文\ncell\cC41\cvtc\c\c\c\ncell\cD41\cvtc\c\c\c\ncell\cE41\cvtc\c\c\c\ncell\cF41\cvtc\c\c\c\ncell\cG41\cvtc\c\c\c\ncell\cA42\cv\c40123242\ncell\cB42\ct\c楊家威\ncell\cC42\cvtc\c\c\c\ncell\cD42\cvtc\c\c\c\ncell\cE42\cvtc\c\c\c\ncell\cF42\cvtc\c\c\c\ncell\cG42\cvtc\c\c\c\ncell\cA43\cv\c40123243\ncell\cB43\ct\c詹景菘\ncell\cC43\cvtc\c\c\c\ncell\cD43\cvtc\c\c\c\ncell\cE43\cvtc\c\c\c\ncell\cF43\cvtc\c\c\c\ncell\cG43\cvtc\c\c\c\ncell\cA44\cv\c40123244\ncell\cB44\ct\c廖子喬\ncell\cC44\cvtc\c\c\c\ncell\cD44\cvtc\c\c\c\ncell\cE44\cvtc\c\c\c\ncell\cF44\cvtc\c\c\c\ncell\cG44\cvtc\c\c\c\ncell\cA45\cv\c40123245\ncell\cB45\ct\c廖柏豪\ncell\cC45\cvtc\c\c\c\ncell\cD45\cvtc\c\c\c\ncell\cE45\cvtc\c\c\c\ncell\cF45\cvtc\c\c\c\ncell\cG45\cvtc\c\c\c\ncell\cA46\cv\c40123246\ncell\cB46\ct\c劉哲宇\ncell\cC46\cvtc\c\c\c\ncell\cD46\cvtc\c\c\c\ncell\cE46\cvtc\c\c\c\ncell\cF46\cvtc\c\c\c\ncell\cG46\cvtc\c\c\c\ncell\cA47\cv\c40123247\ncell\cB47\ct\c潘彥任\ncell\cC47\cvtc\c\c\c\ncell\cD47\cvtc\c\c\c\ncell\cE47\cvtc\c\c\c\ncell\cF47\cvtc\c\c\c\ncell\cG47\cvtc\c\c\c\ncell\cA48\cv\c40123248\ncell\cB48\ct\c蔡承祐\ncell\cC48\cvtc\c\c\c\ncell\cD48\cvtc\c\c\c\ncell\cE48\cvtc\c\c\c\ncell\cF48\cvtc\c\c\c\ncell\cG48\cvtc\c\c\c\ncell\cA49\cv\c40123250\ncell\cB49\ct\c鄭宇晟\ncell\cC49\cvtc\c\c\c\ncell\cD49\cvtc\c\c\c\ncell\cE49\cvtc\c\c\c\ncell\cF49\cvtc\c\c\c\ncell\cG49\cvtc\c\c\c\ncell\cA50\cv\c40123251\ncell\cB50\ct\c鄭志善\ncell\cC50\cvtc\c\c\c\ncell\cD50\cvtc\c\c\c\ncell\cE50\cvtc\c\c\c\ncell\cF50\cvtc\c\c\c\ncell\cG50\cvtc\c\c\c\ncell\cA51\cv\c40123253\ncell\cB51\ct\c謝子傑\ncell\cC51\cvtc\c\c\c\ncell\cD51\cvtc\c\c\c\ncell\cE51\cvtc\c\c\c\ncell\cF51\cvtc\c\c\c\ncell\cG51\cvtc\c\c\c\ncell\cA52\cv\c40123254\ncell\cB52\ct\c鍾文榮\ncell\cC52\cvtc\c\c\c\ncell\cD52\cvtc\c\c\c\ncell\cE52\cvtc\c\c\c\ncell\cF52\cvtc\c\c\c\ncell\cG52\cvtc\c\c\c\ncell\cA53\cv\c40123255\ncell\cB53\ct\c簡宇昇\ncell\cC53\cvtc\c\c\c\ncell\cD53\cvtc\c\c\c\ncell\cE53\cvtc\c\c\c\ncell\cF53\cvtc\c\c\c\ncell\cG53\cvtc\c\c\c\ncell\cA54\cv\c40123256\ncell\cB54\ct\c蘇建瑋\ncell\cC54\cvtc\c\c\c\ncell\cD54\cvtc\c\c\c\ncell\cE54\cvtc\c\c\c\ncell\cF54\cvtc\c\c\c\ncell\cG54\cvtc\c\c\c\ncell\cA55\cv\c40127211\ncell\cB55\ct\c林倉誠\ncell\cC55\cvtc\c\c\c\ncell\cD55\cvtc\c\c\c\ncell\cE55\cvtc\c\c\c\ncell\cF55\cvtc\c\c\c\ncell\cG55\cvtc\c\c\c\ncell\cA56\cv\c49523157\ncell\cB56\ct\c利政錤(復)\ncell\cC56\cvtc\c\c\c\ncell\cD56\cvtc\c\c\c\ncell\cE56\cvtc\c\c\c\ncell\cF56\cvtc\c\c\c\ncell\cG56\cvtc\c\c\c\nsheet\cc\c7\cr\c56\ncopiedfrom\cA1\cG56\n
+paste A1 formulas
+set B2 text t 陳奕捷
+set B3 text t 江玟菱
+set B4 text t 吳逸鈞
+set B5 text t 林佩妤
+set B6 text t 林昱岑
+set B7 text t 洪宜君
+set B8 text t 郭晏妤
+set B9 text t 陳令宛
+set B10 text t 程千育
+set B11 text t 劉凱盈
+set B12 text t 蔡依靜
+set B13 text t 蕭莉蓉
+set B14 text t 簡珮羽
+set B56 text t 利政錤
+insertrow A1
+set A1 text t cd2b
+insertcol E3
+set E2 text t 期中報告
+set C2 text t 自我評量
+set D2 text t 第八週考試
+set E2 text t 期中考試
+set F2 text t 期中報告
+set G2 empty
+set H2 empty
+set G2 text t  期中成績
+set C3 empty
+set A1:G57 empty
+loadclipboard version\c1.5\ncell\cA1\ct\c學號\ncell\cB1\ct\c姓名\ncell\cC1\ct\c日常考查\ncell\cD1\ct\c實作成績\ncell\cE1\ct\c期中成績\ncell\cF1\ct\c作品成績\ncell\cG1\ct\c學期成績\ncell\cA2\cv\c40023143\ncell\cB2\ct\c楊登麟(復)\ncell\cC2\cvtc\c\c\c\ncell\cD2\cvtc\c\c\c\ncell\cE2\cvtc\c\c\c\ncell\cF2\cvtc\c\c\c\ncell\cG2\cvtc\c\c\c\ncell\cA3\cv\c40023207\ncell\cB3\ct\c傅彥綺(女)\ncell\cC3\cvtc\c\c\c\ncell\cD3\cvtc\c\c\c\ncell\cE3\cvtc\c\c\c\ncell\cF3\cvtc\c\c\c\ncell\cG3\cvtc\c\c\c\ncell\cA4\cv\c40123101\ncell\cB4\ct\c王若庭(女)\ncell\cC4\cvtc\c\c\c\ncell\cD4\cvtc\c\c\c\ncell\cE4\cvtc\c\c\c\ncell\cF4\cvtc\c\c\c\ncell\cG4\cvtc\c\c\c\ncell\cA5\cv\c40123102\ncell\cB5\ct\c吳佳潔(女)\ncell\cC5\cvtc\c\c\c\ncell\cD5\cvtc\c\c\c\ncell\cE5\cvtc\c\c\c\ncell\cF5\cvtc\c\c\c\ncell\cG5\cvtc\c\c\c\ncell\cA6\cv\c40123103\ncell\cB6\ct\c周于婷(女)\ncell\cC6\cvtc\c\c\c\ncell\cD6\cvtc\c\c\c\ncell\cE6\cvtc\c\c\c\ncell\cF6\cvtc\c\c\c\ncell\cG6\cvtc\c\c\c\ncell\cA7\cv\c40123104\ncell\cB7\ct\c林宣吟(女)\ncell\cC7\cvtc\c\c\c\ncell\cD7\cvtc\c\c\c\ncell\cE7\cvtc\c\c\c\ncell\cF7\cvtc\c\c\c\ncell\cG7\cvtc\c\c\c\ncell\cA8\cv\c40123105\ncell\cB8\ct\c林詩容(女)\ncell\cC8\cvtc\c\c\c\ncell\cD8\cvtc\c\c\c\ncell\cE8\cvtc\c\c\c\ncell\cF8\cvtc\c\c\c\ncell\cG8\cvtc\c\c\c\ncell\cA9\cv\c40123106\ncell\cB9\ct\c張絲語(女)\ncell\cC9\cvtc\c\c\c\ncell\cD9\cvtc\c\c\c\ncell\cE9\cvtc\c\c\c\ncell\cF9\cvtc\c\c\c\ncell\cG9\cvtc\c\c\c\ncell\cA10\cv\c40123107\ncell\cB10\ct\c陳于加(女)\ncell\cC10\cvtc\c\c\c\ncell\cD10\cvtc\c\c\c\ncell\cE10\cvtc\c\c\c\ncell\cF10\cvtc\c\c\c\ncell\cG10\cvtc\c\c\c\ncell\cA11\cv\c40123108\ncell\cB11\ct\c陳怡樺(女)\ncell\cC11\cvtc\c\c\c\ncell\cD11\cvtc\c\c\c\ncell\cE11\cvtc\c\c\c\ncell\cF11\cvtc\c\c\c\ncell\cG11\cvtc\c\c\c\ncell\cA12\cv\c40123109\ncell\cB12\ct\c黃芯庭(女)\ncell\cC12\cvtc\c\c\c\ncell\cD12\cvtc\c\c\c\ncell\cE12\cvtc\c\c\c\ncell\cF12\cvtc\c\c\c\ncell\cG12\cvtc\c\c\c\ncell\cA13\cv\c40123110\ncell\cB13\ct\c劉翼瑄(女)\ncell\cC13\cvtc\c\c\c\ncell\cD13\cvtc\c\c\c\ncell\cE13\cvtc\c\c\c\ncell\cF13\cvtc\c\c\c\ncell\cG13\cvtc\c\c\c\ncell\cA14\cv\c40123111\ncell\cB14\ct\c鄭妍希(女)\ncell\cC14\cvtc\c\c\c\ncell\cD14\cvtc\c\c\c\ncell\cE14\cvtc\c\c\c\ncell\cF14\cvtc\c\c\c\ncell\cG14\cvtc\c\c\c\ncell\cA15\cv\c40123112\ncell\cB15\ct\c賴湘焄(女)\ncell\cC15\cvtc\c\c\c\ncell\cD15\cvtc\c\c\c\ncell\cE15\cvtc\c\c\c\ncell\cF15\cvtc\c\c\c\ncell\cG15\cvtc\c\c\c\ncell\cA16\cv\c40123113\ncell\cB16\ct\c王若嘉\ncell\cC16\cvtc\c\c\c\ncell\cD16\cvtc\c\c\c\ncell\cE16\cvtc\c\c\c\ncell\cF16\cvtc\c\c\c\ncell\cG16\cvtc\c\c\c\ncell\cA17\cv\c40123114\ncell\cB17\ct\c王瑞豪\ncell\cC17\cvtc\c\c\c\ncell\cD17\cvtc\c\c\c\ncell\cE17\cvtc\c\c\c\ncell\cF17\cvtc\c\c\c\ncell\cG17\cvtc\c\c\c\ncell\cA18\cv\c40123116\ncell\cB18\ct\c吳羽閔\ncell\cC18\cvtc\c\c\c\ncell\cD18\cvtc\c\c\c\ncell\cE18\cvtc\c\c\c\ncell\cF18\cvtc\c\c\c\ncell\cG18\cvtc\c\c\c\ncell\cA19\cv\c40123117\ncell\cB19\ct\c吳昱緯\ncell\cC19\cvtc\c\c\c\ncell\cD19\cvtc\c\c\c\ncell\cE19\cvtc\c\c\c\ncell\cF19\cvtc\c\c\c\ncell\cG19\cvtc\c\c\c\ncell\cA20\cv\c40123118\ncell\cB20\ct\c吳謦麟\ncell\cC20\cvtc\c\c\c\ncell\cD20\cvtc\c\c\c\ncell\cE20\cvtc\c\c\c\ncell\cF20\cvtc\c\c\c\ncell\cG20\cvtc\c\c\c\ncell\cA21\cv\c40123119\ncell\cB21\ct\c呂冠緯\ncell\cC21\cvtc\c\c\c\ncell\cD21\cvtc\c\c\c\ncell\cE21\cvtc\c\c\c\ncell\cF21\cvtc\c\c\c\ncell\cG21\cvtc\c\c\c\ncell\cA22\cv\c40123120\ncell\cB22\ct\c李念融\ncell\cC22\cvtc\c\c\c\ncell\cD22\cvtc\c\c\c\ncell\cE22\cvtc\c\c\c\ncell\cF22\cvtc\c\c\c\ncell\cG22\cvtc\c\c\c\ncell\cA23\cv\c40123121\ncell\cB23\ct\c李啟揚\ncell\cC23\cvtc\c\c\c\ncell\cD23\cvtc\c\c\c\ncell\cE23\cvtc\c\c\c\ncell\cF23\cvtc\c\c\c\ncell\cG23\cvtc\c\c\c\ncell\cA24\cv\c40123122\ncell\cB24\ct\c林子航\ncell\cC24\cvtc\c\c\c\ncell\cD24\cvtc\c\c\c\ncell\cE24\cvtc\c\c\c\ncell\cF24\cvtc\c\c\c\ncell\cG24\cvtc\c\c\c\ncell\cA25\cv\c40123123\ncell\cB25\ct\c林育民\ncell\cC25\cvtc\c\c\c\ncell\cD25\cvtc\c\c\c\ncell\cE25\cvtc\c\c\c\ncell\cF25\cvtc\c\c\c\ncell\cG25\cvtc\c\c\c\ncell\cA26\cv\c40123124\ncell\cB26\ct\c林家弘\ncell\cC26\cvtc\c\c\c\ncell\cD26\cvtc\c\c\c\ncell\cE26\cvtc\c\c\c\ncell\cF26\cvtc\c\c\c\ncell\cG26\cvtc\c\c\c\ncell\cA27\cv\c40123125\ncell\cB27\ct\c林登峰\ncell\cC27\cvtc\c\c\c\ncell\cD27\cvtc\c\c\c\ncell\cE27\cvtc\c\c\c\ncell\cF27\cvtc\c\c\c\ncell\cG27\cvtc\c\c\c\ncell\cA28\cv\c40123126\ncell\cB28\ct\c柯嘉洋\ncell\cC28\cvtc\c\c\c\ncell\cD28\cvtc\c\c\c\ncell\cE28\cvtc\c\c\c\ncell\cF28\cvtc\c\c\c\ncell\cG28\cvtc\c\c\c\ncell\cA29\cv\c40123127\ncell\cB29\ct\c洪宗佑\ncell\cC29\cvtc\c\c\c\ncell\cD29\cvtc\c\c\c\ncell\cE29\cvtc\c\c\c\ncell\cF29\cvtc\c\c\c\ncell\cG29\cvtc\c\c\c\ncell\cA30\cv\c40123128\ncell\cB30\ct\c胡瀚中\ncell\cC30\cvtc\c\c\c\ncell\cD30\cvtc\c\c\c\ncell\cE30\cvtc\c\c\c\ncell\cF30\cvtc\c\c\c\ncell\cG30\cvtc\c\c\c\ncell\cA31\cv\c40123129\ncell\cB31\ct\c高永城\ncell\cC31\cvtc\c\c\c\ncell\cD31\cvtc\c\c\c\ncell\cE31\cvtc\c\c\c\ncell\cF31\cvtc\c\c\c\ncell\cG31\cvtc\c\c\c\ncell\cA32\cv\c40123130\ncell\cB32\ct\c康庭瑋\ncell\cC32\cvtc\c\c\c\ncell\cD32\cvtc\c\c\c\ncell\cE32\cvtc\c\c\c\ncell\cF32\cvtc\c\c\c\ncell\cG32\cvtc\c\c\c\ncell\cA33\cv\c40123131\ncell\cB33\ct\c張凱傑\ncell\cC33\cvtc\c\c\c\ncell\cD33\cvtc\c\c\c\ncell\cE33\cvtc\c\c\c\ncell\cF33\cvtc\c\c\c\ncell\cG33\cvtc\c\c\c\ncell\cA34\cv\c40123132\ncell\cB34\ct\c曹鈞凱\ncell\cC34\cvtc\c\c\c\ncell\cD34\cvtc\c\c\c\ncell\cE34\cvtc\c\c\c\ncell\cF34\cvtc\c\c\c\ncell\cG34\cvtc\c\c\c\ncell\cA35\cv\c40123133\ncell\cB35\ct\c梁智皓\ncell\cC35\cvtc\c\c\c\ncell\cD35\cvtc\c\c\c\ncell\cE35\cvtc\c\c\c\ncell\cF35\cvtc\c\c\c\ncell\cG35\cvtc\c\c\c\ncell\cA36\cv\c40123134\ncell\cB36\ct\c莊凱翔\ncell\cC36\cvtc\c\c\c\ncell\cD36\cvtc\c\c\c\ncell\cE36\cvtc\c\c\c\ncell\cF36\cvtc\c\c\c\ncell\cG36\cvtc\c\c\c\ncell\cA37\cv\c40123135\ncell\cB37\ct\c陳俊安\ncell\cC37\cvtc\c\c\c\ncell\cD37\cvtc\c\c\c\ncell\cE37\cvtc\c\c\c\ncell\cF37\cvtc\c\c\c\ncell\cG37\cvtc\c\c\c\ncell\cA38\cv\c40123136\ncell\cB38\ct\c陳建成\ncell\cC38\cvtc\c\c\c\ncell\cD38\cvtc\c\c\c\ncell\cE38\cvtc\c\c\c\ncell\cF38\cvtc\c\c\c\ncell\cG38\cvtc\c\c\c\ncell\cA39\cv\c40123137\ncell\cB39\ct\c陳家暐\ncell\cC39\cvtc\c\c\c\ncell\cD39\cvtc\c\c\c\ncell\cE39\cvtc\c\c\c\ncell\cF39\cvtc\c\c\c\ncell\cG39\cvtc\c\c\c\ncell\cA40\cv\c40123138\ncell\cB40\ct\c陳靖之\ncell\cC40\cvtc\c\c\c\ncell\cD40\cvtc\c\c\c\ncell\cE40\cvtc\c\c\c\ncell\cF40\cvtc\c\c\c\ncell\cG40\cvtc\c\c\c\ncell\cA41\cv\c40123139\ncell\cB41\ct\c賀廣明\ncell\cC41\cvtc\c\c\c\ncell\cD41\cvtc\c\c\c\ncell\cE41\cvtc\c\c\c\ncell\cF41\cvtc\c\c\c\ncell\cG41\cvtc\c\c\c\ncell\cA42\cv\c40123141\ncell\cB42\ct\c黃柏良\ncell\cC42\cvtc\c\c\c\ncell\cD42\cvtc\c\c\c\ncell\cE42\cvtc\c\c\c\ncell\cF42\cvtc\c\c\c\ncell\cG42\cvtc\c\c\c\ncell\cA43\cv\c40123142\ncell\cB43\ct\c楊佳致\ncell\cC43\cvtc\c\c\c\ncell\cD43\cvtc\c\c\c\ncell\cE43\cvtc\c\c\c\ncell\cF43\cvtc\c\c\c\ncell\cG43\cvtc\c\c\c\ncell\cA44\cv\c40123143\ncell\cB44\ct\c楊鎮豪\ncell\cC44\cvtc\c\c\c\ncell\cD44\cvtc\c\c\c\ncell\cE44\cvtc\c\c\c\ncell\cF44\cvtc\c\c\c\ncell\cG44\cvtc\c\c\c\ncell\cA45\cv\c40123144\ncell\cB45\ct\c鄒萬興\ncell\cC45\cvtc\c\c\c\ncell\cD45\cvtc\c\c\c\ncell\cE45\cvtc\c\c\c\ncell\cF45\cvtc\c\c\c\ncell\cG45\cvtc\c\c\c\ncell\cA46\cv\c40123145\ncell\cB46\ct\c廖宗浩\ncell\cC46\cvtc\c\c\c\ncell\cD46\cvtc\c\c\c\ncell\cE46\cvtc\c\c\c\ncell\cF46\cvtc\c\c\c\ncell\cG46\cvtc\c\c\c\ncell\cA47\cv\c40123146\ncell\cB47\ct\c廖振弦\ncell\cC47\cvtc\c\c\c\ncell\cD47\cvtc\c\c\c\ncell\cE47\cvtc\c\c\c\ncell\cF47\cvtc\c\c\c\ncell\cG47\cvtc\c\c\c\ncell\cA48\cv\c40123148\ncell\cB48\ct\c蔡宗霖\ncell\cC48\cvtc\c\c\c\ncell\cD48\cvtc\c\c\c\ncell\cE48\cvtc\c\c\c\ncell\cF48\cvtc\c\c\c\ncell\cG48\cvtc\c\c\c\ncell\cA49\cv\c40123149\ncell\cB49\ct\c蔡東維\ncell\cC49\cvtc\c\c\c\ncell\cD49\cvtc\c\c\c\ncell\cE49\cvtc\c\c\c\ncell\cF49\cvtc\c\c\c\ncell\cG49\cvtc\c\c\c\ncell\cA50\cv\c40123150\ncell\cB50\ct\c蔡朝仁\ncell\cC50\cvtc\c\c\c\ncell\cD50\cvtc\c\c\c\ncell\cE50\cvtc\c\c\c\ncell\cF50\cvtc\c\c\c\ncell\cG50\cvtc\c\c\c\ncell\cA51\cv\c40123151\ncell\cB51\ct\c鄭羽\ncell\cC51\cvtc\c\c\c\ncell\cD51\cvtc\c\c\c\ncell\cE51\cvtc\c\c\c\ncell\cF51\cvtc\c\c\c\ncell\cG51\cvtc\c\c\c\ncell\cA52\cv\c40123153\ncell\cB52\ct\c戴志軒\ncell\cC52\cvtc\c\c\c\ncell\cD52\cvtc\c\c\c\ncell\cE52\cvtc\c\c\c\ncell\cF52\cvtc\c\c\c\ncell\cG52\cvtc\c\c\c\ncell\cA53\cv\c40123154\ncell\cB53\ct\c謝正利\ncell\cC53\cvtc\c\c\c\ncell\cD53\cvtc\c\c\c\ncell\cE53\cvtc\c\c\c\ncell\cF53\cvtc\c\c\c\ncell\cG53\cvtc\c\c\c\ncell\cA54\cv\c40123155\ncell\cB54\ct\c鍾宇翔\ncell\cC54\cvtc\c\c\c\ncell\cD54\cvtc\c\c\c\ncell\cE54\cvtc\c\c\c\ncell\cF54\cvtc\c\c\c\ncell\cG54\cvtc\c\c\c\ncell\cA55\cv\c40123156\ncell\cB55\ct\c羅冠霖\ncell\cC55\cvtc\c\c\c\ncell\cD55\cvtc\c\c\c\ncell\cE55\cvtc\c\c\c\ncell\cF55\cvtc\c\c\c\ncell\cG55\cvtc\c\c\c\ncell\cA56\cv\c40123157\ncell\cB56\ct\c盧毅民\ncell\cC56\cvtc\c\c\c\ncell\cD56\cvtc\c\c\c\ncell\cE56\cvtc\c\c\c\ncell\cF56\cvtc\c\c\c\ncell\cG56\cvtc\c\c\c\ncell\cA57\cv\c40123158\ncell\cB57\ct\c蔡宗霖\ncell\cC57\cvtc\c\c\c\ncell\cD57\cvtc\c\c\c\ncell\cE57\cvtc\c\c\c\ncell\cF57\cvtc\c\c\c\ncell\cG57\cvtc\c\c\c\ncell\cA58\cv\c49823207\ncell\cB58\ct\c賴思綺(女)(復)\ncell\cC58\cvtc\c\c\c\ncell\cD58\cvtc\c\c\c\ncell\cE58\cvtc\c\c\c\ncell\cF58\cvtc\c\c\c\ncell\cG58\cvtc\c\c\c\nsheet\cc\c7\cr\c58\ncopiedfrom\cA1\cG58\n
+paste A1 formulas
+set B2 text t 楊登麟
+set B3 text t 傅彥綺
+set B4 text t 王若庭
+set B5 text t 吳佳潔
+set B6 text t 周于婷
+set B7 text t 林宣吟
+set B8 text t 林詩容
+set B9 text t 張絲語
+set B10 text t 陳于加
+set B11 text t 陳怡樺
+set B12 text t 黃芯庭
+set B13 text t 劉翼瑄
+set B14 text t 鄭妍希
+set B15 text t 賴湘焄
+set B58 text t 賴思綺
+insertrow A1
+set A1 text t cd2a
+set C2 text t 自我評量
+set D2 text t 第八週考試
+set E2 text t 期中考試
+set F2 text t 期中報告
+set G2 text t 期中成績
+--SocialCalcSpreadsheetControlSave--

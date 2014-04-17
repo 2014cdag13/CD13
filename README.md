@@ -13,3 +13,5 @@ git add .
 git commit -m "commit message"
 
 git push
+
+use username and password to complete the push

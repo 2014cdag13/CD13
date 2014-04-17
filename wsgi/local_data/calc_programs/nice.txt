@@ -1,0 +1,61 @@
+socialcalc:version:1.0
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary=SocialCalcSpreadsheetControlSave
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+# SocialCalc Spreadsheet Control Save
+version:1.0
+part:sheet
+part:edit
+part:audit
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+version:1.5
+cell:A1:tvf:1
+cell:B1:vt:th:<b>bold</b> <i>italic</i> <font color=green>monospace</font>
+cell:C1:vt:tl:http\c//ethercalc.tw/:tvf:1
+cell:D1:vtc:::
+cell:E1:vtc:::
+cell:F1:vtc:::
+cell:A2:t:任何想要嵌入 SocialCalc 的應用程式，都可以自行定義額外的指令，只需要將命名的回調函數添加到 SocialCalc.​SheetCommandInfo.​CmdExtensionCallbacks 物件，即可使用 startcmdextension 指令進行呼叫。
+cell:B2:vtc:::
+cell:C2:t:在建構複雜系統時，若能專注於清晰連貫的設計概念，而非各自為政的想法，那麼溝通成本將會大幅下降。這種連貫式設計概念的構想，最好能由一個人來主導
+cell:D2:t:目前還無法同步編輯, 但是已經可以執行大多數功能
+cell:E2:t:載入 nice.txt<http\c//cdproject-coursemdetw.rhcloud.com/ethercalc?filename=nice.txt>
+cell:F2:t:JavaScript 執行錯誤
+cell:A3:vtc:::
+cell:B3:vtc:::
+cell:C3:vtc:::
+cell:D3:vtc:::
+cell:E3:t:應該讓嵌入物件都可以全螢幕播放
+cell:F3:vtc:::
+cell:A4:vt:th:<iframe src="//player.vimeo.com/video/83654826" width="250" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+cell:B4:t:可以嵌入 Video
+cell:C4:vt:th:<embed width="250"  src="http\c//cmslite.cycu.org/static/viewstl.html?src=/downloads/spikeball.stl"></embed>
+cell:D4:vtc:::
+cell:E4:vt:th:<embed width="250" src="http\c//cmslite.cycu.org/static/viewstl.html?src=/downloads/gauge.stl"></embed>
+cell:F4:vtc:::
+cell:A5:t:Socialcalc 伺服器只需要負責回應 HTTP GET 請求，提供整份表格內容的序列化字串即可。瀏覽器在收到資料後，所有計算、變動追蹤，以及使用者的互動都是通過 JavaScript 達成的。
+cell:B5:t:Sheet 是資料模型，代表試算表在記憶體中的結構。  模型中包含從座標指向 Cell 物件的字典，每個物件代表一個儲存格。空儲存格所在的座標不需要有對映的物件，因此完全不占用記憶體。
+cell:C5:t:通常，SocialCalc 引擎只有在打開試算表並進行編輯時，以及將內容保存回伺服器時才需要與伺服器通訊。因此，Sheet.ParseSheetSave 方法可在Sheet 物件中解析儲存格式字串，而 Sheet.CreateSheetSave 方法可將 Sheet 物件序列化為儲存格式。
+cell:D5:vtc:::
+cell:E5:t:進行多人即時協同編輯。 這乍看之下也許有點複雜，但是感謝 SocialCalc 的模組化設計，我們只需讓每位使用者將自己的指令傳播給其他參與者執行即可。
+cell:F5:vtc:::
+cell:A6:t:POST to http\c//HOST\c8000/RoomID with the SocialCalc serialization whenever a node saves.
+col:D:w:142
+sheet:c:6:r:6
+valueformat:1:text-html
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+version:1.0
+rowpane:0:3:14
+colpane:0:1:11
+ecell:F11
+sort::-1:up::::
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+--SocialCalcSpreadsheetControlSave--

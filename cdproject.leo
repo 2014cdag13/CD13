@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<?xml-stylesheet ekr_test?>
+<leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
+<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
+<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
+	<global_window_position top="50" left="50" height="500" width="700"/>
+	<global_log_window_position top="0" left="0" height="0" width="0"/>
+</globals>
+<preferences/>
+<find_panel_settings/>
+<vnodes>
+<v t="course-mde-tw.20140417093332.1998"><vh>@settings</vh>
+<v t="course-mde-tw.20140417093332.1999"><vh>@data qt-gui-plugin-style-sheet</vh></v>
+<v t="course-mde-tw.20140417093332.2000"><vh>@string initial_split_orientation = horizontal</vh></v>
+<v t="course-mde-tw.20140417093332.2001"><vh>@string rst3_write_intermediate_extension = .rst</vh></v>
+</v>
+<v t="course-mde-tw.20140417093332.2063"><vh>協同產品設計實習</vh></v>
+<v t="course-mde-tw.20140417093332.2027"><vh>@path wsgi</vh>
+<v t="course-mde-tw.20140417093332.2028" a="E"
+expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
+</v>
+<v t="course-mde-tw.20140417093332.2058"><vh>利用 pandoc 進行格式轉換</vh>
+<v t="course-mde-tw.20140417093332.2059"><vh>@button pandoc</vh></v>
+<v t="course-mde-tw.20140417093332.2060" a="E"><vh>@path wsgi/pandoc</vh>
+<v t="course-mde-tw.20140417093332.2061"><vh>@edit demo.txt</vh></v>
+</v>
+</v>
+<v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
+<v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
+<v t="course-mde-tw.20140417093332.2050" a="O"><vh>@auto doc.txt</vh></v>
+</v>
+<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
+<v t="course-mde-tw.20140417093332.2052" a="O"><vh>@auto doc.txt</vh></v>
+</v>
+</v>
+</v>
+</vnodes>
+<tnodes>
+<t tx="course-mde-tw.20140417093332.1998"></t>
+<t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
+    background-color: #CAE1FF; /* lightSteelBlue1 */
+}
+
+QStackedWidget {
+    /* background-color:lightpink; */
+    border-color: red;
+    padding: 0px;
+    /* border-width: 0px; */
+    /* background-color: yellow; */
+}
+
+QSplitter {
+    border-color: white;
+    background-color: white;
+    border-style: solid;
+}
+
+QTreeWidget {
+    /* These apply to the selected item, but not to editing items.*/
+    background-color: #ffffec; /* Leo's traditional tree color */
+    selection-color: black; /* was white */
+    selection-background-color: lightgrey;
+    /* font-family: SansSerif; */
+    /*font-family: DejaVu Sans Mono;*/
+    font-family:YaHei Mono;
+    /* 標題字型大小設定 */
+    font-size: 22px;
+    font-weight: normal; /* normal,bold,100,..,900 */
+    font-style: normal; /* normal, italic,oblique */
+ }
+
+/* Headline edit widgets */
+QTreeWidget QLineEdit {
+    background-color: cornsilk;
+    selection-color: white;
+    selection-background-color: blue;
+    /*font-family: DejaVu Sans Mono;*/    
+    font-family:YaHei Mono;
+    /* 沒有特別對應字型大小 */
+    font-size: 22px;
+    font-weight: normal; /* normal,bold,100,..,900 */
+    font-style: normal; /* normal, italic,oblique */
+}
+
+/* The log panes */
+QTextEdit {
+    background-color: #f2fdff;
+    selection-color: red;
+    selection-background-color: blue;
+    /* font-family: Courier New; */
+    font-family:YaHei Mono;
+    /* log font 大小 */
+    font-size: 22px;
+    font-weight: normal; /* normal,bold,100,..,900 */
+    font-style: normal; /* normal, italic,oblique */
+}
+
+/* The body pane */
+QTextEdit#richTextEdit {
+    background-color: #fdf5f5; /* A kind of pink. */
+    selection-color: white;
+    selection-background-color: red;
+    /*font-family: DejaVu Sans Mono;*/
+    /* font-family: Courier New; */
+    font-family:YaHei Mono;
+    /* 內文字型大小 */
+    font-size: 22px;
+    font-weight: normal; /* normal,bold,100,..,900 */
+    font-style: normal; /* normal,italic,oblique */
+}
+
+QLabel {
+    font-family:YaHei Mono;
+    /* 下方的 Minibuffer 標題字型大小 */
+    font-size: 22px;
+    font-weight: normal; /* normal,bold,100,..,900 */
+    font-style: normal; /* normal,italic,oblique */
+}
+
+/* Editor labels */
+QLineEdit#editorLabel {
+    background-color: #ffffec;
+    font-family:YaHei Mono;
+    /* 沒有直接對應字型大小 */
+    font-size: 22px;
+    font-weight: normal; /* normal,bold,100,..,900 */
+    font-style: normal; /* normal,italic,oblique */
+    border: 2px;
+    margin: 2px;
+}</t>
+<t tx="course-mde-tw.20140417093332.2000">horizontal: body pane to the left
+vertical: body pane on the botton</t>
+<t tx="course-mde-tw.20140417093332.2001"></t>
+<t tx="course-mde-tw.20140417093332.2027"></t>
+<t tx="course-mde-tw.20140417093332.2047">各組的報告統一放在 doc 目錄下, 並且按照分組編號作為目錄名稱
+
+最後希望能夠利用程式整合各分組報告內容, 統一處理成為 pdf 與 html 檔案
+
+目錄架構:
+
+doc 
+    2ag1
+        doc.txt
+    2ag2
+        doc.txt</t>
+<t tx="course-mde-tw.20140417093332.2048"></t>
+<t tx="course-mde-tw.20140417093332.2049"></t>
+<t tx="course-mde-tw.20140417093332.2050">這裡是 2ag1/doc.txt 的內容</t>
+<t tx="course-mde-tw.20140417093332.2051"></t>
+<t tx="course-mde-tw.20140417093332.2052">這裡是 2ag2/doc.txt 的內容</t>
+<t tx="course-mde-tw.20140417093332.2058">@language latex
+
+% 中文內容設定
+
+\usepackage{xeCJK}    % 中英文字行分開設置
+\usepackage[T1]{fontspec}    %設定字體用
+\usepackage{graphicx}
+\usepackage{fancyvrb} % for frame on Verbatim
+% 新細明體
+% 文鼎ＰＬ新宋
+\setCJKmainfont{新細明體}</t>
+<t tx="course-mde-tw.20140417093332.2059">@language python
+import os
+'''
+c is the commander of the outline containing the script.
+g is Leo's leo.core.leoGlobals module.
+p is the presently selected position, the same as c.p.
+'''
+d = c.scanAllDirectives(p)
+#g.es(d)
+# d 為 commander 由目前所在目錄進行指令設定掃描
+# d 資料格式為 dictionary
+''' 
+實際操作下, d 為 
+{'tabwidth': -4, 'lineending': None, 'language': 'python', 'encoding': None, 'pluginsList': [], 'pagewidth': 70, 'wrap': True, 'path': 'D:\\github\\mdeCourse\\2013spring', 'delims': ('#', '', '')}
+'''
+'''
+在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
+
+filenames = ['file1.txt', 'file2.txt']
+directory = "V:/2014c2/w2/local_data/downloads/"
+with open('V:/2014c2/c2wp/pandoc/demo.txt', 'w', encoding="utf-8") as outfile:
+    for fname in filenames:
+        fname = directory+fname
+        with open(fname, encoding="utf-8") as infile:
+            for line in infile:
+                outfile.write(line)
+            outfile.write("\n")
+'''
+# 將目錄指到 pandoc
+mandir = d.get('path') + "/cdwp/pandoc"
+g.es(mandir)
+os.chdir(mandir)
+# 先轉一份 html 
+os.system("V:\\apps\\pandoc\\pandoc.exe -s demo.txt -o demo.html")
+# 利用 pandoc 將 demo.txt 轉為 demo.tex, 在此決定是否要有 toc
+os.system("V:\\apps\\pandoc\\pandoc.exe -s demo.txt --toc -o demo.tex")
+# 中文設定必須要放在 begin document 之前
+setup = ''' 
+\\usepackage{xeCJK}    % 中英文字行分開設置 
+\\usepackage[T1]{fontspec}    %設定字體用 
+\\usepackage{graphicx} 
+\\usepackage{fancyvrb} % for frame on Verbatim 
+\\setCJKmainfont{新細明體}
+'''
+# 在 demo.tex 最前頭加上"中文設定"
+file = open("demo.tex", "r", encoding="utf-8")
+lines = file.read().splitlines()
+file.close()
+file = open("demo.tex", "w", encoding="utf-8")
+for i in range(len(lines)):
+    # 設法將中文設定放在文件開始之前, 以便蓋掉之前的設定
+    if "\\begin{document}" in lines[i]:
+        file.write(setup+lines[i]+"\n")
+    else:
+        file.write(lines[i]+"\n")
+file.close()
+target_name = "demo"
+filename = target_name+".tex"
+os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xelatex.exe -no-pdf -interaction=nonstopmode "+filename)
+os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xelatex.exe -no-pdf -interaction=nonstopmode "+filename)
+filename = target_name+".xdv"
+os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xdvipdfmx.exe -vv -E "+filename)
+
+filename = target_name+".pdf"
+os.system(filename)</t>
+<t tx="course-mde-tw.20140417093332.2060"></t>
+<t tx="course-mde-tw.20140417093332.2063">@language md
+"# This is my README" 
+
+同步規劃:
+
+Bitbucket: https://bitbucket.org/cmsimply/public_cmsimply
+
+Bitbucket 免費帳號特性:
+
+可以自由將倉儲轉為 public 或 private, 沒有限制
+
+每一倉儲最多只能有 5 個 collaborators
+
+OpenShift: http://cdproject-coursemdetw.rhcloud.com/
+
+OpenShift 免費帳號特性:
+
+支援各種網際程式雲端部署, 但是每一帳號至多只能建 3 個應用程式
+
+接下來要加上與 Github 的全班協同倉儲進行同步
+
+Github 免費帳號特性:
+
+免費帳號只能使用 public 倉儲
+
+沒有限制 collaborators 個數, 適合多協同人員執行開放專案使用
+</t>
+</tnodes>
+</leo_file>
