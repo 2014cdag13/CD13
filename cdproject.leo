@@ -19,6 +19,7 @@
 <v t="2014pythonE.20140422152422.1669"><vh>電子郵箱管理</vh></v>
 <v t="2014pythonE.20140422152422.1671"><vh>Github 帳號管理</vh></v>
 <v t="2014pythonE.20140422152422.1670"><vh>OpenShift 權限管理</vh></v>
+<v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
 <v t="course-mde-tw.20140417093332.2027"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
@@ -278,5 +279,12 @@ Github 免費帳號特性:
 
 沒有限制 collaborators 個數, 適合多協同人員執行開放專案使用
 </t>
+<t tx="course-mde-tw.20140422171455.1745">在 Github 倉儲中將 OpenShift 倉儲設為 remote 倉儲
+
+git remote add openshift ssh://5356315e4382ec2b3f000557@2014cda-mdenfu.rhcloud.com/~/git/2014cda.git/
+
+利用 git pull 拉下目前位於 OpenShift 對應倉儲上的程式碼
+
+若與 Github 近端倉儲中的資料沒有產生衝突, 則可以在內容修改後, 同時 push 到 Github 與 OpenShift</t>
 </tnodes>
 </leo_file>
