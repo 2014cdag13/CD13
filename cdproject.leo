@@ -16,11 +16,14 @@
 <v t="course-mde-tw.20140417093332.2001"><vh>@string rst3_write_intermediate_extension = .rst</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2063"><vh>協同產品設計實習</vh></v>
+<v t="2014pythonE.20140422152422.1669"><vh>電子郵箱管理</vh></v>
+<v t="2014pythonE.20140422152422.1671"><vh>Github 帳號管理</vh></v>
+<v t="2014pythonE.20140422152422.1670"><vh>登記 OpenShift 帳號</vh></v>
 <v t="course-mde-tw.20140417093332.2027"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2058"><vh>利用 pandoc 進行格式轉換</vh>
+<v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
 <v t="course-mde-tw.20140417093332.2059"><vh>@button pandoc</vh></v>
 <v t="course-mde-tw.20140417093332.2060" a="E"><vh>@path wsgi/pandoc</vh>
 <v t="course-mde-tw.20140417093332.2061"><vh>@edit demo.txt</vh></v>
@@ -38,6 +41,21 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 </vnodes>
 <tnodes>
+<t tx="2014pythonE.20140422152422.1669">配合 2014cda 專案
+
+2014cdaproject@gmail.com
+
+正好可以有三個  Python 3.3 應用程式, 用於 
+
+2014cda, 2014cdb, 2014c2 等三個專案使用</t>
+<t tx="2014pythonE.20140422152422.1670"></t>
+<t tx="2014pythonE.20140422152422.1671">course-mde-tw on Github 使用 coursemdetw@gmail.com 登記
+
+couorsemdetw on Github 使用 course@mde.tw 登記
+
+2014cda, 2014cdb, 2014c2 Github 專案登記在 coursemdetw 名下
+
+course-mde-tw 為協同人員</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
