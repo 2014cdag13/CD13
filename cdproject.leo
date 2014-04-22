@@ -18,7 +18,7 @@
 <v t="course-mde-tw.20140417093332.2063"><vh>協同產品設計實習</vh></v>
 <v t="2014pythonE.20140422152422.1669"><vh>電子郵箱管理</vh></v>
 <v t="2014pythonE.20140422152422.1671"><vh>Github 帳號管理</vh></v>
-<v t="2014pythonE.20140422152422.1670"><vh>登記 OpenShift 帳號</vh></v>
+<v t="2014pythonE.20140422152422.1670"><vh>OpenShift 權限管理</vh></v>
 <v t="course-mde-tw.20140417093332.2027"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
@@ -48,14 +48,20 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 正好可以有三個  Python 3.3 應用程式, 用於 
 
 2014cda, 2014cdb, 2014c2 等三個專案使用</t>
-<t tx="2014pythonE.20140422152422.1670"></t>
+<t tx="2014pythonE.20140422152422.1670">puttygen.exe 導入 private key 後, 以 Conversions-&gt;Export OpenSSH key
+
+將資料存入 V:\home\.ssh\id_rsa 檔案中
+
+當使用者利用  git clone OpenShift 平台上專案時, Git 將會利用 id_rsa 私鑰與 OpenShift settings 設定所儲存的 public key 進行配對, 若通過驗證才能更新或擷取 OpenShift 平台上的程式碼.</t>
 <t tx="2014pythonE.20140422152422.1671">course-mde-tw on Github 使用 coursemdetw@gmail.com 登記
 
 couorsemdetw on Github 使用 course@mde.tw 登記
 
 2014cda, 2014cdb, 2014c2 Github 專案登記在 coursemdetw 名下
 
-course-mde-tw 為協同人員</t>
+course-mde-tw 為協同人員
+
+</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
