@@ -20,23 +20,24 @@
 <v t="2014pythonE.20140422152422.1671"><vh>Github 帳號管理</vh></v>
 <v t="2014pythonE.20140422152422.1670"><vh>OpenShift 權限管理</vh></v>
 <v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
-<v t="course-mde-tw.20140417093332.2027"><vh>@path wsgi</vh>
+<v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
+<v t="course-mde-tw.20140422221207.1747"><vh>注意事項</vh></v>
 <v t="course-mde-tw.20140417093332.2059"><vh>@button pandoc</vh></v>
-<v t="course-mde-tw.20140417093332.2060" a="E"><vh>@path wsgi/pandoc</vh>
-<v t="course-mde-tw.20140417093332.2061"><vh>@edit demo.txt</vh></v>
+<v t="course-mde-tw.20140417093332.2060" a="E"><vh>@path wsgi/doc</vh>
+<v t="course-mde-tw.20140417093332.2061"><vh>@edit title.txt</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
 <v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
-<v t="course-mde-tw.20140417093332.2050" a="O"><vh>@auto doc.txt</vh></v>
+<v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
-<v t="course-mde-tw.20140417093332.2052" a="O"><vh>@auto doc.txt</vh></v>
+<v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
 </v>
@@ -172,9 +173,7 @@ doc
         doc.txt</t>
 <t tx="course-mde-tw.20140417093332.2048"></t>
 <t tx="course-mde-tw.20140417093332.2049"></t>
-<t tx="course-mde-tw.20140417093332.2050">這裡是 2ag1/doc.txt 的內容</t>
 <t tx="course-mde-tw.20140417093332.2051"></t>
-<t tx="course-mde-tw.20140417093332.2052">這裡是 2ag2/doc.txt 的內容</t>
 <t tx="course-mde-tw.20140417093332.2058">@language latex
 
 % 中文內容設定
@@ -201,27 +200,26 @@ d = c.scanAllDirectives(p)
 實際操作下, d 為 
 {'tabwidth': -4, 'lineending': None, 'language': 'python', 'encoding': None, 'pluginsList': [], 'pagewidth': 70, 'wrap': True, 'path': 'D:\\github\\mdeCourse\\2013spring', 'delims': ('#', '', '')}
 '''
-'''
-在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
-
-filenames = ['file1.txt', 'file2.txt']
-directory = "V:/2014c2/w2/local_data/downloads/"
-with open('V:/2014c2/c2wp/pandoc/demo.txt', 'w', encoding="utf-8") as outfile:
+#在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
+# 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
+filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt']
+directory = "V:/project/2014cda/wsgi/doc/"
+with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
         fname = directory+fname
         with open(fname, encoding="utf-8") as infile:
             for line in infile:
                 outfile.write(line)
-            outfile.write("\n")
-'''
+            outfile.write("\n\n")
+
 # 將目錄指到 pandoc
-mandir = d.get('path') + "/cdwp/pandoc"
+mandir = d.get('path') + "/wsgi/pandoc"
 g.es(mandir)
 os.chdir(mandir)
 # 先轉一份 html 
-os.system("V:\\apps\\pandoc\\pandoc.exe -s demo.txt -o demo.html")
+os.system("V:\\apps\\pandoc\\pandoc.exe -s result.txt -o result.html")
 # 利用 pandoc 將 demo.txt 轉為 demo.tex, 在此決定是否要有 toc
-os.system("V:\\apps\\pandoc\\pandoc.exe -s demo.txt --toc -o demo.tex")
+os.system("V:\\apps\\pandoc\\pandoc.exe -s result.txt --toc -o result.tex")
 # 中文設定必須要放在 begin document 之前
 setup = ''' 
 \\usepackage{xeCJK}    % 中英文字行分開設置 
@@ -231,10 +229,10 @@ setup = '''
 \\setCJKmainfont{新細明體}
 '''
 # 在 demo.tex 最前頭加上"中文設定"
-file = open("demo.tex", "r", encoding="utf-8")
+file = open("result.tex", "r", encoding="utf-8")
 lines = file.read().splitlines()
 file.close()
-file = open("demo.tex", "w", encoding="utf-8")
+file = open("result.tex", "w", encoding="utf-8")
 for i in range(len(lines)):
     # 設法將中文設定放在文件開始之前, 以便蓋掉之前的設定
     if "\\begin{document}" in lines[i]:
@@ -242,7 +240,7 @@ for i in range(len(lines)):
     else:
         file.write(lines[i]+"\n")
 file.close()
-target_name = "demo"
+target_name = "result"
 filename = target_name+".tex"
 os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xelatex.exe -no-pdf -interaction=nonstopmode "+filename)
 os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xelatex.exe -no-pdf -interaction=nonstopmode "+filename)
@@ -285,6 +283,17 @@ git remote add openshift ssh://5356315e4382ec2b3f000557@2014cda-mdenfu.rhcloud.c
 
 利用 git pull 拉下目前位於 OpenShift 對應倉儲上的程式碼
 
-若與 Github 近端倉儲中的資料沒有產生衝突, 則可以在內容修改後, 同時 push 到 Github 與 OpenShift</t>
+git pull 的目的在設法讓 OpenShift 與 Github 中的 git 專案合併
+
+若與 Github 近端倉儲中的資料沒有產生衝突, 則可以在內容修改後, 同時 push 到 Github 與 OpenShift
+
+目前 OpenShift 網站: http://2014cda-mdenfu.rhcloud.com/
+
+Github 倉儲則為: https://github.com/coursemdetw/2014cda
+
+目前的規劃是讓參與協同者可以自由更新 Github 倉儲內容
+
+並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
+<t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 </tnodes>
 </leo_file>

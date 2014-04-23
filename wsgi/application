@@ -64,7 +64,7 @@ class CDProject(object):
     #@+node:course-mde-tw.20140417093332.2032: *3* index
     @cherrypy.expose
     def index(self, input1=None, input2=None):
-        return "設定與 Bitbucket 同步"+str(input1)
+        return "設定與 Github 同步"+str(input1)
     #@+node:course-mde-tw.20140417093332.2033: *3* default
     # default method, if there is no corresponding method, cherrypy will redirect to default method
     # need *args and **kwargs as input variables for all possible URL links

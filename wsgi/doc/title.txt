@@ -1,0 +1,54 @@
+% 2014 協同產品設計實習報告
+% 機械設計工程系二甲
+% April 23, 2014
+
+前言
+===
+
+協同產品設計實習課程目標[^1]
+
+[^1]: 這是註解的用法.
+
+Here is an inline note.^[Inlines notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.]
+
+學習協同產品設計流程與環境的基本原理與架構.
+
+學習如何在網際專案管理系統的協助下, 進行協同產品設計.
+
+學習如何在協同設計流程中, 進行有效率的工程設計表達與產品資料管理.
+
+延續程式語言與電腦輔助設計實習課程, 學習如何建構協同產品設計環境所需的工具.
+
+Pandoc 手冊
+===
+
+http://johnmacfarlane.net/pandoc/README.html
+
+footnotes
+
+tables
+
+flexible ordered lists
+
+definition lists
+
+fenced code blocks
+
+superscript
+
+subscript
+
+strikeout
+
+title blocks
+
+automatic tables of contents
+
+embedded LaTeX math
+
+citations
+
+markdown inside HTML block elements
+

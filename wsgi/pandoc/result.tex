@@ -1,0 +1,134 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={機械設計工程系二甲},
+            pdftitle={2014 協同產品設計實習報告},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\title{2014 協同產品設計實習報告}
+\author{機械設計工程系二甲}
+\date{April 23, 2014}
+
+ 
+\usepackage{xeCJK}    % 中英文字行分開設置 
+\usepackage[T1]{fontspec}    %設定字體用 
+\usepackage{graphicx} 
+\usepackage{fancyvrb} % for frame on Verbatim 
+\setCJKmainfont{新細明體}
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{前言}\label{ux524dux8a00}
+
+協同產品設計實習課程目標\footnote{這是註解的用法.}
+
+Here is an inline note.\footnote{Inlines notes are easier to write,
+  since you don't have to pick an identifier and move down to type the
+  note.}
+
+學習協同產品設計流程與環境的基本原理與架構.
+
+學習如何在網際專案管理系統的協助下, 進行協同產品設計.
+
+學習如何在協同設計流程中, 進行有效率的工程設計表達與產品資料管理.
+
+延續程式語言與電腦輔助設計實習課程,
+學習如何建構協同產品設計環境所需的工具.
+
+\section{Pandoc 手冊}\label{pandoc-ux624bux518a}
+
+http://johnmacfarlane.net/pandoc/README.html
+
+footnotes
+
+tables
+
+flexible ordered lists
+
+definition lists
+
+fenced code blocks
+
+superscript
+
+subscript
+
+strikeout
+
+title blocks
+
+automatic tables of contents
+
+embedded LaTeX math
+
+citations
+
+markdown inside HTML block elements
+
+\section{網際正齒輪減速機設計(2ag1)}\label{ux7db2ux969bux6b63ux9f52ux8f2aux6e1bux901fux6a5fux8a2dux8a082ag1}
+
+正齒輪相關設計公式
+
+\section{設計程式架構}\label{ux8a2dux8a08ux7a0bux5f0fux67b6ux69cb}
+
+傳遞功率
+
+\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6}
+
+這裡是結果與討論
+
+\section{網際鼓式煞車設計(2ag2)}\label{ux7db2ux969bux9f13ux5f0fux715eux8ecaux8a2dux8a082ag2}
+
+有關鼓式煞車
+
+\section{程式設計架構}\label{ux7a0bux5f0fux8a2dux8a08ux67b6ux69cb}
+
+鼓式煞車
+
+\section{結果與討論}\label{ux7d50ux679cux8207ux8a0eux8ad6-1}
+
+這裡是結果與討論
+
+\end{document}
