@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -33,22 +33,20 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<<<<<<< HEAD
-<v t="kmolII_lite.20140429093243.1601" a="E"><vh>@path 2ag7</vh>
-<v t="kmolII_lite.20140429093243.1602"><vh>@edit doc.txt</vh></v>
-=======
-<v t="2014pythonE.20140429095958.1591" a="E"><vh>@path 2ag16</vh>
-<v t="2014pythonE.20140429095958.1592" a="O"><vh>@edit doc.txt</vh></v>
->>>>>>> 14d0c6196e5a1a4a9f0ce1da22010f4557c7a1d2
-</v>
 <v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
+<v t="course-mde-tw.20140417093332.2051"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
+<v t="2014pythonE.20140429104126.1755"><vh>@path 2ag3</vh>
 <v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140429160432.1843"><vh>@path 2ag7</vh>
+<v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
+<v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140424070658.1679" a="E"><vh>@path coursemdetw</vh>
 <v t="2014pythonE.20140424070658.1680"><vh>@auto doc.txt</vh></v>
@@ -79,32 +77,9 @@ course-mde-tw 為協同人員
 
 </t>
 <t tx="2014pythonE.20140424070658.1679"></t>
-<<<<<<< HEAD
-<t tx="2014pythonE.20140429095958.1591"></t>
-<t tx="2014pythonE.20140429095958.1592">@nocolor
-網際正齒輪減速機設計(2ag1)
-===
-
-正齒輪相關設計公式
-
-新增 commit 9 之後的資料
-
-設計程式架構
-===
-
-傳遞功率
-
-新增 commit 9 之後的資料
-
-結果與討論
-===
-
-這裡是結果與討論
-
-新增 commit 9 之後的資料</t>
-=======
 <t tx="2014pythonE.20140429104126.1755"></t>
->>>>>>> a97e797bb753962c21760b81f740b2511c618c1c
+<t tx="2014pythonE.20140429160432.1843"></t>
+<t tx="2014pythonE.20140429160432.1847"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
@@ -201,7 +176,7 @@ QLineEdit#editorLabel {
 vertical: body pane on the botton</t>
 <t tx="course-mde-tw.20140417093332.2001"></t>
 <t tx="course-mde-tw.20140417093332.2027"></t>
-<t tx="course-mde-tw.20140417093332.2047" annotate="7d71002858080000007072696f7269747971014b16580800000070726f677265737371024b64580a000000707269736574646174657103580a000000323031342d30342d32397104752e" lineYOffset="4b032e" icons="5d7100287d7101285808000000636c656f49636f6e7102580100000031710358020000006f6e71045805000000766e6f6465710558040000007870616471064b015807000000786f666673657471074b02580500000077686572657108580e0000006265666f7265486561646c696e6571095807000000796f6666736574710a4b00580400000074797065710b580400000066696c65710c680c5839000000563a5c4944455c507974686f6e33335c6c69625c736974652d7061636b616765735c6c656f5c49636f6e735c636c656f5c786772792e706e67710d580700000072656c50617468710e580d000000636c656f5c786772792e706e67710f757d711028680268036804680568064b0168074b0268086809680a4b00680b680c680c583b000000563a5c4944455c507974686f6e33335c6c69625c736974652d7061636b616765735c6c656f5c49636f6e735c636c656f5c7072673130302e706e677111680e580f000000636c656f5c7072673130302e706e67711275652e">各組的報告統一放在 doc 目錄下, 並且按照分組編號作為目錄名稱
+<t tx="course-mde-tw.20140417093332.2047">各組的報告統一放在 doc 目錄下, 並且按照分組編號作為目錄名稱
 
 最後希望能夠利用程式整合各分組報告內容, 統一處理成為 pdf 與 html 檔案
 
@@ -211,8 +186,6 @@ doc
     2ag1
         doc.txt
     2ag2
-        doc.txt
-    2ag16
         doc.txt</t>
 <t tx="course-mde-tw.20140417093332.2048"></t>
 <t tx="course-mde-tw.20140417093332.2049"></t>
@@ -245,11 +218,7 @@ d = c.scanAllDirectives(p)
 '''
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
-<<<<<<< HEAD
-filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt','2ag16/doc.txt' 'coursemdetw/doc.txt']
-=======
 filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', 'coursemdetw/doc.txt']
->>>>>>> a97e797bb753962c21760b81f740b2511c618c1c
 directory = "V:/project/2014cda/wsgi/doc/"
 with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
@@ -342,6 +311,5 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
-<t tx="kmolII_lite.20140429093243.1601"></t>
 </tnodes>
 </leo_file>
