@@ -42,6 +42,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
+<v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
+<v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140424070658.1679" a="E"><vh>@path coursemdetw</vh>
 <v t="2014pythonE.20140424070658.1680"><vh>@auto doc.txt</vh></v>
 </v>
@@ -71,6 +74,7 @@ course-mde-tw 為協同人員
 
 </t>
 <t tx="2014pythonE.20140424070658.1679"></t>
+<<<<<<< HEAD
 <t tx="2014pythonE.20140429095958.1591"></t>
 <t tx="2014pythonE.20140429095958.1592">@nocolor
 網際正齒輪減速機設計(2ag1)
@@ -93,6 +97,9 @@ course-mde-tw 為協同人員
 這裡是結果與討論
 
 新增 commit 9 之後的資料</t>
+=======
+<t tx="2014pythonE.20140429104126.1755"></t>
+>>>>>>> a97e797bb753962c21760b81f740b2511c618c1c
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
@@ -233,7 +240,11 @@ d = c.scanAllDirectives(p)
 '''
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
+<<<<<<< HEAD
 filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt','2ag16/doc.txt' 'coursemdetw/doc.txt']
+=======
+filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', 'coursemdetw/doc.txt']
+>>>>>>> a97e797bb753962c21760b81f740b2511c618c1c
 directory = "V:/project/2014cda/wsgi/doc/"
 with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
