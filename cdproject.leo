@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -42,7 +42,10 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="2014pythonE.20140429104126.1755"><vh>@path 2ag3</vh>
 <v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1843"><vh>@path 2ag7</vh>
+<v t="kmolII_lite.20140430001511.1599" a="E"><vh>@path 2ag5</vh>
+<v t="kmolII_lite.20140430001511.1600"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140429160432.1843" a="E"><vh>@path 2ag7</vh>
 <v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
@@ -218,7 +221,7 @@ d = c.scanAllDirectives(p)
 '''
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
-filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', 'coursemdetw/doc.txt']
+filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag5/doc.txt', 'coursemdetw/doc.txt']
 directory = "V:/project/2014cda/wsgi/doc/"
 with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
@@ -311,5 +314,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
+<t tx="kmolII_lite.20140430001511.1599"></t>
 </tnodes>
 </leo_file>
