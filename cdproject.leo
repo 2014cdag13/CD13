@@ -20,6 +20,7 @@
 <v t="2014pythonE.20140422152422.1671"><vh>Github 帳號管理</vh></v>
 <v t="2014pythonE.20140422152422.1670"><vh>OpenShift 權限管理</vh></v>
 <v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
+<v t="2014spring.20140430165707.2063"><vh>第十一週任務</vh></v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
@@ -80,6 +81,19 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429104126.1755"></t>
 <t tx="2014pythonE.20140429160432.1843"></t>
 <t tx="2014pythonE.20140429160432.1847"></t>
+<t tx="2014spring.20140430165707.2063">0. 請各組閱讀
+
+https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
+
+中的注意事項與 push 前確認事項.
+
+1. 各組要自行建立 doc 檔案目錄, 而且可以納入 pandoc pdf 與 html 文件產生機制
+
+2. 各組以協同模式在教材一中各選一段, 以英文+中文並陳的方式, 列在各自的 doc.txt 文件中. (之後將需要寫一個類似 pandoc  按鈕來整合此份文件)
+
+3. 各組將上學期的 Pro/Web.Link 程式取出, 準備以各組編寫一個零件尺寸修改的模式來修改 application 雲端程式.
+
+4. 除整班協同的 github 外, 各組需要在組內另外建立一個小分組協同專案來執行小分組協同任務.</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
