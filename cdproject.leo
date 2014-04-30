@@ -21,6 +21,7 @@
 <v t="2014pythonE.20140422152422.1670"><vh>OpenShift 權限管理</vh></v>
 <v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
 <v t="2014spring.20140430175148.1771"><vh>@edit README.md</vh></v>
+<v t="2014spring.20140430205920.1773"><vh>分散式課程評量</vh></v>
 <v t="2014spring.20140430165707.2063"><vh>第十一週任務</vh></v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
@@ -98,6 +99,37 @@ https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8
 3. 各組將上學期的 Pro/Web.Link 程式取出, 準備以各組編寫一個零件尺寸修改的模式來修改 application 雲端程式.
 
 4. 除整班協同的 github 外, 各組需要在組內另外建立一個小分組協同專案來執行小分組協同任務.</t>
+<t tx="2014spring.20140430205920.1773">評量規劃:
+
+每週以組為單位執行分組任務, 評分類別如下:
+
+每完成一項任務: 得分 5 分
+
+幾乎完成: 得分 4 分
+
+部分完成: 得分 3 分
+
+未能完成: 得分 0 分
+
+Week 12: 二項任務, 配分 10 分
+
+Week 13: 三項任務, 配分 15 分
+
+Week 14: 三項任務, 配分 15 分
+
+Week 15: 三項任務, 配分 15 分
+
+Week 16: 三項任務, 配分 15 分
+
+Week 17: 三項任務, 配分 15 分
+
+Week 18: 三項任務, 配分 15 分
+
+備註: 
+
+各週任務評量將在下課前 15 鐘完成
+
+若該週因放假不上課, 則任務仍由 Github 專案上發送, 並以 take-home 模式執行.</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
