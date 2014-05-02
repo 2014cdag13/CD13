@@ -37,31 +37,35 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
+<v t="course-mde-tw.20140417093332.2049"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
+<v t="course-mde-tw.20140417093332.2051"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140429104126.1755"><vh>@path 2ag3</vh>
 <v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140430001511.1599" a="E"><vh>@path 2ag5</vh>
+<v t="kmolII_lite.20140430001511.1599"><vh>@path 2ag5</vh>
 <v t="kmolII_lite.20140430001511.1600"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1843" a="E"><vh>@path 2ag7</vh>
+<v t="2014pythonE.20140429160432.1843"><vh>@path 2ag7</vh>
 <v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
+<v t="2014pythonE.20140429160432.1847"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140424070658.1679" a="E"><vh>@path coursemdetw</vh>
+<v t="123.20140502221015.1628"><vh>@path 2ag21</vh>
+<v t="123.20140502221015.1630"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140424070658.1679"><vh>@path coursemdetw</vh>
 <v t="2014pythonE.20140424070658.1680"><vh>@auto doc.txt</vh></v>
 </v>
 </v>
 </v>
 </vnodes>
 <tnodes>
+<t tx="123.20140502221015.1628"></t>
 <t tx="2014pythonE.20140422152422.1669">配合 2014cda 專案
 
 2014cdaproject@gmail.com
