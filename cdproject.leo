@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -24,10 +24,17 @@
 <v t="2014spring.20140430205920.1773"><vh>分散式課程評量</vh></v>
 <v t="2014spring.20140430165707.2063"><vh>第十一週任務</vh></v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
-<v t="course-mde-tw.20140417093332.2028" a="E"
-expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
+<v t="course-mde-tw.20140417093332.2028"><vh>@file application</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
+<v t="2014spring.20140503125211.2097" a="E"><vh>分組程式開發</vh>
+<v t="2014spring.20140503125211.2098" a="E"><vh>@path wsgi/programs/cdag1</vh>
+<v t="2014spring.20140503125211.2099"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140503125211.2100" a="E"><vh>@path wsgi/programs/cdag2</vh>
+<v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
+</v>
+</v>
+<v t="course-mde-tw.20140417093332.2058"><vh>利用 pandoc 進行格式轉換</vh>
 <v t="course-mde-tw.20140422221207.1747"><vh>注意事項</vh></v>
 <v t="course-mde-tw.20140417093332.2059"><vh>@button pandoc</vh></v>
 <v t="2014spring.20140430205920.1897"><vh>@button pandoc_auto</vh></v>
@@ -35,9 +42,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="course-mde-tw.20140417093332.2061"><vh>@edit title.txt</vh></v>
 </v>
 </v>
-<v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
+<v t="course-mde-tw.20140417093332.2047"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="2014pythonE.20140503095658.1615"><vh>@path 2ag17</vh>
+<v t="2014pythonE.20140503095658.1615" a="E"><vh>@path 2ag17</vh>
 <v t="2014pythonE.20140503095658.1616"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2049"><vh>@path 2ag1</vh>
@@ -232,6 +239,38 @@ os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xdvipdfmx.exe -v
 
 filename = target_name+".pdf"
 os.system(filename)</t>
+<t tx="2014spring.20140503125211.2097">各分組在 Github 中要有一個參與 2014c2 協同程式開發的帳號外
+
+各組員同時在 Github 與 Bitbucket 下都要有對應帳號, 並且利用 Github (不限協同人員個數, 但是免費帳號只允許建立開放專案)或 Bitbucket (專案可以選擇公開或私用, 但是免費帳號只允許最多 5 人協同) 的協同模式, 在小分組下共享程式碼.
+
+Github 2014c2 全班協同專案將會有一個對應的 OpenShift 網站, 各組另外要建立一個分組的 OpenShift 網站與 Github 全班協同專案同步, 以練習各分組的雲端程式部署與控管流程 (各分組成員必須將各自的 public keys 放到分組 OpenShift 應用程式中, 並且自行練習以協同模式控管雲端網站, 而且要與各分組的 Bitbucket 或 Github 程式同步).
+
+各分組雲端程式位於 wsgi/programs/c2g1 目錄下, 使用時必須:
+    
+    1. 確認主要程式 application 中已經導入分組模組, 且與 root 下屬方法加以對應
+    
+    也就是下列程式的置入.
+    
+#####################################################
+# 這是 c2g1 組的物件案例定義
+#####################################################
+# 導入 application 目錄下的模組
+# 導入 programs/c2g1 並且命名為 c2g1
+# 模組內建使用 __init__.py 中的 C2G1 類別
+# 若使用 programs/c2g1/class1.py, 則使用 import programs.c2g1.class1 as c2g1
+import programs.c2g1 as c2g1
+# 利用 c2g1 目錄下的 __init__.py 檔案中的 C2G1 類別建立案例物件
+# 而且指到 application 根目錄下的 c2g1
+root.c2g1 = c2g1.C2G1()
+#####################################################
+# 結束 c2g1 組的物件案例定義
+#####################################################
+
+    2. 各分組則在 wsgi/programs/c2gX 目錄下各自開發 __init__.py 程式方法
+    
+    3. 完成後先在近端測試, 完全符合需求且根據標準流程, 拉下目前協同專案區最新的 github 程式碼後, 檢驗 .leo 是否可以正確開啟, 各對應目錄是否正確配置, application 是否可以正確執行後, 再推送到協同專案區, 並與各分組的 OpenShift 雲端網站進行同步.</t>
+<t tx="2014spring.20140503125211.2098"></t>
+<t tx="2014spring.20140503125211.2100"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
