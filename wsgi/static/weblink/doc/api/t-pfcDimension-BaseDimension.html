@@ -1,0 +1,397 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcBaseDimension"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      25
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDimension.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcBaseDimension</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines a base dimension, which can be a dimension or reference dimension.
+<br>
+<br>The dimension types are as follows:
+<ul type="disc">
+
+
+<li>
+DIM_LINEAR
+</li>
+
+<li>
+DIM_RADIAL
+</li>
+
+<li>
+DIM_DIAMETER
+</li>
+
+<li>
+DIM_ANGULAR
+</li>
+
+</ul>
+
+
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-BaseParameter.html">pfcBaseParameter</a>, 
+        <a class="class" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcDimension-Dimension.html">pfcDimension</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcDimension-RefDimension.html">pfcRefDimension</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcUDFGroup-UDFDimension.html">pfcUDFDimension</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimensionType.html">pfcDimensionType</a></tt></td><td class="func-signature"><tt><a class="method" href="#DimType">DimType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The dimension type</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#DimValue">DimValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The value of the dimension. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#ExtendsInNegativeDirection">ExtendsInNegativeDirection</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if the dimension is currently considered to have a negative "sign" 
+in generating its direction. If the dimension has a negative sign then the dimension is 
+oriented in the opposite manner to the default for the feature.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#Symbol">Symbol</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The dimension name or symbol </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#Texts">Texts</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The dimension text</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Erase">Erase</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases the dimension from a model or drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Show">Show</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimensionShowInstructions.html">pfcDimensionShowInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Forces the display of the dimension in a model.  
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="DimType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimensionType.html">pfcDimensionType</a></tt></td><td class="func-name"><tt>DimType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The dimension type<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#69">Dimensions and Parameters: Dimension Information</a>, <a href="../manual0/JDims.html#71">Dimensions and Parameters: Dimension Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DimValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>DimValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The value of the dimension. <br>
+<br>This is always positive if the model is fully regenerated.  Use the 
+property <tt><b><a class="method" href="t-pfcDimension-BaseDimension.html#ExtendsInNegativeDirection">pfcBaseDimension.ExtendsInNegativeDirection</a></b></tt> 
+to detect if the dimension direction is oriented opposite to the feature default. 
+ When setting this property, if a negative number is passed, 
+this will flip the direction of the dimension.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#64">Dimensions and Parameters: Dimension Information</a>, <a href="../manual0/JDims.html#71">Dimensions and Parameters: Dimension Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExtendsInNegativeDirection">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>ExtendsInNegativeDirection</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if the dimension is currently considered to have a negative "sign" 
+in generating its direction. If the dimension has a negative sign then the dimension is 
+oriented in the opposite manner to the default for the feature.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Symbol">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>Symbol</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The dimension name or symbol <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#70">Dimensions and Parameters: Dimension Information</a>, <a href="../manual0/JDims.html#71">Dimensions and Parameters: Dimension Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Texts">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>Texts</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The dimension text<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#71">Dimensions and Parameters: Dimension Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Erase">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Erase</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases the dimension from a model or drawing.
+<br>
+<br>If called on a <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></b></tt></b></tt> 
+    object, this temporarily erases the displayed dimension from the drawing. 
+     For a permanent erase please use 
+    <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#EraseFromModel2D">pfcDimension2D.EraseFromModel2D()</a></b></tt>.
+    <br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Show">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Show</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimensionShowInstructions.html">pfcDimensionShowInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Forces the display of the dimension in a model.  
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcAssembly-ComponentDimensionShowInstructions.html#Create">pfcComponentDimensionShowInstructions.Create()</a></b></tt>, <tt><b><a class="method" href="t-pfcView2D-DrawingDimensionShowInstructions.html#Create">pfcDrawingDimensionShowInstructions.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Specifies the location where the dimension should be shown:  
+	<ul>
+	
+<li>Pass <tt>null</tt> to show the dimension in the top level part or assembly. </li> 
+	
+<li>Pass an instance of <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentDimensionShowInstructions.html">pfcComponentDimensionShowInstructions</a></b></tt></b></tt> to show the dimension contained in an assembly component in a top level assembly.  </li>
+	
+<li>Pass an instance of <tt><b><tt><b><a class="enumtype" href="t-pfcView2D-DrawingDimensionShowInstructions.html">pfcDrawingDimensionShowInstructions</a></b></tt></b></tt> to show the dimension in a drawing view.</li>
+	
+</ul>
+	
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDetailItemOwner"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      135
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDetail.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDetailItemOwner</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents an object in Creo Parametric that contains detail items.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcModel2D-Model2D.html">pfcModel2D</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcModel2D-Model2D.html">pfcModel2D</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AllowReadonlyNoteSelection">AllowReadonlyNoteSelection</a>
+ (boolean&nbsp;Allow)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Controls whether or not the Creo Parametric user can select read only detail notes.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateDetailItem">CreateDetailItem</a>
+ (<a class="type" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new detail item in the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetDetailItem">GetDetailItem</a>
+ (<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type, integer&nbsp;Id)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds a specified detail item, given the identifier and type.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItems.html">pfcDetailItems</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListDetailItems">ListDetailItems</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the detail items in the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailSymbolDefItem.html">pfcDetailSymbolDefItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveSymbolDefinition">RetrieveSymbolDefinition</a>
+ (string&nbsp;FileName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;FilePath, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;Version, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;UpdateUnconditionally)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves a symbol definition from disk.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AllowReadonlyNoteSelection">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AllowReadonlyNoteSelection</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;Allow)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Controls whether or not the Creo Parametric user can select read only detail notes.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Allow</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to allow selection of readonly detail notes, <tt>false</tt> to disallow it.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateDetailItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-name"><tt>CreateDetailItem</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new detail item in the model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#189">Drawings: Listing Detail Items</a>, <a href="../manual0/jdrawfns.html#191">Drawings: Creating a Detail Item</a>, <a href="../manual0/jdrawfns.html#192">Drawings: Creating a Detail Item</a>, <a href="../manual0/jdrawfns.html#202">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#243">Drawings: Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>A data object describing the type and content of the new detail item.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The newly created detail item.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetDetailItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-name"><tt>GetDetailItem</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type, integer&nbsp;Id)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds a specified detail item, given the identifier and type.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The detail item type.</dd>
+<dt>
+<tt><b>Id</b></tt>
+</dt>
+<dd>The Creo Parametric integer identifier.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The detail item, or <tt>null</tt> if the item was not found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListDetailItems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItems.html">pfcDetailItems</a></tt></td><td class="func-name"><tt>ListDetailItems</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the detail items in the model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#187">Drawings: Listing Detail Items</a>, <a href="../manual0/jdrawfns.html#189">Drawings: Listing Detail Items</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The detail item type to search for, or <tt>null</tt> to return all detail items.</dd>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number to search, or <tt>null</tt> to search all sheets.  This argument is ignored if type is DETAIL_SYM_DEFINITION.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of detail items, or <tt>null</tt> if no items matching the input values were found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveSymbolDefinition">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailSymbolDefItem.html">pfcDetailSymbolDefItem</a></tt></td><td class="func-name"><tt>RetrieveSymbolDefinition</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;FilePath, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;Version, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;UpdateUnconditionally)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves a symbol definition from disk.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#264">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The name of the symbol definition file.</dd>
+<dt>
+<tt><b>FilePath</b></tt>
+</dt>
+<dd>The path to the symbol definition file, relative to the configuration option <i>pro_symbol_dir</i>.  <tt>null</tt> indicates that the function should search the system symbol definition directory instead.</dd>
+<dt>
+<tt><b>Version</b></tt>
+</dt>
+<dd>The numerical version of the symbol definition file, or <tt>null</tt> to retrieve the latest version.</dd>
+<dt>
+<tt><b>UpdateUnconditionally</b></tt>
+</dt>
+<dd>
+<tt>true</tt> if Creo Parametric should update existing instances of this symbol definition, <tt>false</tt> if the operation should fail if the definition already exists in the model.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

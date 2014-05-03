@@ -1,0 +1,281 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcModelItemOwner"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      354
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModelItem.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcModelItemOwner</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This is a base class for an object that has model items associated with it
+(such as a model).
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcModel-Model.html">pfcModel</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Parent.html">pfcParent</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcModel-Model.html">pfcModel</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetItemById">GetItemById</a>
+ (<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type, integer&nbsp;Id)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the specified model item, given its identifier and type.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetItemByName">GetItemByName</a>
+ (<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type, string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a model item, given a string name and type, if it exists.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItems.html">pfcModelItems</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListItems">ListItems</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Provides a list of model items of the specified type.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="GetItemById">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-name"><tt>GetItemById</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type, integer&nbsp;Id)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the specified model item, given its identifier and type.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#13">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JModelitem.html#16">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JSimpRep.html#54">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/JSimpRep.html#58">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/jdrawfns.html#103">Drawings: Obtaining Drawing Dimensions</a>, <a href="../manual0/jdrawfns.html#104">Drawings: Obtaining Drawing Dimensions</a>, <a href="../manual0/jdrawfns.html#188">Drawings: Listing Detail Items</a>, <a href="../manual0/jdrawfns.html#189">Drawings: Listing Detail Items</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of the model item (feature, edge, and so on)</dd>
+<dt>
+<tt><b>Id</b></tt>
+</dt>
+<dd>The integer identifier of the model item</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model item with the specified attributes, or <tt>null</tt> if a model item withsuch attributes has not been found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetItemByName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-name"><tt>GetItemByName</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type, string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a model item, given a string name and type, if it exists.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModelItem-ModelItem.html#GetName">pfcModelItem.GetName()</a></b></tt>, <tt><b><a class="method" href="t-pfcModelItem-ModelItem.html#SetName">pfcModelItem.SetName()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#14">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JModelitem.html#16">ModelItem: Getting ModelItem Objects</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of the model item to locate.</dd>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the model item to locate.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model item object, or <tt>null</tt>, if the item was not found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListItems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItems.html">pfcModelItems</a></tt></td><td class="func-name"><tt>ListItems</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Provides a list of model items of the specified type.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#13">Geometry Evaluation: Traversing the Geometry of a Solid Block</a>, <a href="../manual0/JGeom.html#15">Geometry Evaluation: Traversing the Geometry of a Solid Block</a>, <a href="../manual0/JModelitem.html#10">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JModelitem.html#16">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JSimpRep.html#53">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/JSimpRep.html#58">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/jdrawfns.html#102">Drawings: Obtaining Drawing Dimensions</a>, <a href="../manual0/jdrawfns.html#104">Drawings: Obtaining Drawing Dimensions</a>, <a href="../manual0/jdrawfns.html#186">Drawings: Listing Detail Items</a>, <a href="../manual0/jdrawfns.html#189">Drawings: Listing Detail Items</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of model items to retrieve. If this parameter is <tt>null</tt>, then allthe model items will be listed.<p></p>
+Note that only those surfaces associated with solid geometry are included in the list of model items when you specify <tt>ITEM_SURFACE</tt> or <tt>null</tt> as the <i>Type</i> . Surfaces of Creo Parametric Surface features and Quilts are not included. To obtain a list of the quilt features with their component datum surfaces, specify <tt>ITEM_QUILT</tt>. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of model items, or <tt>null</tt> if no model items of the specified type has been found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

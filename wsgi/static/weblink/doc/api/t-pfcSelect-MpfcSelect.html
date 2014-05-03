@@ -1,0 +1,288 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for module-level class "MpfcSelect"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      1,
+      42
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;Module
+     </td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;MpfcSelect</h2>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%" class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td width="1%" class="func-name"><tt><a class="func" href="#CreateComponentSelection">CreateComponentSelection</a></tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a>&nbsp;Path)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used to create a <tt><b><tt><b><a class="enumtype" href="t-pfcSelect-Selection.html">pfcSelection</a></b></tt></b></tt> object, based on the path to a specified component.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%" class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td width="1%" class="func-name"><tt><a class="func" href="#CreateModelItemSelection">CreateModelItemSelection</a></tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;SelItem, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a>&nbsp;Path)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used to create a <tt><b><tt><b><a class="enumtype" href="t-pfcSelect-Selection.html">pfcSelection</a></b></tt></b></tt> object, based on a <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt> and, optionally, its <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> in an assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%" class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td width="1%" class="func-name"><tt><a class="func" href="#CreateSelectionFromString">CreateSelectionFromString</a></tt></td><td class="func-params"><tt>
+ (string&nbsp;SelectionString)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new selection object, given a Web.Link style selection string.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="CreateComponentSelection">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>CreateComponentSelection</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a>&nbsp;Path)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used to create a <tt><b><tt><b><a class="enumtype" href="t-pfcSelect-Selection.html">pfcSelection</a></b></tt></b></tt> object, based on the path to a specified component.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#32">Selection: Programmatic Selection</a>, <a href="../manual0/JSelection.html#36">Selection: Programmatic Selection</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Path</b></tt>
+</dt>
+<dd>The <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> of the object to selected within an assembly.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The <tt><b><tt><b><a class="enumtype" href="t-pfcSelect-Selection.html">pfcSelection</a></b></tt></b></tt> object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateModelItemSelection">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>CreateModelItemSelection</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;SelItem, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a>&nbsp;Path)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used to create a <tt><b><tt><b><a class="enumtype" href="t-pfcSelect-Selection.html">pfcSelection</a></b></tt></b></tt> object, based on a <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt> and, optionally, its <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> in an assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#31">Selection: Programmatic Selection</a>, <a href="../manual0/JSelection.html#36">Selection: Programmatic Selection</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SelItem</b></tt>
+</dt>
+<dd>The Selected <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt>
+</dd>
+<dt>
+<tt><b>Path</b></tt>
+</dt>
+<dd>The <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> of the selected object within an assembly.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The <tt><b><tt><b><a class="enumtype" href="t-pfcSelect-Selection.html">pfcSelection</a></b></tt></b></tt> object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateSelectionFromString">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>CreateSelectionFromString</tt></td><td class="func-params"><tt>
+ (string&nbsp;SelectionString)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new selection object, given a Web.Link style selection string.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="func" href="t-pfcSelect-MpfcSelect.html#CreateModelItemSelection">MpfcSelect.CreateModelItemSelection()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcSelect-MpfcSelect.html#CreateComponentSelection">MpfcSelect.CreateComponentSelection()</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#33">Selection: Programmatic Selection</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SelectionString</b></tt>
+</dt>
+<dd>The selection string.  The string should follow the following formats (items in brackets [] are optional):<tt> TopLevelObject:[SubAsm]:[SubAs:LeafComponent]/[ModelItem] </tt>
+<p></p>
+ The top level object should provided as:<i> "name.type" </i>
+<p></p>
+Each component in the path can have one of the following formats:<ul type="disc">
+
+<li>
+ 
+<i>"name.type"</i>
+</li>
+
+<li>
+ 
+<i>"name.type(#comp_id)"</i>
+</li>
+
+<li>
+ 
+<i>"name.type(comp_name)"</i>
+</li>
+
+</ul>
+The component name is the name of the component feature in the context of its parent assembly.<p></p>
+The model item can have one of the following formats:<ul type="disc">
+
+<li>
+ 
+<i>"itemtype(#item_id) </i>
+</li>
+
+<li>
+ 
+<i>"itemtype(item_name) </i>
+</li>
+
+</ul>
+Itemtype must one of the following:<ul type="disc">
+
+<li>
+ Feature</li>
+
+<li>
+ Dimension</li>
+
+</ul>
+
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created selection object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

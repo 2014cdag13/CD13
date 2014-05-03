@@ -1,0 +1,1108 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcModel2D"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      346
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModel2D.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcModel2D</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a two-dimensional Creo Parametric model.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#ListModels">pfcBaseSession.ListModels()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModel">pfcBaseSession.GetModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromDescr">pfcBaseSession.GetModelFromDescr()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#CreateDrawingFromTemplate">pfcBaseSession.CreateDrawingFromTemplate()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#Import2DModel">pfcBaseSession.Import2DModel()</a></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDrawing-Drawing.html">pfcDrawing</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcReport-Report.html">pfcReport</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcLayout-Layout.html">pfcLayout</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcSheet-SheetOwner.html">pfcSheetOwner</a>, 
+        <a class="class" href="t-pfcDetail-DetailItemOwner.html">pfcDetailItemOwner</a>, 
+        <a class="class" href="t-pfcTable-TableOwner.html">pfcTableOwner</a>, 
+        <a class="class" href="t-pfcModel-Model.html">pfcModel</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcDrawing-Drawing.html">pfcDrawing</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcReport-Report.html">pfcReport</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcLayout-Layout.html">pfcLayout</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#TextHeight">TextHeight</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The text height of the model. The model must be in the current window inorderto access this property.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AddModel">AddModel</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;NewModel)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds a solid model to the drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AddSimplifiedRep">AddSimplifiedRep</a>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimplifiedRep)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds a new simplified representation of a model to a drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateDrawingDimension">CreateDrawingDimension</a>
+ (<a class="type" href="t-pfcDimension2D-DrawingDimCreateInstructions.html">pfcDrawingDimCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new drawing dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateView">CreateView</a>
+ (<a class="type" href="t-pfcView2D-View2DCreateInstructions.html">pfcView2DCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new view in the drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteModel">DeleteModel</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Model)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes a model from the drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteSimplifiedRep">DeleteSimplifiedRep</a>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimplifiedRep)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes a simplified representation of a model from a drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetCurrentSolid">GetCurrentSolid</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the current solid model of the drawing</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetViewByName">GetViewByName</a>
+ (string&nbsp;ViewName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a drawing view, given its name.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetViewDisplaying">GetViewDisplaying</a>
+ (<a class="type" href="t-pfcDimension-BaseDimension.html">pfcBaseDimension</a>&nbsp;Dim)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the drawing view that displays a dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-View2Ds.html">pfcView2Ds</a></tt></td><td class="func-signature"><tt><a class="method" href="#List2DViews">List2DViews</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the drawing views.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Models.html">pfcModels</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListModels">ListModels</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the models used in the drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-Dimension2Ds.html">pfcDimension2Ds</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListShownDimensions">ListShownDimensions</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Model, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the solid-model owned dimensions and reference dimensions shown in the drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpReps.html">pfcSimpReps</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListSimplifiedReps">ListSimplifiedReps</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Solid)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a list of the simplified representations referenced by the drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Regenerate">Regenerate</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Regenerates the drawing draft entities.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ReplaceModel">ReplaceModel</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;FromModel, <a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;ToModel, boolean&nbsp;Unrepresent)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Replaces a drawing model solid with another solid. The old and new solids must be members of the same family table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetCurrentSolid">SetCurrentSolid</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;NewCurrentSolid)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the current solid model for the drawing.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetViewDisplaying">SetViewDisplaying</a>
+ (<a class="type" href="t-pfcDimension-BaseDimension.html">pfcBaseDimension</a>&nbsp;Dim, <a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a>&nbsp;NewView)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the view that shows the model dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="TextHeight">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>TextHeight</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The text height of the model. The model must be in the current window inorderto access this property.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#18">Drawings: Drawing Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AddModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AddModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;NewModel)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds a solid model to the drawing.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#21">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewModel</b></tt>
+</dt>
+<dd>The model to add.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AddSimplifiedRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AddSimplifiedRep</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimplifiedRep)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds a new simplified representation of a model to a drawing.
+<br>
+<br>Allows the creation of views displaying the simplified rep.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddModel">pfcModel2D.AddModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#ListSimplifiedReps">pfcModel2D.ListSimplifiedReps()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#ListModels">pfcModel2D.ListModels()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#DeleteSimplifiedRep">pfcModel2D.DeleteSimplifiedRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#DeleteModel">pfcModel2D.DeleteModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#25">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SimplifiedRep</b></tt>
+</dt>
+<dd>The simplfied representation to add to the drawing.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateDrawingDimension">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td><td class="func-name"><tt>CreateDrawingDimension</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDimension2D-DrawingDimCreateInstructions.html">pfcDrawingDimCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new drawing dimension.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#28">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#107">Drawings: Creating Drawing Dimensions</a>, <a href="../manual0/jdrawfns.html#114">Drawings: Creating Drawing Dimensions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Data object containing information needed to place the dimension.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created dimension.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateView">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-name"><tt>CreateView</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcView2D-View2DCreateInstructions.html">pfcView2DCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new view in the drawing.
+<br>
+<br>Before calling this method, display the drawing using the <tt><b><a class="method" href="t-pfcModel-Model.html#Display">pfcModel.Display()</a></b></tt> method.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcView2D-GeneralViewCreateInstructions.html">pfcGeneralViewCreateInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcView2D-ProjectionViewCreateInstructions.html">pfcProjectionViewCreateInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#57">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Data object containing details about how to create the view.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The newly created drawing view.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Model)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes a model from the drawing.
+<br>
+<br>The model cannot appear in any drawing views.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#22">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Model</b></tt>
+</dt>
+<dd>The model to remove.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteSimplifiedRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteSimplifiedRep</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimplifiedRep)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes a simplified representation of a model from a drawing.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#DeleteModel">pfcModel2D.DeleteModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#ListSimplifiedReps">pfcModel2D.ListSimplifiedReps()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#ListModels">pfcModel2D.ListModels()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddSimplifiedRep">pfcModel2D.AddSimplifiedRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddModel">pfcModel2D.AddModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#26">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SimplifiedRep</b></tt>
+</dt>
+<dd>The simplfied representation to delete from the drawing.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCurrentSolid">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetCurrentSolid</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the current solid model of the drawing<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#16">Drawings: Drawing Information</a>, <a href="../manual0/jdrawfns.html#18">Drawings: Drawing Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The current solid model.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetViewByName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-name"><tt>GetViewByName</tt></td><td class="func-params"><tt>
+ (string&nbsp;ViewName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a drawing view, given its name.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#75">Drawings: Obtaining Drawing Views</a>, <a href="../manual0/jdrawfns.html#77">Drawings: Obtaining Drawing Views</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ViewName</b></tt>
+</dt>
+<dd>The name of the drawing view.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The drawing view, or <tt>null</tt>, if the view does not exist.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetViewDisplaying">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-name"><tt>GetViewDisplaying</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDimension-BaseDimension.html">pfcBaseDimension</a>&nbsp;Dim)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the drawing view that displays a dimension.
+<br>
+<br>Works for solid and drawing dimensions.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#76">Drawings: Obtaining Drawing Views</a>, <a href="../manual0/jdrawfns.html#77">Drawings: Obtaining Drawing Views</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Dim</b></tt>
+</dt>
+<dd>The dimension object.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The view where the dimension is displayed, or <tt>null</tt>, if the dimension is not displayed in the drawing.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="List2DViews">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-View2Ds.html">pfcView2Ds</a></tt></td><td class="func-name"><tt>List2DViews</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the drawing views.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#74">Drawings: Obtaining Drawing Views</a>, <a href="../manual0/jdrawfns.html#77">Drawings: Obtaining Drawing Views</a>, <a href="../manual0/jdrawfns.html#202">Drawings: Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The drawing views found.  This does not include the drawing sheet background view(s), returned by <tt><b><a class="method" href="t-pfcSheet-SheetOwner.html#GetSheetBackgroundView">pfcSheetOwner.GetSheetBackgroundView()</a></b></tt>.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListModels">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Models.html">pfcModels</a></tt></td><td class="func-name"><tt>ListModels</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the models used in the drawing.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#15">Drawings: Drawing Information</a>, <a href="../manual0/jdrawfns.html#18">Drawings: Drawing Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of models used in the drawing, or <tt>null</tt>, if no models are used.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListShownDimensions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-Dimension2Ds.html">pfcDimension2Ds</a></tt></td><td class="func-name"><tt>ListShownDimensions</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Model, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the solid-model owned dimensions and reference dimensions shown in the drawing.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Model</b></tt>
+</dt>
+<dd>The model which owns the dimensions.</dd>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of dimension to find, or <tt>null</tt> to find normal and reference dimensions.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of dimensions and reference dimensions.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListSimplifiedReps">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpReps.html">pfcSimpReps</a></tt></td><td class="func-name"><tt>ListSimplifiedReps</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Solid)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a list of the simplified representations referenced by the drawing.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#ListModels">pfcModel2D.ListModels()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddSimplifiedRep">pfcModel2D.AddSimplifiedRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddModel">pfcModel2D.AddModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#DeleteSimplifiedRep">pfcModel2D.DeleteSimplifiedRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#DeleteModel">pfcModel2D.DeleteModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#17">Drawings: Drawing Information</a>, <a href="../manual0/jdrawfns.html#18">Drawings: Drawing Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Solid</b></tt>
+</dt>
+<dd>The solid model owner of the simplified representations.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of simplified representations found, or <tt>null</tt>, if no representations were found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Regenerate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Regenerate</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Regenerates the drawing draft entities.
+<br>
+<br>If the model is a layout, this regenerates the layout and its relations.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#27">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ReplaceModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ReplaceModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;FromModel, <a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;ToModel, boolean&nbsp;Unrepresent)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Replaces a drawing model solid with another solid. The old and new solids must be members of the same family table.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddModel">pfcModel2D.AddModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#ListModels">pfcModel2D.ListModels()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#DeleteModel">pfcModel2D.DeleteModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#23">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FromModel</b></tt>
+</dt>
+<dd>The model to be replaced.</dd>
+<dt>
+<tt><b>ToModel</b></tt>
+</dt>
+<dd>The model to use as the replacement.</dd>
+<dt>
+<tt><b>Unrepresent</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to unrepresent any simplified views of the old model in the drawing, <tt>false</tt> to fail if the old model has one or more simplified views in the drawing.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetCurrentSolid">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetCurrentSolid</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;NewCurrentSolid)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the current solid model for the drawing.<br>
+<br>Before calling this method, the solid model must be assigned to the drawing 
+using <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#AddModel">pfcModel2D.AddModel()</a></b></tt>. To see changes to parameters 
+and fields reflecting the change of the current solid model, regenerate the drawing 
+using <tt><b><a class="method" href="t-pfcSheet-SheetOwner.html#RegenerateSheet">pfcSheetOwner.RegenerateSheet()</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#24">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewCurrentSolid</b></tt>
+</dt>
+<dd>The solid model to be made current.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetViewDisplaying">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetViewDisplaying</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDimension-BaseDimension.html">pfcBaseDimension</a>&nbsp;Dim, <a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a>&nbsp;NewView)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the view that shows the model dimension.
+<br>
+<br>Before calling this method, dimension should be displayed in the drawing.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Dim</b></tt>
+</dt>
+<dd>The model dimension.</dd>
+<dt>
+<tt><b>NewView</b></tt>
+</dt>
+<dd>The view in which to show this dimension.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

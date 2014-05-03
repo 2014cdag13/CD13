@@ -1,0 +1,341 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcModelItem"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      352
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModelItem.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcModelItem</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines a model item. 
+<br>
+<br>A model item is an object associated with a model (such as feature, 
+surface, dimension, etc.) that is identified by an integer.
+<p></p>
+
+The possible types of model item are as follows:
+<p></p>
+
+
+<ul type="disc">
+
+
+<li>
+ITEM_FEATURE
+</li>
+
+<li>
+ITEM_SURFACE
+</li>
+
+<li>
+ITEM_EDGE
+</li>
+
+<li>
+ITEM_COORD_SYS
+</li>
+
+<li>
+ITEM_AXIS
+</li>
+
+<li>
+ITEM_POINT
+</li>
+
+<li>
+ITEM_QUILT 
+</li>
+
+<li>
+ITEM_CURVE
+</li>
+
+<li>
+ITEM_LAYER
+</li>
+
+<li>
+ITEM_NOTE
+</li>
+
+<li>
+ITEM_DIMENSION
+</li>
+
+<li>
+ITEM_REF_DIMENSION
+</li>
+
+</ul>
+
+
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Child.html">pfcChild</a>, 
+        <a class="class" href="t-pfcBase-ActionSource.html">pfcActionSource</a>, 
+        <a class="class" href="t-pfcModelItem-RelationOwner.html">pfcRelationOwner</a>, 
+        <a class="class" href="t-pfcModelItem-ParameterOwner.html">pfcParameterOwner</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcLayer-Layer.html">pfcLayer</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcLayer-SolidGeometryLayerItem.html">pfcSolidGeometryLayerItem</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-Edge.html">pfcEdge</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-Surface.html">pfcSurface</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-CoordSystem.html">pfcCoordSystem</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-Axis.html">pfcAxis</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-Quilt.html">pfcQuilt</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-Curve.html">pfcCurve</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcDimension-BaseDimension.html">pfcBaseDimension</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcFeature-Feature.html">pfcFeature</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcAssembly-ExplodedState.html">pfcExplodedState</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcTable-Table.html">pfcTable</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcNote-Note.html">pfcNote</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#Id">Id</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The identifier of the model item</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a></tt></td><td class="func-signature"><tt><a class="method" href="#Type">Type</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The type of model item</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GetName">GetName</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the name of a model item.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetName">SetName</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the item name.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Id">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>Id</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The identifier of the model item<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#21">ModelItem: ModelItem Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Type">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemType.html">pfcModelItemType</a></tt></td><td class="func-name"><tt>Type</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The type of model item<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#22">ModelItem: ModelItem Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="GetName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GetName</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the name of a model item.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#19">ModelItem: ModelItem Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetName</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the item name.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#20">ModelItem: ModelItem Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The new item name.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

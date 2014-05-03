@@ -1,0 +1,695 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcModelDescriptor"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      349
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModel.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcModelDescriptor</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class includes the information that identifies a Creo Parametric model or file.
+<br>
+<br>Model descriptors can be used to represent models that are not currently in session.
+<p></p>
+
+The possible model types are as follows:
+<ul type="disc">
+
+
+<li>
+MDL_ASSEMBLY
+</li>
+
+<li>
+MDL_PART
+</li>
+
+<li>
+MDL_DRAWING
+</li>
+
+<li>
+MDL_2D_SECTION
+</li>
+
+<li>
+MDL_LAYOUT
+</li>
+
+<li>
+MDL_DWG_FORMAT
+</li>
+
+<li>
+MDL_MFG
+</li>
+
+<li>
+MDL_REPORT
+</li>
+
+<li>
+MDL_MARKUP
+</li>
+
+<li>
+MDL_DIAGRAM
+</li>
+
+</ul>
+
+
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Backup">pfcModel.Backup()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#OpenFile">pfcBaseSession.OpenFile()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromDescr">pfcBaseSession.GetModelFromDescr()</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#Device">Device</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The device. On UNIX systems, this field contains an empty string. If you change this value on a UNIX system, Creo Parametric may experience problems when reading or writing the file.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#FileVersion">FileVersion</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The version of the file</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GenericName">GenericName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the generic model. If the model is not an instance, this attribute must be <tt>null</tt> or an empty string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#Host">Host</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The host. If the model resides on the local Windows or UNIX host, this field contains an empty string. If you change this value, Creo Parametric may experience problems when reading or writing the file.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#InstanceName">InstanceName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the model, or, if the model is an instance, the instance name. This string can be neither <tt>null</tt> nor empty. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#Path">Path</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The path to the file. Note that this argument is ignored by the RetrieveModel method.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td><td class="func-signature"><tt><a class="method" href="#Type">Type</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The model type.  If the model descriptor represents a Creo Parametric related file that is not a true model type, a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XUnusedValue.html">pfcXUnusedValue</a></b></tt></b></tt> exception will result if you try to access this value.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type, string&nbsp;InstanceName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;GenericName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new model descriptor. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateFromFileName">CreateFromFileName</a>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new model descriptor object, given a file name string.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetExtension">GetExtension</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the extension of the model identified by the model descriptor.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetFileName">GetFileName</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the file name for the object represented by the model descriptor.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetFullName">GetFullName</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the full name of the model identified by the model descriptor.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Device">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>Device</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The device. On UNIX systems, this field contains an empty string. If you change this value on a UNIX system, Creo Parametric may experience problems when reading or writing the file.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#21">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FileVersion">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>FileVersion</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The version of the file<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#23">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GenericName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GenericName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the generic model. If the model is not an instance, this attribute must be <tt>null</tt> or an empty string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#17">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Host">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>Host</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The host. If the model resides on the local Windows or UNIX host, this field contains an empty string. If you change this value, Creo Parametric may experience problems when reading or writing the file.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#20">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="InstanceName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>InstanceName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the model, or, if the model is an instance, the instance name. This string can be neither <tt>null</tt> nor empty. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#18">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Path">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>Path</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The path to the file. Note that this argument is ignored by the RetrieveModel method.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#22">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Type">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td><td class="func-name"><tt>Type</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The model type.  If the model descriptor represents a Creo Parametric related file that is not a true model type, a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XUnusedValue.html">pfcXUnusedValue</a></b></tt></b></tt> exception will result if you try to access this value.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#19">Models: Model Descriptors</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type, string&nbsp;InstanceName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;GenericName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new model descriptor. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#15">Models: Model Descriptors</a>, <a href="../manual0/JModel.html#25">Models: Model Descriptors</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The model type</dd>
+<dt>
+<tt><b>InstanceName</b></tt>
+</dt>
+<dd>The name of the model, or, if the model is an instance, the instance name.This string can be neither <tt>null</tt> nor empty.</dd>
+<dt>
+<tt><b>GenericName</b></tt>
+</dt>
+<dd>The name of the generic model. If the model is not an instance, this attributemust be <tt>null</tt> or an empty string.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new <i>ModelDescriptor</i>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateFromFileName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-name"><tt>CreateFromFileName</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new model descriptor object, given a file name string.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-ModelDescriptor.html#GetFileName">pfcModelDescriptor.GetFileName()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel-ModelDescriptor.html#Create">pfcModelDescriptor.Create()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromFileName">pfcBaseSession.GetModelFromFileName()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#16">Models: Model Descriptors</a>, <a href="../manual0/JModel.html#25">Models: Model Descriptors</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The file name, of the form "&lt;name&gt;.&lt;extension&gt;".</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new model descriptor object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetExtension">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetExtension</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the extension of the model identified by the model descriptor.
+<br>
+<br>Model extension gives an extension of the file which stores the model 
+information. Models of the same type have the same extension.
+The following model extensions are used:
+<ul type="disc">
+
+
+<li>
+"asm" - for MDL_ASSEMBLY
+</li>
+
+<li>
+"prt" - for MDL_PART
+</li>
+
+<li>
+"drw" - for MDL_DRAWING
+</li>
+
+<li>
+"sec" - for MDL_2D_SECTION and for MDL_3D_SECTION
+</li>
+
+<li>
+"lay" - for MDL_LAYOUT
+</li>
+
+<li>
+"frm" - for MDL_DWG_FORMAT
+</li>
+
+<li>
+"mfg" - for MDL_MFG
+</li>
+
+<li>
+"rep" - for MDL_REPORT
+</li>
+
+<li>
+"mrk" - for MDL_MARKUP
+</li>
+
+<li>
+"dgm" - for MDL_DIAGRAM
+</li>
+
+</ul>
+
+Other extensions may be returned for a model descriptor that represents a Creo Parametric file that does not match one of the above types.
+<br>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model extension </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetFileName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetFileName</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the file name for the object represented by the model descriptor.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-ModelDescriptor.html#CreateFromFileName">pfcModelDescriptor.CreateFromFileName()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel-ModelDescriptor.html#Create">pfcModelDescriptor.Create()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromFileName">pfcBaseSession.GetModelFromFileName()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The file name, of the form "&lt;name&gt;.&lt;extension&gt;".</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetFullName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetFullName</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the full name of the model identified by the model descriptor.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#24">Models: Model Descriptors</a>, <a href="../manual0/WBrowser.html#28">The Web.Link Online Browser: APIWizard Interface</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The name of the model. If the model is an instance, its full name has the form<i>InstanceName</i>&lt;<i>GenericName</i>&gt;</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

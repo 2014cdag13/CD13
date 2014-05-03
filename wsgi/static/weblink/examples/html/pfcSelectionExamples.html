@@ -1,0 +1,138 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcSelectionExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function selectItems_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+      {
+      var optArray = new Array ();
+      var options = document.IS.selectOpts.options;
+      for (var i = 0; i < options.length; i++)
+      {
+      if (options[i].selected)
+      optArray.push (options[i].value);				
+      }
+      
+      selectItems (optArray, document.IS.numSelections.value);
+      }
+      catch (err)
+      {
+      alert ("Exception occurred: "+pfcGetExceptionType (err));
+      }
+}
+
+function createAndHighlightSelections_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createAndHighlightSelections (document.PS.featureName.value);
+		}
+	catch (err)
+		{
+					alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Selection Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=IS>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Prompting for selection</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“selectItems”) demonstrates interactive
+  selection.<span style="mso-spacerun: yes">   </span>Choose one or more
+  strings to use for selection item types, and enter the maximum number of
+  selections.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><SELECT MULTIPLE NAME="selectOpts" SIZE="4"
+  id=selectOpts>
+<OPTION VALUE="feature">feature
+<OPTION VALUE="prt_or_asm">prt_or_asm
+<OPTION VALUE="edge">edge
+<OPTION VALUE="surface">surface
+<OPTION VALUE="draft_ent">draft_ent
+<OPTION VALUE="any_note">any_note
+</SELECT><INPUT TYPE="text" NAME="numSelections" VALUE="UNLIMITED"
+  id=numSelections>
+  <input type=button value=Select id=button1 name=button1 onclick="selectItems_wrapper()">
+  </p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<p style='tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=PS>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Programmatic selection</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“createAndHighlightSelections”)
+  demonstrates programmatic selection.<span style="mso-spacerun: yes">  
+  </span>Enter the name of feature(s) found in the current assembly.<span
+  style="mso-spacerun: yes">  </span>This function traverses the assembly and
+  highlights each feature with the given name.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><INPUT TYPE="text" NAME="featureName"
+  id=featureName>
+  <input type=button value=Highlight id=button1 name=button1 onclick="createAndHighlightSelections_wrapper()">
+  </p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

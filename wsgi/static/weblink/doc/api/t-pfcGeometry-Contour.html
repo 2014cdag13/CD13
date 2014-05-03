@@ -1,0 +1,388 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcContour"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      64
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcGeometry.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcContour</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes a contour.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Object.html">pfcObject</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-ContourTraversal.html">pfcContourTraversal</a></tt></td><td class="func-signature"><tt><a class="method" href="#InternalTraversal">InternalTraversal</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Determines if a countour's traversal is internal or external.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#EvalArea">EvalArea</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the surface area inside the given outer contour,
+accounting for internal voids.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Outline2D.html">pfcOutline2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalOutline">EvalOutline</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the two-dimensional bounding box of the surface inside the outer
+contour.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-Contour.html">pfcContour</a></tt></td><td class="func-signature"><tt><a class="method" href="#FindContainingContour">FindContainingContour</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the innermost contour that encloses the specified
+contour.  If the specified contour is internal, the returned
+contour will be external, and vice versa.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-Edges.html">pfcEdges</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListElements">ListElements</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets an array of edges for the contour. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Placement.html">pfcPlacement</a></tt></td><td class="func-signature"><tt><a class="method" href="#VerifyUV">VerifyUV</a>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Verifies whether the specified UV point lies within the
+given contour.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="InternalTraversal">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-ContourTraversal.html">pfcContourTraversal</a></tt></td><td class="func-name"><tt>InternalTraversal</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Determines if a countour's traversal is internal or external.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#66">Geometry Evaluation: Contours</a>, <a href="../manual0/JGeom.html#70">Geometry Evaluation: Contours</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="EvalArea">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>EvalArea</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the surface area inside the given outer contour,
+accounting for internal voids.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#68">Geometry Evaluation: Contours</a>, <a href="../manual0/JGeom.html#70">Geometry Evaluation: Contours</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The contour area</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalOutline">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Outline2D.html">pfcOutline2D</a></tt></td><td class="func-name"><tt>EvalOutline</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the two-dimensional bounding box of the surface inside the outer
+contour.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#69">Geometry Evaluation: Contours</a>, <a href="../manual0/JGeom.html#70">Geometry Evaluation: Contours</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The bounding box, as an array of points</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FindContainingContour">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-Contour.html">pfcContour</a></tt></td><td class="func-name"><tt>FindContainingContour</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the innermost contour that encloses the specified
+contour.  If the specified contour is internal, the returned
+contour will be external, and vice versa.
+<br>
+<br>In case the specified contour is 
+   the outermost contour for the surface then <tt>null</tt> is returned.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#67">Geometry Evaluation: Contours</a>, <a href="../manual0/JGeom.html#70">Geometry Evaluation: Contours</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The containing contour.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListElements">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-Edges.html">pfcEdges</a></tt></td><td class="func-name"><tt>ListElements</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets an array of edges for the contour. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#15">Geometry Evaluation: Traversing the Geometry of a Solid Block</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of edges</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="VerifyUV">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Placement.html">pfcPlacement</a></tt></td><td class="func-name"><tt>VerifyUV</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Verifies whether the specified UV point lies within the
+given contour.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#70">Geometry Evaluation: Contours</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Params</b></tt>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The function returns one of the following values:<ul type="disc">
+
+<li>
+PLACE_ON_BOUNDARY -- The point is on the contour.</li>
+
+<li>
+PLACE_OUTSIDE -- The point is outside the contour.</li>
+
+<li>
+PLACE_INSIDE -- The point is inside the contour. </li>
+
+</ul>
+
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

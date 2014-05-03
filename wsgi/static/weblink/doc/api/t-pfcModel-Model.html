@@ -1,0 +1,1888 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcModel"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      345
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModel.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcModel</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class specifies the information about a model which is currently in session.
+<br>
+<br>Attributes <i>Revision</i>, <i>Version</i>, <i>Branch</i> and <i>ReleaseLevel</i> are 
+used for data management applications. Attributes <i>FullName</i>, <i>GenericName</i>, 
+<i>InstanceName</i> and <i>Type</i> have the same values as the corresponding 
+attributes of the model descriptor <i>Descr</i>. 
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcSolid-Solid.html">pfcSolid</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel2D-Model2D.html">pfcModel2D</a></b></tt></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#ListModels">pfcBaseSession.ListModels()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModel">pfcBaseSession.GetModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromDescr">pfcBaseSession.GetModelFromDescr()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetByRelationId">pfcBaseSession.GetByRelationId()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#CreateModelWindow">pfcBaseSession.CreateModelWindow()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#ImportNewModel">pfcBaseSession.ImportNewModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-ModelItemOwner.html">pfcModelItemOwner</a>, 
+        <a class="class" href="t-pfcView-ViewOwner.html">pfcViewOwner</a>, 
+        <a class="class" href="t-pfcObject-Child.html">pfcChild</a>, 
+        <a class="class" href="t-pfcBase-ActionSource.html">pfcActionSource</a>, 
+        <a class="class" href="t-pfcModelItem-RelationOwner.html">pfcRelationOwner</a>, 
+        <a class="class" href="t-pfcModelItem-ParameterOwner.html">pfcParameterOwner</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcSolid-Solid.html">pfcSolid</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcDrawingFormat-DrawingFormat.html">pfcDrawingFormat</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcModel2D-Model2D.html">pfcModel2D</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcMFG-MFG.html">pfcMFG</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcSection-Section2D.html">pfcSection2D</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcDiagram-Diagram.html">pfcDiagram</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcMarkup-Markup.html">pfcMarkup</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Branch">Branch</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The branch. This attribute can be <tt>null</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#CommonName">CommonName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The common name for the model.  This is the name that will shown for the model in Windchill PDM.  It can be modified for models which are not owned by PDM.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-signature"><tt><a class="method" href="#Descr">Descr</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The model descriptor. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#FileName">FileName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The model file name in "name"."type" format.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#FullName">FullName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The full name of the model in instance&lt;generic&gt; format.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GenericName">GenericName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the generic model. If the model is not an instance, this attributemust be <tt>null</tt> or an empty string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#InstanceName">InstanceName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the model, or, if the model is an instance, the instance name.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsModified">IsModified</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A Boolean flag that specifies whether the model has been modified since the last save.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Origin">Origin</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The location of the origin of the model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PostRegenerationRelations">PostRegenerationRelations</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The list of the post-regeneration relations assigned to the model.
+  This attribute can be <tt>null</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#RelationId">RelationId</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The relation identifier. This attribute can be <tt>null</tt>. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#ReleaseLevel">ReleaseLevel</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The release level. This attribute can be <tt>null</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Revision">Revision</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The revision number. This attribute can be <tt>null</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td><td class="func-signature"><tt><a class="method" href="#Type">Type</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The model type.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Version">Version</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The version. This attribute can be <tt>null</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#VersionStamp">VersionStamp</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The version stamp.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExternal-ExternalDataAccess.html">pfcExternalDataAccess</a></tt></td><td class="func-signature"><tt><a class="method" href="#AccessExternalData">AccessExternalData</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Initializes External Data access
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Backup">Backup</a>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;WhereTo)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Backs up the model to a specified directory. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#CheckIsModifiable">CheckIsModifiable</a>
+ (boolean&nbsp;ShowUI)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Check if given model is modifiable, indicating that the model could be saved 
+    (without checking for any subordinate models).</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#CheckIsSaveAllowed">CheckIsSaveAllowed</a>
+ (boolean&nbsp;ShowUI)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Check if given model can be saved along with all its subordinate models that 
+    are to be saved together with it according to their modification status and the configuration 
+    option 'save_objects'.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Copy">Copy</a>
+ (string&nbsp;NewName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-CopyInstructions.html">pfcCopyInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Copies the disk file for the model to another named file. The model copy is 
+not retrieved into the session.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#CopyAndRetrieve">CopyAndRetrieve</a>
+ (string&nbsp;NewName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-CopyInstructions.html">pfcCopyInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Copies the model to a new one, and retrieves the new model into memory.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcLayer-Layer.html">pfcLayer</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateLayer">CreateLayer</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new layer in the object.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Delete">Delete</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes the model from memory and disk.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeletePostRegenerationRelations">DeletePostRegenerationRelations</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes the post-regeneration relations in the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Display">Display</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Displays the model in its window.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Erase">Erase</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases the model from the session. This method does not delete the model file
+from the disk.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#EraseWithDependencies">EraseWithDependencies</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases the model from the session.
+<p></p>
+
+This method also erases all of the models that this model depdends on from disk, so long as the dependencies are not needed by other items in session.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Export">Export</a>
+ (string&nbsp;FileName, <a class="type" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a>&nbsp;ExportData)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Exports model data to a file or creates a plot.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Import">Import</a>
+ (string&nbsp;FilePath, <a class="type" href="t-pfcModel-ImportInstructions.html">pfcImportInstructions</a>&nbsp;ImportData)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Reads a file into Creo Parametric.
+ The format must be the same as if these files were created by Creo Parametric.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsCommonNameModifiable">IsCommonNameModifiable</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if the model common name (<tt><b><a class="method" href="t-pfcModel-Model.html#CommonName">pfcModel.CommonName</a></b></tt>) can be modified. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ModelDescriptors.html">pfcModelDescriptors</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListDeclaredModels">ListDeclaredModels</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds all the first-level objects declared for the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Dependencies.html">pfcDependencies</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListDependencies">ListDependencies</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the first-level dependencies for the model in
+the Creo Parametric workspace.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RegeneratePostRegenerationRelations">RegeneratePostRegenerationRelations</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Regenerates the post-regeneration relations in the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Rename">Rename</a>
+ (string&nbsp;NewName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;RenameFilesToo)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Renames the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Save">Save</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Writes the model to disk.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#TerminateExternalData">TerminateExternalData</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Cleans up the setup required for the generic application data operations for the specified model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Branch">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Branch</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The branch. This attribute can be <tt>null</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#48">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CommonName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>CommonName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The common name for the model.  This is the name that will shown for the model in Windchill PDM.  It can be modified for models which are not owned by PDM.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#36">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Descr">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-name"><tt>Descr</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The model descriptor. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#43">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FileName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>FileName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The model file name in "name"."type" format.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#35">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FullName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>FullName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The full name of the model in instance&lt;generic&gt; format.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#25">Models: Model Descriptors</a>, <a href="../manual0/JModel.html#38">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>, <a href="../manual0/WBrowser.html#28">The Web.Link Online Browser: APIWizard Interface</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GenericName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GenericName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the generic model. If the model is not an instance, this attributemust be <tt>null</tt> or an empty string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#39">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="InstanceName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>InstanceName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the model, or, if the model is an instance, the instance name.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#40">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsModified">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsModified</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A Boolean flag that specifies whether the model has been modified since the last save.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#45">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Origin">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Origin</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The location of the origin of the model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#41">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PostRegenerationRelations">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PostRegenerationRelations</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The list of the post-regeneration relations assigned to the model.
+  This attribute can be <tt>null</tt>.<br>
+<br>This attribute is a complement of 
+  pfcModelItem::RelationOwner::Relations which does not contain post regeneration relations. 
+ The obtained post regeneration relations attribute can be used in 
+ pfcModelItem::RelationOwner::SetRelations(/*optional*/ stringseq value), 
+ <tt><b><a class="method" href="t-pfcModelItem-RelationOwner.html#RegenerateRelations">pfcRelationOwner.RegenerateRelations()</a></b></tt> and
+ <tt><b><a class="method" href="t-pfcModelItem-RelationOwner.html#DeleteRelations">pfcRelationOwner.DeleteRelations()</a></b></tt>. 
+ <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JRelations.html#8">Relations: Accessing Post Regeneration Relations</a>, <a href="../manual0/JRelations.html#10">Relations: Accessing Post Regeneration Relations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RelationId">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>RelationId</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The relation identifier. This attribute can be <tt>null</tt>. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#42">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ReleaseLevel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>ReleaseLevel</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The release level. This attribute can be <tt>null</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#49">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Revision">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Revision</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The revision number. This attribute can be <tt>null</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#47">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Type">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td><td class="func-name"><tt>Type</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The model type.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#44">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Version">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Version</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The version. This attribute can be <tt>null</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#46">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="VersionStamp">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>VersionStamp</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The version stamp.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#50">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AccessExternalData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExternal-ExternalDataAccess.html">pfcExternalDataAccess</a></tt></td><td class="func-name"><tt>AccessExternalData</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Initializes External Data access
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JExtern.html#5">External Data: Accessing External Data</a>, <a href="../manual0/JExtern.html#7">External Data: Accessing External Data</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>ExternalDataAccess object used to access model's external dara</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Backup">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Backup</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;WhereTo)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Backs up the model to a specified directory. 
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel-Model.html#Copy">pfcModel.Copy()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#3">Digital Rights Management: Exception Types</a>, <a href="../manual0/JModel.html#64">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>WhereTo</b></tt>
+</dt>
+<dd>The path to the directory where the backup copy is created. (The backup has the same file name as the original.)</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CheckIsModifiable">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>CheckIsModifiable</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;ShowUI)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Check if given model is modifiable, indicating that the model could be saved 
+    (without checking for any subordinate models).<br>
+<br> For a generic model, if ShowUI is <tt>true</tt>, all its instances are also 
+    checked.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#53">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ShowUI</b></tt>
+</dt>
+<dd>Indicates whether the Conflicts dialog should be shown to 
+   user to resolve conflicts (if they are detected); when set to <tt>false</tt> no UI is enabled 
+   and the model is considered as modifiable if there are no conflicts that could not be 
+   overridden or resolved by default resolution actions.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The access status. If it is <tt>true</tt>, the model is modifiable.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CheckIsSaveAllowed">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>CheckIsSaveAllowed</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;ShowUI)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Check if given model can be saved along with all its subordinate models that 
+    are to be saved together with it according to their modification status and the configuration 
+    option 'save_objects'.<br>
+<br>This will also check the current UI context to see if it is currently safe to save the 
+    model, and so calling this function at different times might return different results.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#5">Digital Rights Management: Additional DRM Implications</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ShowUI</b></tt>
+</dt>
+<dd>Indicates whether the Conflicts dialog should be shown to 
+    user to resolve conflicts (if they are detected); when set to <tt>false</tt> no UI is enabled 
+    and the model is considered as modifiable if there are no conflicts that could not be 
+    overridden or resolved by default resolution actions.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The boolean save access status. If it is <tt>true</tt>, the check is successful. If it is 
+    <tt>false</tt>, the model or at least one of its subordinate models can not be saved 
+    due to remaining unresolved non-overridable conflicts. Conflicts will not be shown 
+    if the model currently cannot be saved due to UI restrictions; the function will return 
+    <tt>false</tt> regardless of this flag.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Copy">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Copy</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-CopyInstructions.html">pfcCopyInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Copies the disk file for the model to another named file. The model copy is 
+not retrieved into the session.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#CopyAndRetrieve">pfcModel.CopyAndRetrieve()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#3">Digital Rights Management: Exception Types</a>, <a href="../manual0/JModel.html#65">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewName</b></tt>
+</dt>
+<dd>The new name of the model</dd>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Reserved for the future. Pass <tt>null</tt>.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CopyAndRetrieve">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>CopyAndRetrieve</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-CopyInstructions.html">pfcCopyInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Copies the model to a new one, and retrieves the new model into memory.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Copy">pfcModel.Copy()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#66">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewName</b></tt>
+</dt>
+<dd>The new name of the model</dd>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Reserved for the future. Pass <tt>null</tt>.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The copied model</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateLayer">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcLayer-Layer.html">pfcLayer</a></tt></td><td class="func-name"><tt>CreateLayer</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new layer in the object.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#37">ModelItem: Getting Layer Objects</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the new layer</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created layer</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Delete">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Delete</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes the model from memory and disk.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Erase">pfcModel.Erase()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#71">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeletePostRegenerationRelations">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeletePostRegenerationRelations</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes the post-regeneration relations in the model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JRelations.html#10">Relations: Accessing Post Regeneration Relations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Display">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Display</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Displays the model in its window.
+<br>
+<br>Does not support display of 2D section models.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#72">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>, <a href="../manual0/JWinView.html#11">Windows and Views: Getting a Window Object</a>, <a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Erase">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Erase</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases the model from the session. This method does not delete the model file
+from the disk.
+<br>
+<br>If the model is displayed in a window, the model is marked to be erased when control returns the Creo Parametric UI from the application.  It is not erased immediately.
+<p></p>
+
+Models used by other models cannot be erased until the models dependent upon them are erased.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#EraseWithDependencies">pfcModel.EraseWithDependencies()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#EraseUndisplayedModels">pfcBaseSession.EraseUndisplayedModels()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#5">Digital Rights Management: Additional DRM Implications</a>, <a href="../manual0/JModel.html#69">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EraseWithDependencies">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>EraseWithDependencies</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases the model from the session.
+<p></p>
+
+This method also erases all of the models that this model depdends on from disk, so long as the dependencies are not needed by other items in session.
+<br>
+<br>If the model is displayed in a window, the model is marked to be erased when control returns the Creo Parametric UI from the application.  It is not erased immediately.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Erase">pfcModel.Erase()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#EraseUndisplayedModels">pfcBaseSession.EraseUndisplayedModels()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#5">Digital Rights Management: Additional DRM Implications</a>, <a href="../manual0/JModel.html#70">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Export">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Export</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName, <a class="type" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a>&nbsp;ExportData)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Exports model data to a file or creates a plot.
+<br>
+<br>The exported file(s) will be typically be placed in the current Creo Parametric working directory.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcWindow-Window.html#ExportRasterImage">pfcWindow.ExportRasterImage()</a></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-RelationExportInstructions.html">pfcRelationExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-IGESFileExportInstructions.html">pfcIGESFileExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ModelInfoExportInstructions.html">pfcModelInfoExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ProgramExportInstructions.html">pfcProgramExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DXFExportInstructions.html">pfcDXFExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DWGSetupExportInstructions.html">pfcDWGSetupExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-FeatIdExportInstructions.html">pfcFeatIdExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-FeatInfoExportInstructions.html">pfcFeatInfoExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-MFGFeatCLExportInstructions.html">pfcMFGFeatCLExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-MFGOperCLExportInstructions.html">pfcMFGOperCLExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-CATIAFacetsExportInstructions.html">pfcCATIAFacetsExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-RenderExportInstructions.html">pfcRenderExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-STLASCIIExportInstructions.html">pfcSTLASCIIExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-STLBinaryExportInstructions.html">pfcSTLBinaryExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-InventorExportInstructions.html">pfcInventorExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-IGES3DExportInstructions.html">pfcIGES3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-STEPExportInstructions.html">pfcSTEPExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-VDAExportInstructions.html">pfcVDAExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcModel::SETExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-FIATExportInstructions.html">pfcFIATExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcModel::CATIAExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-BOMExportInstructions.html">pfcBOMExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-MaterialExportInstructions.html">pfcMaterialExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ConnectorParamExportInstructions.html">pfcConnectorParamExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-CGMFILEExportInstructions.html">pfcCGMFILEExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-VRMLModelExportInstructions.html">pfcVRMLModelExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-PlotInstructions.html">pfcPlotInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-STEP3DExportInstructions.html">pfcSTEP3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcExport::SET3DExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-VDA3DExportInstructions.html">pfcVDA3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-IGES3DNewExportInstructions.html">pfcIGES3DNewExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcExport::CATIA3DExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-CATIAModel3DExportInstructions.html">pfcCATIAModel3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-ACIS3DExportInstructions.html">pfcACIS3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-CATIASession3DExportInstructions.html">pfcCATIASession3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcExport::PDGS3DExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-CADDSExportInstructions.html">pfcCADDSExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-NEUTRALFileExportInstructions.html">pfcNEUTRALFileExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-ProductViewExportInstructions.html">pfcProductViewExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-STEP2DExportInstructions.html">pfcSTEP2DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-CableParamsFileInstructions.html">pfcCableParamsFileInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#3">Digital Rights Management: Exception Types</a>, <a href="../manual0/Jinterface.html#5">Interface: Exporting Files and 2D Models</a>, <a href="../manual0/Jinterface.html#61">Interface: Exporting to PDF and U3D</a>, <a href="../manual0/Jinterface.html#62">Interface: Exporting 3D Geometry</a>, <a href="../manual0/Jinterface.html#88">Interface: Export Utilities</a>, <a href="../manual0/Jinterface.html#184">Interface: Printer Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The name of the export file.<p></p>
+When <i>ExportData</i> is a <tt><b><tt><b><a class="enumtype" href="t-pfcModel-VRMLExportInstructions.html">pfcVRMLExportInstructions</a></b></tt></b></tt> object, <i>Name</i> specifies the directory where the VRML files will be created.</dd>
+<dt>
+<tt><b>ExportData</b></tt>
+</dt>
+<dd>An export-instructions object that controls the exporting or plotting operation.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Import">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Import</tt></td><td class="func-params"><tt>
+ (string&nbsp;FilePath, <a class="type" href="t-pfcModel-ImportInstructions.html">pfcImportInstructions</a>&nbsp;ImportData)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Reads a file into Creo Parametric.
+ The format must be the same as if these files were created by Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcModel-Import2DInstructions.html">pfcImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-STEPImport2DInstructions.html">pfcSTEPImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-IGESImport2DInstructions.html">pfcIGESImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DXFImport2DInstructions.html">pfcDXFImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DWGImport2DInstructions.html">pfcDWGImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcModel::SETImport2DInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcModel::CADAMImport2DInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-RelationImportInstructions.html">pfcRelationImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-IGESSectionImportInstructions.html">pfcIGESSectionImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ProgramImportInstructions.html">pfcProgramImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ConfigImportInstructions.html">pfcConfigImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DWGSetupImportInstructions.html">pfcDWGSetupImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SpoolImportInstructions.html">pfcSpoolImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ConnectorParamsImportInstructions.html">pfcConnectorParamsImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-CableParamsImportInstructions.html">pfcCableParamsImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-ASSEMTreeCFGImportInstructions.html">pfcASSEMTreeCFGImportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-WireListImportInstructions.html">pfcWireListImportInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#118">Interface: Importing Files</a>, <a href="../manual0/Jinterface.html#133">Interface: Import Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FilePath</b></tt>
+</dt>
+<dd>&nbsp; </dd>
+<dt>
+<tt><b>ImportData</b></tt>
+</dt>
+<dd>An import instructions object that controls the import operation. </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsCommonNameModifiable">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsCommonNameModifiable</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if the model common name (<tt><b><a class="method" href="t-pfcModel-Model.html#CommonName">pfcModel.CommonName</a></b></tt>) can be modified. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#37">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListDeclaredModels">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ModelDescriptors.html">pfcModelDescriptors</a></tt></td><td class="func-name"><tt>ListDeclaredModels</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds all the first-level objects declared for the model.
+<br>
+<br>If layout A is declared in layout B and layout B is declared 
+in part P, only layout B will be returned.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#52">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of declared object model descriptors, or <tt>null</tt>, if no objectsdeclared for the model has been found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListDependencies">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Dependencies.html">pfcDependencies</a></tt></td><td class="func-name"><tt>ListDependencies</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the first-level dependencies for the model in
+the Creo Parametric workspace.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#51">Models: Model Information</a>, <a href="../manual0/JModel.html#54">Models: Model Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of dependencies, or <tt>null</tt>, if no dependencies found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RegeneratePostRegenerationRelations">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RegeneratePostRegenerationRelations</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Regenerates the post-regeneration relations in the model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JRelations.html#9">Relations: Accessing Post Regeneration Relations</a>, <a href="../manual0/JRelations.html#10">Relations: Accessing Post Regeneration Relations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Rename">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Rename</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;RenameFilesToo)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Renames the model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#3">Digital Rights Management: Exception Types</a>, <a href="../manual0/JModel.html#67">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewName</b></tt>
+</dt>
+<dd>The new name for the model.</dd>
+<dt>
+<tt><b>RenameFilesToo</b></tt>
+</dt>
+<dd>Ignored: by default, this is <tt>false</tt>.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Save">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Save</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Writes the model to disk.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Backup">pfcModel.Backup()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#3">Digital Rights Management: Exception Types</a>, <a href="../manual0/JModel.html#68">Models: Model Operations</a>, <a href="../manual0/JModel.html#73">Models: Model Operations</a>, <a href="../manual0/wc_apis.html#39">Windchill Connectivity APIs: Save</a>, <a href="../manual0/wc_apis.html#43">Windchill Connectivity APIs: Upload</a>, <a href="../manual0/wc_apis.html#54">Windchill Connectivity APIs: CheckIn</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TerminateExternalData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>TerminateExternalData</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Cleans up the setup required for the generic application data operations for the specified model.
+<br>
+<br>If you need to preserve the external data created in session you must save the model before calling this method. Otherwise your data will be lost.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JExtern.html#6">External Data: Accessing External Data</a>, <a href="../manual0/JExtern.html#7">External Data: Accessing External Data</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

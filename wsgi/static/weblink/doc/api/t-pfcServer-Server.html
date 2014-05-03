@@ -1,0 +1,1090 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcServer"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      466
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcServer.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcServer</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes server<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Child.html">pfcChild</a>, 
+        <a class="class" href="t-pfcServer-ServerLocation.html">pfcServerLocation</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcWPP-WPPServer.html">pfcWPPServer</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#ActiveWorkspace">ActiveWorkspace</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the name of active server. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Alias">Alias</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the alias of server. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Context">Context</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies context of the server</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsActive">IsActive</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies whether server active or not.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Activate">Activate</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the server to be active in session.
+ <notes> This function is only supported in batch mode.</notes>
+ 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#CheckinObjects">CheckinObjects</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-CheckinOptions.html">pfcCheckinOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Checks in an object to the database.
+ <notes>The model must be saved using <tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>
+  before it can be checked in.  This function does not save the 
+  model by default.</notes>
+ 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#CheckoutMultipleObjects">CheckoutMultipleObjects</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Files, boolean&nbsp;Checkout, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Checks out or downloads multiple objects to the workspace.
+ Checkout rules are processed based on the Workspace config spec,
+ unless the version is set using 
+ <tt><b><a class="method" href="t-pfcServer-CheckoutOptions.html#Version">pfcCheckoutOptions.Version</a></b></tt>.
+ If the config spec is LATEST, for example, the latest version of
+ the indicated object(s) will be checked out. If an aliased URL path
+ to a model is supplied, and more than one revision of the model
+ is in the path, Creo Parametric will apply the workspace config spec
+ rules against the objects which reside in that folder. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#CheckoutObjects">CheckoutObjects</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;File, boolean&nbsp;Checkout, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Checks out or downloads an object to the workspace.  Checkout rules are processed based  
+  on the Workspace config spec, unless the version is set using 
+  <tt><b><a class="method" href="t-pfcServer-CheckoutOptions.html#Version">pfcCheckoutOptions.Version</a></b></tt>.
+   If the config spec is LATEST, for example, the latest version of the indicated object(s) will be  
+  checked out. If an aliased URL path to the model is supplied, and more than one revision of the model  
+  is in the path, Creo Parametric will apply the workspace config spec rules against the objects which   
+  reside in that folder. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#CreateWorkspace">CreateWorkspace</a>
+ (<a class="type" href="t-pfcServer-WorkspaceDefinition.html">pfcWorkspaceDefinition</a>&nbsp;Definition)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates and activates a new workspace.
+ <notes>This function is only supported in batch mode. </notes> 
+ 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetAliasedUrl">GetAliasedUrl</a>
+ (string&nbsp;ModelName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets aliased url for a given model name.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsObjectCheckedOut">IsObjectCheckedOut</a>
+ (string&nbsp;WorkspaceName, string&nbsp;ObjectName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the checkout status for the given object in the workspace.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsObjectModified">IsObjectModified</a>
+ (string&nbsp;WorkspaceName, string&nbsp;ObjectName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the modification status for the given object in the workspace.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RemoveObjects">RemoveObjects</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;ModelNames)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes a list of models from a workspace.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#UndoCheckout">UndoCheckout</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Undoes the checkout of the given object.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Unregister">Unregister</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Unregisters a given server and cleans a local cache for the server.
+ <notes>This function is only supported in batch mode.</notes>
+ 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#UploadObjects">UploadObjects</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Uploads an object to the database.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#UploadObjectsWithOptions">UploadObjectsWithOptions</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;TopModel, <a class="type" href="t-pfcServer-UploadOptions.html">pfcUploadOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Uploads objects to the database with the specified options.
+ <notes>The model should be saved using 
+ <tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>
+  before it can be uploaded.  This function does not save the 
+  model by default. The model can also be imported using
+ <tt><b><a class="method" href="t-pfcSession-BaseSession.html#ImportToCurrentWS">pfcBaseSession.ImportToCurrentWS()</a></b></tt> 
+  before it can be uploaded.</notes>
+ 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="ActiveWorkspace">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>ActiveWorkspace</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the name of active server. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#31">Windchill Connectivity APIs: Creating and Modifying the Workspace</a>, <a href="../manual0/wc_apis.html#32">Windchill Connectivity APIs: Creating and Modifying the Workspace</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Alias">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Alias</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the alias of server. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#18">Windchill Connectivity APIs: Accessing Information From a Registered Server</a>, <a href="../manual0/wc_apis.html#19">Windchill Connectivity APIs: Accessing Information From a Registered Server</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Context">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Context</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies context of the server<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#19">Windchill Connectivity APIs: Accessing Information From a Registered Server</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsActive">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsActive</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies whether server active or not.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#17">Windchill Connectivity APIs: Accessing Information From a Registered Server</a>, <a href="../manual0/wc_apis.html#19">Windchill Connectivity APIs: Accessing Information From a Registered Server</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Activate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Activate</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the server to be active in session.
+ <notes> This function is only supported in batch mode.</notes>
+ 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#14">Windchill Connectivity APIs: Registering and Activating a Server</a>, <a href="../manual0/wc_apis.html#15">Windchill Connectivity APIs: Registering and Activating a Server</a>, <a href="../manual0/wc_apis.html#34">Windchill Connectivity APIs: To Register a Server with an Existing Workspace</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CheckinObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>CheckinObjects</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-CheckinOptions.html">pfcCheckinOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Checks in an object to the database.
+ <notes>The model must be saved using <tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>
+  before it can be checked in.  This function does not save the 
+  model by default.</notes>
+ 
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitCheckoutConflict.html">pfcXToolkitCheckoutConflict</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#45">Windchill Connectivity APIs: CheckIn</a>, <a href="../manual0/wc_apis.html#54">Windchill Connectivity APIs: CheckIn</a>, <a href="../manual0/wc_apis.html#90">Windchill Connectivity APIs: Conflicts During Server Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Mdl</b></tt>
+</dt>
+<dd>The model to checkin. Pass <tt>null</tt> to  check in the entire workspace</dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Checkin options object of type <tt><b><tt><b><a class="enumtype" href="t-pfcServer-CheckinOptions.html">pfcCheckinOptions</a></b></tt></b></tt>.
+ Pass <tt>null</tt>  for a default checkin (as per Creo Parametric's Checkin button in the File menu). </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CheckoutMultipleObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>CheckoutMultipleObjects</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Files, boolean&nbsp;Checkout, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Checks out or downloads multiple objects to the workspace.
+ Checkout rules are processed based on the Workspace config spec,
+ unless the version is set using 
+ <tt><b><a class="method" href="t-pfcServer-CheckoutOptions.html#Version">pfcCheckoutOptions.Version</a></b></tt>.
+ If the config spec is LATEST, for example, the latest version of
+ the indicated object(s) will be checked out. If an aliased URL path
+ to a model is supplied, and more than one revision of the model
+ is in the path, Creo Parametric will apply the workspace config spec
+ rules against the objects which reside in that folder. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#61">Windchill Connectivity APIs: Checkout and Download</a>, <a href="../manual0/wc_apis.html#68">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Files</b></tt>
+</dt>
+<dd>Sequence of top level objects to checkout or download. 
+ This can contain either aliased URLs to a given object or the object
+ name. If an aliased URL path to the model is supplied, and more
+ than one revision of the model is in the path, Creo Parametric
+ will apply the workspace config spec rules against the objects
+ which reside in that folder. </dd>
+<dt>
+<tt><b>Checkout</b></tt>
+</dt>
+<dd>Checkout flag .<tt>true</tt> to checkout and 
+ download, <tt>false</tt> to download without checking out.</dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Checkout options object of type 
+ <tt><b><tt><b><a class="enumtype" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a></b></tt></b></tt>. Pass <tt>null</tt>  for a 
+ default checkout (as per Creo Parametric's Checkout button 
+ in the File menu). </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of urls to the top level objects in their downloaded/checked
+ out location. </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CheckoutObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>CheckoutObjects</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;File, boolean&nbsp;Checkout, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Checks out or downloads an object to the workspace.  Checkout rules are processed based  
+  on the Workspace config spec, unless the version is set using 
+  <tt><b><a class="method" href="t-pfcServer-CheckoutOptions.html#Version">pfcCheckoutOptions.Version</a></b></tt>.
+   If the config spec is LATEST, for example, the latest version of the indicated object(s) will be  
+  checked out. If an aliased URL path to the model is supplied, and more than one revision of the model  
+  is in the path, Creo Parametric will apply the workspace config spec rules against the objects which   
+  reside in that folder. <br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitCheckoutConflict.html">pfcXToolkitCheckoutConflict</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#60">Windchill Connectivity APIs: Checkout and Download</a>, <a href="../manual0/wc_apis.html#68">Windchill Connectivity APIs: Checkout and Download</a>, <a href="../manual0/wc_apis.html#90">Windchill Connectivity APIs: Conflicts During Server Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Mdl</b></tt>
+</dt>
+<dd>The top level object to checkout.Can be <tt>null</tt> 
+</dd>
+<dt>
+<tt><b>File</b></tt>
+</dt>
+<dd>The top level object to checkout or download.Can be <tt>null</tt>. 
+ <notes>One of Mdl and File must not be <tt>null</tt>.This can be either an aliased URL to a given  
+  object or the object name.If an aliased URL path to the model is supplied, and more than one revision  
+  of the model is in the path, Creo Parametric will apply the workspace config spec rules against the objects  
+   which reside in that folder.</notes>
+ 
+</dd>
+<dt>
+<tt><b>Checkout</b></tt>
+</dt>
+<dd>Checkout flag .<tt>true</tt> to checkout and download, <tt>false</tt> 
+ to download without checking out.</dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Checkout options object of type <tt><b><tt><b><a class="enumtype" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a></b></tt></b></tt>.
+ Pass <tt>null</tt>  for a default checkout (as per Creo Parametric's Checkout button in the File menu). </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The url to the top level object in its downloaded/checked out location</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateWorkspace">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>CreateWorkspace</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcServer-WorkspaceDefinition.html">pfcWorkspaceDefinition</a>&nbsp;Definition)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates and activates a new workspace.
+ <notes>This function is only supported in batch mode. </notes> 
+ 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#28">Windchill Connectivity APIs: Accessing Workspaces</a>, <a href="../manual0/wc_apis.html#30">Windchill Connectivity APIs: Creating and Modifying the Workspace</a>, <a href="../manual0/wc_apis.html#32">Windchill Connectivity APIs: Creating and Modifying the Workspace</a>, <a href="../manual0/wc_apis.html#35">Windchill Connectivity APIs: To Register a Server with a New Workspace</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Definition</b></tt>
+</dt>
+<dd>Object of <tt><b><tt><b><a class="enumtype" href="t-pfcServer-WorkspaceDefinitions.html">pfcWorkspaceDefinitions</a></b></tt></b></tt>. </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetAliasedUrl">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetAliasedUrl</tt></td><td class="func-params"><tt>
+ (string&nbsp;ModelName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets aliased url for a given model name.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#92">Windchill Connectivity APIs: Utility APIs</a>, <a href="../manual0/wc_apis.html#95">Windchill Connectivity APIs: Utility APIs</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ModelName</b></tt>
+</dt>
+<dd>The model name.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The aliased url to the model.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsObjectCheckedOut">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsObjectCheckedOut</tt></td><td class="func-params"><tt>
+ (string&nbsp;WorkspaceName, string&nbsp;ObjectName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the checkout status for the given object in the workspace.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#86">Windchill Connectivity APIs: Server Object Status</a>, <a href="../manual0/wc_apis.html#87">Windchill Connectivity APIs: Server Object Status</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>WorkspaceName</b></tt>
+</dt>
+<dd>The workspace name.</dd>
+<dt>
+<tt><b>ObjectName</b></tt>
+</dt>
+<dd>The object name </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Checkout status . <tt>true</tt> if the object is currently checked out. </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsObjectModified">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsObjectModified</tt></td><td class="func-params"><tt>
+ (string&nbsp;WorkspaceName, string&nbsp;ObjectName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the modification status for the given object in the workspace.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#87">Windchill Connectivity APIs: Server Object Status</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>WorkspaceName</b></tt>
+</dt>
+<dd>The workspace name.</dd>
+<dt>
+<tt><b>ObjectName</b></tt>
+</dt>
+<dd>The object name </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Object modification status . <tt>true</tt> if the object is checked out and modified.
+ <notes>This function will return modified as <tt>false</tt> for newly created objects  which have not  
+  yet been uploaded.</notes>
+ 
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RemoveObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RemoveObjects</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;ModelNames)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes a list of models from a workspace.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitCheckoutConflict.html">pfcXToolkitCheckoutConflict</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#89">Windchill Connectivity APIs: Delete Objects</a>, <a href="../manual0/wc_apis.html#90">Windchill Connectivity APIs: Conflicts During Server Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ModelNames</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UndoCheckout">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>UndoCheckout</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Undoes the checkout of the given object.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitCheckoutConflict.html">pfcXToolkitCheckoutConflict</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#70">Windchill Connectivity APIs: Undo Checkout</a>, <a href="../manual0/wc_apis.html#90">Windchill Connectivity APIs: Conflicts During Server Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Mdl</b></tt>
+</dt>
+<dd>The top level model that was checked out.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Unregister">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Unregister</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Unregisters a given server and cleans a local cache for the server.
+ <notes>This function is only supported in batch mode.</notes>
+ 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#15">Windchill Connectivity APIs: Registering and Activating a Server</a>, <a href="../manual0/wc_apis.html#32">Windchill Connectivity APIs: Creating and Modifying the Workspace</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UploadObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>UploadObjects</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Uploads an object to the database.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitCheckoutConflict.html">pfcXToolkitCheckoutConflict</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#41">Windchill Connectivity APIs: Upload</a>, <a href="../manual0/wc_apis.html#43">Windchill Connectivity APIs: Upload</a>, <a href="../manual0/wc_apis.html#90">Windchill Connectivity APIs: Conflicts During Server Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Mdl</b></tt>
+</dt>
+<dd>The model to upload.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UploadObjectsWithOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>UploadObjectsWithOptions</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;TopModel, <a class="type" href="t-pfcServer-UploadOptions.html">pfcUploadOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Uploads objects to the database with the specified options.
+ <notes>The model should be saved using 
+ <tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>
+  before it can be uploaded.  This function does not save the 
+  model by default. The model can also be imported using
+ <tt><b><a class="method" href="t-pfcSession-BaseSession.html#ImportToCurrentWS">pfcBaseSession.ImportToCurrentWS()</a></b></tt> 
+  before it can be uploaded.</notes>
+ 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#42">Windchill Connectivity APIs: Upload</a>, <a href="../manual0/wc_apis.html#43">Windchill Connectivity APIs: Upload</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>TopModel</b></tt>
+</dt>
+<dd>The model to upload. Pass <tt>null</tt> to 
+  upload the entire workspace</dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Upload options object of 
+  type <tt><b><tt><b><a class="enumtype" href="t-pfcServer-UploadOptions.html">pfcUploadOptions</a></b></tt></b></tt>.
+ </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

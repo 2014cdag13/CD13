@@ -1,0 +1,85 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcDimensionExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function setAngularToleranceToLimits_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			setAngularToleranceToLimits (parseFloat (document.TM.dimTolRange.value));
+		}
+	catch (err)
+		{
+					alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Dimension Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=TM>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Modifying dimension tolerances</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“setAngularToleranceToLimits”) sets
+  angular tolerances to a specified range.<span style="mso-spacerun: yes">  
+  </span>For each angular dimension in the current model the function gets the
+  dimension value and adds or subtracts the range to it to get the upper and
+  lower limits.<span style="mso-spacerun: yes">  </span>The function then
+  initializes a pfcDimTolLimits tolerance object and assigns it to the
+  dimension.<span style="mso-spacerun: yes">   </span>The function displays
+  each shown dimension.<span style="mso-spacerun: yes">  </span>The current
+  model must be a part or assembly.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><INPUT TYPE="text" NAME="dimTolRange" VALUE="0.5"
+  id=dimTolRange>
+  <input type=button value="Modify Tolerances" id=button1 name=button1 onclick="setAngularToleranceToLimits_wrapper()">
+  </p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

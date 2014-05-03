@@ -1,0 +1,2169 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcSolid"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      509
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcSolid.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSolid</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines a solid.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcFamily-FamilyMember.html">pfcFamilyMember</a>, 
+        <a class="class" href="t-pfcModel-Model.html">pfcModel</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcPart-Part.html">pfcPart</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#AbsoluteAccuracy">AbsoluteAccuracy</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The absolute accuracy of the solid or <tt>null</tt>, if relative accuracy is used</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GeomOutline">GeomOutline</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The outline of the solid with respect to the base coordinate system orientation</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsSkeleton">IsSkeleton</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the model is a skeleton model, <tt>false</tt> otherwise.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#RelativeAccuracy">RelativeAccuracy</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The relative accuracy of the solid or <tt>null</tt>, if absolute accuracy is used</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ActivateSimpRep">ActivateSimpRep</a>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimpRep)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Activates the specified simplified representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateCustomUnit">CreateCustomUnit</a>
+ (string&nbsp;Name, <a class="type" href="t-pfcUnits-UnitConversionFactor.html">pfcUnitConversionFactor</a>&nbsp;ConversionFactor, <a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a>&nbsp;ReferenceUnit)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a custom unit based on name, conversion factor and 
+ reference unit.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateFeature">CreateFeature</a>
+ (<a class="type" href="t-pfcFeature-FeatureCreateInstructions.html">pfcFeatureCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Not implemented in the current release. 
+Creates a feature, based on the instructions provided.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateImportFeat">CreateImportFeat</a>
+ (<a class="type" href="t-pfcModel-IntfDataSource.html">pfcIntfDataSource</a>&nbsp;IntfData, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-CoordSystem.html">pfcCoordSystem</a>&nbsp;CoordSys, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ImportFeatAttr.html">pfcImportFeatAttr</a>&nbsp;FeatAttr)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new import feature in the solid.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-FeatureGroup.html">pfcFeatureGroup</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateLocalGroup">CreateLocalGroup</a>
+ (<a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a>&nbsp;Members, string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a local group out of the specified set of features.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateNote">CreateNote</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Lines, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;Owner)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp; </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateSimpRep">CreateSimpRep</a>
+ (<a class="type" href="t-pfcSimpRep-CreateNewSimpRepInstructions.html">pfcCreateNewSimpRepInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a simplified representation based on the supplied instructions.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-FeatureGroup.html">pfcFeatureGroup</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateUDFGroup">CreateUDFGroup</a>
+ (<a class="type" href="t-pfcUDFGroup-UDFGroupCreateInstructions.html">pfcUDFGroupCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a FeatureGroup, based on the instructions provided.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateUnitSystem">CreateUnitSystem</a>
+ (string&nbsp;Name, <a class="type" href="t-pfcUnits-UnitSystemType.html">pfcUnitSystemType</a>&nbsp;Type, <a class="type" href="t-pfcUnits-Units.html">pfcUnits</a>&nbsp;Units)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new unit system in the model. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteSimpRep">DeleteSimpRep</a>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimpRep)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes the specified simplified representation from its owner model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalOutline">EvalOutline</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;Trf, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemTypes.html">pfcModelItemTypes</a>&nbsp;ExcludeTypes)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Computes the outline of a solid.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ExecuteFeatureOps">ExecuteFeatureOps</a>
+ (<a class="type" href="t-pfcFeature-FeatureOperations.html">pfcFeatureOperations</a>&nbsp;Ops, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-RegenInstructions.html">pfcRegenInstructions</a>&nbsp;Instrs)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Performs the specified feature operations. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ExportShrinkwrap">ExportShrinkwrap</a>
+ (<a class="type" href="t-pfcSolid-ShrinkwrapExportInstructions.html">pfcShrinkwrapExportInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Exports a solid model to shrinkwrap format.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetActiveSimpRep">GetActiveSimpRep</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the current active simplified representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcXSection-XSection.html">pfcXSection</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetCrossSection">GetCrossSection</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a cross-section object, given its name.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetFeatureById">GetFeatureById</a>
+ (integer&nbsp;Id)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified feature, given its identifier.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetFeatureByName">GetFeatureByName</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Locates the feature object, given its name.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetGeomRep">GetGeomRep</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the object representing the solid model's Geometry Rep.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetGraphicsRep">GetGraphicsRep</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the object representing the solid model's Grpahics Rep.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSolid-MassProperty.html">pfcMassProperty</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetMassProperty">GetMassProperty</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;CoordSysName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the mass properties for the solid.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetMasterRep">GetMasterRep</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the object representing the solid model's Master Rep.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetPrincipalUnits">GetPrincipalUnits</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the system of units assigned to the solid model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSimpRep">GetSimpRep</a>
+ (string&nbsp;SimpRepName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the handle to the specified simplified representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetUnit">GetUnit</a>
+ (string&nbsp;Name, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;ByExpression)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Get the handle to a particular unit based on name or
+expression.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#HasRetrievalErrors">HasRetrievalErrors</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if a previous call to retrieve the model resulted in errors.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcXSection-XSections.html">pfcXSections</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListCrossSections">ListCrossSections</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the cross-sections in the solid model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListFailedFeatures">ListFailedFeatures</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the list of failed features in the
+part or assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListFeaturesByType">ListFeaturesByType</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;VisibleOnly, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-FeatureType.html">pfcFeatureType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the features according to type. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-FeatureGroups.html">pfcFeatureGroups</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListGroups">ListGroups</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Collect groups (including UDFs) in the solid.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-Units.html">pfcUnits</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListUnits">ListUnits</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-UnitType.html">pfcUnitType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the units available in the model.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-UnitSystems.html">pfcUnitSystems</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListUnitSystems">ListUnitSystems</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the unit systems available in the model.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Regenerate">Regenerate</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-RegenInstructions.html">pfcRegenInstructions</a>&nbsp;Instrs)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Regenerates the solid.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelectSimpRep">SelectSimpRep</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables the user to select a simplified representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetPrincipalUnits">SetPrincipalUnits</a>
+ (<a class="type" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a>&nbsp;Units, <a class="type" href="t-pfcUnits-UnitConversionOptions.html">pfcUnitConversionOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the system of units for the solid.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="AbsoluteAccuracy">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>AbsoluteAccuracy</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The absolute accuracy of the solid or <tt>null</tt>, if relative accuracy is used<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#17">Solid: Solid Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GeomOutline">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-name"><tt>GeomOutline</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The outline of the solid with respect to the base coordinate system orientation<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#31">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsSkeleton">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsSkeleton</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the model is a skeleton model, <tt>false</tt> otherwise.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#33">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>, <a href="../manual0/jassembly.html#63">Assemblies and Components: Skeleton Models</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RelativeAccuracy">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>RelativeAccuracy</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The relative accuracy of the solid or <tt>null</tt>, if absolute accuracy is used<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#16">Solid: Solid Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="ActivateSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ActivateSimpRep</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimpRep)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Activates the specified simplified representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#57">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/JSimpRep.html#58">Simplified Representations: Simplified Representation Utilities</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SimpRep</b></tt>
+</dt>
+<dd>The simplified representation to activate.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateCustomUnit">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-name"><tt>CreateCustomUnit</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, <a class="type" href="t-pfcUnits-UnitConversionFactor.html">pfcUnitConversionFactor</a>&nbsp;ConversionFactor, <a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a>&nbsp;ReferenceUnit)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a custom unit based on name, conversion factor and 
+ reference unit.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#52">Solid: Creating a New Unit</a>, <a href="../manual0/JSolid.html#53">Solid: Creating a New Unit</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the unit</dd>
+<dt>
+<tt><b>ConversionFactor</b></tt>
+</dt>
+<dd>Information relating the new unit to
+its reference unit.</dd>
+<dt>
+<tt><b>ReferenceUnit</b></tt>
+</dt>
+<dd>The unit upon which the new unit is
+based. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created <tt><b><tt><b><a class="enumtype" href="t-pfcUnits-Unit.html">pfcUnit</a></b></tt></b></tt>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateFeature">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>CreateFeature</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcFeature-FeatureCreateInstructions.html">pfcFeatureCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Not implemented in the current release. 
+Creates a feature, based on the instructions provided.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Descriptions of the type of feature to create.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>pfcFeature object </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateImportFeat">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>CreateImportFeat</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-IntfDataSource.html">pfcIntfDataSource</a>&nbsp;IntfData, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-CoordSystem.html">pfcCoordSystem</a>&nbsp;CoordSys, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-ImportFeatAttr.html">pfcImportFeatAttr</a>&nbsp;FeatAttr)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new import feature in the solid.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#223">Interface: Solid Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>IntfData</b></tt>
+</dt>
+<dd>The source of data (that is, the file) from which to create the import feature.</dd>
+<dt>
+<tt><b>CoordSys</b></tt>
+</dt>
+<dd>A reference coordinate system. If NULL, the method uses the default coordinate system.</dd>
+<dt>
+<tt><b>FeatAttr</b></tt>
+</dt>
+<dd>The attributes for creation of the new import feature. If NULL, the method uses the default attributes.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the new import feature.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateLocalGroup">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-FeatureGroup.html">pfcFeatureGroup</a></tt></td><td class="func-name"><tt>CreateLocalGroup</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a>&nbsp;Members, string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a local group out of the specified set of features.
+<br>
+<br>The supplied features must represent a contiguous set of features in the 
+part or assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#68">Features: Feature Groups and Patterns</a>, <a href="../manual0/JFeat.html#73">Features: Feature Groups and Patterns</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Members</b></tt>
+</dt>
+<dd>The features to be grouped </dd>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name to be assigned to the created local group </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The local group that was created</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateNote">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-name"><tt>CreateNote</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Lines, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;Owner)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp; <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Lines</b></tt>
+</dt>
+<dd>&nbsp; </dd>
+<dt>
+<tt><b>Owner</b></tt>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>CreateSimpRep</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSimpRep-CreateNewSimpRepInstructions.html">pfcCreateNewSimpRepInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a simplified representation based on the supplied instructions.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#20">Simplified Representations: Creating and Deleting Simplified Representations</a>, <a href="../manual0/JSimpRep.html#21">Simplified Representations: Creating and Deleting Simplified Representations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>The Instructions (data) for the simplified representation.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the new simplified representation.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateUDFGroup">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-FeatureGroup.html">pfcFeatureGroup</a></tt></td><td class="func-name"><tt>CreateUDFGroup</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcUDFGroup-UDFGroupCreateInstructions.html">pfcUDFGroupCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a FeatureGroup, based on the instructions provided.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#83">Features: Read Access to Groups and User Defined Features</a>, <a href="../manual0/JFeat.html#87">Features: Creating Features from UDFs</a>, <a href="../manual0/JFeat.html#107">Features: Creating a Custom UDF</a>, <a href="../manual0/JSolid.html#11">Solid: Getting a Solid Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Data objects containing parameters for the type of feature group to create.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created UDF group.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateUnitSystem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a></tt></td><td class="func-name"><tt>CreateUnitSystem</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, <a class="type" href="t-pfcUnits-UnitSystemType.html">pfcUnitSystemType</a>&nbsp;Type, <a class="type" href="t-pfcUnits-Units.html">pfcUnits</a>&nbsp;Units)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new unit system in the model. <br>
+<br>Units should include at most one occurrence of each basic unit type.  
+ If a unit of a basic type is missing then a corresponding one is taken from 
+ the standard system 'Creo Parametric Default'.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#64">Solid: Creating a New System of Units</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the new unit system.</dd>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of unit system to create (Mass/Length/Time)
+or (Force/Length/Time). </dd>
+<dt>
+<tt><b>Units</b></tt>
+</dt>
+<dd>Sequence of units that makes up the new unit
+system.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created <tt><b><tt><b><a class="enumtype" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a></b></tt></b></tt>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteSimpRep</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;SimpRep)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes the specified simplified representation from its owner model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#21">Simplified Representations: Creating and Deleting Simplified Representations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SimpRep</b></tt>
+</dt>
+<dd>The simplified representation to delete.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalOutline">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-name"><tt>EvalOutline</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;Trf, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItemTypes.html">pfcModelItemTypes</a>&nbsp;ExcludeTypes)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Computes the outline of a solid.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#32">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Trf</b></tt>
+</dt>
+<dd>The orientation matrix (with respect to the base coordinatesystem) to which the outline is to be computed</dd>
+<dt>
+<tt><b>ExcludeTypes</b></tt>
+</dt>
+<dd>An array of model-item types to exclude from the outline computation. The types that can be excluded are <tt>ITEM_COORD_SYS</tt>, <tt>ITEM_AXIS</tt>, and <tt>ITEM_POINT</tt>.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>An <i>Outline3D</i> object which contains two points that define the boundaries of the solid in the specified orientation</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExecuteFeatureOps">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ExecuteFeatureOps</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcFeature-FeatureOperations.html">pfcFeatureOperations</a>&nbsp;Ops, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-RegenInstructions.html">pfcRegenInstructions</a>&nbsp;Instrs)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Performs the specified feature operations. 
+<br>
+<br>This method is not supported in No-Resolve mode (default regeneration mode 
+   in Creo Elements/Pro). It will throw <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitBadContext.html">pfcXToolkitBadContext</a></b></tt></b></tt>, 
+   if Creo Parametric is running in No-Resolve mode. To continue with the Pro/ENGINEER 
+   Wildfire 4.0 behavior in Resolve mode, set the configuration option 'regen_failure_handling' 
+   to 'resolve_mode'.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#40">Features: Feature Operations</a>, <a href="../manual0/JFeat.html#55">Features: Feature Operations</a>, <a href="../manual0/jassembly.html#15">Assemblies and Components: Assembly Components</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Ops</b></tt>
+</dt>
+<dd>The feature operations (suppress, delete, resume, and so on)</dd>
+<dt>
+<tt><b>Instrs</b></tt>
+</dt>
+<dd>The regeneration instructions. This parameter can be <tt>null</tt>, in which case the Creo Parametric's Fix Model interface is not displayed after a failure.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExportShrinkwrap">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ExportShrinkwrap</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSolid-ShrinkwrapExportInstructions.html">pfcShrinkwrapExportInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Exports a solid model to shrinkwrap format.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#90">Interface: Shrinkwrap Export</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Instructions describing the type and contents of the shrinkwrap model. </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetActiveSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>GetActiveSimpRep</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the current active simplified representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#58">Simplified Representations: Simplified Representation Utilities</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The current active simplified representation</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCrossSection">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcXSection-XSection.html">pfcXSection</a></tt></td><td class="func-name"><tt>GetCrossSection</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a cross-section object, given its name.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#84">Solid: Cross Sections</a>, <a href="../manual0/JSolid.html#90">Solid: Cross Sections</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the cross-section.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The cross-section object, or <tt>null</tt>, if the cross-section with that name does not exist.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetFeatureById">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>GetFeatureById</tt></td><td class="func-params"><tt>
+ (integer&nbsp;Id)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified feature, given its identifier.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#19">Features: Access to Features</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Id</b></tt>
+</dt>
+<dd>The feature identifier</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The requested feature or <tt>null</tt>, if the solid does not contain a featurewith the specified identifier.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetFeatureByName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>GetFeatureByName</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Locates the feature object, given its name.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the feature to locate.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The feature object, or <tt>null</tt>, if the feature was not found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetGeomRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>GetGeomRep</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the object representing the solid model's Geometry Rep.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSolid-Solid.html#GetSimpRep">pfcSolid.GetSimpRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSolid-Solid.html#GetGraphicsRep">pfcSolid.GetGraphicsRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSolid-Solid.html#GetMasterRep">pfcSolid.GetMasterRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSimpRep-SimpRep.html#GetSimpRepType">pfcSimpRep.GetSimpRepType()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>An object representing the Geometry Rep.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetGraphicsRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>GetGraphicsRep</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the object representing the solid model's Grpahics Rep.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSolid-Solid.html#GetSimpRep">pfcSolid.GetSimpRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSolid-Solid.html#GetGeomRep">pfcSolid.GetGeomRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSolid-Solid.html#GetMasterRep">pfcSolid.GetMasterRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSimpRep-SimpRep.html#GetSimpRepType">pfcSimpRep.GetSimpRepType()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>An object representing the Graphics Rep.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetMassProperty">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSolid-MassProperty.html">pfcMassProperty</a></tt></td><td class="func-name"><tt>GetMassProperty</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;CoordSysName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the mass properties for the solid.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#73">Solid: Mass Properties</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>CoordSysName</b></tt>
+</dt>
+<dd>The coordinate system name used to compute the mass property.If <tt>null</tt>, uses the default coordinate system.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetMasterRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>GetMasterRep</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the object representing the solid model's Master Rep.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSolid-Solid.html#GetSimpRep">pfcSolid.GetSimpRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSolid-Solid.html#GetGraphicsRep">pfcSolid.GetGraphicsRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSolid-Solid.html#GetGeomRep">pfcSolid.GetGeomRep()</a></b></tt>, <tt><b><a class="method" href="t-pfcSimpRep-SimpRep.html#GetSimpRepType">pfcSimpRep.GetSimpRepType()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>An object representing the Master Rep.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetPrincipalUnits">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a></tt></td><td class="func-name"><tt>GetPrincipalUnits</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the system of units assigned to the solid model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#56">Solid: Accessing Systems of Units</a>, <a href="../manual0/JSolid.html#60">Solid: Accessing Systems of Units</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The unit system.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>GetSimpRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;SimpRepName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the handle to the specified simplified representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#55">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/JSimpRep.html#58">Simplified Representations: Simplified Representation Utilities</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SimpRepName</b></tt>
+</dt>
+<dd>The name of the simplified representation in the solid.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetUnit">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-name"><tt>GetUnit</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;ByExpression)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Get the handle to a particular unit based on name or
+expression.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#39">Solid: Accessing Individual Units</a>, <a href="../manual0/JSolid.html#47">Solid: Accessing Individual Units</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name, or expression, for the unit.</dd>
+<dt>
+<tt><b>ByExpression</b></tt>
+</dt>
+<dd>Specifies whether name is to be treated as an 
+ expression (value <tt>true</tt>) or not (value <tt>false</tt>).</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The initialized <tt><b><tt><b><a class="enumtype" href="t-pfcUnits-Unit.html">pfcUnit</a></b></tt></b></tt> 
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="HasRetrievalErrors">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>HasRetrievalErrors</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if a previous call to retrieve the model resulted in errors.
+<br>
+<br>Models may be retrieved even if some component models are missing.  The missing components will be suppressed, and geometry referencing these models will be frozen. The retrieval methods will not give an indication that this error occurred.  Call this method after retrieval to see if any such errors occurred.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModelWithOpts">pfcBaseSession.RetrieveModelWithOpts()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#OpenFile">pfcBaseSession.OpenFile()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveAssemSimpRep">pfcBaseSession.RetrieveAssemSimpRep()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#32">Models: Retrieving Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if errors occurred during retrieval, <tt>false</tt> if there was no error.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListCrossSections">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcXSection-XSections.html">pfcXSections</a></tt></td><td class="func-name"><tt>ListCrossSections</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the cross-sections in the solid model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#83">Solid: Cross Sections</a>, <a href="../manual0/JSolid.html#90">Solid: Cross Sections</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of cross-section objects.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListFailedFeatures">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a></tt></td><td class="func-name"><tt>ListFailedFeatures</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the list of failed features in the
+part or assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#17">Features: Access to Features</a>, <a href="../manual0/JFeat.html#19">Features: Access to Features</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of failed features, or <tt>null</tt> if no failed features has been found</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListFeaturesByType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a></tt></td><td class="func-name"><tt>ListFeaturesByType</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;VisibleOnly, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-FeatureType.html">pfcFeatureType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the features according to type. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#18">Features: Access to Features</a>, <a href="../manual0/JFeat.html#19">Features: Access to Features</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>VisibleOnly</b></tt>
+</dt>
+<dd>If this is <tt>true</tt>, the function lists public features only. 
+   If this is <tt>false</tt>, the function lists both public and internal features. 
+   Internal features are 'invisible' features and used internally for construction purposes.
+   (If the argument is <tt>null</tt>, <tt>true</tt> will be used.)</dd>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The feature type or <tt>null</tt>, if all the solid features are to be listed</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of features or <tt>null</tt>, if no features of the specified type has been found</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListGroups">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-FeatureGroups.html">pfcFeatureGroups</a></tt></td><td class="func-name"><tt>ListGroups</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Collect groups (including UDFs) in the solid.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of groups.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListUnits">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-Units.html">pfcUnits</a></tt></td><td class="func-name"><tt>ListUnits</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-UnitType.html">pfcUnitType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the units available in the model.
+ <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#38">Solid: Accessing Individual Units</a>, <a href="../manual0/JSolid.html#47">Solid: Accessing Individual Units</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of units to list.  If this is
+<tt>null</tt>, this will list all unit types.
+ </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of units found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListUnitSystems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-UnitSystems.html">pfcUnitSystems</a></tt></td><td class="func-name"><tt>ListUnitSystems</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the unit systems available in the model.
+ <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#55">Solid: Accessing Systems of Units</a>, <a href="../manual0/JSolid.html#60">Solid: Accessing Systems of Units</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of unit systems.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Regenerate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Regenerate</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-RegenInstructions.html">pfcRegenInstructions</a>&nbsp;Instrs)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Regenerates the solid.
+<br>
+<br>Regeneration in No-Resolve mode (default mode in Creo Elements/Pro) is not supported.
+   This method will throw <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitBadContext.html">pfcXToolkitBadContext</a></b></tt></b></tt>, 
+   if Creo Parametric is running in No-Resolve mode. To continue with the Pro/ENGINEER Wildfire 
+   4.0 behavior in Resolve mode, set the configuration option 'regen_failure_handling' to 
+   'resolve_mode'.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#22">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>, <a href="../manual0/jassembly.html#31">Assemblies and Components: Assembling Components</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instrs</b></tt>
+</dt>
+<dd>The regeneration instructions. This parameter can be <tt>null</tt>, in which case the Creo Parametric's Fix Model interface is not displayed after a failure.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelectSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>SelectSimpRep</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables the user to select a simplified representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#56">Simplified Representations: Simplified Representation Utilities</a>, <a href="../manual0/JSimpRep.html#58">Simplified Representations: Simplified Representation Utilities</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The selected simplified representation.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetPrincipalUnits">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetPrincipalUnits</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcUnits-UnitSystem.html">pfcUnitSystem</a>&nbsp;Units, <a class="type" href="t-pfcUnits-UnitConversionOptions.html">pfcUnitConversionOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the system of units for the solid.<br>
+<br>This will regenerate the model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#66">Solid: Conversion to a New Unit System</a>, <a href="../manual0/JSolid.html#69">Solid: Conversion to a New Unit System</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Units</b></tt>
+</dt>
+<dd>The new unit system.
+ </dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Information about the data conversion should
+take place.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

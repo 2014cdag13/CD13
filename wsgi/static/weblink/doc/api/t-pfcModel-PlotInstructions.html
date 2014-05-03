@@ -1,0 +1,747 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcPlotInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      406
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModel.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcPlotInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>Instructions object used to plot drawings.
+<br>
+<br>
+ This export-instructions class has been superseeded by 
+ <tt><b><tt><b><a class="enumtype" href="t-pfcExport-PrinterInstructions.html">pfcPrinterInstructions</a></b></tt></b></tt> objects.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-PlotInstructions.html#Create">pfcPlotInstructions.Create()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#FirstPage">FirstPage</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">When <i>PageRangeChoice</i> is <tt>PlotPageRange.PLOT_RANGE_OF_PAGES</tt>, this specifies the first page to print. Otherwise, the value is <tt>null</tt> </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#LabelPlot">LabelPlot</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If set to <tt>true</tt> , generates the plot with a label. Default is <tt>false</tt>; no label is created.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#LastPage">LastPage</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">When <i>PageRangeChoice</i> is <tt>PlotPageRange.PLOT_RANGE_OF_PAGES</tt>, this specifies the last page to print. Otherwise, the value is <tt>null</tt> </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#OutputQuality">OutputQuality</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A value of 0, 1, 2, or 3. Default is 1. Defines the amount of checking for overlapping lines in a plot or 2-D export file, such as IGES, before making a file. <p></p>
+The values are interpreted as follows:<ul type="disc">
+
+<li>
+ 0-Does not check for overlapping lines or collect lines of the same pen color.</li>
+
+<li>
+ 1-Does not check for overlapping lines, but collects lines of the same pen color for plotting.</li>
+
+<li>
+ 2-Partially checks edges with two vertices, and collects lines of the same pen color for plotting.</li>
+
+<li>
+ 3-Does a complete check of all edges against each other, regardless of the number of vertices, font, or color. Collects lines of the same pen color for plotting.</li>
+
+</ul>
+
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-PlotPageRange.html">pfcPlotPageRange</a></tt></td><td class="func-signature"><tt><a class="method" href="#PageRangeChoice">PageRangeChoice</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">One of the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-PlotPageRange.html">pfcPlotPageRange</a></b></tt></b></tt> enumeration objects. Default is PlotPageRange.PLOT_RANGE_ALL.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-PlotPaperSize.html">pfcPlotPaperSize</a></tt></td><td class="func-signature"><tt><a class="method" href="#PaperSize">PaperSize</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">One of the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-PlotPaperSize.html">pfcPlotPaperSize</a></b></tt></b></tt> enumeration objects. Default is PlotPaperSize.ASIZEPLOT.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#PaperSizeX">PaperSizeX</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">When <i>PaperSize</i> is <tt>PlotPaperSize.VARIABLEPLOTSIZE</tt>, this specifies the size of the plotter paper in the X dimension. Otherwise, the value is <tt>null</tt></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#PaperSizeY">PaperSizeY</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">When <i>PaperSize</i> is <tt>PlotPaperSize.VARIABLEPLOTSIZE</tt>, this specifies the size of the plotter paper in the Y dimension. Otherwise, the value is <tt>null</tt>. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#PenSlew">PenSlew</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Set to <tt>true</tt> if you want to adjust pen velocity. Default is <tt>false</tt>. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#PenVelocityX">PenVelocityX</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">When <i>PenSlew</i> is <tt>true</tt>, this value is a multiple of the default pen speed in the X dimension. Permitted range is 0.1 to 100. Ignored when <i>PenSlew</i> is <tt>false</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#PenVelocityY">PenVelocityY</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">When <i>PenSlew</i> is <tt>true</tt>, this value is a multiple of the default pen speed in the y dimension. Permitted range is 0.1 to 100. Ignored when <i>PenSlew</i> is <tt>false</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#PlotterName">PlotterName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">c.f. The print dialog for support names
+	    eg: POSTSCRIPT, COLORPOSTSC
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#SegmentedOutput">SegmentedOutput</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Set to <tt>true</tt> to generate a segmented plot. Default is <tt>false</tt>.This may be <tt>true</tt> only if you are plotting a single page.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#SeparatePlotFiles">SeparatePlotFiles</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Defines the default in the <b>Print to File</b> dialog box.<ul type="disc">
+
+<li>
+ 
+<tt>true</tt>-Sets the default to Create Separate Files. </li>
+
+<li>
+ 
+<tt>false</tt> -A single file is created by default.</li>
+
+</ul>
+
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#UserScale">UserScale</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies a scale factor between 0.01 and 100 for scaling a model or drawing for plotting. Default is 0.01.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcModel-PlotInstructions.html">pfcPlotInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (string&nbsp;PlotterName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new instructions object used to plot a part, drawing, or assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="FirstPage">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>FirstPage</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>When <i>PageRangeChoice</i> is <tt>PlotPageRange.PLOT_RANGE_OF_PAGES</tt>, this specifies the first page to print. Otherwise, the value is <tt>null</tt> 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#155">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LabelPlot">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>LabelPlot</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If set to <tt>true</tt> , generates the plot with a label. Default is <tt>false</tt>; no label is created.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#150">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LastPage">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>LastPage</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>When <i>PageRangeChoice</i> is <tt>PlotPageRange.PLOT_RANGE_OF_PAGES</tt>, this specifies the last page to print. Otherwise, the value is <tt>null</tt> 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#156">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="OutputQuality">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>OutputQuality</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A value of 0, 1, 2, or 3. Default is 1. Defines the amount of checking for overlapping lines in a plot or 2-D export file, such as IGES, before making a file. <p></p>
+The values are interpreted as follows:<ul type="disc">
+
+<li>
+ 0-Does not check for overlapping lines or collect lines of the same pen color.</li>
+
+<li>
+ 1-Does not check for overlapping lines, but collects lines of the same pen color for plotting.</li>
+
+<li>
+ 2-Partially checks edges with two vertices, and collects lines of the same pen color for plotting.</li>
+
+<li>
+ 3-Does a complete check of all edges against each other, regardless of the number of vertices, font, or color. Collects lines of the same pen color for plotting.</li>
+
+</ul>
+
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#144">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PageRangeChoice">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-PlotPageRange.html">pfcPlotPageRange</a></tt></td><td class="func-name"><tt>PageRangeChoice</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>One of the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-PlotPageRange.html">pfcPlotPageRange</a></b></tt></b></tt> enumeration objects. Default is PlotPageRange.PLOT_RANGE_ALL.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#153">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PaperSize">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-PlotPaperSize.html">pfcPlotPaperSize</a></tt></td><td class="func-name"><tt>PaperSize</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>One of the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-PlotPaperSize.html">pfcPlotPaperSize</a></b></tt></b></tt> enumeration objects. Default is PlotPaperSize.ASIZEPLOT.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#152">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PaperSizeX">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>PaperSizeX</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>When <i>PaperSize</i> is <tt>PlotPaperSize.VARIABLEPLOTSIZE</tt>, this specifies the size of the plotter paper in the X dimension. Otherwise, the value is <tt>null</tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#154">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PaperSizeY">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>PaperSizeY</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>When <i>PaperSize</i> is <tt>PlotPaperSize.VARIABLEPLOTSIZE</tt>, this specifies the size of the plotter paper in the Y dimension. Otherwise, the value is <tt>null</tt>. <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PenSlew">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>PenSlew</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Set to <tt>true</tt> if you want to adjust pen velocity. Default is <tt>false</tt>. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#146">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PenVelocityX">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>PenVelocityX</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>When <i>PenSlew</i> is <tt>true</tt>, this value is a multiple of the default pen speed in the X dimension. Permitted range is 0.1 to 100. Ignored when <i>PenSlew</i> is <tt>false</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#147">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PenVelocityY">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>PenVelocityY</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>When <i>PenSlew</i> is <tt>true</tt>, this value is a multiple of the default pen speed in the y dimension. Permitted range is 0.1 to 100. Ignored when <i>PenSlew</i> is <tt>false</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#148">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PlotterName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>PlotterName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>c.f. The print dialog for support names
+	    eg: POSTSCRIPT, COLORPOSTSC
+   <br>
+<br>Note: MS_PRINT_MGR is not supported<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#143">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SegmentedOutput">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>SegmentedOutput</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Set to <tt>true</tt> to generate a segmented plot. Default is <tt>false</tt>.This may be <tt>true</tt> only if you are plotting a single page.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#149">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SeparatePlotFiles">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>SeparatePlotFiles</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Defines the default in the <b>Print to File</b> dialog box.<ul type="disc">
+
+<li>
+ 
+<tt>true</tt>-Sets the default to Create Separate Files. </li>
+
+<li>
+ 
+<tt>false</tt> -A single file is created by default.</li>
+
+</ul>
+
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#151">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UserScale">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>UserScale</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies a scale factor between 0.01 and 100 for scaling a model or drawing for plotting. Default is 0.01.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#145">Interface: Plotting Files</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcModel-PlotInstructions.html">pfcPlotInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (string&nbsp;PlotterName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new instructions object used to plot a part, drawing, or assembly.
+<br>
+<br>The drawing must be displayed in a window to be successfully plotted.
+   The return value must be passed to 
+   <tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt> to produce the output file. 
+
+ This export-instructions class has been superseeded by 
+ <tt><b><tt><b><a class="enumtype" href="t-pfcExport-PrinterInstructions.html">pfcPrinterInstructions</a></b></tt></b></tt> objects.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#142">Interface: Plotting Files</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>PlotterName</b></tt>
+</dt>
+<dd>The name of a printer, typed exactly as it would appear in a user's <b>File &gt; Print</b> dialog. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The instructions object</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

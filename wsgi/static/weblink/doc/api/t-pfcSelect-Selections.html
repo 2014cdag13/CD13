@@ -1,0 +1,297 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for sequence  "
+	pfcSelections"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      465
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcSelect.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSelections</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This data type is used to specify an array of selections.
+<br>
+<br>The user can access elements by their integer index (position) in the list. Sequence provides methods for positional (indexed) access to its elements. Sequences are zero based.<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>/*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#Selections">Count</a></tt></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the number of items in the sequence.</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Append">Append</a>
+	(
+	<a class="" href="t-pfcSelect-Selection.html">pfcSelection</a>&nbsp;Item
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds a new item to the end of the sequence.</td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Clear">Clear</a>
+	(
+	
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes all items from the sequence.</td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Insert">Insert</a>
+	(
+	integer&nbsp;AtIndex
+	,&nbsp;<a class="" href="t-pfcSelect-Selection.html">pfcSelection</a>&nbsp;Item
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Inserts a new item in front of the 
+        sequence item with the specified index. If the index is out of range,
+        the sequence is expanded to include this index.</td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#InsertSeq">InsertSeq</a>
+	(
+	integer&nbsp;AtIndex
+	,&nbsp;<a class="" href="t-pfcSelect-Selections.html">pfcSelections</a>&nbsp;Sequence
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Inserts a sequence of items 
+        passed as the second argument in front of the sequence item with the 
+        specified index. If the index is out of range, the sequence is expanded 
+        to include this index.</td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-signature"><tt><a class="method" href="#Item">Item</a>
+	(
+	integer&nbsp;Index
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Accesses an item by its index in the 
+        sequence. If the index is out of range, this method throws the 
+        cipXInvalidSeqIndex exception.</td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Remove">Remove</a>
+	(
+	integer&nbsp;FromIndex
+	,&nbsp;integer&nbsp;ToIndex
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes items in the specified range
+        from the sequence. The first argument specifies the index of the first 
+        item to be removed. The second argument specifies the index of the item
+        immediately after the last in the range to be removed.</td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Set">Set</a>
+	(
+	integer&nbsp;Index
+	,&nbsp;<a class="" href="t-pfcSelect-Selection.html">pfcSelection</a>&nbsp;Item
+	)
+   </tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Assigns an item to the designated index
+        in the sequence. If the index is out of range, the sequence is expanded
+        to include this index.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Count">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>/*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>Count</tt></td>
+</tr>
+</table>
+</a>
+<br>Returns the number of items in the sequence.<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Append">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Append</tt></td><td class="func-params"><tt>
+	(
+	<a class="" href="t-pfcSelect-Selection.html">pfcSelection</a>&nbsp;Item
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Adds a new item to the end of the sequence.<br>
+<br>
+<hr>
+<br>
+<a name="Clear">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Clear</tt></td><td class="func-params"><tt>
+	(
+	
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Removes all items from the sequence.<br>
+<br>
+<hr>
+<br>
+<a name="Insert">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Insert</tt></td><td class="func-params"><tt>
+	(
+	integer&nbsp;AtIndex
+	,&nbsp;<a class="" href="t-pfcSelect-Selection.html">pfcSelection</a>&nbsp;Item
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Inserts a new item in front of the 
+        sequence item with the specified index. If the index is out of range,
+        the sequence is expanded to include this index.<br>
+<br>
+<hr>
+<br>
+<a name="InsertSeq">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>InsertSeq</tt></td><td class="func-params"><tt>
+	(
+	integer&nbsp;AtIndex
+	,&nbsp;<a class="" href="t-pfcSelect-Selections.html">pfcSelections</a>&nbsp;Sequence
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Inserts a sequence of items 
+        passed as the second argument in front of the sequence item with the 
+        specified index. If the index is out of range, the sequence is expanded 
+        to include this index.<br>
+<br>
+<hr>
+<br>
+<a name="Item">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>Item</tt></td><td class="func-params"><tt>
+	(
+	integer&nbsp;Index
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Accesses an item by its index in the 
+        sequence. If the index is out of range, this method throws the 
+        cipXInvalidSeqIndex exception.<br>
+<br>
+<hr>
+<br>
+<a name="Remove">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Remove</tt></td><td class="func-params"><tt>
+	(
+	integer&nbsp;FromIndex
+	,&nbsp;integer&nbsp;ToIndex
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Removes items in the specified range
+        from the sequence. The first argument specifies the index of the first 
+        item to be removed. The second argument specifies the index of the item
+        immediately after the last in the range to be removed.<br>
+<br>
+<hr>
+<br>
+<a name="Set">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Set</tt></td><td class="func-params"><tt>
+	(
+	integer&nbsp;Index
+	,&nbsp;<a class="" href="t-pfcSelect-Selection.html">pfcSelection</a>&nbsp;Item
+	)
+   </tt></td>
+</tr>
+</table>
+</a>
+<br>Assigns an item to the designated index
+        in the sequence. If the index is out of range, the sequence is expanded
+        to include this index.</body>
+</html>

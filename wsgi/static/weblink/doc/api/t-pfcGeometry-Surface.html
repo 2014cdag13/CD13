@@ -1,0 +1,1162 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcSurface"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      534
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcGeometry.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSurface</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines a surface.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcGeometry-TransformedSurface.html">pfcTransformedSurface</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-CoonsPatch.html">pfcCoonsPatch</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-FilletSurface.html">pfcFilletSurface</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-SplineSurface.html">pfcSplineSurface</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcGeometry-NURBSSurface.html">pfcNURBSSurface</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsVisible">IsVisible</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">true if the geometry is visible and active, false if it is invisible and inactive.  Inactive geometry may not have all geometric properties defined.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-Quilt.html">pfcQuilt</a></tt></td><td class="func-signature"><tt><a class="method" href="#OwnerQuilt">OwnerQuilt</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The quilt that contains the surface.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfXYZData.html">pfcSurfXYZData</a></tt></td><td class="func-signature"><tt><a class="method" href="#Eval3DData">Eval3DData</a>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Evaluates the surface in the specified UV point.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#EvalArea">EvalArea</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the surface area.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalClosestPoint">EvalClosestPoint</a>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;ToPoint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the point on the surface that is closest to the given point.  
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalClosestPointOnSurface">EvalClosestPointOnSurface</a>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;ToPoint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Determines whether the specified point is within a small epsilon value 
+of the invoking surface.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#EvalDiameter">EvalDiameter</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the surface diameter at the specified UV point. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalMaximum">EvalMaximum</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Proj)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the coordinates of the surface edge at the maximum projection,
+in the specified direction. The accuracy of this result
+is limited to the accuracy of the edge tessellation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalMinimum">EvalMinimum</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Proj)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the coordinates of the surface edge at the minimum projection,
+in the specified direction. The accuracy of this result
+is limited to the accuracy of the edge tessellation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalParameters">EvalParameters</a>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Point)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds the corresponding UV point on the surface, given the XYZ
+point.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-CurvatureData.html">pfcCurvatureData</a></tt></td><td class="func-signature"><tt><a class="method" href="#EvalPrincipalCurv">EvalPrincipalCurv</a>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns the principal curvatures and directions of a surface
+at a specified UV point.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-NURBSSurfaceDescriptor.html">pfcNURBSSurfaceDescriptor</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetNURBSRepresentation">GetNURBSRepresentation</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method calculates the surface geometry as a non-uniform rational B-spline surface.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfaceOrientation.html">pfcSurfaceOrientation</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetOrientation">GetOrientation</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns the orientation of the surface
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfaceDescriptor.html">pfcSurfaceDescriptor</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSurfaceDescriptor">GetSurfaceDescriptor</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns a data object representing the geometry of the surface.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfaceType.html">pfcSurfaceType</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSurfaceType">GetSurfaceType</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns the type of the surface.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-UVOutline.html">pfcUVOutline</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetUVExtents">GetUVExtents</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns the UV parameters at the corners of the surface.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetXYZExtents">GetXYZExtents</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns the XYZ points at the corners of the surface.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-Contours.html">pfcContours</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListContours">ListContours</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists all the contours on the surface.  
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-Surfaces.html">pfcSurfaces</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListSameSurfaces">ListSameSurfaces</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds and returns an array of surfaces that are the same as the
+input surface. For example, in the case of a cylinder, Creo Parametric   
+creates two, half-cylindrical surfaces. If you input one half of the 
+cylinder, this function returns the other half.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Placement.html">pfcPlacement</a></tt></td><td class="func-signature"><tt><a class="method" href="#VerifyUV">VerifyUV</a>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Verifies whether the specified UV point lies within the surface
+boundaries.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="IsVisible">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsVisible</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>true if the geometry is visible and active, false if it is invisible and inactive.  Inactive geometry may not have all geometric properties defined.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="OwnerQuilt">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcGeometry-Quilt.html">pfcQuilt</a></tt></td><td class="func-name"><tt>OwnerQuilt</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The quilt that contains the surface.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#99">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Eval3DData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfXYZData.html">pfcSurfXYZData</a></tt></td><td class="func-name"><tt>Eval3DData</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Evaluates the surface in the specified UV point.
+<br>
+<br>The function returns the following information: 
+<ul type="disc">
+
+
+<li>
+ The resulting XYZ point
+</li>
+
+<li>
+ The first and second derivatives 
+</li>
+
+<li>
+ The normal to the surface
+</li>
+
+</ul>
+
+
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#102">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Params</b></tt>
+</dt>
+<dd>The UV parameter on the surface</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The evaluation data</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalArea">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>EvalArea</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the surface area.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#104">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The surface area</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalClosestPoint">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>EvalClosestPoint</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;ToPoint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the point on the surface that is closest to the given point.  
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#100">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ToPoint</b></tt>
+</dt>
+<dd>The XYZ point</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The closest point in the surface</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalClosestPointOnSurface">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>EvalClosestPointOnSurface</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;ToPoint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Determines whether the specified point is within a small epsilon value 
+of the invoking surface.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#101">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ToPoint</b></tt>
+</dt>
+<dd>The point to evaluate </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>If the point is within tolerance, the method returns the closest three-dimensional point that is on the surface.   If the specified point is not within tolerance, the method returns  null. </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalDiameter">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>EvalDiameter</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the surface diameter at the specified UV point. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#105">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Params</b></tt>
+</dt>
+<dd>The UV point. This is ignored when the surface diameter is constant.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The resulting diameter </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalMaximum">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>EvalMaximum</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Proj)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the coordinates of the surface edge at the maximum projection,
+in the specified direction. The accuracy of this result
+is limited to the accuracy of the edge tessellation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#108">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Proj</b></tt>
+</dt>
+<dd>The direction of projection</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The coordinates of the point where the function finds the maximum projection</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalMinimum">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>EvalMinimum</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Proj)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the coordinates of the surface edge at the minimum projection,
+in the specified direction. The accuracy of this result
+is limited to the accuracy of the edge tessellation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#109">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Proj</b></tt>
+</dt>
+<dd>The direction of projection</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The coordinates of the point where the function finds the minimum projection</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalParameters">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a></tt></td><td class="func-name"><tt>EvalParameters</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Point)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds the corresponding UV point on the surface, given the XYZ
+point.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#103">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Point</b></tt>
+</dt>
+<dd>The XYZ point. The point does not need to lie on the surface. If the point is off the surface, the function finds the closest surface point.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The corresponding UV point</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EvalPrincipalCurv">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-CurvatureData.html">pfcCurvatureData</a></tt></td><td class="func-name"><tt>EvalPrincipalCurv</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns the principal curvatures and directions of a surface
+at a specified UV point.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#106">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Params</b></tt>
+</dt>
+<dd>The UV point</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The minimum and maximum curvatures at the specified point and theprincipal directions at the point</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetNURBSRepresentation">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-NURBSSurfaceDescriptor.html">pfcNURBSSurfaceDescriptor</a></tt></td><td class="func-name"><tt>GetNURBSRepresentation</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method calculates the surface geometry as a non-uniform rational B-spline surface.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#113">Geometry Evaluation: Surface Descriptors</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The NURBS surface geometry.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetOrientation">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfaceOrientation.html">pfcSurfaceOrientation</a></tt></td><td class="func-name"><tt>GetOrientation</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns the orientation of the surface
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#93">Geometry Evaluation: Surface Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The surface orientation</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSurfaceDescriptor">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfaceDescriptor.html">pfcSurfaceDescriptor</a></tt></td><td class="func-name"><tt>GetSurfaceDescriptor</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns a data object representing the geometry of the surface.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#112">Geometry Evaluation: Surface Descriptors</a>, <a href="../manual0/JGeom.html#113">Geometry Evaluation: Surface Descriptors</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The surface descriptor</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSurfaceType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-SurfaceType.html">pfcSurfaceType</a></tt></td><td class="func-name"><tt>GetSurfaceType</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns the type of the surface.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#90">Geometry Evaluation: Surface Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The surface type</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetUVExtents">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-UVOutline.html">pfcUVOutline</a></tt></td><td class="func-name"><tt>GetUVExtents</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns the UV parameters at the corners of the surface.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#92">Geometry Evaluation: Surface Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The UV parameters.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetXYZExtents">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-name"><tt>GetXYZExtents</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns the XYZ points at the corners of the surface.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#91">Geometry Evaluation: Surface Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The XYZ points.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListContours">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-Contours.html">pfcContours</a></tt></td><td class="func-name"><tt>ListContours</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists all the contours on the surface.  
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#14">Geometry Evaluation: Traversing the Geometry of a Solid Block</a>, <a href="../manual0/JGeom.html#15">Geometry Evaluation: Traversing the Geometry of a Solid Block</a>, <a href="../manual0/JGeom.html#65">Geometry Evaluation: Contours</a>, <a href="../manual0/JGeom.html#70">Geometry Evaluation: Contours</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of contours</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListSameSurfaces">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcGeometry-Surfaces.html">pfcSurfaces</a></tt></td><td class="func-name"><tt>ListSameSurfaces</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds and returns an array of surfaces that are the same as the
+input surface. For example, in the case of a cylinder, Creo Parametric   
+creates two, half-cylindrical surfaces. If you input one half of the 
+cylinder, this function returns the other half.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The array of surfaces</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="VerifyUV">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Placement.html">pfcPlacement</a></tt></td><td class="func-name"><tt>VerifyUV</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a>&nbsp;Params)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Verifies whether the specified UV point lies within the surface
+boundaries.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#107">Geometry Evaluation: Evaluation of Surfaces</a>, <a href="../manual0/JGeom.html#110">Geometry Evaluation: Evaluation of Surfaces</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Params</b></tt>
+</dt>
+<dd>The UV point to test</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The resulting status. The function returns one of the following values: <ul type="disc">
+
+<li>
+PLACE_ON_BOUNDARY -- The point is on the contour.</li>
+
+<li>
+PLACE_OUTSIDE -- The point is outside the contour.</li>
+
+<li>
+PLACE_INSIDE -- The point is inside the contour. </li>
+
+</ul>
+
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

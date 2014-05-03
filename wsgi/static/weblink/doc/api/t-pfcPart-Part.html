@@ -1,0 +1,356 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcPart"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      400
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcPart.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcPart</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines the material data for a part.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcSolid-Solid.html">pfcSolid</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-signature"><tt><a class="method" href="#CurrentMaterial">CurrentMaterial</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The part material </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateMaterial">CreateMaterial</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a material of the specified name (with default values)
+in the part. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetMaterial">GetMaterial</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Locates a material by name.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Materials.html">pfcMaterials</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListMaterials">ListMaterials</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the materials that exist in the part.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveMaterial">RetrieveMaterial</a>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Reads the named material properties from file and
+adds (or updates) the specified material name to the part's
+database.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="CurrentMaterial">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-name"><tt>CurrentMaterial</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The part material <br>
+<br>By default, assigning a material to a sheetmetal part through
+   <tt><b><a class="method" href="t-pfcPart-Part.html#CurrentMaterial">pfcPart.CurrentMaterial</a></b></tt> modifies the values 
+   of the sheetmetal properties such as Y factor and/or bend table as per the 
+   material file definition. This triggers a regeneration and a modification of 
+   the developed length calculations of the sheetmetal part. However, you can 
+   avoid this behavior by setting the value of the config option 
+   "material_update_smt_bend_table" to "never_replace".<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#99">Solid: Materials</a>, <a href="../manual0/JSolid.html#102">Solid: Materials</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="CreateMaterial">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-name"><tt>CreateMaterial</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a material of the specified name (with default values)
+in the part. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#101">Solid: Materials</a>, <a href="../manual0/JSolid.html#102">Solid: Materials</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The material name</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new material</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetMaterial">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-name"><tt>GetMaterial</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Locates a material by name.
+<br>
+<br>The material must be stored in the part and not stored in an external file.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcPart-Part.html#RetrieveMaterial">pfcPart.RetrieveMaterial()</a></b></tt>, <tt><b><a class="method" href="t-pfcPart-Part.html#ListMaterials">pfcPart.ListMaterials()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the material to find.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The material object, or <tt>null</tt>, if the material was not found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListMaterials">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Materials.html">pfcMaterials</a></tt></td><td class="func-name"><tt>ListMaterials</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the materials that exist in the part.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#100">Solid: Materials</a>, <a href="../manual0/JSolid.html#102">Solid: Materials</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of materials</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveMaterial">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Material.html">pfcMaterial</a></tt></td><td class="func-name"><tt>RetrieveMaterial</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Reads the named material properties from file and
+adds (or updates) the specified material name to the part's
+database.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#102">Solid: Materials</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The name of the material file.  The method will look for'matl_name'.mtl (a modern material file) first, and then 'matl_name'.mat.
+ </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The material properties</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

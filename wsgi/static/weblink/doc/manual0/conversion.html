@@ -1,0 +1,267 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="conversion" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Application Conversion</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANCONVERSION0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.28.1" class="ChapterTitle">Application Conversion</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0">This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes how to convert <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> applications from <span class=" x-ph-1-0">Release 2001</span> or earlier to <span class=" x-ph-1-0">Wildfire</span> embedded browser applications.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="conversion_ConvertingProWeb.LinkApplicationsFr-BDBC407F_30_10">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.28.3.1" class="Heading1">Converting Pro/Web.Link Applications from Previous Releases</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">To convert <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> applications from <span class=" x-ph-1-0">Release 2001</span> or earlier to <span class=" x-ph-1-0">Wildfire</span> embedded browser applications:
+               </div>
+               <div class=" x-ol-6-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-11-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0.00em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">1.</td>
+                           <td><span class=" x-p-4-0">Remove the prior <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> header.</span><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">&lt;EMBED TYPE = application/x-proconnect NAME = "mypwc" WIDTH=2 HEIGHT=2&gt;
+&lt;APPLET CODE = WebLink.class NAME = "pwl" WIDTH=2 HEIGHT=2&gt; &lt;/APPLET&gt;</span></pre></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0.00em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">2.</td>
+                           <td><span class=" x-p-4-0">Add a new header to the start of the script based on embedded JavaScript.</span><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">&lt;SCRIPT&gt;
+function pfcCreate (className)
+{
+  if (navigator.appName.indexOf ("Microsoft") != -1)
+      return (new ActiveXObject ("pfc." + className));
+  else
+      alert ("Only IE is supported in this release");
+}
+
+try
+{
+  document.pwl = pfcCreate("MpfcCOMGlobal").GetScript();
+  document.pwlc = document.pwl.GetPWLConstants();
+  document.pwlf = document.pwl.GetPWLFeatureConstants();
+}
+catch (x)
+{
+if (x.description == "pfcXNotConnectedToProE")
+{
+// The configuration option 'web_enable_javascript' was not set, or the page was loaded into a non-embedded browser window
+}
+else if (x.description == "Automation Server can't create object")
+{
+// The browser security does not allow embedded JavaScript
+}
+}
+...
+&lt;/SCRIPT&gt;</span></pre></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0.00em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">3.</td>
+                           <td><span class=" x-p-4-0">Replace all usages of arrays in the current <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> functions and return values. Search your web page for &#8220;[&#8220; and replace as follows:</span><div class=" x-ul-2-0">
+                                 <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                                    <col style="width: 0em">
+                                    <col style="width: 18pt">
+                                    <col>
+                                    <tbody>
+                                       <tr valign="baseline">
+                                          <td align="right"></td>
+                                          <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                          <td><span class=" x-p-4-0">If the array usage is populating an array for the purposes of passing it to a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> method, replace the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">&lt;array&gt;[&lt;index&gt;] = &lt;value&gt; syntax with &lt;array&gt;.Set (&lt;index&gt;, &lt;value&gt;)</span></span>.</span></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                                    <col style="width: 0em">
+                                    <col style="width: 18pt">
+                                    <col>
+                                    <tbody>
+                                       <tr valign="baseline">
+                                          <td align="right"></td>
+                                          <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                          <td><span class=" x-p-4-0">If the array usage is extracting the contents of an array returned from a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> method, replace the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">&lt;value&gt; = &lt;array&gt;[&lt;index&gt;] syntax with &lt;value&gt; = &lt;array&gt;.Item (&lt;index&gt;)</span></span>.</span><div class=" x-note-2-0 x-note-2-3">
+                                                <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                                                <div class=" x-p-7-0">Your application can use JavaScript style arrays, but inputs and outputs accessing <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> methods must not be contained in standard arrays.
+                                                </div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-12-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0.00em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">4.</td>
+                           <td><span class=" x-p-4-0">Replace all uses of named <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> constants in the following order:</span><div class=" x-ul-2-0">
+                                 <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                                    <col style="width: 0em">
+                                    <col style="width: 18pt">
+                                    <col>
+                                    <tbody>
+                                       <tr valign="baseline">
+                                          <td align="right"></td>
+                                          <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                          <td><span class=" x-p-4-0">Replace the string <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pwl.PWL_FEAT_ with pwlf.PWL_FEAT_</span></span>. The feature related constants are stored in the top-level object returned by <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">GetPWLFeatureConstants()</span></span>.</span></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                                    <col style="width: 0em">
+                                    <col style="width: 18pt">
+                                    <col>
+                                    <tbody>
+                                       <tr valign="baseline">
+                                          <td align="right"></td>
+                                          <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                          <td><span class=" x-p-4-0">Replace the string <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pwl.PWL with pwlc.PWL</span></span>. All non-feature related <span class=" x-ph-1-0">Pro/Web.Link</span> constants are stored in the top-level object returned by <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">GetPWLConstants()</span></span>.</span></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class=" x-note-2-0 x-note-2-3">
+                                 <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                                 <div class=" x-ul-2-0">
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                             <td><span class=" x-p-4-0">The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">document.pwl</span></span> object supports an <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">eval()</span></span> method which converts a plain string representation of a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> constant to an integer value. For example, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">document.pwl.eval ("PWL_FEATURE")</span></span> returns 3. The <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">eval()</span></span> method cannot be used to resolve and call functions at runtime.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                             <td><span class=" x-p-4-0">The embedded browser version of <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> does not write a JavaScript trail file. Actions performed on buttons and components in web pages in the embedded browser
+                                                   are written into the standard <span class=" x-ph-1-0">Creo Parametric</span> trail file.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="conversion_WorkingWithConvertedFunctions-BDBC500F_30_66">
+               
+               <a name="2"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.28.3.3.1" class="Heading2">Working with Converted Functions</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">After converting the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> applications from previous releases to the embedded browser, you can use the new &#8220;PFC&#8221; style interfaces available to <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>. In most situations, it will not be required to convert PWL sections of <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Pro/Web.Link</span></span> code to PFC as many PWL methods return the required PFC object along with the other information.
+                  </div>
+                  <div class=" x-p-7-0">For example, the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pwlAssemblyComponentsGet</span></span> in the embedded browser returns:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">int NumMdls</span></span>&#8212;The number of components found</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">string[] MdlNameExt</span></span>&#8212;The names and types of the components</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">int[] ComponentID</span></span>&#8212;The identifier of each component</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcComponentFeats.ComponentFeatObjects</span></span>&#8212;Sequence of 'PFC' style component features</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">To examine the components' constraints, extract the PFC component feature objects from the last member of the return value,
+                     without rewriting other code using the original return parameters.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
