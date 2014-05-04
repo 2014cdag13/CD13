@@ -1,0 +1,449 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcParameter"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      386
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModelItem.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcParameter</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines a parameter object.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-BaseParameter.html">pfcBaseParameter</a>, 
+        <a class="class" href="t-pfcModelItem-NamedModelItem.html">pfcNamedModelItem</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Description">Description</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Parameter description string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-signature"><tt><a class="method" href="#Units">Units</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Units assigned to the parameter.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Delete">Delete</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes a parameter.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ParameterDriverType.html">pfcParameterDriverType</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetDriverType">GetDriverType</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Obtains the type of driver for a material parameter.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ParameterRestriction.html">pfcParameterRestriction</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetRestriction">GetRestriction</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if a parameter's value is restricted to a certain range or enumerated.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetScaledValue">GetScaledValue</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the parameter value in the units of the parameter, instead of the units of the owner model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Reorder">Reorder</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a>&nbsp;ParamBefore)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Reorders the given parameter to come just after the indicated parameter.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetScaledValue">SetScaledValue</a>
+ (<a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a>&nbsp;value, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a>&nbsp;Units)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the parameter value in terms of the units provided, instead of using the units of the owner model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Description">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Description</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Parameter description string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#45">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Units">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-name"><tt>Units</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Units assigned to the parameter.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#41">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Delete">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Delete</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes a parameter.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#49">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetDriverType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ParameterDriverType.html">pfcParameterDriverType</a></tt></td><td class="func-name"><tt>GetDriverType</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Obtains the type of driver for a material parameter.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#47">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The parameter driver type.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetRestriction">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ParameterRestriction.html">pfcParameterRestriction</a></tt></td><td class="func-name"><tt>GetRestriction</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if a parameter's value is restricted to a certain range or enumerated.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#46">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The parameter restriction.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetScaledValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a></tt></td><td class="func-name"><tt>GetScaledValue</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the parameter value in the units of the parameter, instead of the units of the owner model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#39">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The parameter scaled value.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Reorder">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Reorder</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a>&nbsp;ParamBefore)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Reorders the given parameter to come just after the indicated parameter.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#48">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ParamBefore</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetScaledValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetScaledValue</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a>&nbsp;value, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a>&nbsp;Units)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the parameter value in terms of the units provided, instead of using the units of the owner model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#40">Dimensions and Parameters: Parameter Information</a>, <a href="../manual0/JDims.html#50">Dimensions and Parameters: Parameter Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>value</b></tt>
+</dt>
+<dd></dd>
+<dt>
+<tt><b>Units</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

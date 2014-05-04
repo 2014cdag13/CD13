@@ -1,0 +1,368 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+	 CIP JavaScript documentation for module "pfcDetail"
+	</title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      1,
+      10
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;Module
+     </td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Module "pfcDetail"</h2>
+<b>Description</b>
+<br>
+<br>This module contains detail and detail item related interfaces.
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Enumerated Types</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-DetailType.html">pfcDetailType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type contains the types of detail items.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-AttachmentType.html">pfcAttachmentType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the types of detail attachments.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-HorizontalJustification.html">pfcHorizontalJustification</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the types of horizontal justification for notes.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-VerticalJustification.html">pfcVerticalJustification</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the types of vertical justification for notes.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-SymbolDefHeight.html">pfcSymbolDefHeight</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the symbol definition height options.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-SymbolDefAttachmentType.html">pfcSymbolDefAttachmentType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the symbol definition attachment options.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-SymbolGroupFilter.html">pfcSymbolGroupFilter</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the filter option for getting symbol groups included in a symbol instance.
+ </td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDetail-DetailSymbolGroupOption.html">pfcDetailSymbolGroupOption</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type represents the various options of symbol group placement.</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Classes</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-Attachment.html">pfcAttachment</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail item attachment.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is used to provide information on how to create a detail item.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailEntityInstructions.html">pfcDetailEntityInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains information used to describe a detail entity item.  
+It may be used when creating detail entities (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#CreateDetailItem">pfcDetailSymbolDefItem.CreateDetailItem()</a></b></tt>), or accessing existing entities (<tt><b><a class="method" href="t-pfcDetail-DetailEntityItem.html#Modify">pfcDetailEntityItem.Modify()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailEntityItem.html#GetInstructions">pfcDetailEntityItem.GetInstructions()</a></b></tt>).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailEntityItem.html">pfcDetailEntityItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail entity item in a Creo Parametric model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailGroupInstructions.html">pfcDetailGroupInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains information used to describe a detail group item.  
+It may be used when creating detail groups (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>), or accessing existing groups (<tt><b><a class="method" href="t-pfcDetail-DetailGroupItem.html#Modify">pfcDetailGroupItem.Modify()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailGroupItem.html#GetInstructions">pfcDetailGroupItem.GetInstructions()</a></b></tt>).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailGroupItem.html">pfcDetailGroupItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail group item in a Creo Parametric model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail item in Creo Parametric.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailItemOwner.html">pfcDetailItemOwner</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents an object in Creo Parametric that contains detail items.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailLeaders.html">pfcDetailLeaders</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a set of leaders used by a detail item.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains information used to describe a detail note item.  
+It may be used when creating detail notes (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#CreateDetailItem">pfcDetailSymbolDefItem.CreateDetailItem()</a></b></tt>), or accessing existing notes (<tt><b><a class="method" href="t-pfcDetail-DetailNoteItem.html#Modify">pfcDetailNoteItem.Modify()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailNoteItem.html#GetInstructions">pfcDetailNoteItem.GetInstructions()</a></b></tt>).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailNoteItem.html">pfcDetailNoteItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail note item in a Creo Parametric model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailOLEObject.html">pfcDetailOLEObject</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a drawing-embedded OLE object.
+ </td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains information used to describe a symbol definition.  
+It may be used when creating symbol definition (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>), or accessing existing entities (<tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#Modify">pfcDetailSymbolDefItem.Modify()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#GetInstructions">pfcDetailSymbolDefItem.GetInstructions()</a></b></tt>).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolDefItem.html">pfcDetailSymbolDefItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a symbol definition in a Creo Parametric model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a symbol group contained in a drawing symbol.
+ </td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolGroupInstructions.html">pfcDetailSymbolGroupInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains information used to describe a symbol group. It may be used for modifying/accessing 
+ existing symbol groups (<tt><b><a class="method" href="t-pfcDetail-DetailSymbolGroup.html#Modify">pfcDetailSymbolGroup.Modify()</a></b></tt> and
+  <tt><b><a class="method" href="t-pfcDetail-DetailSymbolGroup.html#GetInstructions">pfcDetailSymbolGroup.GetInstructions()</a></b></tt>).
+ </td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolInstInstructions.html">pfcDetailSymbolInstInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains information used to describe a symbol instance.
+It may be used when creating symbol instances
+ (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>), 
+ or accessing existing groups (<tt><b><a class="method" href="t-pfcDetail-DetailSymbolInstItem.html#Modify">pfcDetailSymbolInstItem.Modify()</a></b></tt> 
+ and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolInstItem.html#GetInstructions">pfcDetailSymbolInstItem.GetInstructions()</a></b></tt>).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolInstItem.html">pfcDetailSymbolInstItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a symbol instance in a Creo Parametric model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailText.html">pfcDetailText</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a text entry in a detail note.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailTextLine.html">pfcDetailTextLine</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a line of text in a detail note.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailVariantText.html">pfcDetailVariantText</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a variant text element set in a symbol instance.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-FreeAttachment.html">pfcFreeAttachment</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail item attachment at free point, possibly relative to a model view.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-OffsetAttachment.html">pfcOffsetAttachment</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail item offset attachment that refers to a point or axis.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-ParametricAttachment.html">pfcParametricAttachment</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail item attachment on an entity or item.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-SymbolDefAttachment.html">pfcSymbolDefAttachment</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents the way that an instance may be attached to a symbol definition.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-TextReference.html">pfcTextReference</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface identifies the text item used for a symbol definition which as a height type of SYMDEF_TEXT_RELATED. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-UnsupportedAttachment.html">pfcUnsupportedAttachment</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a detail item attachment on an item that cannot be represented in PFC at the current time. 
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Collections</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-Attachments.html">pfcAttachments</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of detail attachment objects.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailItems.html">pfcDetailItems</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of detail items.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailSymbolGroups.html">pfcDetailSymbolGroups</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailTextLines.html">pfcDetailTextLines</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of text lines.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailTexts.html">pfcDetailTexts</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of texts.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-DetailVariantTexts.html">pfcDetailVariantTexts</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of variant text elements used in placing a symbol instance.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDetail-SymbolDefAttachments.html">pfcSymbolDefAttachments</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of symbol definition attachment objects.
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

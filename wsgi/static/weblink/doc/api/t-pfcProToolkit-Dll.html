@@ -1,0 +1,285 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDll"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      174
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcProToolkit.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDll</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a Creo Parametric TOOLKIT DLL.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetProToolkitDll">pfcBaseSession.GetProToolkitDll()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#LoadProToolkitDll">pfcBaseSession.LoadProToolkitDll()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Child.html">pfcChild</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Id">Id</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The DLL identifier string.  Use <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetProToolkitDll">pfcBaseSession.GetProToolkitDll()</a></b></tt> to obtain a DLL handle using this string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcProToolkit-FunctionReturn.html">pfcFunctionReturn</a></tt></td><td class="func-signature"><tt><a class="method" href="#ExecuteFunction">ExecuteFunction</a>
+ (string&nbsp;FunctionName, <a class="type" href="t-pfcArgument-Arguments.html">pfcArguments</a>&nbsp;InputArguments)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Causes Creo Parametric to call a function in a Creo Parametric TOOLKIT DLL application.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsActive">IsActive</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Helper method for determining if application that this <tt><b><tt><b><a class="enumtype" href="t-pfcProToolkit-Dll.html">pfcDll</a></b></tt></b></tt> object has been unloaded.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Unload">Unload</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Unloads a previously loaded DLL application.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Id">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Id</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The DLL identifier string.  Use <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetProToolkitDll">pfcBaseSession.GetProToolkitDll()</a></b></tt> to obtain a DLL handle using this string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#26">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>, <a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="ExecuteFunction">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcProToolkit-FunctionReturn.html">pfcFunctionReturn</a></tt></td><td class="func-name"><tt>ExecuteFunction</tt></td><td class="func-params"><tt>
+ (string&nbsp;FunctionName, <a class="type" href="t-pfcArgument-Arguments.html">pfcArguments</a>&nbsp;InputArguments)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Causes Creo Parametric to call a function in a Creo Parametric TOOLKIT DLL application.
+<br>
+<br>The function must have a signature matching <b>ProTkdllFunction</b> in ProToolkitDll.h.
+The function must be exported using the proper macros, functions, and linker options that allow Creo Parametric to call the function.  See the Creo Parametric TOOLKIT User's Guide and ProToolkitDll.h for more details.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#LoadProToolkitDll">pfcBaseSession.LoadProToolkitDll()</a></b></tt>, <tt><b><a class="method" href="t-pfcArgument-Argument.html#Create">pfcArgument.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#25">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>, <a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FunctionName</b></tt>
+</dt>
+<dd>The function name.</dd>
+<dt>
+<tt><b>InputArguments</b></tt>
+</dt>
+<dd>Sequence of input argument name-value pairs to be passed to the function.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The function return value, as integer, and the output arguments passed back from the function call.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsActive">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsActive</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Helper method for determining if application that this <tt><b><tt><b><a class="enumtype" href="t-pfcProToolkit-Dll.html">pfcDll</a></b></tt></b></tt> object has been unloaded.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#27">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>, <a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Whether or not the application has been unloaded.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Unload">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Unload</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Unloads a previously loaded DLL application.
+<br>
+<br>You are only permitted to unload applications that you previously loaded with <tt><b><a class="method" href="t-pfcSession-BaseSession.html#LoadProToolkitDll">pfcBaseSession.LoadProToolkitDll()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

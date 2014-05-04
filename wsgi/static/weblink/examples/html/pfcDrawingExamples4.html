@@ -1,0 +1,81 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+-->
+<html>
+
+<head>
+<title>Pro/Web Link Drawing Examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcDrawingExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function createPointDims_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createPointDims ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Drawing Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Page 4<o:p></o:p></p>
+
+<form name=CS>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating auto-dimensioned points</h3>
+  <p>This example function (“createPointDims()”) demonstrates creation of a
+  drawing dimensions.<span style="mso-spacerun: yes">  </span>Select a
+  coordinate system from a model in a drawing view.<span style="mso-spacerun:
+  yes">  </span>Ordinate dimensions between the csys and all of the<span
+  style="mso-spacerun: yes">  </span>points in the top level model will be
+  constructed and shown.<o:p></o:p></p>
+  <p align=center style='text-align:center'>
+  <input type=button value="Create Point Dims" id=button3 name=button3 onclick="createPointDims_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=CE>
+</form>
+
+<p style='tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

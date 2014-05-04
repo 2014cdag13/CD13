@@ -1,0 +1,261 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcScreenTransform"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      454
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcBase.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcScreenTransform</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>Stores pan and zoom values.
+<br>
+<br>The pan and zoom values are applied to a window by calling the window's <tt>ScreenTransformSet()</tt> method.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcBase-ScreenTransform.html#Create">pfcScreenTransform.Create()</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#PanX">PanX</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A value between -1.0 and 1.0 that specifies the amount of horizontal panning. -1.0 pans one window width to the left; 1.0 pans one window width to the right. 0 specifies no horizontal panning. This attribute can be <tt>null</tt>, in which case 0 is used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#PanY">PanY</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A value between -1.0 and 1.0 that specifies the amount of vertical panning. -1.0 pans up by the height of the window; 1.0 pans down by the height of the window. 0 specifies no vertical panning. This attribute can be <tt>null</tt>, in which case 0 is used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#Zoom">Zoom</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A value greater than 0 and the less than or equal to the value of the Creo Parametric variable <tt>MAX_ZOOM_SCALE</tt> that specifies the zoom factor. The value 0.1, for example, would zoom out by a factor of 10. <p></p>
+This attribute can be <tt>null</tt>, in which case 1 (no zoom) is used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcBase-ScreenTransform.html">pfcScreenTransform</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;number&nbsp;PanX, 
+   /*&nbsp;optional&nbsp;*/&nbsp;number&nbsp;PanY, 
+   /*&nbsp;optional&nbsp;*/&nbsp;number&nbsp;Zoom)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new <i>ScreenTransform</i> object.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="PanX">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>PanX</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A value between -1.0 and 1.0 that specifies the amount of horizontal panning. -1.0 pans one window width to the left; 1.0 pans one window width to the right. 0 specifies no horizontal panning. This attribute can be <tt>null</tt>, in which case 0 is used.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#101">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PanY">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>PanY</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A value between -1.0 and 1.0 that specifies the amount of vertical panning. -1.0 pans up by the height of the window; 1.0 pans down by the height of the window. 0 specifies no vertical panning. This attribute can be <tt>null</tt>, in which case 0 is used.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#102">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Zoom">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>Zoom</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A value greater than 0 and the less than or equal to the value of the Creo Parametric variable <tt>MAX_ZOOM_SCALE</tt> that specifies the zoom factor. The value 0.1, for example, would zoom out by a factor of 10. <p></p>
+This attribute can be <tt>null</tt>, in which case 1 (no zoom) is used.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#103">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcBase-ScreenTransform.html">pfcScreenTransform</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;number&nbsp;PanX, 
+   /*&nbsp;optional&nbsp;*/&nbsp;number&nbsp;PanY, 
+   /*&nbsp;optional&nbsp;*/&nbsp;number&nbsp;Zoom)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new <i>ScreenTransform</i> object.
+<br>
+<br>The pan and zoom values in a <i>ScreenTransform</i> object are applied to a window by using the <tt><b><a class="method" href="t-pfcWindow-Window.html#ScreenTransform">pfcWindow.ScreenTransform</a></b></tt>  property.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>PanX</b></tt>
+</dt>
+<dd>A value between -1.0 and 1.0 that specifies the amount of horizontal panning. -1.0 pans one window width to the left; 1.0 pans one window width to the right. 0 specifies no horizontal panning. This attribute can be <tt>null</tt>, in which case 0 is used.</dd>
+<dt>
+<tt><b>PanY</b></tt>
+</dt>
+<dd>A value between -1.0 and 1.0 that specifies the amount of vertical panning. -1.0 pans up by the height of the window; 1.0 pans down by the height of the window. 0 specifies no vertical panning. This attribute can be <tt>null</tt>, in which case 0 is used.</dd>
+<dt>
+<tt><b>Zoom</b></tt>
+</dt>
+<dd>A value greater than 0 and the less than or equal to the value of the Creo Parametric variable <tt>MAX_ZOOM_SCALE</tt> that specifies the zoom factor. The value 0.1, for example, would zoom out by a factor of 10. <p></p>
+This attribute can be <tt>null</tt>, in which case 1 (no zoom) is used.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new <i>ScreenTransform</i> object</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

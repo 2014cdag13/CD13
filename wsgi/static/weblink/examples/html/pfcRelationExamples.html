@@ -1,0 +1,74 @@
+<!--  
+
+23-JUL-2007   L-01-35 $$1  SNV     Created and submitted
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link Examples - Relation</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcRelationExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function createParamDimRelation_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createParamDimRelation_script_wrapper();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Relation Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=DR>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Add Parameter - Dimension Relations</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“createParamDimRelation”) creates parameters for all dimensions in
+  selected features of a part model and adds relation between them.<span
+  style="mso-spacerun: yes">  </span>The current model must a part.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'>
+  <input type=button value="Add Relation" id=button1 name=button1 onclick="createParamDimRelation_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

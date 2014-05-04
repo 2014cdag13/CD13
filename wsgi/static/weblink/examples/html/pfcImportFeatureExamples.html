@@ -1,0 +1,90 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+09-APR-2009   L-03-29 $$4  SRV     Remvng CATIA file type as it obsoleted.
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcImportFeatureExample.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function createImportFeatureFromDataFile_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+      try
+      {
+      createImportFeatureFromDataFile (document.CI.fileType.value, 
+      document.CI.fileName.value, 
+      document.CI.csysName.value);
+		}
+	catch (err)
+		{
+      alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Import Feature Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=CI>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Adding hole diameters to the family table</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“createImportFeatureFromDataFile”)
+  creates a new import feature given a geometry file and the name of a
+  coordinate system.<span style="mso-spacerun: yes">  </span>The current model
+  must be a part.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><SELECT NAME="fileType"
+  id=fileType>
+<OPTION VALUE="Neutral" ID=Neutral>Neutral
+<OPTION VALUE="IGES" ID=IGES>IGES
+<OPTION VALUE="PDGS" ID=PDGS>PDGS
+<OPTION VALUE="SET" ID=SET>SET
+<OPTION VALUE="STEP" ID=STEP>STEP
+<OPTION VALUE="VDA" ID=VDA>VDA
+</SELECT><INPUT TYPE="text" NAME="fileName" VALUE="File name"
+  id=fileName><INPUT TYPE="text" NAME="csysName" VALUE="PRT_CSYS_DEF"
+  id=csysName>
+  <input type=button value="Create Feature" id=button1 name=button1 onclick="createImportFeatureFromDataFile_wrapper()">
+  </p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

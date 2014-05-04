@@ -1,0 +1,1081 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="JSelection" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Selection</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANJSELECTION0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.9.1" class="ChapterTitle">Selection</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0">This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes how to use Interactive Selection in <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="JSelection_InteractiveSelection-B9ABDE9A_11_10">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.9.3.1" class="Heading1">Interactive Selection</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="2"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="3"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="4"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="5"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#Select">pfcBaseSession.Select()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="6"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionOptions.html#Create">pfcSelectionOptions.Create()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="7"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionOptions.html#MaxNumSels">pfcSelectionOptions.MaxNumSels</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="8"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionOptions.html#OptionKeywords">pfcSelectionOptions.OptionKeywords</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.Select()</span></span> activates the standard <span class=" x-ph-1-0">Creo Parametric</span> menu structure for selecting objects and returns a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Selections</span></span> sequence that contains the objects the user selected. Using the <span class=" x-parmname-3-0">Options</span> argument, you can control the type of object that can be selected and the maximum number of selections.
+               </div>
+               <div class=" x-p-7-0">In addition, you can pass in a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Selections</span></span> sequence to the method. The returned <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Selections</span></span> sequence will contain the input sequence and any new objects. 
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelectionOptions.Create()</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and the property </span></span><span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.SelectionOptions.SetOptionKeywords</span></span> take a <span class=" x-parmname-3-0">String</span> argument made up of one or more of the identifiers listed in the table below, separated by commas.
+               </div>
+               <div class=" x-p-7-0">For example, to allow the selection of features and axes, the arguments would be <span class=" x-parmname-3-0">feature</span>, <span class=" x-parmname-3-0">axis</span>. 
+               </div>
+               <div class=" x-table-2-0 x-table-2-3" id="styler-id1.1.1.9.3.3.7">
+                  <table xmlns="" cellpadding="6.666666666666667" class=" x-tgroup-1-0" frame="box" rules="none" style="border-collapse: collapse; border-width: 1pt; " width="100%">
+                     <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                     </colgroup>
+                     <thead align="left" class=" x-thead-1-0" style="font-weight: bold" valign="top">
+                        <tr class=" x-row-2-0">
+                           <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                              <div class=" x-p-3-0">Creo Parametric Database Item</div>
+                           </th>
+                           <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                              <div class=" x-p-3-0">String Identifier</div>
+                           </th>
+                           <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                              <div class=" x-p-3-0">ModelItemType</div>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody class=" x-tbody-1-0" valign="top">
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Datum point </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">point</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_POINT</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Datum axis </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">axis</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_AXIS</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Datum plane</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">datum</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_SURFACE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Coordinate system datum </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">csys</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_COORD_SYS</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Feature </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">feature</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_FEATURE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Edge (solid or datum surface)</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">edge</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_EDGE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Edge (solid only) </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">sldedge</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_EDGE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Edge (datum surface only)</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">qltedge</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_EDGE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Datum curve</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">curve</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_CURVE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Composite curve</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">comp_crv</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_CURVE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Surface (solid or quilt)</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">surface</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_SURFACE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Surface (solid) </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">sldface</span> 
+                              </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_SURFACE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Surface (datum surface)</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">qltface</span> 
+                              </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_SURFACE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Quilt</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">dtmqlt</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_QUILT</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Dimension</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">dimension</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_DIMENSION</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Reference dimension</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">ref_dim</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_REF_DIMENSION</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Integer parameter</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">ipar</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_DIMENSION</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Part </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">part</span> 
+                              </div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">N/A</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Part or subassembly</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">prt_or_asm</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">N/A</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Assembly component model</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">component</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">N/A</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Component or feature</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">membfeat</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_FEATURE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Detail symbol</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">dtl_symbol</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_DTL_SYM_INSTANCE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Note</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">any_note</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_NOTE</span></span>, <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_DTL_NOTE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Draft entity</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">draft_ent</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_DTL_ENTITY</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Table</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">dwg_table</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_TABLE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Table cell</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">table_cell</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ITEM_TABLE</span></span></div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Drawing view</div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-parmname-2-0">dwg_view</span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">N/A</div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">When you specify the maximum number of selections, the argument to <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelectionOptions.MaxNumSels</span></span> must be an Integer.
+               </div>
+               <div class=" x-p-7-0">The default value assigned when creating a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SelectionOptions</span></span> object is &#8211;1, which allows any number of selections by the user.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSelection_AccessingSelectionData-B9ADE57F_11_342">
+            
+            <a name="9"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.9.4.1" class="Heading1">Accessing Selection Data</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="10"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="11"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">Properties </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="12"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelModel">pfcSelection.SelModel</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="13"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelItem">pfcSelection.SelItem</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="14"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#Path">pfcSelection.Path</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="15"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#Params">pfcSelection.Params</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="16"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#TParam">pfcSelection.TParam</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="17"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#Point">pfcSelection.Point</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="18"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#Depth">pfcSelection.Depth</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="19"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelView2D">pfcSelection.SelView2D</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="20"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelTableCell">pfcSelection.SelTableCell</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="21"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelTableSegment">pfcSelection.SelTableSegment</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">These <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span> return objects and data that make up the selection object. Using the appropriate <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span>, you can access the following data:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For a selected model or model item use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.SelModel</span></span> or <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.SelItem</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For an assembly component use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.Path</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For UV parameters of the selection point on a surface use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.Params</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For the T parameter of the selection point on an edge or curve use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.TParam</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For a three-dimensional point object that contains the selected point use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.Point</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For selection depth, in screen coordinates use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.Depth</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For the selected drawing view, if the selection was from a drawing, use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.SelView2D</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For the selected table cell, if the selection was from a table, use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.SelTableCell</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">For the selected table segment, if the selection was from a table, use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.Selection.GetSelTableSegment</span></span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSelection_ControllingSelectionDisplay-B9ADD2E9_11_418">
+               
+               <a name="22"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.9.4.4.1" class="Heading2">Controlling Selection Display</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="23"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="24"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="25"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods Introduced:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="26"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#Highlight">pfcSelection.Highlight()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="27"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#UnHighlight">pfcSelection.UnHighlight()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="28"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#Display">pfcSelection.Display()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">These methods cause a specific selection to be highlighted or dimmed on the screen using the color specified as an argument.</div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.Highlight()</span></span> highlights the selection in the current window. This highlight is the same as the one used by <span class=" x-ph-1-0">Creo Parametric</span> when selecting an item&#8212;it just repaints the wire-frame display in the new color. The highlight is removed if you use the
+                     <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">View</span></span>, <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Repaint</span></span> command or <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Repaint()</span></span>; it is not removed if you use <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Refresh()</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.UnHighlight()</span></span> removes the highlight.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.Selection.Display</span></span> causes a selected object to be displayed on the screen, even if it is suppressed or hidden.
+                  </div>
+                  <div class=" x-note-2-0 x-note-2-3">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">This is a one-time action and the next repaint will erase this display.</div>
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSelection_ExampleCodeUsingInteractiveSelectio-B9ADC9C0_11_453">
+               
+               <a name="29"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.9.4.5.1" class="Heading2">Example Code: Using Interactive Selection</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The sample code in the file <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="1"><span class="cf-Monospace-combined-European_Alphabets">pfcSelectionExamples.js</span></span></span> located at <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="1"><span class="cf-Monospace-combined-European_Alphabets">&lt;creo_weblink_loadpoint&gt;/weblinkexamples/jscript</span></span></span> demonstrates how to use <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> to allow interactive selection.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSelection_ProgrammaticSelection-B9AFD36B_11_466">
+            
+            <a name="30"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.9.5.1" class="Heading1">Programmatic Selection</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> provides methods whereby you can make your own Selection objects, without prompting the user. These Selections are required
+                  as inputs to some methods and can also be used to highlight certain objects on the screen.
+               </div>
+               <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="31"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-MpfcSelect.html#CreateModelItemSelection">MpfcSelect.CreateModelItemSelection()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="32"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-MpfcSelect.html#CreateComponentSelection">MpfcSelect.CreateComponentSelection()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span xmlns="" profilecode="1"><span class=" x-p-4-0"><a name="33"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-MpfcSelect.html#CreateSelectionFromString">MpfcSelect.CreateSelectionFromString()</A></li></span></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="34"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelItem">pfcSelection.SelItem</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="35"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelTableCell">pfcSelection.SelTableCell</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="36"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-Selection.html#SelView2D">pfcSelection.SelView2D</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">MpfcSelect.CreateModelItemSelection()</span></span> creates a selection out of any model item object. It takes a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ModelItem</span></span> and optionally a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ComponentPath</span></span> object to identify which component in an assembly the Selection Object belongs to.
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">MpfcSelect.CreateComponentSelection()</span></span> creates a selection out of any component in an assembly. It takes a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ComponentPath</span></span> object. For more information about <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ComponentPath</span></span> objects, see the section <a href="JSolid.html" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Getting a Solid Object</a> in <a href="JSolid.html" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Solid</a>.
+               </div>
+               <div class=" x-p-7-0"><span xmlns="" profilecode="1">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.CreateSelectionFromString</span></span> creates a new selection object, based on a <span class=" x-ph-1-0">Web.Link</span> style selection string specified as the input.</span></div>
+               <div class=" x-p-7-0">Some <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span> require more information to be set in the selection object. The methods allow you to set the following:
+               </div>
+               <div class=" x-p-7-0">The selected item using the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.SelItem</span></span>.
+               </div>
+               <div class=" x-p-7-0">The selected table cell using the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelection.SelTableCell</span></span>.
+               </div>
+               <div class=" x-p-7-0">The selected drawing view using the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.Selection.SetSelView2D</span></span>.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSelection_SelectionBuffer-B9B01247_11_553">
+            
+            <a name="37"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.9.6.1" class="Heading1">Selection Buffer</div>
+            <div class=" x-body-3-0"></div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSelection_IntroductionToSelectionBuffers-B9AFF310_11_556">
+               
+               <a name="38"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.9.6.3.1" class="Heading2">Introduction to Selection Buffers</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Selection is the process of choosing items on which you want to perform an operation. In <span class=" x-ph-1-0">Creo Parametric</span>, before a feature tool is invoked, the user can select items to be used in a given tool's collectors. Collectors are like
+                     storage bins of the references of selected items. The location where preselected items are stored is called the selection
+                     buffer.
+                  </div>
+                  <div class=" x-p-7-0">Depending on the situation, different selection buffers may be active at any one time. In Part and Assembly mode, <span class=" x-ph-1-0">Creo Parametric</span> offers the default selection buffer, the Edit selection buffer, and other more specialized buffers. Other <span class=" x-ph-1-0">Creo Parametric</span> modes offer different selection buffers.
+                  </div>
+                  <div class=" x-p-7-0">In the default Part and Assembly buffer there are two levels at which selection is done:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">First Level Selection</span><div class=" x-p-5-0">Provides access to higher-level objects such as features or components. You can make a second level selection only after you
+                                    select the higher-level object.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">Second Level Selection</span><div class=" x-p-5-0">Provides access to geometric objects such as edges and faces.</div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-note-2-0 x-note-2-3">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">First-level and second-level objects are usually incompatible in the selection buffer.</div>
+                  </div>
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> allows access to the contents of the currently active selection buffer. The available functions allow your application to:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">Get the contents of the active selection buffer.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">Remove the contents of the active selection buffer.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">Add to the contents of the active selection buffer. </span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSelection_ReadingTheContentsOfTheSelectionBuf-B9AFFE79_11_585">
+               
+               <a name="39"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.9.6.4.1" class="Heading2">Reading the Contents of the Selection Buffer</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">Properties</span></span> Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="40"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-Session.html#CurrentSelectionBuffer">pfcSession.CurrentSelectionBuffer</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="41"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionBuffer.html#Contents">pfcSelectionBuffer.Contents</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.CurrentSelectionBuffer</span></span> returns the selection buffer object for the current active model in session. The selection buffer contains the items preselected
+                     by the user to be used by the selection tool and popup menus.
+                  </div>
+                  <div class=" x-p-7-0">Use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.SelectionBuffer.GetContents</span></span> to access the contents of the current selection buffer. The method returns independent copies of the selections in the selection
+                     buffer (if the buffer is cleared, this array is still valid).
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSelection_RemovingTheItemsOfTheSelectionBuffe-B9B00577_11_606">
+               
+               <a name="42"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.9.6.5.1" class="Heading2">Removing the Items of the Selection Buffer</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods Introduced:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="43"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionBuffer.html#RemoveSelection">pfcSelectionBuffer.RemoveSelection()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="44"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionBuffer.html#Clear">pfcSelectionBuffer.Clear()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">Use the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelectionBuffer.RemoveSelection()</span></span> to remove a specific selection from the selection buffer. The input argument is the <span class=" x-parmname-3-0">IndexToRemove</span> specifies the index where the item was found in the call to the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelectionBuffer.Contents</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">Use the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.SelectionBuffer.Clear</span></span> to clear the currently active selection buffer of all contents. After the buffer is cleared, all contents are lost.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSelection_AddingItemsToTheSelectionBuffer-B9B00FD4_11_623">
+               
+               <a name="45"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.9.6.6.1" class="Heading2">Adding Items to the Selection Buffer</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Method Introduced:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="46"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSelect-SelectionBuffer.html#AddSelection">pfcSelectionBuffer.AddSelection()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">Use the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSelect.SelectionBuffer.AddSelection</span></span> to add an item to the currently active selection buffer.
+                  </div>
+                  <div class=" x-note-2-0 x-note-2-3">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">The selected item must refer to an item that is in the current model such as its owner, component path or drawing view.</div>
+                  </div>
+                  <div class=" x-p-7-0">This method may fail due to any of the following reasons:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">There is no current selection buffer active.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">The selection does not refer to the current model.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">The item is not currently displayed and so cannot be added to the buffer.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">The selection cannot be added to the buffer in combination with one or more objects that are already in the buffer. For example:
+                                    geometry and features cannot be selected in the default buffer at the same time.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

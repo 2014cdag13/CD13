@@ -1,0 +1,253 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcSymbolDefAttachment"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      539
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDetail.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSymbolDefAttachment</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents the way that an instance may be attached to a symbol definition.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#AttachmentParam">AttachmentParam</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The parameter on the entity (typically a <i>t</i> parameter).  <tt>null</tt>, if the attachment type is SYMDEFATTACH_FREE or SYMDEFATTACH_RADIAL_LEADER. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#AttachmentPoint">AttachmentPoint</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The attachment point, in the coordinate system of the symbol definition.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#EntityId">EntityId</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The identifier of the symbol definition entity.  <tt>null</tt>, if the attachment type is SYMDEFATTACH_FREE.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-SymbolDefAttachmentType.html">pfcSymbolDefAttachmentType</a></tt></td><td class="func-signature"><tt><a class="method" href="#Type">Type</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The type of attachment.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDetail-SymbolDefAttachment.html">pfcSymbolDefAttachment</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-pfcDetail-SymbolDefAttachmentType.html">pfcSymbolDefAttachmentType</a>&nbsp;inType, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;inAttachmentPoint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a data object that represents the way that an instance may be attached to a symbol definition.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="AttachmentParam">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>AttachmentParam</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The parameter on the entity (typically a <i>t</i> parameter).  <tt>null</tt>, if the attachment type is SYMDEFATTACH_FREE or SYMDEFATTACH_RADIAL_LEADER. <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AttachmentPoint">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>AttachmentPoint</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The attachment point, in the coordinate system of the symbol definition.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EntityId">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>EntityId</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The identifier of the symbol definition entity.  <tt>null</tt>, if the attachment type is SYMDEFATTACH_FREE.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Type">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-SymbolDefAttachmentType.html">pfcSymbolDefAttachmentType</a></tt></td><td class="func-name"><tt>Type</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The type of attachment.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDetail-SymbolDefAttachment.html">pfcSymbolDefAttachment</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-SymbolDefAttachmentType.html">pfcSymbolDefAttachmentType</a>&nbsp;inType, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;inAttachmentPoint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a data object that represents the way that an instance may be attached to a symbol definition.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>inType</b></tt>
+</dt>
+<dd>The type of attachment.</dd>
+<dt>
+<tt><b>inAttachmentPoint</b></tt>
+</dt>
+<dd>The attachment point, in the coordinate system of the symbol definition.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

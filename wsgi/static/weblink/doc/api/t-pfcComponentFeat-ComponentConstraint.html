@@ -1,0 +1,431 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcComponentConstraint"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      50
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcComponentFeat.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcComponentConstraint</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a component constraint.
+<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-DatumSide.html">pfcDatumSide</a></tt></td><td class="func-signature"><tt><a class="method" href="#AssemblyDatumSide">AssemblyDatumSide</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The datum plane side, if the AssemblyReference is a datum plane.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-signature"><tt><a class="method" href="#AssemblyReference">AssemblyReference</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The geometric reference from the assembly.  This reference must be created using an assembly component path. Use <tt>null</tt> for constraint types not requiring a component reference.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcComponentFeat-ConstraintAttributes.html">pfcConstraintAttributes</a></tt></td><td class="func-signature"><tt><a class="method" href="#Attributes">Attributes</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Constraint related attributed. Use <tt>null</tt> for the default settings.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-DatumSide.html">pfcDatumSide</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComponentDatumSide">ComponentDatumSide</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The datum plane side, if the ComponentReference is a datum plane.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComponentReference">ComponentReference</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The geometric reference on the component.  Use <tt>null</tt> for constraint types not requiring a component reference.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#Offset">Offset</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The offset value, if appropriate to the constraint type.  Use <tt>null</tt> to represent a 0.0 value, or for constraint types not requiring an offset.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcComponentFeat-ComponentConstraintType.html">pfcComponentConstraintType</a></tt></td><td class="func-signature"><tt><a class="method" href="#Type">Type</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The type of constraint.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#UserDefinedData">UserDefinedData</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A user created string stored with the constraint.  Typically <tt>null</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcComponentFeat-ComponentConstraint.html">pfcComponentConstraint</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-pfcComponentFeat-ComponentConstraintType.html">pfcComponentConstraintType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new component constraint object.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="AssemblyDatumSide">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-DatumSide.html">pfcDatumSide</a></tt></td><td class="func-name"><tt>AssemblyDatumSide</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The datum plane side, if the AssemblyReference is a datum plane.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#40">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AssemblyReference">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>AssemblyReference</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The geometric reference from the assembly.  This reference must be created using an assembly component path. Use <tt>null</tt> for constraint types not requiring a component reference.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#39">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Attributes">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcComponentFeat-ConstraintAttributes.html">pfcConstraintAttributes</a></tt></td><td class="func-name"><tt>Attributes</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Constraint related attributed. Use <tt>null</tt> for the default settings.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#44">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ComponentDatumSide">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-DatumSide.html">pfcDatumSide</a></tt></td><td class="func-name"><tt>ComponentDatumSide</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The datum plane side, if the ComponentReference is a datum plane.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#42">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ComponentReference">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>ComponentReference</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The geometric reference on the component.  Use <tt>null</tt> for constraint types not requiring a component reference.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#41">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Offset">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>Offset</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The offset value, if appropriate to the constraint type.  Use <tt>null</tt> to represent a 0.0 value, or for constraint types not requiring an offset.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#43">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Type">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcComponentFeat-ComponentConstraintType.html">pfcComponentConstraintType</a></tt></td><td class="func-name"><tt>Type</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The type of constraint.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#38">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UserDefinedData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>UserDefinedData</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A user created string stored with the constraint.  Typically <tt>null</tt>.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#45">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcComponentFeat-ComponentConstraint.html">pfcComponentConstraint</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcComponentFeat-ComponentConstraintType.html">pfcComponentConstraintType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new component constraint object.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcComponentFeat-ComponentFeat.html#SetConstraints">pfcComponentFeat.SetConstraints()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#37">Assemblies and Components: Assembling a Component Parametrically</a>, <a href="../manual0/jassembly.html#45">Assemblies and Components: Assembling a Component Parametrically</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of constraint.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new component constraint object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

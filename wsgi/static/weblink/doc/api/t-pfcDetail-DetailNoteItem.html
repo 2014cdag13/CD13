@@ -1,0 +1,530 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDetailNoteItem"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      139
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDetail.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDetailNoteItem</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a detail note item in a Creo Parametric model.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#GetDetailItem">pfcDetailItemOwner.GetDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#ListDetailItems">pfcDetailItemOwner.ListDetailItems()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#GetDetailItem">pfcDetailSymbolDefItem.GetDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#ListDetailItems">pfcDetailSymbolDefItem.ListDetailItems()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#CreateDetailItem">pfcDetailSymbolDefItem.CreateDetailItem()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolDefItem.html">pfcDetailSymbolDefItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#SymbolDef">SymbolDef</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The symbol definition that the note belongs to, or <tt>null</tt> if the note does not belong to a symbol definition.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Draw">Draw</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Draws a detail note item.  Drawn notes will be removed upon the next regeneration.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Erase">Erase</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases a detail note item.  Erased notes will be shown again after the next regeneration.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetInstructions">GetInstructions</a>
+ (boolean&nbsp;GiveParametersAsNames)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a data object describing how a detail note item is constructed.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Envelope2D.html">pfcEnvelope2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetLineEnvelope">GetLineEnvelope</a>
+ (integer&nbsp;LineNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the envelope of a line in the note, in screen coordinates.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetModelReference">GetModelReference</a>
+ (integer&nbsp;LineNumber, integer&nbsp;Index)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the model referenced by parameterized text in a note.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Modify">Modify</a>
+ (<a class="type" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Modifies the definition of an existing detail note item.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Remove">Remove</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes a detail note item. Removed notes will continue to be removed after the next regeneration. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Show">Show</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Shows a note.  Shown notes will continue to be shown after the next regeneration.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="SymbolDef">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolDefItem.html">pfcDetailSymbolDefItem</a></tt></td><td class="func-name"><tt>SymbolDef</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The symbol definition that the note belongs to, or <tt>null</tt> if the note does not belong to a symbol definition.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#229">Drawings: Detail Notes Information</a>, <a href="../manual0/jdrawfns.html#231">Drawings: Detail Notes Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Draw">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Draw</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Draws a detail note item.  Drawn notes will be removed upon the next regeneration.<br>
+<br> The drawing must be current to use this method. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#233">Drawings: Details Notes Operations</a>, <a href="../manual0/jdrawfns.html#237">Drawings: Details Notes Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Erase">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Erase</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases a detail note item.  Erased notes will be shown again after the next regeneration.<br>
+<br> The drawing must be current to use this method. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#235">Drawings: Details Notes Operations</a>, <a href="../manual0/jdrawfns.html#237">Drawings: Details Notes Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetInstructions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></tt></td><td class="func-name"><tt>GetInstructions</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;GiveParametersAsNames)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a data object describing how a detail note item is constructed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#228">Drawings: Detail Notes Information</a>, <a href="../manual0/jdrawfns.html#231">Drawings: Detail Notes Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>GiveParametersAsNames</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to get symbolic representations of
+ parameter entries in the text, <tt>false</tt> to get the actual text shown to the user.
+ Creo Parametric does not resolve and replace symbolic callouts for notes, which are not
+ displayed. Therefore, if the note is not displayed or is hidden in a layer, the text
+ retrieved may contain symbolic callouts, even when GiveParametersAsNames is false.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The instuctions data object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetLineEnvelope">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Envelope2D.html">pfcEnvelope2D</a></tt></td><td class="func-name"><tt>GetLineEnvelope</tt></td><td class="func-params"><tt>
+ (integer&nbsp;LineNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the envelope of a line in the note, in screen coordinates.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#230">Drawings: Detail Notes Information</a>, <a href="../manual0/jdrawfns.html#231">Drawings: Detail Notes Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>LineNumber</b></tt>
+</dt>
+<dd>The line number to evaluate.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The envelope, in screen coordinates. The order of coordinates are returned as:                          
+<br>0 -------- 1                          				 
+<br>|          |                          				  
+<br>2 -------- 3
+<br>This ordering of points is preserved even if the note is mirrored and/or at an angle. </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModelReference">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetModelReference</tt></td><td class="func-params"><tt>
+ (integer&nbsp;LineNumber, integer&nbsp;Index)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the model referenced by parameterized text in a note.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#231">Drawings: Detail Notes Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>LineNumber</b></tt>
+</dt>
+<dd>The line number where the parameterized text occurs.</dd>
+<dt>
+<tt><b>Index</b></tt>
+</dt>
+<dd>The index in the line for the parameterized text.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model referenced by the parameterized text.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Modify">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Modify</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Modifies the definition of an existing detail note item.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#237">Drawings: Details Notes Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>The instructions object describing the new detail note item.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Remove">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Remove</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes a detail note item. Removed notes will continue to be removed after the next regeneration. 
+<br>
+<br> The drawing must be current to use this method.  To remove a note that is in a non-current model, use the <tt><b><tt><b><a class="enumtype" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></b></tt></b></tt> attribute IsDisplayed, and regenerate the drawing. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#236">Drawings: Details Notes Operations</a>, <a href="../manual0/jdrawfns.html#237">Drawings: Details Notes Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Show">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Show</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Shows a note.  Shown notes will continue to be shown after the next regeneration.<br>
+<br> The drawing must be current to use this method.  To show a note that is in a non-current model, use the <tt><b><tt><b><a class="enumtype" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></b></tt></b></tt> attribute IsDisplayed, and regenerate the drawing.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#234">Drawings: Details Notes Operations</a>, <a href="../manual0/jdrawfns.html#237">Drawings: Details Notes Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcDrawingExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function createSheetAndViews_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createSheetAndViews (document.CV.drawingModel.value);
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+function lineEntityCreate_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			lineEntityCreate ();
+		}
+	catch (err)
+		{
+                       alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+function createSurfNote_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createSurfNote ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Drawing Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Page 2</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=CV>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating views and sheets</h3>
+  <p>This example function (“createSheetAndViews()”) demonstrates creation of
+  sheets, general and project views using Pro/Web.Link.<span
+  style="mso-spacerun: yes">  </span>The current model must be a drawing.<span
+  style="mso-spacerun: yes">  </span>The input (supplied below) must be the
+  name of a solid model to display in a view in the form ??????.prt or
+  ???????.asm.</p>
+  <p align=center style='text-align:center'><INPUT TYPE="text" NAME="drawingModel">
+  <input type=button value="Create Views and Sheet" onclick="createSheetAndViews_wrapper()">
+  </p>
+  <p style='tab-stops:374.25pt'><span style='mso-tab-count:1'>                                                                                                                             </span></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=CE>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating detail entities</h3>
+  <p>This example function (“lineEntityCreate()”) demonstrates creation of
+  detail entities.<span style="mso-spacerun: yes">  </span>The current model
+  must be a drawing.<span style="mso-spacerun: yes">  </span>After selecting on
+  the button below choose the endpoints of the line with the mouse.<o:p></o:p></p>
+  <p align=center style='text-align:center'>
+  <input type=button value="Create Line" id=button1 name=button1 onclick="lineEntityCreate_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p style='tab-stops:374.25pt'><span style='mso-tab-count:1'>                                                                                                                             </span></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=CN>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating detail notes</h3>
+  <p>This example function (“createDetailNote()”) demonstrates creation of
+  detail notes.<span style="mso-spacerun: yes">  </span>The current model must
+  be a drawing.<span style="mso-spacerun: yes">  </span>The note text will be
+  the name or id of the selected surface, and the note text will be placed at
+  the upper right of the drawing view outline.<o:p></o:p></p>
+  <p align=center style='text-align:center'>
+  <input type=button value="Create Note" id=button1 name=button1 onclick="createSurfNote_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><a
+href="pfcDrawingExamples3.html">More Examples</a></p>
+
+</div>
+
+</body>
+
+</html>

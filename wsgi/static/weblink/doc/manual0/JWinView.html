@@ -1,0 +1,1120 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="JWinView" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Windows and Views</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANJWINVIEW0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.13.1" class="ChapterTitle">Windows and Views</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> provides access to <span class=" x-ph-1-0">Creo Parametric</span> windows and saved views. This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes the methods that provide this access.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="JWinView_WindowsWindows-BCC682BB_15_11">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.13.3.1" class="Heading1">Windows</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="2"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">This section describes the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods that access <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Window</span></span> objects. The topics are as follows:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JWinView_DisplaymodelInWindowListsofWindowsG-BCC688D215_25" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Getting a Window Object</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JWinView_WindowsoperationsOperationswindowRe-BCC68F6D15_28" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Window Operations</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_DisplaymodelInWindowListsofWindowsG-BCC688D215_25">
+               
+               <a name="3"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.13.3.4.1" class="Heading2">Getting a Window Object</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="4"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="5"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="6"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="7"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="8"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Property </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="9"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#CurrentWindow">pfcBaseSession.CurrentWindow</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="10"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#CreateModelWindow">pfcBaseSession.CreateModelWindow()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="11"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModel-Model.html#Display">pfcModel.Display()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="12"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#ListWindows">pfcBaseSession.ListWindows()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="13"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#GetWindow">pfcBaseSession.GetWindow()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="14"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#OpenFile">pfcBaseSession.OpenFile()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="15"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#GetModelWindow">pfcBaseSession.GetModelWindow()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.CurrentWindow</span></span> provides access to the current active window in <span class=" x-ph-1-0">Creo Parametric</span>.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.CreateModelWindow()</span></span> creates a new window that contains the model that was passed as an argument. 
+                  </div>
+                  <div class=" x-note-2-0 x-note-2-3">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">You must call the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Display()</span></span> for the model geometry to be displayed in the window.
+                     </div>
+                  </div>
+                  <div class=" x-p-7-0">Use the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.ListWindows()</span></span> to get a list of all the current windows in session.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.GetWindow()</span></span> gets the handle to a window given its integer identifier.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.OpenFile()</span></span> returns the handle to a newly created window that contains the opened model.
+                  </div>
+                  <div class=" x-note-2-0 x-note-2-3">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">If a model is already open in a window the method returns a handle to the window.</div>
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.GetModelWindow</span></span> returns the handle to the window that contains the opened model, if it is displayed.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_WindowsoperationsOperationswindowRe-BCC68F6D15_28">
+               
+               <a name="16"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.13.3.5.1" class="Heading2">Window Operations</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="17"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="18"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="19"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="20"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="21"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="22"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="23"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="24"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="25"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="26"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="27"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="28"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="29"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Height">pfcWindow.Height</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="30"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Width">pfcWindow.Width</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="31"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#XPos">pfcWindow.XPos</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="32"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#YPos">pfcWindow.YPos</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="33"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#GraphicsAreaHeight">pfcWindow.GraphicsAreaHeight</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="34"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#GraphicsAreaWidth">pfcWindow.GraphicsAreaWidth</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="35"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Clear">pfcWindow.Clear()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="36"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Repaint">pfcWindow.Repaint()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="37"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Refresh">pfcWindow.Refresh()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="38"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Close">pfcWindow.Close()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="39"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#Activate">pfcWindow.Activate()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="40"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#GetId">pfcWindow.GetId()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="41"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#FlushCurrentWindow">pfcBaseSession.FlushCurrentWindow()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Height</span></span>, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Width</span></span>, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.XPos</span></span>, and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.YPos</span></span> retrieve the height, width, x-position, and y-position of the window respectively. The values of these parameters are normalized
+                     from 0 to 1.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.GraphicsAreaHeight</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.GraphicsAreaWidth</span></span> retrieve the height and width of the <span class=" x-ph-1-0">Creo Parametric</span> graphics area window without the border respectively. The values of these parameters are normalized from 0 to 1. For both
+                     the window and graphics area sizes, if the object occupies the whole screen, the window size returned is 1. For example, if
+                     the screen is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">1024 pixels</span></span> wide and the graphics area is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">512 pixels</span></span>, then the width of the graphics area window is returned as 0.5. 
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Clear()</span></span> removes geometry from the window.
+                  </div>
+                  <div class=" x-p-7-0">Both <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Repaint()</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Refresh()</span></span> repaint solid geometry. However, the <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Refresh</span></span> method does not remove highlights from the screen and is used primarily to remove temporary geometry entities from the screen.
+                     
+                  </div>
+                  <div class=" x-p-7-0">Use the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Close()</span></span> to close the window. If the current window is the original window created when <span class=" x-ph-1-0">Creo Parametric</span> started, this method clears the window. Otherwise, it removes the window from the screen.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Activate()</span></span> activates a window. This function is available only in the asynchronous mode.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.GetId()</span></span> retrieves the ID of the <span class=" x-ph-1-0">Creo Parametric</span> window.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.FlushCurrentWindow</span></span> flushes the pending display commands on the current window.
+                     <div class=" x-note-1-0 x-note-1-2">
+                        <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                        <div class=" x-p-7-0">It is recommended to call this method only after completing all the display operations. Excessive use of this method will
+                           cause major slow down of systems running on Windows Vista and Windows 7.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JWinView_EmbeddedBrowser-BCC69AF8_15_189">
+            
+            <a name="42"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.13.4.1" class="Heading1">Embedded Browser</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods Introduced:</div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="43"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#GetURL">pfcWindow.GetURL()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="44"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#SetURL">pfcWindow.SetURL()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="45"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#GetBrowserSize">pfcWindow.GetBrowserSize()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="46"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#SetBrowserSize">pfcWindow.SetBrowserSize()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">The methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.GetURL()</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.SetURL()</span></span> enables you to find and change the URL displayed in the embedded browser in the <span class=" x-ph-1-0">Creo Parametric</span> window.
+               </div>
+               <div class=" x-p-7-0">The methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.GetBrowserSize()</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Window.SetBrowserSize</span></span> enables you to find and change the size of the embedded browser in the <span class=" x-ph-1-0">Creo Parametric</span> window.
+                  <div class=" x-note-1-0 x-note-1-2">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">The methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Window.GetBrowserSize</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcWindow.Window.SetBrowserSize</span></span> are not supported if the browser is open in a separate window.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JWinView_Views-BCC69D5B_15_218">
+            
+            <a name="47"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.13.5.1" class="Heading1">Views</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">This section describes the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods that access <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">View</span></span> objects. The topics are as follows:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JWinView_ViewsgettingAViewObjectGettingAView-BCC69ED215_236" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Getting a View Object</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JWinView_ViewsoperationsOperationsviewSavevi-BCC6A7E415_239" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">View Operations</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_ViewsgettingAViewObjectGettingAView-BCC69ED215_236">
+               
+               <a name="48"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.13.5.3.1" class="Heading2">Getting a View Object</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="49"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="50"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="51"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="52"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="53"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods Introduced:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="54"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-ViewOwner.html#RetrieveView">pfcViewOwner.RetrieveView()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="55"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-ViewOwner.html#GetView">pfcViewOwner.GetView()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="56"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-ViewOwner.html#ListViews">pfcViewOwner.ListViews()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="57"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-ViewOwner.html#GetCurrentView">pfcViewOwner.GetCurrentView()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">Any solid model inherits from the interface <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ViewOwner</span></span>. This will enable you to use these methods on any solid object. 
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcViewOwner.RetrieveView()</span></span> sets the current view to the orientation previously saved with a specified name.
+                  </div>
+                  <div class=" x-p-7-0">Use the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcViewOwner.GetView()</span></span> to get a handle to a named view without making any modifications.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcViewOwner.ListViews()</span></span> returns a list of all the views previously saved in the model.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.ViewOwner.GetCurrentView</span></span> returns a view handle that represents the current orientation. Although this view does not have a name, you can use this
+                     view to find or modify the current orientation.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_ViewsoperationsOperationsviewSavevi-BCC6A7E415_239">
+               
+               <a name="58"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.13.5.4.1" class="Heading2">View Operations</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="59"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="60"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="61"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="62"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="63"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="64"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-View.html#Name">pfcView.Name</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="65"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-View.html#IsCurrent">pfcView.IsCurrent</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="66"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-View.html#Reset">pfcView.Reset()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="67"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-ViewOwner.html#SaveView">pfcViewOwner.SaveView()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">To get the name of a view given its identifier, use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.Name</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.IsCurrent</span></span> determines if the View object represents the current view.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.Reset()</span></span> method restores the current view to the default view.
+                  </div>
+                  <div class=" x-p-7-0">To store the current view under the specified name, call the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.ViewOwner.SaveView</span></span>.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JWinView_CoordinateTransformationsTransforma-BCC6AF19_15_316">
+            
+            <a name="68"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.13.6.1" class="Heading1">Coordinate Systems and Transformations</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="69"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="70"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="71"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">his section describes the various coordinate systems used by <span class=" x-ph-1-0">Creo Parametric</span> and accessible from <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> and how to transform from one coordinate system to another.
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystems-BCC6B452_15_329">
+               
+               <a name="72"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.13.6.4.1" class="Heading2">Coordinate Systems</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0">Creo Parametric</span> and <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> use the following coordinate systems:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_SolidCoordinateSystem-BD1FA3D715_349" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Solid Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemsscreenScreenCoordi-BCC6B88C15_352" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Screen Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemswindowWindowCoordi-BCC6BC9015_355" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Window Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemsdrawingDrawingCoor-BCC6BEFC15_358" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Drawing Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemsDrawingViewDrawing-BCC6C26115_361" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Drawing View Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemsassembliesAssembli-BCC6C4EB15_364" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Assembly Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemsdatumDatumCoordina-BCC6C98A15_367" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Datum Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><a href="#JWinView_CoordinateSystemssectionSectionCoor-BD1C75A015_370" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Section Coordinate System</a></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The following sections describe each of these coordinate systems.</div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_SolidCoordinateSystem-BD1FA3D715_349">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.3.1">Solid Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="73"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="74"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The solid coordinate system is the three-dimensional, Cartesian coordinate system used to describe the geometry of a <span class=" x-ph-1-0">Creo Parametric</span> solid model. In a part, the solid coordinate system describes the geometry of the surfaces and edges. In an assembly, the
+                        solid coordinate system also describes the locations and orientations of the assembly members.
+                     </div>
+                     <div class=" x-p-7-0">You can visualize the solid coordinate system in <span class=" x-ph-1-0">Creo Parametric</span> by creating a coordinate system datum with the option <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Default</span></span>. Distances measured in solid coordinates correspond to the values of dimensions as seen by the <span class=" x-ph-1-0">Creo Parametric</span> user.
+                     </div>
+                     <div class=" x-p-7-0">Solid coordinates are used by <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> for all the methods that look at geometry and most of the methods that draw three-dimensional graphics.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemsscreenScreenCoordi-BCC6B88C15_352">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.4.1">Screen Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="75"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="76"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The screen coordinate system is two-dimensional coordinate system that describes locations in a <span class=" x-ph-1-0">Creo Parametric</span> window. When the user zooms or pans the view, the screen coordinate system follows the display of the solid so a particular
+                        point on the solid always maps to the same screen coordinate. The mapping changes only when the view orientation is changed.
+                     </div>
+                     <div class=" x-p-7-0">Screen coordinates are nominal pixel counts. The bottom, left corner of the default window is at (0, 0) and the top, right
+                        corner is at (1000, 864).
+                     </div>
+                     <div class=" x-p-7-0">Screen coordinates are used by some of the graphics methods, the mouse input methods, and all methods that draw graphics or
+                        manipulate items on a drawing.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemswindowWindowCoordi-BCC6BC9015_355">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.5.1">Window Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="77"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="78"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The window coordinate system is similar to the screen coordinate system, except it is not affected by zoom and pan. When an
+                        object is first displayed in a window, or the option <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">View</span></span>, <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Pan/Zoom</span></span>, <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Reset</span></span> is used, the screen and window coordinates are the same.
+                     </div>
+                     <div class=" x-p-7-0">Window coordinates are needed only if you take account of zoom and pan. For example, you can find out whether a point on the
+                        solid is visible in the window or you can draw two-dimensional text in a particular window location, regardless of pan and
+                        zoom.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemsdrawingDrawingCoor-BCC6BEFC15_358">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.6.1">Drawing Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="79"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The drawing coordinate system is a two-dimensional system that describes the location on a drawing relative to the bottom,
+                        left corner, and measured in drawing units. For example, on a U.S. letter-sized, landscape-format drawing sheet that uses
+                        inches, the top, right-corner is (11, 8.5) in drawing coordinates.
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods and properties that manipulate drawings generally use screen coordinates.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemsDrawingViewDrawing-BCC6C26115_361">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.7.1">Drawing View Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="80"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The drawing view coordinate system is used to describe the locations of entities in a drawing view.</div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemsassembliesAssembli-BCC6C4EB15_364">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.8.1">Assembly Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="81"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="82"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">An assembly has its own coordinate system that describes the positions and orientations of the member parts, subassemblies,
+                        and the geometry of datum features created in the assembly.
+                     </div>
+                     <div class=" x-p-7-0">When an assembly is retrieved into memory each member is also loaded and continues to use its own solid coordinate system
+                        to describe its geometry.
+                     </div>
+                     <div class=" x-p-7-0">This is important when you are analyzing the geometry of a subassembly and want to extract or display the results relative
+                        to the coordinate system of the parent assembly.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemsdatumDatumCoordina-BCC6C98A15_367">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.9.1">Datum Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="83"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">A coordinate system datum can be created anywhere in any part or assembly, and represents a user-defined coordinate system.
+                        It is often a requirement in a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application to describe geometry relative to such a datum.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_CoordinateSystemssectionSectionCoor-BD1C75A015_370">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.4.10.1">Section Coordinate System</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="84"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">Every sketch has a coordinate system used to locate entities in that sketch. Sketches used in features will use a coordinate
+                        system different from that of the solid model.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_TransformationsTransformations-BD1C7A02_15_450">
+               
+               <a name="85"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.13.6.5.1" class="Heading2">Transformations</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="86"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="87"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#Invert">pfcTransform3D.Invert()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="88"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#TransformPoint">pfcTransform3D.TransformPoint()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="89"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#TransformVector">pfcTransform3D.TransformVector()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="90"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#Matrix">pfcTransform3D.Matrix</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="91"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#GetOrigin">pfcTransform3D.GetOrigin()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="92"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#GetXAxis">pfcTransform3D.GetXAxis()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="93"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#GetYAxis">pfcTransform3D.GetYAxis()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="94"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-Transform3D.html#GetZAxis">pfcTransform3D.GetZAxis()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">All coordinate systems are treated in <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> as if they were three-dimensional. Therefore, a point in any of the coordinate systems is always represented by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Point3D</span></span> class:
+                  </div>
+                  <div class=" x-p-7-0">Vectors store the same data but are represented for clarity by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Vector3D</span></span> class. 
+                  </div>
+                  <div class=" x-p-7-0">Screen coordinates contain a z-value whose positive direction is outwards from the screen. The value of z is not generally
+                     important when specifying a screen location as an input to a method, but it is useful in other situations. For example, if
+                     you select a datum plane, you can find the direction of the plane by calculating the normal to the plane, transforming to
+                     screen coordinates, then looking at the sign of the z-coordinate.
+                  </div>
+                  <div class=" x-p-7-0">A transformation between two coordinate systems is represented by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">I</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Transform3D</span></span> class. This class contains a 4x4 matrix that combines the conventional 3x3 matrix that describes the relative orientation
+                     of the two systems, and the vector that describes the shift between them.
+                  </div>
+                  <div class=" x-p-7-0">The 4x4 matrix used for transformations is as follows:</div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.13.6.5.3.8">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/4x4_transform_matrix.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">The utility method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcTransform3D.Invert()</span></span> inverts a transformation matrix so that it can be used to transform points in the opposite direction.
+                  </div>
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> provides two utilities for performing coordinate transformations. The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcTransform3D.TransformPoint()</span></span> transforms a three-dimensional point and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcTransform3D.TransformVector()</span></span> transforms a three-dimensional vector.
+                  </div>
+                  <div class=" x-p-7-0">The following diagram summarizes the coordinate transformations needed when using <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> and specifies the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods that provide the transformation matrix.
+                  </div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.13.6.5.3.12"><span xmlns="" profilecode="1">
+                        <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/coordinate_transformations_web.gif"><span xmlns="" profilecode="1"></span></div></span></div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_TransformationssolidToScreenCoordin-BD1C7FC0_15_528">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.5.4.1">Transforming to Screen Coordinates</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="95"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                     </div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="96"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-View.html#Transform">pfcView.Transform</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="97"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcView-View.html#Rotate">pfcView.Rotate()</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">The view matrix describes the transformation from solid to screen coordinates. The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.Transform</span></span> provides the view matrix for the specified view. 
+                     </div>
+                     <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcView.View.Rotate</span></span> rotates a view, relative to the X, Y, or Z axis, in the amount that you specifiy. 
+                     </div>
+                     <div class=" x-p-7-0">To transform from screen to solid coordinates, invert the transformation matrix using the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcTransform3D.Invert()</span></span>.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_TransformationssolidToCoordinateSys-BD1C82B4_15_556">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.5.5.1">Transforming to Coordinate System Datum Coordinates</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="98"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> Introduced:
+                     </div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="99"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcGeometry-CoordSystem.html#CoordSys">pfcCoordSystem.CoordSys</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcGeometry.CoordSystem.GetCoordSys</span></span> provides the location and orientation of the coordinate system datum in the coordinate system of the solid that contains
+                        it. The location is in terms of the directions of the three axes and the position of the origin.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_TransformingWindowCoordinates-BD1C8635_15_573">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.5.6.1">Transforming Window Coordinates</div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">Properties </span></span>Introduced
+                     </div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="100"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcWindow-Window.html#ScreenTransform">pfcWindow.ScreenTransform</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="101"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-ScreenTransform.html#PanX">pfcScreenTransform.PanX</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="102"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-ScreenTransform.html#PanY">pfcScreenTransform.PanY</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="103"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcBase-ScreenTransform.html#Zoom">pfcScreenTransform.Zoom</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">You can alter the pan and zoom of a window by using a Screen Transform object. This object contains three attributes. PanX
+                        and PanY represent the horizontal and vertical movement. Every increment of 1.0 moves the view point one screen width or height.
+                        Zoom represents a scaling factor for the view. This number must be greater than zero.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_TransformingCoordinatesOfAnAssembly-BD1C8963_15_596">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.13.6.5.7.1">Transforming Coordinates of an Assembly Member</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="104"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="105"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="106"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="107"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="108"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="109"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">Method Introduced:</div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="110"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcAssembly-ComponentPath.html#GetTransform">pfcComponentPath.GetTransform()</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcAssembly.ComponentPath.GetTransform</span></span> provides the matrix for transforming from the solid coordinate system of the assembly member to the solid coordinates of
+                        the parent assembly, or the reverse.
+                     </div>
+                  </div>
+                  <div class=" x-topic-11-0 x-topic-11-1" id="JWinView_ExampleCode-NormalizingACoordinateT-BD1FA62A_15_619">
+                     
+                     <div class=" x-title-17-0 x-title-17-1" combinedFontName="off" id="styler-id1.1.1.13.6.5.7.4.1"></div>
+                     <div class=" x-body-3-0">
+                        <div class=" x-p-7-0">.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

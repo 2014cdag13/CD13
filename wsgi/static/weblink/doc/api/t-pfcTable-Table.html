@@ -1,0 +1,1658 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcTable"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      542
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcTable.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcTable</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a drawing table in a Creo Parametric model.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModelItem-ModelItemOwner.html#ListItems">pfcModelItemOwner.ListItems()</a></b></tt>, <tt><b><a class="method" href="t-pfcModelItem-ModelItemOwner.html#GetItemById">pfcModelItemOwner.GetItemById()</a></b></tt>, <tt><b><a class="method" href="t-pfcTable-TableOwner.html#CreateTable">pfcTableOwner.CreateTable()</a></b></tt>, <tt><b><a class="method" href="t-pfcTable-TableOwner.html#RetrieveTable">pfcTableOwner.RetrieveTable()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#CheckIfIsFromFormat">CheckIfIsFromFormat</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if the drawing table was created by the format.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteColumn">DeleteColumn</a>
+ (integer&nbsp;Column, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes a column in the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteRow">DeleteRow</a>
+ (integer&nbsp;Row, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes a row in the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Display">Display</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Displays the table, if it has been erased.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Erase">Erase</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetCellComponentModel">GetCellComponentModel</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the component model referred to by a cell in a 
+repeat region of a table.  This function will not return a valid result if 
+the cell has the attribute "NO DUPLICATE" or "NO DUPLICATE/LEVEL" 
+as there is no unique path available. In that case use the functions 
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetCellTopModel">pfcTable.GetCellTopModel()</a></b></tt> (for Top level model) 
+or <tt><b><a class="method" href="t-pfcTable-Table.html#GetCellReferenceModel">pfcTable.GetCellReferenceModel()</a></b></tt>.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetCellNote">GetCellNote</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the detail note contained in the table cell.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetCellReferenceModel">GetCellReferenceModel</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the reference component referred to by this
+cell in a repeat region drawing table. Differs from 
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetCellComponentModel">pfcTable.GetCellComponentModel()</a></b></tt> 
+in that this function will return the reference object if the cell attribute 
+is set to "NO DUPLICATE" or "NO DUPLICATE/LEVEL". 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetCellTopModel">GetCellTopModel</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the top model referred to by this
+cell in a repeat region drawing table. Differs from 
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetCellComponentModel">pfcTable.GetCellComponentModel()</a></b></tt> 
+in that this function will return the object if the cell attribute 
+is set to "NO DUPLICATE" or "NO DUPLICATE/LEVEL". 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#GetColumnCount">GetColumnCount</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the number of columns in the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#GetColumnSize">GetColumnSize</a>
+ (integer&nbsp;SegmentId, integer&nbsp;Column)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the width of the drawing table column.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcTable-TableInfo.html">pfcTableInfo</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetInfo">GetInfo</a>
+ (integer&nbsp;SegmentId)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns information about the drawing table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#GetRowCount">GetRowCount</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the number of rows in the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#GetRowSize">GetRowSize</a>
+ (integer&nbsp;SegmentId, integer&nbsp;Row)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the height of the row.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#GetSegmentCount">GetSegmentCount</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the number of segments in the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#GetSegmentSheet">GetSegmentSheet</a>
+ (integer&nbsp;SegmentNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the sheet where a particuar table segment lies.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetText">GetText</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell, <a class="type" href="t-pfcTable-ParamMode.html">pfcParamMode</a>&nbsp;Mode)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the text in a drawing table cell.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#InsertColumn">InsertColumn</a>
+ (number&nbsp;Width, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;InsertAfterColumn, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Inserts a column in the drawing table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#InsertRow">InsertRow</a>
+ (number&nbsp;Height, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;InsertAfterRow, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Inserts a new row into the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsCommentCell">IsCommentCell</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Determines if a table cell is a comment cell in a repeat region.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#MergeRegion">MergeRegion</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;UpperLeft, <a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;LowerRight, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Merges a rectangular section of table cells.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#MoveSegment">MoveSegment</a>
+ (integer&nbsp;SegmentNumber, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;NewPosition, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Moves a segment of the table.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RotateClockwise">RotateClockwise</a>
+ (<a class="type" href="t-pfcTable-RotationDegree.html">pfcRotationDegree</a>&nbsp;Rotation, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Rotates a table clockwise.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetText">SetText</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell, <a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Lines)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the text in the table cell.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SubdivideRegion">SubdivideRegion</a>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;UpperLeft, <a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;LowerRight, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes all merges in the specified region of previously merged cells.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="CheckIfIsFromFormat">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>CheckIfIsFromFormat</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if the drawing table was created by the format.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#155">Drawings: Drawing Tables Information</a>, <a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if the table was created by applying the drawing format.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteColumn">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteColumn</tt></td><td class="func-params"><tt>
+ (integer&nbsp;Column, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes a column in the table.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#169">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Column</b></tt>
+</dt>
+<dd>&nbsp; </dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteRow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteRow</tt></td><td class="func-params"><tt>
+ (integer&nbsp;Row, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes a row in the table.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#168">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Row</b></tt>
+</dt>
+<dd>&nbsp; </dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Display">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Display</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Displays the table, if it has been erased.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#Erase">pfcTable.Erase()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#162">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Erase">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Erase</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases the table.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#Display">pfcTable.Display()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#161">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCellComponentModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></tt></td><td class="func-name"><tt>GetCellComponentModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the component model referred to by a cell in a 
+repeat region of a table.  This function will not return a valid result if 
+the cell has the attribute "NO DUPLICATE" or "NO DUPLICATE/LEVEL" 
+as there is no unique path available. In that case use the functions 
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetCellTopModel">pfcTable.GetCellTopModel()</a></b></tt> (for Top level model) 
+or <tt><b><a class="method" href="t-pfcTable-Table.html#GetCellReferenceModel">pfcTable.GetCellReferenceModel()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableCell.html#Create">pfcTableCell.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#180">Drawings: Repeat Regions</a>, <a href="../manual0/jdrawfns.html#183">Drawings: Repeat Regions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The full path to the component referenced by the cell.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCellNote">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-name"><tt>GetCellNote</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the detail note contained in the table cell.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableCell.html#Create">pfcTableCell.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The detail note item.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCellReferenceModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetCellReferenceModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the reference component referred to by this
+cell in a repeat region drawing table. Differs from 
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetCellComponentModel">pfcTable.GetCellComponentModel()</a></b></tt> 
+in that this function will return the reference object if the cell attribute 
+is set to "NO DUPLICATE" or "NO DUPLICATE/LEVEL". 
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableCell.html#Create">pfcTableCell.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#181">Drawings: Repeat Regions</a>, <a href="../manual0/jdrawfns.html#183">Drawings: Repeat Regions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model of record for the cell.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCellTopModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>GetCellTopModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the top model referred to by this
+cell in a repeat region drawing table. Differs from 
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetCellComponentModel">pfcTable.GetCellComponentModel()</a></b></tt> 
+in that this function will return the object if the cell attribute 
+is set to "NO DUPLICATE" or "NO DUPLICATE/LEVEL". 
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableCell.html#Create">pfcTableCell.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#182">Drawings: Repeat Regions</a>, <a href="../manual0/jdrawfns.html#183">Drawings: Repeat Regions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The top model for the region.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetColumnCount">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>GetColumnCount</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the number of columns in the table.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#154">Drawings: Drawing Tables Information</a>, <a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The number of columns.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetColumnSize">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>GetColumnSize</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SegmentId, integer&nbsp;Column)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the width of the drawing table column.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetColumnCount">pfcTable.GetColumnCount()</a></b></tt>, <tt><b><a class="method" href="t-pfcTable-Table.html#GetSegmentCount">pfcTable.GetSegmentCount()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#157">Drawings: Drawing Tables Information</a>, <a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SegmentId</b></tt>
+</dt>
+<dd>The segment identifier.  Segment identifiers start at 0.</dd>
+<dt>
+<tt><b>Column</b></tt>
+</dt>
+<dd>The column number.  Column numbers range from 1 to the number of columns.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The column size.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetInfo">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcTable-TableInfo.html">pfcTableInfo</a></tt></td><td class="func-name"><tt>GetInfo</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SegmentId)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns information about the drawing table.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetSegmentCount">pfcTable.GetSegmentCount()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#177">Drawings: Drawing Table Segments</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SegmentId</b></tt>
+</dt>
+<dd>The segment identifier.  Segment ids start at 0.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The table information, including the rotation, column and row information, and outline.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetRowCount">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>GetRowCount</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the number of rows in the table.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#153">Drawings: Drawing Tables Information</a>, <a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The number of rows.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetRowSize">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>GetRowSize</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SegmentId, integer&nbsp;Row)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the height of the row.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetRowCount">pfcTable.GetRowCount()</a></b></tt>, <tt><b><a class="method" href="t-pfcTable-Table.html#GetSegmentCount">pfcTable.GetSegmentCount()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#156">Drawings: Drawing Tables Information</a>, <a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SegmentId</b></tt>
+</dt>
+<dd>The segment identifier.  Segment ids range start at 0.</dd>
+<dt>
+<tt><b>Row</b></tt>
+</dt>
+<dd>The row number.  Row numbers range from 1 to the number of rows.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The row height.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSegmentCount">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>GetSegmentCount</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the number of segments in the table.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#174">Drawings: Drawing Table Segments</a>, <a href="../manual0/jdrawfns.html#177">Drawings: Drawing Table Segments</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The number of segments.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSegmentSheet">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>GetSegmentSheet</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SegmentNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the sheet where a particuar table segment lies.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetSegmentCount">pfcTable.GetSegmentCount()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#175">Drawings: Drawing Table Segments</a>, <a href="../manual0/jdrawfns.html#177">Drawings: Drawing Table Segments</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SegmentNumber</b></tt>
+</dt>
+<dd>The segement identifier.  Segment ids start at 0.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The sheet number.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetText">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>GetText</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell, <a class="type" href="t-pfcTable-ParamMode.html">pfcParamMode</a>&nbsp;Mode)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the text in a drawing table cell.
+<br>
+<br>If no text is found in the table cell, this method will throw a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitGeneralError.html">pfcXToolkitGeneralError</a></b></tt></b></tt> exception.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableCell.html#Create">pfcTableCell.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#158">Drawings: Drawing Tables Information</a>, <a href="../manual0/jdrawfns.html#159">Drawings: Drawing Tables Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+<dt>
+<tt><b>Mode</b></tt>
+</dt>
+<dd>The mode used to retrieve the text.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of text in the table cell.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="InsertColumn">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>InsertColumn</tt></td><td class="func-params"><tt>
+ (number&nbsp;Width, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;InsertAfterColumn, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Inserts a column in the drawing table.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetColumnCount">pfcTable.GetColumnCount()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#165">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Width</b></tt>
+</dt>
+<dd>The width of the inserted column.</dd>
+<dt>
+<tt><b>InsertAfterColumn</b></tt>
+</dt>
+<dd>The column number to insert after.  Pass 0 to insert as the first column. Column numbers range from 1 to the number of columns.</dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="InsertRow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>InsertRow</tt></td><td class="func-params"><tt>
+ (number&nbsp;Height, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;InsertAfterRow, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Inserts a new row into the table.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-Table.html#GetRowCount">pfcTable.GetRowCount()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#164">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Height</b></tt>
+</dt>
+<dd>The row height.  This argument should be in number of characters, even if the table was created using a height type of TABLESIZE_BY_LENGTH.</dd>
+<dt>
+<tt><b>InsertAfterRow</b></tt>
+</dt>
+<dd>The row number.  Enter 0 to insert a new first row. Row numbers range from 1 to the number of rows.</dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsCommentCell">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsCommentCell</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Determines if a table cell is a comment cell in a repeat region.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#179">Drawings: Repeat Regions</a>, <a href="../manual0/jdrawfns.html#183">Drawings: Repeat Regions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Whether or not the cell is a comment cell.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="MergeRegion">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>MergeRegion</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;UpperLeft, <a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;LowerRight, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Merges a rectangular section of table cells.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#166">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>UpperLeft</b></tt>
+</dt>
+<dd>The table cell on the upper left of the region.</dd>
+<dt>
+<tt><b>LowerRight</b></tt>
+</dt>
+<dd>The table cell on the lower right of the region.</dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="MoveSegment">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>MoveSegment</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SegmentNumber, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;NewPosition, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Moves a segment of the table.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#176">Drawings: Drawing Table Segments</a>, <a href="../manual0/jdrawfns.html#177">Drawings: Drawing Table Segments</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SegmentNumber</b></tt>
+</dt>
+<dd>The segment identifier.  Segment ids start from 0.</dd>
+<dt>
+<tt><b>NewPosition</b></tt>
+</dt>
+<dd>The new location for the drawing table segment.</dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RotateClockwise">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RotateClockwise</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-RotationDegree.html">pfcRotationDegree</a>&nbsp;Rotation, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Rotates a table clockwise.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#163">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Rotation</b></tt>
+</dt>
+<dd>The amount of rotation.</dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetText">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetText</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;Cell, <a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Lines)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the text in the table cell.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableCell.html#Create">pfcTableCell.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#170">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Cell</b></tt>
+</dt>
+<dd>The table cell.</dd>
+<dt>
+<tt><b>Lines</b></tt>
+</dt>
+<dd>The text for the table cell.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SubdivideRegion">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SubdivideRegion</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;UpperLeft, <a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a>&nbsp;LowerRight, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Repaint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes all merges in the specified region of previously merged cells.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#167">Drawings: Drawing Tables Operations</a>, <a href="../manual0/jdrawfns.html#171">Drawings: Drawing Tables Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>UpperLeft</b></tt>
+</dt>
+<dd>The upper left table cell to remesh.</dd>
+<dt>
+<tt><b>LowerRight</b></tt>
+</dt>
+<dd>The lower right table cell to remesh.</dd>
+<dt>
+<tt><b>Repaint</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to repaint the drawing with the changes, <tt>false</tt> or <tt>null</tt> to delay the repaint.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

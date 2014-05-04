@@ -1,0 +1,205 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcJLinkApplication"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      307
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcJLink.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcJLinkApplication</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>&nbsp; <br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Object.html">pfcObject</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcArgument-Arguments.html">pfcArguments</a></tt></td><td class="func-signature"><tt><a class="method" href="#ExecuteTask">ExecuteTask</a>
+ (string&nbsp;TaskId, <a class="type" href="t-pfcArgument-Arguments.html">pfcArguments</a>&nbsp;InputArguments)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Call a method in a J-Link application, with user-specified arguments.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsActive">IsActive</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if the application is currently running.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Stop">Stop</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Stop a previously loaded J-Link application. The application's stop method will be called.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="ExecuteTask">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcArgument-Arguments.html">pfcArguments</a></tt></td><td class="func-name"><tt>ExecuteTask</tt></td><td class="func-params"><tt>
+ (string&nbsp;TaskId, <a class="type" href="t-pfcArgument-Arguments.html">pfcArguments</a>&nbsp;InputArguments)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Call a method in a J-Link application, with user-specified arguments.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#31">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>, <a href="../manual0/japplib.html#33">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>TaskId</b></tt>
+</dt>
+<dd>The string identifier for the task.</dd>
+<dt>
+<tt><b>InputArguments</b></tt>
+</dt>
+<dd>The input arguments for the method.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The output arguments from the method.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsActive">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsActive</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if the application is currently running.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#32">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>, <a href="../manual0/japplib.html#33">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if its running, <tt>false</tt> otherwise.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Stop">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Stop</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Stop a previously loaded J-Link application. The application's stop method will be called.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#33">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

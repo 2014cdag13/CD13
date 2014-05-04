@@ -1,0 +1,469 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDetailSymbolDefInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      141
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDetail.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDetailSymbolDefInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface contains information used to describe a symbol definition.  
+It may be used when creating symbol definition (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>), or accessing existing entities (<tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#Modify">pfcDetailSymbolDefItem.Modify()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#GetInstructions">pfcDetailSymbolDefItem.GetInstructions()</a></b></tt>).
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcDetail-SymbolDefAttachment.html#Create">pfcSymbolDefAttachment.Create()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-TextReference.html#Create">pfcTextReference.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-SymbolDefAttachments.html">pfcSymbolDefAttachments</a></tt></td><td class="func-signature"><tt><a class="method" href="#Attachments">Attachments</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sequence of possible instance attachment points for the symbol definition.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#FullPath">FullPath</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The full path to the symbol definition file.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#HasElbow">HasElbow</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>null</tt> or <tt>true</tt> if the symbol definition includes an elbow, <tt>false</tt> if not.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#Height">Height</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The height value of the symbol definition.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsTextAngleFixed">IsTextAngleFixed</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>null</tt> or <tt>true</tt> if the text angle is fixed, <tt>false</tt> if not.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Name">Name</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the symbol defintion.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-TextReference.html">pfcTextReference</a></tt></td><td class="func-signature"><tt><a class="method" href="#Reference">Reference</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The text reference information, or <tt>null</tt> if unused.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#ScaledHeight">ScaledHeight</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The symbol definition height in inches. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-SymbolDefHeight.html">pfcSymbolDefHeight</a></tt></td><td class="func-signature"><tt><a class="method" href="#SymbolHeight">SymbolHeight</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The height type for the symbol definition.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (string&nbsp;inFullPath)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates an instructions object used to create a symbol definition.  Pass this object to <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#Modify">pfcDetailSymbolDefItem.Modify()</a></b></tt>.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Attachments">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-SymbolDefAttachments.html">pfcSymbolDefAttachments</a></tt></td><td class="func-name"><tt>Attachments</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sequence of possible instance attachment points for the symbol definition.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#257">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FullPath">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>FullPath</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The full path to the symbol definition file.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#258">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="HasElbow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>HasElbow</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>null</tt> or <tt>true</tt> if the symbol definition includes an elbow, <tt>false</tt> if not.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#254">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Height">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>Height</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The height value of the symbol definition.<br>
+<br> This property does not consistently contain a value capable of being 
+   related mathematically to the symbol definition height in inches.  Use 
+   <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefInstructions.html#ScaledHeight">pfcDetailSymbolDefInstructions.ScaledHeight</a></b></tt> 
+    instead.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsTextAngleFixed">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsTextAngleFixed</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>null</tt> or <tt>true</tt> if the text angle is fixed, <tt>false</tt> if not.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#255">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Name">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Name</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the symbol defintion.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Reference">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-TextReference.html">pfcTextReference</a></tt></td><td class="func-name"><tt>Reference</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The text reference information, or <tt>null</tt> if unused.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ScaledHeight">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>ScaledHeight</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The symbol definition height in inches. <br>
+<br>(Inches are always used for the units in the symbol definition).
+  <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#256">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SymbolHeight">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-SymbolDefHeight.html">pfcSymbolDefHeight</a></tt></td><td class="func-name"><tt>SymbolHeight</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The height type for the symbol definition.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#253">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (string&nbsp;inFullPath)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates an instructions object used to create a symbol definition.  Pass this object to <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#Modify">pfcDetailSymbolDefItem.Modify()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#252">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>inFullPath</b></tt>
+</dt>
+<dd>Path and name for the symbol definition.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The instructions data object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

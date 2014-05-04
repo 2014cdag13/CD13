@@ -1,0 +1,390 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcRegenInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      432
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcSolid.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcRegenInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes the instructions for regenerating the solid.
+<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#AllowFixUI">AllowFixUI</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If this is <tt>true</tt>, the <b>Fix Model</b> interface is displayed if there is an error. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#ForceRegen">ForceRegen</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Forces the solid to fully regenerate. This will regenerate every feature in the solid. If not set, Creo Parametric uses its internal algorithm to determine which features to regenerate.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#FromFeat">FromFeat</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Not used. Reserved for the future.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#RefreshModelTree">RefreshModelTree</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If this is <tt>true</tt>, refresh the Creo Parametric Model Tree after the regeneration.  If this is <tt>false</tt> (the default) the tree is not refreshed.  A model must be active to use this attribute. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#ResumeExcludedComponents">ResumeExcludedComponents</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables Creo Parametric to resume available excluded components of the simplified representation during regeneration. This can result in a more accurate update of the simplified representation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#UpdateAssemblyOnly">UpdateAssemblyOnly</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Updates assembly and sub-assembly placements and regenerates assembly features and intersected parts. If the affected assembly is retrieved as a simplified representation, this flag will update the locations of the components.If the flag is not set, the component locations are not updated by default when the simplified representation is retrieved.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#UpdateInstances">UpdateInstances</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Updates instances of the solid in memory. This may slow down the regeneration process.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcSolid-RegenInstructions.html">pfcRegenInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;AllowFixUI, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;ForceRegen, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a>&nbsp;FromFeat)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new <i>RegenInstructions</i> object. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="AllowFixUI">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>AllowFixUI</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If this is <tt>true</tt>, the <b>Fix Model</b> interface is displayed if there is an error. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#24">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ForceRegen">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>ForceRegen</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Forces the solid to fully regenerate. This will regenerate every feature in the solid. If not set, Creo Parametric uses its internal algorithm to determine which features to regenerate.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#25">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FromFeat">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>FromFeat</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Not used. Reserved for the future.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#26">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RefreshModelTree">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>RefreshModelTree</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If this is <tt>true</tt>, refresh the Creo Parametric Model Tree after the regeneration.  If this is <tt>false</tt> (the default) the tree is not refreshed.  A model must be active to use this attribute. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#27">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ResumeExcludedComponents">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>ResumeExcludedComponents</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables Creo Parametric to resume available excluded components of the simplified representation during regeneration. This can result in a more accurate update of the simplified representation.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#28">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UpdateAssemblyOnly">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>UpdateAssemblyOnly</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Updates assembly and sub-assembly placements and regenerates assembly features and intersected parts. If the affected assembly is retrieved as a simplified representation, this flag will update the locations of the components.If the flag is not set, the component locations are not updated by default when the simplified representation is retrieved.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#29">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UpdateInstances">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>UpdateInstances</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Updates instances of the solid in memory. This may slow down the regeneration process.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#30">Solid: Solid Operations</a>, <a href="../manual0/JSolid.html#34">Solid: Solid Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcSolid-RegenInstructions.html">pfcRegenInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;AllowFixUI, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;ForceRegen, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a>&nbsp;FromFeat)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new <i>RegenInstructions</i> object. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#23">Solid: Solid Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AllowFixUI</b></tt>
+</dt>
+<dd>If this is <tt>true</tt>, the <b>Fix Model</b> interface is displayed if there is an error. If this is <tt>false</tt>, the <b>Fix Model</b> interface is not displayed. (If <tt>null</tt> is passed, <tt>false</tt> is assumed.)</dd>
+<dt>
+<tt><b>ForceRegen</b></tt>
+</dt>
+<dd>Reserved for the future. Pass <tt>null</tt>.</dd>
+<dt>
+<tt><b>FromFeat</b></tt>
+</dt>
+<dd>Reserved for the future. Pass <tt>null</tt>.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new <i>RegenInstructions</i> object</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

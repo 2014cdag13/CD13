@@ -1,0 +1,193 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDimensionAngleOptions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      164
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDimension2D.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDimensionAngleOptions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface contains the flags used by a <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-AngleDimensionSense.html">pfcAngleDimensionSense</a></b></tt></b></tt> object.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-AngleDimensionSense.html">pfcAngleDimensionSense</a></b></tt></b></tt>, <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetDimensionSenses">pfcDimension2D.GetDimensionSenses()</a></b></tt>, <tt><b><a class="method" href="t-pfcDimension2D-AngleDimensionSense.html#Create">pfcAngleDimensionSense.Create()</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsFirst">IsFirst</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the angle starts from this entity in a 
+   counterclockwise sense; <tt>false</tt> or <tt>null</tt> if the 
+   dimension ends at this entity.  One entity in an angular 
+   dimension must be <tt>true</tt>, and one must be <tt>false</tt>.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#ShouldFlip">ShouldFlip</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If "should_flip" is <tt>false</tt> or <tt>null</tt>, and 
+   the entity's inherent direction is away from the angle vertex, then 
+   the dimension attaches directly to the entity. If the entity's direction 
+   is towards the angle vertex, the dimension is attached to a witness 
+   line which is in line with the entity but on the opposite side of the 
+   angle vertex. If "should_flip" is <tt>true</tt>, then these cases are 
+   interchanged.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDimension2D-DimensionAngleOptions.html">pfcDimensionAngleOptions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates an empty DimensionAngleOptions object.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="IsFirst">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsFirst</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the angle starts from this entity in a 
+   counterclockwise sense; <tt>false</tt> or <tt>null</tt> if the 
+   dimension ends at this entity.  One entity in an angular 
+   dimension must be <tt>true</tt>, and one must be <tt>false</tt>.
+   <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ShouldFlip">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>ShouldFlip</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If "should_flip" is <tt>false</tt> or <tt>null</tt>, and 
+   the entity's inherent direction is away from the angle vertex, then 
+   the dimension attaches directly to the entity. If the entity's direction 
+   is towards the angle vertex, the dimension is attached to a witness 
+   line which is in line with the entity but on the opposite side of the 
+   angle vertex. If "should_flip" is <tt>true</tt>, then these cases are 
+   interchanged.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDimension2D-DimensionAngleOptions.html">pfcDimensionAngleOptions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates an empty DimensionAngleOptions object.<br>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

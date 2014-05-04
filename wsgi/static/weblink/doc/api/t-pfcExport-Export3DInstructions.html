@@ -1,0 +1,299 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcExport3DInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      193
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcExport.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcExport3DInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface is used to export a solid model to a specified format.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcExport-STEP3DExportInstructions.html">pfcSTEP3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-VDA3DExportInstructions.html">pfcVDA3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-IGES3DNewExportInstructions.html">pfcIGES3DNewExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-CATIAModel3DExportInstructions.html">pfcCATIAModel3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-ACIS3DExportInstructions.html">pfcACIS3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-DXF3DExportInstructions.html">pfcDXF3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-DWG3DExportInstructions.html">pfcDWG3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-CATIASession3DExportInstructions.html">pfcCATIASession3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-JT3DExportInstructions.html">pfcJT3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-UG3DExportInstructions.html">pfcUG3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-ParaSolid3DExportInstructions.html">pfcParaSolid3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-CatiaPart3DExportInstructions.html">pfcCatiaPart3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-CatiaProduct3DExportInstructions.html">pfcCatiaProduct3DExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcExport-CatiaCGR3DExportInstructions.html">pfcCatiaCGR3DExportInstructions</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-AssemblyConfiguration.html">pfcAssemblyConfiguration</a></tt></td><td class="func-signature"><tt><a class="method" href="#Configuration">Configuration</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The configuration to use when exporting the model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-GeometryFlags.html">pfcGeometryFlags</a></tt></td><td class="func-signature"><tt><a class="method" href="#Geometry">Geometry</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The geometry type(s) to export.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-InclusionFlags.html">pfcInclusionFlags</a></tt></td><td class="func-signature"><tt><a class="method" href="#IncludedEntities">IncludedEntities</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Flags indicating whether or not to include certain entities. If <tt>null</tt>, do not include these entities.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-LayerExportOptions.html">pfcLayerExportOptions</a></tt></td><td class="func-signature"><tt><a class="method" href="#LayerOptions">LayerOptions</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Object indicating the special instructions to follow when exporting layers.  If <tt>null</tt>, layers will be exported without changes.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-signature"><tt><a class="method" href="#ReferenceSystem">ReferenceSystem</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The coordinate system used for the export.  If <tt>null</tt>, the default model coordinate system is used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-TriangulationInstructions.html">pfcTriangulationInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#TriangulationOptions">TriangulationOptions</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">
+       Object indicating the special instructions to follow when exporting to a faceted format.  
+       If <tt>null</tt>, export will be without triangulation.
+     </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Configuration">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-AssemblyConfiguration.html">pfcAssemblyConfiguration</a></tt></td><td class="func-name"><tt>Configuration</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The configuration to use when exporting the model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#64">Interface: Export Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Geometry">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-GeometryFlags.html">pfcGeometryFlags</a></tt></td><td class="func-name"><tt>Geometry</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The geometry type(s) to export.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#66">Interface: Export Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IncludedEntities">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-InclusionFlags.html">pfcInclusionFlags</a></tt></td><td class="func-name"><tt>IncludedEntities</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Flags indicating whether or not to include certain entities. If <tt>null</tt>, do not include these entities.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#67">Interface: Export Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LayerOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-LayerExportOptions.html">pfcLayerExportOptions</a></tt></td><td class="func-name"><tt>LayerOptions</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Object indicating the special instructions to follow when exporting layers.  If <tt>null</tt>, layers will be exported without changes.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#68">Interface: Export Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ReferenceSystem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>ReferenceSystem</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The coordinate system used for the export.  If <tt>null</tt>, the default model coordinate system is used.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#65">Interface: Export Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TriangulationOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-TriangulationInstructions.html">pfcTriangulationInstructions</a></tt></td><td class="func-name"><tt>TriangulationOptions</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+       Object indicating the special instructions to follow when exporting to a faceted format.  
+       If <tt>null</tt>, export will be without triangulation.
+     <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

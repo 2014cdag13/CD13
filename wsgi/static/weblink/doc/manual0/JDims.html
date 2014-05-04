@@ -1,0 +1,1455 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="JDims" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Dimensions and Parameters</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANJDIMS0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.18.1" class="ChapterTitle">Dimensions and Parameters</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0">This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods and classes that affect dimensions and parameters.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="JDims_Overview-AF6D263E_20_10">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.18.3.1" class="Heading1">Overview</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Dimensions and parameters in <span class=" x-ph-1-0">Creo Parametric</span> have similar characteristics but also have significant differences. In <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>, the similarities between dimensions and parameters are contained in the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">BaseParameter</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">class</span></span>. This <span class=" x-ph-1-0"><span xmlns="" profilecode="3">class</span></span> allows access to the parameter or dimension value and to information regarding a parameter's designation and modification.
+                  The differences between parameters and dimensions are recognizable because <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Dimension</span></span> inherits from the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">class</span></span> <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ModelItem</span></span>, and can be assigned tolerances, whereas parameters are not <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ModelItems</span></span> and cannot have tolerances.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JDims_TheParamValueObject-AFC09B5C_20_37">
+            
+            <a name="2"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.18.4.1" class="Heading1">The ParamValue Object</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="3"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Both parameters and dimension objects contain an object of type <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span>. This object contains the integer, real, string, or Boolean value of the parameter or dimension. Because of the different
+                  possible value types that can be associated with a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> object there are different methods used to access each value type and some methods will not be applicable for some <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> objects. If you try to use an incorrect method an exception will be thrown.
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_AccessingAParamValueObject-AF6D21DE_20_53">
+               
+               <a name="4"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.4.4.1" class="Heading2">Accessing a ParamValue Object</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Property </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="5"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-MpfcModelItem.html#CreateIntParamValue">MpfcModelItem.CreateIntParamValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="6"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-MpfcModelItem.html#CreateDoubleParamValue">MpfcModelItem.CreateDoubleParamValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="7"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-MpfcModelItem.html#CreateStringParamValue">MpfcModelItem.CreateStringParamValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="8"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-MpfcModelItem.html#CreateBoolParamValue">MpfcModelItem.CreateBoolParamValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="9"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-MpfcModelItem.html#CreateNoteParamValue">MpfcModelItem.CreateNoteParamValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="10"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#Value">pfcBaseParameter.Value</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem</span></span> utility class contains methods for creating each type of <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> object. Once you have established the value type in the object, you can change it. The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.BaseParameter.GetValue</span></span> returns the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> associated with a particular parameter or dimension.
+                  </div>
+                  <div class=" x-p-7-0">A <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Note</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> is an integer value that refers to the ID of a specified note. To create a parameter of this type the identified note must
+                     already exist in the model.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_AccessingTheParamValueValue-AF6D1E13_20_95">
+               
+               <a name="11"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.4.5.1" class="Heading2">Accessing the ParamValue Value</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="12"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">Properties</span></span> Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="13"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParamValue.html#discr">pfcParamValue.discr</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="14"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParamValue.html#IntValue">pfcParamValue.IntValue</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="15"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParamValue.html#DoubleValue">pfcParamValue.DoubleValue</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="16"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParamValue.html#StringValue">pfcParamValue.StringValue</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="17"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParamValue.html#BoolValue">pfcParamValue.BoolValue</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="18"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParamValue.html#NoteId">pfcParamValue.NoteId</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParamValue.discr</span></span> returns a enumeration object that identifies the type of value contained in the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-ph-1-0">ParamValue</span> object. Use this information with the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">specified</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span>   to access the value. If you use an incorrect    <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> an exception of type <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XBadGetParamValue</span></span> will be thrown.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JDims_ParameterObjects-AFDE2FF0_20_156">
+            
+            <a name="19"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.18.5.1" class="Heading1">Parameter Objects</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">The following sections describe the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods that access parameters. The topics are as follows:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JDims_CreatingAndAccessingParameters-AFC0921120_171" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Creating and Accessing Parameters</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JDims_ParameterSelectionOptions-AFC0692320_174" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Parameter Selection Options</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JDims_ParameterInformation-AFD2A4AC20_177" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Parameter Information</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JDims_ParameterRestrictions-AFD25F1920_180" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Parameter Restrictions</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_CreatingAndAccessingParameters-AFC0921120_171">
+               
+               <a name="20"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.5.3.1" class="Heading2">Creating and Accessing Parameters</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="21"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="22"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Property </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="23"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterOwner.html#CreateParam">pfcParameterOwner.CreateParam()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="24"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterOwner.html#CreateParamWithUnits">pfcParameterOwner.CreateParamWithUnits()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="25"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterOwner.html#GetParam">pfcParameterOwner.GetParam()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="26"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterOwner.html#ListParams">pfcParameterOwner.ListParams()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="27"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterOwner.html#SelectParam">pfcParameterOwner.SelectParam()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="28"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterOwner.html#SelectParameters">pfcParameterOwner.SelectParameters()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="29"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcFamily-FamColParam.html#RefParam">pfcFamColParam.RefParam</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">In <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>, models, features, surfaces, and edges inherit from the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterOwner</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="1">class</span></span>, because each of the objects can be assigned parameters in <span class=" x-ph-1-0">Creo Parametric</span>.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.GetParam()</span></span> gets a parameter given its name.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.ListParams()</span></span> returns a sequence of all parameters assigned to the object.
+                  </div>
+                  <div class=" x-p-7-0">To create a new parameter with a name and a specific value, call the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.CreateParam()</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">To create a new parameter with a name, a specific value, and units, call the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.CreateParamWithUnits()</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.SelectParam()</span></span> allows you to select a parameter from the <span class=" x-ph-1-0">Creo Parametric</span> user interface. The top model from which the parameters are selected must be displayed in the current window.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.SelectParameters()</span></span> allows you to interactively select parameters from the <span class=" x-ph-1-0">Creo Parametric</span> <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Parameter</span></span> dialog box based on the parameter selection options specified by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterSelectionOptions</span></span> object. The top model from which the parameters are selected must be displayed in the current window. Refer to the section
+                     <a href="#JDims_ParameterSelectionOptions-AFC0692320_174" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Parameter Selection Options</a> for more information.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcFamily.FamColParam.GetRefParam</span></span> returns the reference parameter from the parameter column in a family table.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_ParameterSelectionOptions-AFC0692320_174">
+               
+               <a name="30"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.5.4.1" class="Heading2">Parameter Selection Options</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Parameter selection options in <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> are represented by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterSelectionOptions</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="1">class</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="31"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterSelectionOptions.html#Create">pfcParameterSelectionOptions.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="32"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterSelectionOptions.html#AllowContextSelection">pfcParameterSelectionOptions.AllowContextSelection</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="33"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterSelectionOptions.html#Contexts">pfcParameterSelectionOptions.Contexts</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="34"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterSelectionOptions.html#AllowMultipleSelections">pfcParameterSelectionOptions.AllowMultipleSelections</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="35"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterSelectionOptions.html#SelectButtonLabel">pfcParameterSelectionOptions.SelectButtonLabel</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterSelectionOptions.Create()</span></span> creates a new instance of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterSelectionOptions</span></span> object that is used by the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterOwner.SelectParameters()</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The parameter selection options are as follows:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">AllowContextSelection</span></span>&#8212;This boolean attribute indicates whether to allow parameter selection from multiple contexts, or from the invoking parameter
+                                    owner. By default, it is false and allows selection only from the invoking parameter owner. If it is true and if specific
+                                    selection contexts are not yet assigned, then you can select the parameters from any context. </span><div class=" x-p-5-0">Use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.ParameteSelectionOptions.SetAllow</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ContextSelection</span></span> to modify the value of this attribute.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Contexts</span></span>&#8212;The permitted parameter selection contexts in the form of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterSelectionContexts</span></span> object. Use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterSelectionOptions.Contexts</span></span> to assign the parameter selection context. By default, you can select parameters from any context.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">The types of parameter selection contexts are as follows:</span><div class=" x-ul-2-0">
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_MODEL</span></span>&#8212;Specifies that the top level model parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_PART</span></span>&#8212;Specifies that any part&#8217;s parameters (at any level of the top model) can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_ASM</span></span>&#8212;Specifies that any assembly&#8217;s parameters (at any level of the top model) can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_FEATURE</span></span>&#8212;Specifies that any feature&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_EDGE</span></span>&#8212;Specifies that any edge&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_SURFACE</span></span>&#8212;Specifies that any surface&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_QUILT</span></span>&#8212;Specifies that any quilt&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_CURVE</span></span>&#8212;Specifies that any curve&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_COMPOSITE_CURVE</span></span>&#8212;Specifies that any composite curve&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_INHERITED</span></span>&#8212;Specifies that any inheritance feature&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_SKELETON</span></span>&#8212;Specifies that any skeleton&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" class=" x-li-10-0" style="table-layout: fixed; " width="100%">
+                                       <col style="width: 0em">
+                                       <col style="width: 18pt">
+                                       <col>
+                                       <tbody>
+                                          <tr valign="baseline">
+                                             <td align="right"></td>
+                                             <td align="left" style="word-break: keep-all; "><span style="font-family: 'Arial Unicode MS'; ">&#9675;</span>&nbsp;
+                                             </td>
+                                             <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_COMPONENT</span></span>&#8212;Specifies that any component&#8217;s parameters can be selected.</span></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">AllowMultipleSelections</span></span>&#8212;This boolean attribute indicates whether or not to allow multiple parameters to be selected from the dialog box, or only
+                                    a single parameter. By default, it is true and allows selection of multiple parameters.</span><div class=" x-p-5-0">Use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.ParameterSelectionOptions.SetAllow</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">MultipleSelections</span></span> to modify this attribute.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SelectButtonLabel</span></span>&#8212;The visible label for the select button in the dialog box. </span><div class=" x-p-5-0">Use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.ParameterSelectionOptions.SetSelectButtonLabel</span></span> to set the label. If not set, the default label in the language of the active <span class=" x-ph-1-0">Creo Parametric</span> session is displayed.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_ParameterInformation-AFD2A4AC20_177">
+               
+               <a name="36"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.5.5.1" class="Heading2">Parameter Information</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="37"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="38"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#Value">pfcBaseParameter.Value</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="39"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#GetScaledValue">pfcParameter.GetScaledValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="40"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#SetScaledValue">pfcParameter.SetScaledValue()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="41"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#Units">pfcParameter.Units</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="42"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#IsDesignated">pfcBaseParameter.IsDesignated</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="43"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#IsModified">pfcBaseParameter.IsModified</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="44"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#ResetFromBackup">pfcBaseParameter.ResetFromBackup()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="45"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#Description">pfcParameter.Description</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="46"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#GetRestriction">pfcParameter.GetRestriction()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="47"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#GetDriverType">pfcParameter.GetDriverType()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="48"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#Reorder">pfcParameter.Reorder()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="49"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-Parameter.html#Delete">pfcParameter.Delete()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="50"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-NamedModelItem.html#Name">pfcNamedModelItem.Name</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">Parameters inherit methods from the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">BaseParameter</span></span>, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Parameter</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">NamedModelItem</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="1">classes</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseParameter.Value</span></span> returns the value of the parameter or dimension.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.GetScaledValue()</span></span> returns the parameter value in the units of the parameter, instead of the units of the owner model as returned by <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.BaseParameter.GetValue</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.SetScaledValue()</span></span> assigns the parameter value in the units provided, instead of using the units of the owner model as assumed by <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.BaseParameter.GetValue</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.Units</span></span> returns the units assigned to the parameter.
+                  </div>
+                  <div class=" x-p-7-0">You can access the designation status of the parameter using the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseParameter.IsDesignated</span></span>  .
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseParameter.IsModified</span></span> and <span class=" x-ph-1-0"><span xmlns="" profilecode="3">the</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">method</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseParameter.ResetFromBackup()</span></span> enable you to identify a modified parameter or dimension, and reset it to the last stored value. A parameter is said to be
+                     "modified" when the value has been changed but the parameter's owner has not yet been regenerated.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.Description</span></span> returns the parameter description, or null, if no description is assigned.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.Parameter.SetDescription</span></span> assigns the parameter description.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.GetRestriction()</span></span> identifies if the parameter&#8217;s value is restricted to a certain range or enumeration. It returns the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterRestriction</span></span> object. Refer to the section <a href="#JDims_ParameterRestrictions-AFD25F1920_180" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Parameter Restrictions</a> for more information.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property </span></span><span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.GetDriverType()</span></span> returns the driver type for a material parameter. The driver types are as follows:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMDRIVER_PARAM</span></span>&#8212;Specifies that the parameter value is driven by another parameter.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMDRIVER_FUNCTION</span></span>&#8212;Specifies that the parameter value is driven by a function.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMDRIVER_RELATION</span></span>&#8212;Specifies that the parameter value is driven by a relation. This is equivalent to the value obtained using <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseParameter.IsRelationDriven</span></span> for a parameter object type.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.Reorder()</span></span> reorders the given parameter to come immediately after the indicated parameter in the <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Parameter</span></span> dialog box and information files generated by <span class=" x-ph-1-0">Creo Parametric.</span></div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameter.Delete()</span></span> permanently removes a specified parameter.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.NamedModelItem.GetName</span></span> accesses the name of the specified parameter.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_ParameterRestrictions-AFD25F1920_180">
+               
+               <a name="51"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.5.6.1" class="Heading2">Parameter Restrictions</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0">Creo Parametric</span> allows users to assign specified limitations to the value allowed for a given parameter (wherever the parameter  appears
+                     in the model). You can only read the details of the permitted restrictions from <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>, but not modify the permitted values or range of values. Parameter restrictions in <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> are represented by the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">class</span></span> <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterRestriction</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">Method Introduced:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="52"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterRestriction.html#Type">pfcParameterRestriction.Type</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.ParameterRestriction.GetType</span></span> returns the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">RestrictionType</span></span> object containing the types of parameter restrictions. The parameter restrictions are of the following types:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_ENUMERATION</span></span>&#8212;Specifies that the parameter is restricted to a list of permitted values.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_RANGE</span></span>&#8212;Specifies that the parameter is limited to a specified range of numeric values.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JDims_EnumerationRestriction-AFD32CE5_20_542">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.18.5.6.3.1">Enumeration Restriction</div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_ENUMERATION</span></span> type of parameter restriction is represented by the <span class=" x-ph-1-0"><span xmlns="" profilecode="1">class</span></span> <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterEnumeration</span></span>. It is a child of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterRestriction</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="1">class</span></span>.
+                     </div>
+                     <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">Property</span></span> Introduced:
+                     </div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="53"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterEnumeration.html#PermittedValues">pfcParameterEnumeration.PermittedValues</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.ParameterEnumeration.GetPermittedValues</span></span> returns a list of permitted parameter values allowed by this restriction in the form of a sequence of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> objects.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JDims_RangeRestriction-AFD3B566_20_575">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.18.5.6.4.1">Range Restriction</div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMSELECT_RANGE</span></span> type of parameter restriction is represented by the interface <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterRange</span></span>. It is a child of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterRestriction</span></span> interface.
+                     </div>
+                     <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="3">Properties</span></span> Introduced:
+                     </div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="54"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterRange.html#Maximum">pfcParameterRange.Maximum</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="55"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterRange.html#Minimum">pfcParameterRange.Minimum</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="56"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterLimit.html#Type">pfcParameterLimit.Type</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; "></td>
+                                 <td><span class=" x-p-4-0"><a name="57"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ParameterLimit.html#Value">pfcParameterLimit.Value</A></li></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterRange.Maximum</span></span> returns the maximum value limit for the parameter in the form of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterLimit</span></span> object.
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterRange.Minimum</span></span> returns the minimum value limit for the parameter in the form of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterLimit</span></span> object.
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterLimit.Type</span></span> returns the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParameterLimitType</span></span> containing the types of parameter limits. The parameter limits are of the following types:
+                     </div>
+                     <div class=" x-ul-2-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                 <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMLIMIT_LESS_THAN</span></span>&#8212;Specifies that the parameter must be less than the indicated value.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                 <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMLIMIT_LESS_THAN_OR_EQUAL</span></span>&#8212;Specifies that the parameter must be less than or equal to the indicated value.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                 <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMLIMIT_GREATER_THAN</span></span>&#8212;Specifies that the parameter must be greater than the indicated value.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                                 <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PARAMLIMIT_GREATER_THAN_OR_EQUAL</span></span>&#8212;Specifies that the parameter must be greater than or equal to the indicated value.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.ParameterLimit.GetValue</span></span> returns the boundary value of the parameter limit in the form of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> object.
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JDims_ExampleCodeUpdatingModelParameters-AFDB5FDB_20_654">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.18.5.6.5.1">Example Code: Updating Model Parameters</div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0"><span xmlns="" profilecode="1">The sample code in the file <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcParameterExamples.js</span></span> located at <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">&lt;creo_weblink_loadpoint&gt;/weblinkexamples/jscript</span></span> contains a single static utility method. This method creates or updates model parameters based on the name-value pairs in
+                           the URL page. A utility method parses the String returned via the URL into int, double, or boolean values if possible.</span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JDims_DimensionObjects-AFDE6A27_20_666">
+            
+            <a name="58"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.18.6.1" class="Heading1">Dimension Objects</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="59"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Dimension objects include standard <span class=" x-ph-1-0">Creo Parametric</span> dimensions as well as reference dimensions. Dimension objects enable you to access dimension tolerances and enable you to
+                  set the value for the dimension. Reference dimensions allow neither of these actions.
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_GettingDimensions-AFDDD97E_20_673">
+               
+               <a name="60"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.6.4.1" class="Heading2">Getting Dimensions</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Dimensions and reference dimensions are <span class=" x-ph-1-0">Creo Parametric</span> model items. See the section <a href="JModelitem.html" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Getting ModelItem Objects</a> for methods that can return <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Dimension</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">RefDimension</span></span> objects.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_DimensionInformation-AFDFC789_20_685">
+               
+               <a name="61"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.6.5.1" class="Heading2">Dimension Information</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="62"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="63"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#Value">pfcBaseParameter.Value</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="64"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-BaseDimension.html#DimValue">pfcBaseDimension.DimValue</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="65"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#IsDesignated">pfcBaseParameter.IsDesignated</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="66"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#IsModified">pfcBaseParameter.IsModified</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="67"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#ResetFromBackup">pfcBaseParameter.ResetFromBackup()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="68"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-BaseParameter.html#IsRelationDriven">pfcBaseParameter.IsRelationDriven</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="69"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-BaseDimension.html#DimType">pfcBaseDimension.DimType</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="70"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-BaseDimension.html#Symbol">pfcBaseDimension.Symbol</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="71"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-BaseDimension.html#Texts">pfcBaseDimension.Texts</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">All the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">BaseParameter</span></span> methods are accessible to Dimensions as well as Parameters. See the section <a href="#JDims_ParameterObjects-AFDE2FF0_20_156" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Parameter Objects</a> for brief descriptions.
+                  </div>
+                  <div class=" x-note-2-0 x-note-2-3">
+                     <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                     <div class=" x-p-7-0">You cannot set the value or designation status of reference dimension objects.</div>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseDimension.DimValue</span></span>  access<span class=" x-ph-1-0"><span xmlns="" profilecode="3">es</span></span> the dimension value as a double. <span class=" x-ph-1-0"><span xmlns="" profilecode="3">This property</span></span> provide<span class=" x-ph-1-0"><span xmlns="" profilecode="3">s</span></span> a shortcut for accessing the dimensions' values without using a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> object.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseParameter.IsRelationDriven</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> identifies whether the part or assembly relations control a dimension.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseDimension.DimType</span></span> returns an enumeration object that identifies whether a dimension is linear, radial, angular, or diametrical.
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseDimension.Symbol</span></span> returns the dimension or reference dimension symbol (that is, &#8220;d#&#8221; or &#8220;rd#&#8221;). 
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcDimension.BaseDimension.GetTexts</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcDimension.BaseDimension.SetTexts</span></span> methods allows access to the text strings that precede or follow the dimension value.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JDims_DimensionTolerances-AFE66876_20_767">
+               
+               <a name="72"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.18.6.6.1" class="Heading2">Dimension Tolerances</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="73"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="74"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="75"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-Dimension.html#Tolerance">pfcDimension.Tolerance</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="76"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-DimTolPlusMinus.html#Create">pfcDimTolPlusMinus.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="77"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-DimTolSymmetric.html#Create">pfcDimTolSymmetric.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="78"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-DimTolLimits.html#Create">pfcDimTolLimits.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="79"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-DimTolSymSuperscript.html#Create">pfcDimTolSymSuperscript.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="80"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcDimension-DimTolISODIN.html#Create">pfcDimTolISODIN.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">Only true dimension objects can have geometric tolerances.</div>
+                  <div class=" x-p-7-0">The  <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcDimension.Tolerance</span></span> enable<span class=" x-ph-1-0"><span xmlns="" profilecode="3">s</span></span> you to access the dimension tolerance. The object types for the dimension tolerance are:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">DimTolLimits</span></span>&#8212;Displays dimension tolerances as upper and lower limits.</span><div class=" x-note-2-0 x-note-2-3">
+                                    <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                                    <div class=" x-p-7-0">This format is not available when only the tolerance value for a dimension is displayed.</div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">DimTolPlusMinus</span></span>&#8212;Displays dimensions as nominal with plus-minus tolerances. The positive and negative values are independent.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">DimTolSymmetric</span></span>&#8212;Displays dimensions as nominal with a single value for both the positive and the negative tolerance.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">DimTolSymSuperscript</span></span>&#8212;Displays dimensions as nominal with a single value for positive and negative tolerance. The text of the tolerance is displayed
+                                    in a superscript format with respect to the dimension text.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">DimTolISODIN</span></span>&#8212;Displays the tolerance table type, table column, and table name, if the dimension tolerance is set to a hole or shaft table
+                                    (DIN/ISO standard).</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">A <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">null</span></span> value is similar to the nominal option in <span class=" x-ph-1-0">Creo Parametric</span>.
+                  </div>
+                  <div class=" x-p-7-0"><span xmlns="" profilecode="1">To determine whether a given tolerance is plus/minus, symmetric, limits, or superscript use TBD.</span></div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JDims_ExampleCodeSettingTolerencesToASpec-AFE660B9_20_841">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.18.6.6.4.1">Example Code: Setting Tolerances to a Specified Range</div>
+                  <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="81"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="82"></a><span class=" x-indexterm-1-0"></span></div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">The sample code in the file <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="1"><span class="cf-Monospace-combined-European_Alphabets">pfcDimensionExamples.js</span></span></span> located at <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="1"><span class="cf-Monospace-combined-European_Alphabets">&lt;creo_weblink_loadpoint&gt;/weblinkexamples/jscript</span></span></span>  shows a utility method that sets angular tolerances to a specified range.
+                     </div>
+                     <div class=" x-p-7-0"><span class=" x-ph-1-0">The example code shows a utility method that sets angular tolerances to a specified range. First, the program determines whether
+                           the dimension passed to it is angular. If it is, the method gets the dimension value and adds or subtracts the range to it
+                           to get the upper and lower limits.</span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

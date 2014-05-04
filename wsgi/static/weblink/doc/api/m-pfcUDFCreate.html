@@ -1,0 +1,198 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+	 CIP JavaScript documentation for module "pfcUDFCreate"
+	</title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      1,
+      50
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;Module
+     </td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Module "pfcUDFCreate"</h2>
+<b>Description</b>
+<br>
+<br>&nbsp; <br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Enumerated Types</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcUDFCreate-UDFDependencyType.html">pfcUDFDependencyType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Represents the dependency type of the UDF. The choices correspond
+to the choices available when you create the UDF interactively. 
+This enumerated type can take only one of the attribute values.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcUDFCreate-UDFScaleType.html">pfcUDFScaleType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Specifies what should happen if the UDF used different length 
+units than the model to which it is being applied.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcUDFCreate-UDFVariantValueType.html">pfcUDFVariantValueType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies if a variant value is a 
+dimension or a pattern parameter.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcUDFCreate-UDFDimensionDisplayType.html">pfcUDFDimensionDisplayType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Specifies how to display all UDF dimensions in the UDF to be placed.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcUDFCreate-UDFOrientation.html">pfcUDFOrientation</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">An enum that provides an answer to a 
+Creo Parametric prompt that uses a flip arrow. 
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Classes</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFAssemblyIntersection.html">pfcUDFAssemblyIntersection</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class defines an assembly intersection.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFCustomCreateInstructions.html">pfcUDFCustomCreateInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Contains all options required to place a UDF programmatically.
+Users can enter attribute data programmatically, or wait for 
+Creo Parametric to interactively prompt for the missing data.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFExternalReference.html">pfcUDFExternalReference</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">The assembly and member to reference when placing the UDF
+with external references.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFReference.html">pfcUDFReference</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class describes an array of element references.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFVariantDimension.html">pfcUDFVariantDimension</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies the value of the dimension name
+the user must supply to place the UDF.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFVariantPatternParam.html">pfcUDFVariantPatternParam</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies the name of the pattern parameter 
+the user must supply to place the UDF.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFVariantValue.html">pfcUDFVariantValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class defines either a dimension or pattern parameter that 
+must be provided to place the UDF. This is the parent of 
+<tt><b><tt><b><a class="enumtype" href="t-pfcUDFCreate-UDFVariantDimension.html">pfcUDFVariantDimension</a></b></tt></b></tt> and <tt><b><tt><b><a class="enumtype" href="t-pfcUDFCreate-UDFVariantPatternParam.html">pfcUDFVariantPatternParam</a></b></tt></b></tt> .
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Collections</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFAssemblyIntersections.html">pfcUDFAssemblyIntersections</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class defines a sequence of assembly intersections.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFExternalReferences.html">pfcUDFExternalReferences</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A sequence of external references.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFOrientations.html">pfcUDFOrientations</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">An array of enums that provides answers to  
+Creo Parametric prompts that use a flip arrow. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFReferences.html">pfcUDFReferences</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class describes a sequence of arrays of element references.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcUDFCreate-UDFVariantValues.html">pfcUDFVariantValues</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class defines a sequence of either dimensions or pattern 
+parameters that must be provided to place the UDF.
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

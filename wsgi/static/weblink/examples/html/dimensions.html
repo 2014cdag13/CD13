@@ -1,0 +1,330 @@
+<!--
+
+FILE:    dimensions.html
+PURPOSE: Converted Pro/Web.Link demo page for the embedded browser. 
+
+20-NOV-2002  J-03-38   $$1   JCN    Submitted.
+07-MAR-2003  K-01-03   $$2   JCN    UNIX support
+
+
+-->
+
+<html>
+
+<head>
+<title>Web.Link Dimensions Test</title>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+
+<script src="../jscript/wl_header.js">
+document.writeln ("Error loading Pro/Web.Link header!");
+</script>
+
+<script language="JavaScript">
+function WlDimensionGet()
+//	Gets the dimensions, reference dimensions, or feature dimensions.
+{
+    if (!pfcIsWindows())
+      netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret;
+    var FunctionName;
+    var DimType;
+
+    if (document.list_dim.ModelNameExt.value == "")
+    {
+        return ;
+    }
+    if (document.list_dim.DimType.options[
+            document.list_dim.DimType.selectedIndex].value == "BY_FEATURE")
+    {
+        if (document.list_dim.FeatureID.value == "")
+        {
+            return ;
+        }
+		 FeatureID = parseInt (document.list_dim.FeatureID.value);
+		 if (isNaN (FeatureID))
+			{
+			    alert ("Feature ID invalid: "+document.list_dim.FeatureID.value);
+		            return;
+			}
+        ret = document.pwl.pwlFeatureDimensionsGet(
+                  document.list_dim.ModelNameExt.value,
+                  FeatureID);
+        FunctionName = "pwlFeatureDimensionsGet";
+        DimType = document.pwlc.PWL_DIMENSION_STANDARD;
+    }
+    else
+    {
+		 DimType = document.pwl.eval(document.list_dim.DimType.options[
+                              document.list_dim.DimType.selectedIndex].value);
+		 if (isNaN (DimType) || DimType == -10001)
+			{
+				alert ("Could not recognize dim type");	
+			}
+/*
+		if (DimType == document.pwlc.PWL_DIMENSION_STANDARD)
+		{
+			pfcDimType = 10;  // pfcITEM_DIMENSION
+		}
+		else
+		{	
+			pfcDimType = 11;  // pfcITEM_REF_DIMENSION
+		}
+
+	   var s = glob.GetProSession ();
+		
+		var m = s.GetModelFromFileName (document.list_dim.ModelNameExt.value);
+
+		if (m == void null)
+		{
+			alert ("Couldn't find model: "+document.list_dim.ModelNameExt.value);
+			return;
+		}
+	
+		var items = m.ListItems (pfcDimType);
+
+		if (items == void null)
+		{
+			alert ("Model items were null!");
+			return;
+		}
+
+		if (items.Count == 0)
+		{
+			alert ("Empty items!");
+		}
+		else
+			alert ("Items :" + items.Count);
+	}
+*/
+            ret = document.pwl.pwlMdlDimensionsGet(
+                  document.list_dim.ModelNameExt.value,
+                  DimType);
+        FunctionName = "pwlMdlDimensionsGet";
+    }
+    if (!ret.Status)
+    {
+        alert(FunctionName + " failed (" + ret.ErrorCode + "): " + ret.ErrorString);
+        return ;
+    }
+    document.list_dim.DimValues.value = "";
+ 	for (var i = 0; i < ret.NumDims; i++)   
+    {
+        var info_ret = document.pwl.pwlDimensionInfoGetByID(
+                           document.list_dim.ModelNameExt.value,
+                           ret.DimIDs.Item(i), DimType);
+        if (!info_ret.Status)
+        {
+            alert("pwlDimensionInfoGetByID failed (" + info_ret.ErrorCode +
+                  ")");
+            return ;
+        }
+        document.list_dim.DimValues.value += info_ret.DimName + " (#" +
+            info_ret.DimID + "):  " + info_ret.DimValue +
+            ((info_ret.DimStyle == parseInt(document.pwlc.PWL_ANGULAR_DIM)) ?
+             " degrees" : "") + " (-" + info_ret.TolMinus + "/+" +
+            info_ret.TolPlus + ")\n";
+    }
+}
+
+function WlDimensionGetByName()
+//	Gets a dimension by name.
+{
+    if (!pfcIsWindows())
+      netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    if (document.get_value_name.ModelNameExt.value == "" ||
+        document.get_value_name.DimName.value == "")
+    {
+        return ;
+    }
+    var DimType = document.pwl.eval(document.get_value_name.DimType.options[
+                        document.get_value_name.DimType.selectedIndex].value);
+	if (isNaN (DimType) || DimType == -10001)
+			{
+				alert ("Could not recognize dim type");	
+			}
+    var ret = document.pwl.pwlDimensionInfoGetByName(
+                  document.get_value_name.ModelNameExt.value,
+                  document.get_value_name.DimName.value,
+                  DimType);
+    if (!ret.Status)
+    {
+        alert("pwlDimensionInfoGetByName failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    document.get_value_name.DimValue.value = ret.DimName + " (#" +
+        ret.DimID + "):  " + ret.DimValue +
+        ((ret.DimStyle == parseInt(document.pwlc.PWL_ANGULAR_DIM)) ?
+         " degrees" : "") + " (-" + ret.TolMinus + "/+" + ret.TolPlus + ")";
+}
+
+function WlDimensionSetByID()
+//	Sets the value of a dimension.
+{
+    if (!pfcIsWindows())
+      netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    if (document.set_value_id.ModelNameExt.value == "" ||
+        document.set_value_id.DimID.value == "" ||
+        document.set_value_id.DimValue.value == "")
+    {
+        return ;
+    }
+	DimensionID = parseInt(document.set_value_id.DimID.value);
+	if (isNaN (DimensionID))
+	{
+		alert ("Invalid dimension id: "+document.set_value_id.DimID.value);
+		return;
+	}
+
+	DimensionValue = parseFloat(document.set_value_id.DimValue.value);
+	if (isNaN (DimensionValue))
+	{
+		alert ("Invalid dimension value: "+document.set_value_id.DimValue.value);
+		return;
+	}
+
+    var ret = document.pwl.pwlDimensionValueSetByID(
+                  document.set_value_id.ModelNameExt.value,
+                  DimensionID,
+                  DimensionValue);
+    if (!ret.Status)
+    {
+        alert("pwlDimensionValueSetByID failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+}
+
+function WlDimensionSetToleranceByID()
+//	Sets the tolerance of a dimension.
+{    
+    if (!pfcIsWindows())
+      netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlDimensionToleranceSetByID(
+                  document.set_tol.ModelNameExt.value,
+                  parseInt(document.set_tol.DimID.value),
+                  parseFloat(document.set_tol.TolPlus.value),
+                  parseFloat(document.set_tol.TolMinus.value));
+    if (!ret.Status)
+    {
+        alert("pwlDimensionValueToleranceByID failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+}
+
+function NotApplicable(form)
+//	Prints N\A in the feature ID field when a model is selected.
+{
+    if (form.DimType.options[form.DimType.selectedIndex].value != "BY_FEATURE")
+    {
+        form.FeatureID.value = "N\\A";
+    }
+    else if (form.FeatureID.value == "N\\A")
+    {
+        form.FeatureID.value = "";
+    }
+}
+
+</script>
+</head>
+
+<body>
+
+<form name="list_dim">
+  <h4>List Dimensions</h4>
+  <div align="center"><center><p><!-- Input arguments --> </p>
+  </center></div><div align="center"><center><table>
+    <tr>
+      <td><div align="center"><center><p>Model:</td>
+      <td align="center"><div align="center"><center><p>Display:</td>
+      <td align="center"><div align="center"><center><p>Feature ID:</td>
+    </tr>
+    <tr align="center">
+      <td><input type="text" name="ModelNameExt" size="20"></td>
+      <td><select name="DimType" onchange="NotApplicable(document.list_dim)" size="1">
+        <option value="PWL_DIMENSION_STANDARD" selected>Dimensions</option>
+        <option value="PWL_DIMENSION_REFERENCE">Reference Dimensions</option>
+        <option value="BY_FEATURE">By Feature ID</option>
+      </select></td>
+      <td><input type="text" name="FeatureID" value="N\A" size="20"></td>
+    </tr>
+  </table>
+  </center></div><!-- Buttons -->
+<div align="center"><center><p><input type="button" value="Get Dimensions"
+  onclick="WlDimensionGet()"></p>
+  </center></div><div align="center"><center><p><!-- Output arguments --> Dimensions:<br>
+  <textarea name="DimValues" rows="4" cols="50"></textarea> </p>
+  </center></div><hr align="center">
+</form>
+
+<form name="get_value_name">
+  <h4>Get Dimension Value by Name</h4>
+  <div align="center"><center><p><!-- Input arguments --> </p>
+  </center></div><div align="center"><center><table>
+    <tr>
+      <td><div align="center"><center><p>Model:</td>
+      <td align="center"><div align="center"><center><p>Dimension Name:</td>
+      <td align="center"><div align="center"><center><p>Type:</td>
+    </tr>
+    <tr align="center">
+      <td><input type="text" name="ModelNameExt" size="20"></td>
+      <td><input type="text" name="DimName" size="20"></td>
+      <td><select name="DimType" size="1">
+        <option value="PWL_DIMENSION_STANDARD" selected>Dimensions</option>
+        <option value="PWL_DIMENSION_REFERENCE">Reference Dimensions</option>
+      </select></td>
+    </tr>
+  </table>
+  </center></div><!-- Buttons -->
+<div align="center"><center><p><input type="button"
+  value="Get Dimension Value" onclick="WlDimensionGetByName()"></p>
+  </center></div><div align="center"><center><p><!-- Output arguments --> Value: <input type="text" name="DimValue"
+  size="20"> </p>
+  </center></div><hr align="center">
+</form>
+
+<form name="set_value_id">
+  <h4>Set Dimension Value by ID</h4>
+  <div align="center"><center><p><!-- Input arguments --> </p>
+  </center></div><div align="center"><center><table>
+    <tr>
+      <td><div align="center"><center><p>Model:</td>
+      <td align="center"><div align="center"><center><p>Dimension ID:</td>
+      <td align="center"><div align="center"><center><p>Value:</td>
+    </tr>
+    <tr align="center">
+      <td><input type="text" name="ModelNameExt" size="20"></td>
+      <td><input type="text" name="DimID" size="20"></td>
+      <td><input type="text" name="DimValue" size="20"></td>
+    </tr>
+  </table>
+  </center></div><!-- Buttons -->
+<div align="center"><center><p><input type="button"
+  value="Set Dimension Value" onclick="WlDimensionSetByID()"> </p>
+  </center></div><hr align="center">
+</form>
+
+<form name="set_tol">
+  <h4>Set Dimension Tolerance by ID</h4>
+  <div align="center"><center><p><!-- Input arguments --> </p>
+  </center></div><div align="center"><center><table>
+    <tr>
+      <td>Model:</td>
+      <td><input type="text" name="ModelNameExt" size="20"></td>
+      <td>Dimension ID:</td>
+      <td><input type="text" name="DimID" size="20"></td>
+    </tr>
+    <tr>
+      <td>Plus Tolerance:</td>
+      <td><input type="text" name="TolPlus" size="20"></td>
+      <td>Minus Tolerance:</td>
+      <td><input type="text" name="TolMinus" size="20"></td>
+    </tr>
+  </table>
+  </center></div><!-- Buttons -->
+<div align="center"><center><p><input type="button"
+  value="Set Dimension Tolerance" onclick="WlDimensionSetToleranceByID()"> </p>
+  </center></div><hr>
+</form>
+</body>
+</html>

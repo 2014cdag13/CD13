@@ -1,0 +1,903 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDimension2D"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      162
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDimension2D.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDimension2D</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a dimension or reference dimension in a drawing.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#CreateDrawingDimension">pfcModel2D.CreateDrawingDimension()</a></b></tt>, <tt><b><a class="method" href="t-pfcModelItem-ModelItemOwner.html#GetItemById">pfcModelItemOwner.GetItemById()</a></b></tt>, <tt><b><a class="method" href="t-pfcModelItem-ModelItemOwner.html#ListItems">pfcModelItemOwner.ListItems()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcDimension-BaseDimension.html">pfcBaseDimension</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsAssociative">IsAssociative</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not the dimension is associative.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsDisplayed">IsDisplayed</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not the dimension is current displayed in the drawing.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsToleranceDisplayed">IsToleranceDisplayed</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not the dimension's tolerance is displayed in the drawing.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Location">Location</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The placement location of the dimension.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#ConvertToBaseline">ConvertToBaseline</a>
+ (<a class="type" href="t-pfcBase-Vector2D.html">pfcVector2D</a>&nbsp;Location)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Converts a location on a linear drawing dimension to be used as an ordinate baseline dimension.  The linear dimension will be converted to ordinate.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ConvertToLinear">ConvertToLinear</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Converts an ordinate drawing dimension to a linear dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ConvertToOrdinate">ConvertToOrdinate</a>
+ (<a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a>&nbsp;BaselineDimension)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Converts a linear drawing dimension to ordinate.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#EraseFromModel2D">EraseFromModel2D</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases the dimension from drawing permanently.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetAttachmentPoints">GetAttachmentPoints</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the attachment locations for a drawing dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetBaselineDimension">GetBaselineDimension</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the baseline dimension for an ordinate drawing dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetDimensionSenses">GetDimensionSenses</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the dimension senses for the drawing dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#GetIsReference">GetIsReference</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Determines if a drawing dimension is a reference dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetOrientationHint">GetOrientationHint</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the orientation hint used for placing the drawing dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimTolerance.html">pfcDimTolerance</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetTolerance">GetTolerance</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves parameters of a specified dimension.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetView">GetView</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the view associated with a drawing dimension.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetTolerance">SetTolerance</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimTolerance.html">pfcDimTolerance</a>&nbsp;Limits)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the tolerance of the specified dimension of the object.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SwitchView">SwitchView</a>
+ (<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a>&nbsp;View)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Switches a drawing dimension to a new view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="IsAssociative">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsAssociative</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not the dimension is associative.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#116">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsDisplayed">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsDisplayed</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not the dimension is current displayed in the drawing.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#118">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsToleranceDisplayed">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsToleranceDisplayed</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not the dimension's tolerance is displayed in the drawing.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Location">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>Location</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The placement location of the dimension.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#123">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="ConvertToBaseline">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td><td class="func-name"><tt>ConvertToBaseline</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector2D.html">pfcVector2D</a>&nbsp;Location)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Converts a location on a linear drawing dimension to be used as an ordinate baseline dimension.  The linear dimension will be converted to ordinate.
+<br>
+<br>The drawing must be displayed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#130">Drawings: Drawing Dimensions Operations</a>, <a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Location</b></tt>
+</dt>
+<dd>A point on one of the extension line of the linear 
+   dimension specified in screen coordinates.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The newly created baseline dimension.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ConvertToLinear">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ConvertToLinear</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Converts an ordinate drawing dimension to a linear dimension.
+<br>
+<br>The drawing must be displayed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#128">Drawings: Drawing Dimensions Operations</a>, <a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ConvertToOrdinate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ConvertToOrdinate</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a>&nbsp;BaselineDimension)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Converts a linear drawing dimension to ordinate.
+<br>
+<br>The drawing must be displayed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#129">Drawings: Drawing Dimensions Operations</a>, <a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>BaselineDimension</b></tt>
+</dt>
+<dd>The ordinate baseline dimension used for the conversion.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EraseFromModel2D">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>EraseFromModel2D</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases the dimension from drawing permanently.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#133">Drawings: Drawing Dimensions Operations</a>, <a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetAttachmentPoints">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a></tt></td><td class="func-name"><tt>GetAttachmentPoints</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the attachment locations for a drawing dimension.
+<br>
+<br>Applicable only for dimensions created in drawing mode.  
+This function does not support dimensions created at intersection points of entities.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetDimensionSenses">pfcDimension2D.GetDimensionSenses()</a></b></tt>, <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetOrientationHint">pfcDimension2D.GetOrientationHint()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#119">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of attachment points.  For information about how these attachments are interpreted, see the dimension senses array returned from <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetDimensionSenses">pfcDimension2D.GetDimensionSenses()</a></b></tt>.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetBaselineDimension">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td><td class="func-name"><tt>GetBaselineDimension</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the baseline dimension for an ordinate drawing dimension.
+<br>
+<br>The drawing must be displayed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#122">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The ordinate baseline dimension, or <tt>null</tt> if the dimension is not an ordinate dimension.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetDimensionSenses">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a></tt></td><td class="func-name"><tt>GetDimensionSenses</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the dimension senses for the drawing dimension.
+<br>
+<br>Only applicable for dimensions created in drawing mode. 
+This method does not support drawing dimensions created from intersections of geometric entities.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-EmptyDimensionSense.html">pfcEmptyDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-PointDimensionSense.html">pfcPointDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-SplinePointDimensionSense.html">pfcSplinePointDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-TangentIndexDimensionSense.html">pfcTangentIndexDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-LinAOCTangentDimensionSense.html">pfcLinAOCTangentDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-AngleDimensionSense.html">pfcAngleDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-PointToAngleDimensionSense.html">pfcPointToAngleDimensionSense</a></b></tt></b></tt>, <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetOrientationHint">pfcDimension2D.GetOrientationHint()</a></b></tt>, <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetAttachmentPoints">pfcDimension2D.GetAttachmentPoints()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#120">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of dimension senses, describing how the dimension is attached at each attachment returned from <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetAttachmentPoints">pfcDimension2D.GetAttachmentPoints()</a></b></tt>.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetIsReference">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>GetIsReference</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Determines if a drawing dimension is a reference dimension.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#117">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if the dimension is a reference dimension, otherwise <tt>false</tt>.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetOrientationHint">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a></tt></td><td class="func-name"><tt>GetOrientationHint</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the orientation hint used for placing the drawing dimension.
+<br>
+<br>Only applicable for dimensions created in drawing mode. 
+This function does not support drawing dimensions created from intersections of geometric entities.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetAttachmentPoints">pfcDimension2D.GetAttachmentPoints()</a></b></tt>, <tt><b><a class="method" href="t-pfcDimension2D-Dimension2D.html#GetDimensionSenses">pfcDimension2D.GetDimensionSenses()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#121">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The orientation hint, which determines how Creo Parametric will orient the dimension with respect to the attachment points.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetTolerance">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimTolerance.html">pfcDimTolerance</a></tt></td><td class="func-name"><tt>GetTolerance</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves parameters of a specified dimension.<br>
+<br> A null value indicates a nominal tolerance.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#125">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The upper and lower limit of the dimension.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetView">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-name"><tt>GetView</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the view associated with a drawing dimension.
+<br>
+<br>Applies to dimensions stored in the solid or in the drawing.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#124">Drawings: Drawing Dimensions Information</a>, <a href="../manual0/jdrawfns.html#126">Drawings: Drawing Dimensions Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The drawing view where the dimension is displayed, or <tt>null</tt>, if the dimension is not attached to a drawing view.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetTolerance">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetTolerance</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDimension-DimTolerance.html">pfcDimTolerance</a>&nbsp;Limits)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the tolerance of the specified dimension of the object.<br>
+<br> A null value indicates a nominal tolerance. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#132">Drawings: Drawing Dimensions Operations</a>, <a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Limits</b></tt>
+</dt>
+<dd> The dimension's upper and lower limit. </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SwitchView">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SwitchView</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a>&nbsp;View)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Switches a drawing dimension to a new view.
+<br>
+<br>Applies to dimensions stored in the solid or in the drawing.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#131">Drawings: Drawing Dimensions Operations</a>, <a href="../manual0/jdrawfns.html#134">Drawings: Drawing Dimensions Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>View</b></tt>
+</dt>
+<dd>The new drawing view for the dimension.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

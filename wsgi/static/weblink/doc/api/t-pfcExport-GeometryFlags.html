@@ -1,0 +1,242 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcGeometryFlags"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      266
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcExport.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcGeometryFlags</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface contains flags indicating the format of an export file.
+<br>
+<br>Not all geometry types are supported by all export formats.  Use the method <tt><b><a class="method" href="t-pfcSession-BaseSession.html#IsGeometryRepSupported">pfcBaseSession.IsGeometryRepSupported()</a></b></tt> to determine if a set of flags is valid for a particular export type.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#IsGeometryRepSupported">pfcBaseSession.IsGeometryRepSupported()</a></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-Export3DInstructions.html">pfcExport3DInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#AsQuilts">AsQuilts</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not to export as a set of quilts.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#AsSolids">AsSolids</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not to export as solid objects.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#AsSurfaces">AsSurfaces</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not to export as a set of surfaces.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#AsWireframe">AsWireframe</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not export as wireframe entities.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcExport-GeometryFlags.html">pfcGeometryFlags</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new geometry flags object used when exporting a model to a 3D representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="AsQuilts">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>AsQuilts</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not to export as a set of quilts.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AsSolids">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>AsSolids</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not to export as solid objects.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AsSurfaces">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>AsSurfaces</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not to export as a set of surfaces.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AsWireframe">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>AsWireframe</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not export as wireframe entities.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcExport-GeometryFlags.html">pfcGeometryFlags</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new geometry flags object used when exporting a model to a 3D representation.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-Export3DInstructions.html">pfcExport3DInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#69">Interface: Export Instructions</a>, <a href="../manual0/Jinterface.html#85">Interface: Export Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created geometry flags object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

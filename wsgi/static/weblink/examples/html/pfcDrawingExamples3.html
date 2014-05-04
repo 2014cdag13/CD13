@@ -1,0 +1,160 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+-->
+<html>
+
+<head>
+<title>Pro/Web Link Drawing Examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcDrawingExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function placeSymInst_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			placeSymInst ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+function createGroup_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createGroup (document.CG.groupName.value);
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+function createTableOfPoints_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createTableOfPoints ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Drawing Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Page 3<o:p></o:p></p>
+
+<form name=PS>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Placing symbol instances</h3>
+  <p>This example function (“placeSymInst()”) demonstrates placement of symbol
+  instances.<span style="mso-spacerun: yes">  </span>.<span
+  style="mso-spacerun: yes">  </span>The current model must be a drawing.<span
+  style="mso-spacerun: yes">   </span>Select one or more locations for the
+  symbol instance (terminate selection with the middle mouse button).</p>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'>
+  <input type=button value="Place Symbol Instance" id=button1 name=button1
+  onclick="placeSymInst_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=CG>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating a detail group</h3>
+  <p>This example function (“createGroup()”) demonstrates creation of a detail
+  group.<span style="mso-spacerun: yes">  </span>The current model must be a
+  drawing.<span style="mso-spacerun: yes">  </span>Enter the name of the group
+  in the input box below.<span style="mso-spacerun: yes">  </span>Select notes,
+  entities and symbols to add to the detail group.<o:p></o:p></p>
+  <p align=center style='text-align:center'><INPUT TYPE="text" NAME="groupName"
+  id=groupName>
+  <input type=button value="Create Group" id=button2 name=button2 onclick="createGroup_wrapper()">
+  </p>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=CT>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating a table of point information</h3>
+  <p>This example function (“createTableOfPoints()”) demonstrates creation of a
+  table.<span style="mso-spacerun: yes">  </span>Select a coordinate system
+  from a model in a drawing view.<span style="mso-spacerun: yes"> 
+  </span>Geometric information on all the points in the top level model will be
+  written in the new table.<o:p></o:p></p>
+  <p align=center style='text-align:center'>
+  <input type=button value="Create Point Table" id=button3 name=button3 onclick="createTableOfPoints_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><span
+style='font-size:8.0pt;font-family:Arial'><a href="pfcDrawingExamples4.html"><span
+style='font-size:12.0pt;font-family:"Times New Roman"'>More Examples</span></a></span></p>
+
+</div>
+
+</body>
+
+</html>

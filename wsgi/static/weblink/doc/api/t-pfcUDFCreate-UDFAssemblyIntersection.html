@@ -1,0 +1,228 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcUDFAssemblyIntersection"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      562
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcUDFCreate.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcUDFAssemblyIntersection</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines an assembly intersection.
+<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-intseq.html">intseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComponentPath">ComponentPath</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The member identifier table that defines the location of the intersected part in the assembly that contains the UDF.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#InstanceNames">InstanceNames</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">An array of names for the new instances of parts created to represent the intersection geometry.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#VisibilityLevel">VisibilityLevel</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The length of the <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> that corresponds to the visibility level of the intersected part in the assembly. If VisibilityLevel == the number of entries in the <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> sequence, the feature is visible in the part that it intersects. If VisibilityLevel is 0, the feature is visible at the level of the assembly containing the UDF. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcUDFCreate-UDFAssemblyIntersection.html">pfcUDFAssemblyIntersection</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-stdcols-intseq.html">intseq</a>&nbsp;ComponentPath, integer&nbsp;VisibilityLevel)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates an assembly intersection object, which is 
+used to place a UDF programatically.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="ComponentPath">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-intseq.html">intseq</a></tt></td><td class="func-name"><tt>ComponentPath</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The member identifier table that defines the location of the intersected part in the assembly that contains the UDF.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="InstanceNames">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>InstanceNames</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>An array of names for the new instances of parts created to represent the intersection geometry.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#109">Features: Creating a Custom UDF</a>, <a href="../manual0/JFeat.html#110">Features: Creating a Custom UDF</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="VisibilityLevel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>VisibilityLevel</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The length of the <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> that corresponds to the visibility level of the intersected part in the assembly. If VisibilityLevel == the number of entries in the <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> sequence, the feature is visible in the part that it intersects. If VisibilityLevel is 0, the feature is visible at the level of the assembly containing the UDF. <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcUDFCreate-UDFAssemblyIntersection.html">pfcUDFAssemblyIntersection</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-intseq.html">intseq</a>&nbsp;ComponentPath, integer&nbsp;VisibilityLevel)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates an assembly intersection object, which is 
+used to place a UDF programatically.
+<br>
+<br>Used as a component of <tt><b><tt><b><a class="enumtype" href="t-pfcUDFCreate-UDFCustomCreateInstructions.html">pfcUDFCustomCreateInstructions</a></b></tt></b></tt> .
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#108">Features: Creating a Custom UDF</a>, <a href="../manual0/JFeat.html#110">Features: Creating a Custom UDF</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ComponentPath</b></tt>
+</dt>
+<dd>The member identifier table that defines the location of the intersected part in the assembly that contains the UDF.</dd>
+<dt>
+<tt><b>VisibilityLevel</b></tt>
+</dt>
+<dd>The length of the <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> that corresponds to the visibility level of the intersected part in the assembly. If VisibilityLevel == the number of entries in the <tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></b></tt></b></tt> sequence, the feature is visible in the part that it intersects. If VisibilityLevel is 0, the feature is visible at the level of the assembly containing the UDF.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Instance of the AssemblyIntersection object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

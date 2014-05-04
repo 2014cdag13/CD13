@@ -1,0 +1,441 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcCoordSysExportInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      70
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModel.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcCoordSysExportInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>Base class of classes that export files with information that describes  faceted, solid models (without datums and surfaces).
+<br>
+<br>For more information about the Maximum Chord Height and Angle Control settings, refer to information about controlling the quality of an export in the Interface section of the Creo Parametric help.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcModel-CATIAFacetsExportInstructions.html">pfcCATIAFacetsExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcModel-RenderExportInstructions.html">pfcRenderExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcModel-STLASCIIExportInstructions.html">pfcSTLASCIIExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcModel-STLBinaryExportInstructions.html">pfcSTLBinaryExportInstructions</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcModel-InventorExportInstructions.html">pfcInventorExportInstructions</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#AngleControl">AngleControl</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The Angle Control setting. (Pass <tt>null</tt> if you specify <i>Quality</i>.).
+   Default value is 0.1.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#CsysName">CsysName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Stores the name of a coordinate-system feature in the model being 
+   exported. A coordinate system that places the part or assembly in its 
+   upper-right quadrant is recommended, so that all position/distance values 
+   are positive. Allowed to be <tt>null</tt> if exporting as Slice</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-FacetControlFlags.html">pfcFacetControlFlags</a></tt></td><td class="func-signature"><tt><a class="method" href="#FacetControlOptions">FacetControlOptions</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Flags (FACET_STEP_SIZE_ADJUST and others) to control Facet export. (Pass <tt>null</tt> if not exporting slice formats).
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#MaxChordHeight">MaxChordHeight</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The Maximun Chord Height setting. (Pass <tt>null</tt> if you specify <i>Quality</i>.).
+   Default value is 0.1.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#Quality">Quality</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Can be used in place of <i>MaxChordHeight</i> and <i>AngleControl</i>. A value between 1 and 10. The higher the value you pass, the lower the <i>MaxChordHeight</i> setting and the higher the <i>AngleControl</i> setting that the method will use. <p></p>
+Pass <tt>null</tt> if you use <i>MaxChordHeight</i> and <i>AngleControl</i> values. If <i>Quality</i>, <i>MaxChordHeight</i>, and <i>AngleControl</i> are all <tt>null</tt>, a <i>Quality</i> value of 3 is used. 
+Default value is 1.0</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#StepSize">StepSize</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The Step Size Control setting. (Pass <tt>null</tt> if you specify <i>Quality</i>.).
+   Default value is 0.0.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSliceExportData">GetSliceExportData</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns an <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> object or NULL if the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> isn't set.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetSliceExportData">SetSliceExportData</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a>&nbsp;SliceExpData)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> .
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="AngleControl">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>AngleControl</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The Angle Control setting. (Pass <tt>null</tt> if you specify <i>Quality</i>.).
+   Default value is 0.1.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#49">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CsysName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>CsysName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Stores the name of a coordinate-system feature in the model being 
+   exported. A coordinate system that places the part or assembly in its 
+   upper-right quadrant is recommended, so that all position/distance values 
+   are positive. Allowed to be <tt>null</tt> if exporting as Slice<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#46">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FacetControlOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-FacetControlFlags.html">pfcFacetControlFlags</a></tt></td><td class="func-name"><tt>FacetControlOptions</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Flags (FACET_STEP_SIZE_ADJUST and others) to control Facet export. (Pass <tt>null</tt> if not exporting slice formats).
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="MaxChordHeight">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>MaxChordHeight</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The Maximun Chord Height setting. (Pass <tt>null</tt> if you specify <i>Quality</i>.).
+   Default value is 0.1.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#48">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Quality">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>Quality</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Can be used in place of <i>MaxChordHeight</i> and <i>AngleControl</i>. A value between 1 and 10. The higher the value you pass, the lower the <i>MaxChordHeight</i> setting and the higher the <i>AngleControl</i> setting that the method will use. <p></p>
+Pass <tt>null</tt> if you use <i>MaxChordHeight</i> and <i>AngleControl</i> values. If <i>Quality</i>, <i>MaxChordHeight</i>, and <i>AngleControl</i> are all <tt>null</tt>, a <i>Quality</i> value of 3 is used. 
+Default value is 1.0<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#47">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StepSize">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>StepSize</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The Step Size Control setting. (Pass <tt>null</tt> if you specify <i>Quality</i>.).
+   Default value is 0.0.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#44">Interface: Exporting to Faceted Formats</a>, <a href="../manual0/Jinterface.html#52">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="GetSliceExportData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></tt></td><td class="func-name"><tt>GetSliceExportData</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns an <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> object or NULL if the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> isn't set.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#50">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetSliceExportData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetSliceExportData</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a>&nbsp;SliceExpData)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> .
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#51">Interface: Exporting Using Coordinate System</a>, <a href="../manual0/Jinterface.html#53">Interface: Exporting Using Coordinate System</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SliceExpData</b></tt>
+</dt>
+<dd>The <tt><b><tt><b><a class="enumtype" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></b></tt></b></tt> for setting.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

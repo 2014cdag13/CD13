@@ -1,0 +1,984 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcSheetOwner"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      481
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcSheet.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSheetOwner</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a model containing sheets.
+<br>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcModel2D-Model2D.html">pfcModel2D</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#CurrentSheetNumber">CurrentSheetNumber</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The current sheet number.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#NumberOfSheets">NumberOfSheets</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The number of sheets in the model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#AddSheet">AddSheet</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds a sheet to the model.  
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteSheet">DeleteSheet</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes a sheet from the model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetBackgroundView">GetSheetBackgroundView</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the background view for the given sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSheet-SheetData.html">pfcSheetData</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetData">GetSheetData</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns information about the specified sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDrawingFormat-DrawingFormat.html">pfcDrawingFormat</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetFormat">GetSheetFormat</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the drawing format used for the particular sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetFormatDescr">GetSheetFormatDescr</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the model descriptor of the drawing format used for the particular sheet.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSheet-SheetInfo.html">pfcSheetInfo</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetInfo">GetSheetInfo</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns information about the specified sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetScale">GetSheetScale</a>
+ (integer&nbsp;SheetNumber, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;DrawingModel)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the scale of the drawing on particular sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetTransform">GetSheetTransform</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the transformation matrix for the sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetUnits">GetSheetUnits</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the length units for the given sheet. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RegenerateSheet">RegenerateSheet</a>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Regenerates a specified sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ReorderSheet">ReorderSheet</a>
+ (integer&nbsp;FromSheetNumber, integer&nbsp;To)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Reorders the given sheet to a new sheet number.   
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetSheetFormat">SetSheetFormat</a>
+ (integer&nbsp;SheetNumber, <a class="type" href="t-pfcDrawingFormat-DrawingFormat.html">pfcDrawingFormat</a>&nbsp;Format, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;FormatSheetNumber, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;DrawingModel)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Applies the specified format to a drawing sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetSheetScale">SetSheetScale</a>
+ (integer&nbsp;SheetNumber, number&nbsp;Scale, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;DrawingModel)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the scale for a model on the sheet.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="CurrentSheetNumber">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>CurrentSheetNumber</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The current sheet number.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#41">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="NumberOfSheets">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>NumberOfSheets</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The number of sheets in the model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#40">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AddSheet">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>AddSheet</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds a sheet to the model.  
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#45">Drawings: Drawing Sheet Operations</a>, <a href="../manual0/jdrawfns.html#50">Drawings: Drawing Sheet Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The number of the new sheet added.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteSheet">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteSheet</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes a sheet from the model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#46">Drawings: Drawing Sheet Operations</a>, <a href="../manual0/jdrawfns.html#50">Drawings: Drawing Sheet Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The number of the sheet to remove.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetBackgroundView">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-name"><tt>GetSheetBackgroundView</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the background view for the given sheet.
+<br>
+<br>The sheet background view is used for the placement of items in the drawing without associating them to a particular model view.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#39">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#77">Drawings: Obtaining Drawing Views</a>, <a href="../manual0/jdrawfns.html#202">Drawings: Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 up to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The background view object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetData">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSheet-SheetData.html">pfcSheetData</a></tt></td><td class="func-name"><tt>GetSheetData</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns information about the specified sheet.
+<br>
+<br>This method is deprecated.
+   Use <tt><b><a class="method" href="t-pfcSheet-SheetOwner.html#GetSheetInfo">pfcSheetOwner.GetSheetInfo()</a></b></tt> instead.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The sheet data, including size, orientation, and units.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetFormat">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDrawingFormat-DrawingFormat.html">pfcDrawingFormat</a></tt></td><td class="func-name"><tt>GetSheetFormat</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the drawing format used for the particular sheet.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#37">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.   Sheet numbers range from 1 to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The drawing format, or <tt>null</tt>, if no format is assigned to the sheet.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetFormatDescr">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td><td class="func-name"><tt>GetSheetFormatDescr</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the model descriptor of the drawing format used for the particular sheet.
+ <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#38">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.   Sheet numbers range from 1 to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model descriptor of the drawing format.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetInfo">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSheet-SheetInfo.html">pfcSheetInfo</a></tt></td><td class="func-name"><tt>GetSheetInfo</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns information about the specified sheet.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#35">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  
+   Sheet numbers range from 1 to the number of sheets.
+   </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The sheet info including size, orientation, and units.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetScale">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>GetSheetScale</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;DrawingModel)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the scale of the drawing on particular sheet.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#36">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 to the number of sheets.</dd>
+<dt>
+<tt><b>DrawingModel</b></tt>
+</dt>
+<dd>The model used to measure the scale.  If <tt>null</tt>, the function uses the current model in the drawing.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The sheet scale.  If no models are used in the drawing, the scale is 1.0.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetTransform">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-name"><tt>GetSheetTransform</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the transformation matrix for the sheet.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#34">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The transformation matrix for the sheet.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetUnits">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a></tt></td><td class="func-name"><tt>GetSheetUnits</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the length units for the given sheet. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#42">Drawings: Drawing Sheet Information</a>, <a href="../manual0/jdrawfns.html#43">Drawings: Drawing Sheet Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 up to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The units.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RegenerateSheet">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RegenerateSheet</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Regenerates a specified sheet.
+<br>
+<br>The sheet must be displayed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#29">Drawings: Drawing Operations</a>, <a href="../manual0/jdrawfns.html#48">Drawings: Drawing Sheet Operations</a>, <a href="../manual0/jdrawfns.html#50">Drawings: Drawing Sheet Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 to the number of sheets.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ReorderSheet">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ReorderSheet</tt></td><td class="func-params"><tt>
+ (integer&nbsp;FromSheetNumber, integer&nbsp;To)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Reorders the given sheet to a new sheet number.   
+<br>
+<br>Reordering will cause other affected sheets to change their sheet numbers as well.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#47">Drawings: Drawing Sheet Operations</a>, <a href="../manual0/jdrawfns.html#50">Drawings: Drawing Sheet Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FromSheetNumber</b></tt>
+</dt>
+<dd>The sheet number to reorder.  Sheet numbers range from 1 to the number of sheets.</dd>
+<dt>
+<tt><b>To</b></tt>
+</dt>
+<dd>The new sheet number for the sheet.  </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetSheetFormat">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetSheetFormat</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber, <a class="type" href="t-pfcDrawingFormat-DrawingFormat.html">pfcDrawingFormat</a>&nbsp;Format, 
+   /*&nbsp;optional&nbsp;*/&nbsp;integer&nbsp;FormatSheetNumber, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;DrawingModel)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Applies the specified format to a drawing sheet.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#50">Drawings: Drawing Sheet Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number to apply the format.  Sheet numbers range from 1 to the number of sheets.</dd>
+<dt>
+<tt><b>Format</b></tt>
+</dt>
+<dd>The drawing format to apply.</dd>
+<dt>
+<tt><b>FormatSheetNumber</b></tt>
+</dt>
+<dd>The sheet number of the format to apply.  This number can range from 1 to the number of sheets in the format.  Pass <tt>null</tt> to use the first format sheet.</dd>
+<dt>
+<tt><b>DrawingModel</b></tt>
+</dt>
+<dd>The drawing model (used when resolving parameters in the format).  Pass <tt>null</tt> to use the current drawing model.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetSheetScale">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetSheetScale</tt></td><td class="func-params"><tt>
+ (integer&nbsp;SheetNumber, number&nbsp;Scale, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;DrawingModel)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the scale for a model on the sheet.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#49">Drawings: Drawing Sheet Operations</a>, <a href="../manual0/jdrawfns.html#50">Drawings: Drawing Sheet Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number.  Sheet numbers range from 1 to the number of sheets.</dd>
+<dt>
+<tt><b>Scale</b></tt>
+</dt>
+<dd>The scale to use.</dd>
+<dt>
+<tt><b>DrawingModel</b></tt>
+</dt>
+<dd>The drawing model to scale.  Pass <tt>null</tt> to use the current drawing model.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

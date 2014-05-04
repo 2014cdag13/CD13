@@ -1,0 +1,603 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcWPPServer"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      607
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcWPP.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcWPPServer</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes WPPServer<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Child.html">pfcChild</a>, 
+        <a class="class" href="t-pfcServer-Server.html">pfcServer</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockStat.html">pfcServerLockStat</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetServerObjectLockStatus">GetServerObjectLockStatus</a>
+ (string&nbsp;Obj)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Check for a single object lock status on the primary server.
+ Applies only to ProductPoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockStats.html">pfcServerLockStats</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetServerObjectsLockStatus">GetServerObjectsLockStatus</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Objs)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Check lock status of multiple objects on the primary server.
+ Applies only to ProductPoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#GetServerSynchronizationState">GetServerSynchronizationState</a>
+ (string&nbsp;ServerAlias)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies the synchronzation status of the server.
+ Applies only to ProductPoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetServerTargetfolder">GetServerTargetfolder</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets to target folder location for the active server.
+ This location is where new models (models not already retrieved 
+ from a file location) will be saved, if the server permits 
+ saving to an arbitrary location. 
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockConflicts.html">pfcServerLockConflicts</a></tt></td><td class="func-signature"><tt><a class="method" href="#LockServerObjects">LockServerObjects</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Objs)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lock a set of objects on the primary server.
+ Applies only to ProductPoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetServerContext">SetServerContext</a>
+ (string&nbsp;ServerAlias, string&nbsp;Context)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the active context/product for the given server.
+ Allows function like <tt><b>
+         &lt;reference to unknown entity pfcModel::Model::RetrieveModel&gt;
+        </b></tt>
+ to look in the correct location on the server for retrieval of
+ models. Applies only to Productpoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetServerTargetfolder">SetServerTargetfolder</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;TargetFolder)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets to target folder location for the active server.
+ This location is where new models (models not already retrieved 
+ from a file location) will be saved, if the server permits 
+ saving to an arbitrary location. 
+ <notes>This location applies to functions such as: 
+ <tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>
+ <tt><b><a class="method" href="t-pfcSession-BaseSession.html#CopyFileToWS">pfcBaseSession.CopyFileToWS()</a></b></tt>
+ 
+</notes>
+ 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetWsimpexFolderoption">SetWsimpexFolderoption</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;Folder)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Set a workspace folder to import/export data to/from (when applicable).
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWPP-ServerSynchronizeConflicts.html">pfcServerSynchronizeConflicts</a></tt></td><td class="func-signature"><tt><a class="method" href="#SynchronizeServer">SynchronizeServer</a>
+ (string&nbsp;ServerAlias, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWPP-ServerSynchronizeOptions.html">pfcServerSynchronizeOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Synchronizes the full content on the local cache with
+ the content on the server. Applies only to ProductPoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockConflicts.html">pfcServerLockConflicts</a></tt></td><td class="func-signature"><tt><a class="method" href="#UnlockServerObjects">UnlockServerObjects</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Objs)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Unlock a set of objects on the primary server.
+ Applies only to ProductPoint servers.
+ </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="GetServerObjectLockStatus">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockStat.html">pfcServerLockStat</a></tt></td><td class="func-name"><tt>GetServerObjectLockStatus</tt></td><td class="func-params"><tt>
+ (string&nbsp;Obj)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Check for a single object lock status on the primary server.
+ Applies only to ProductPoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Obj</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Server lock status.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetServerObjectsLockStatus">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockStats.html">pfcServerLockStats</a></tt></td><td class="func-name"><tt>GetServerObjectsLockStatus</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Objs)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Check lock status of multiple objects on the primary server.
+ Applies only to ProductPoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Objs</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Array of server lock status.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetServerSynchronizationState">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>GetServerSynchronizationState</tt></td><td class="func-params"><tt>
+ (string&nbsp;ServerAlias)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies the synchronzation status of the server.
+ Applies only to ProductPoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ServerAlias</b></tt>
+</dt>
+<dd>The server alias.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Synchronization state.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetServerTargetfolder">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetServerTargetfolder</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets to target folder location for the active server.
+ This location is where new models (models not already retrieved 
+ from a file location) will be saved, if the server permits 
+ saving to an arbitrary location. 
+ <br>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Server target folder.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LockServerObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockConflicts.html">pfcServerLockConflicts</a></tt></td><td class="func-name"><tt>LockServerObjects</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Objs)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lock a set of objects on the primary server.
+ Applies only to ProductPoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Objs</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Lock conflicts.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetServerContext">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetServerContext</tt></td><td class="func-params"><tt>
+ (string&nbsp;ServerAlias, string&nbsp;Context)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the active context/product for the given server.
+ Allows function like <tt><b>
+         &lt;reference to unknown entity pfcModel::Model::RetrieveModel&gt;
+        </b></tt>
+ to look in the correct location on the server for retrieval of
+ models. Applies only to Productpoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ServerAlias</b></tt>
+</dt>
+<dd>The server alias</dd>
+<dt>
+<tt><b>Context</b></tt>
+</dt>
+<dd>The product.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetServerTargetfolder">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetServerTargetfolder</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;TargetFolder)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets to target folder location for the active server.
+ This location is where new models (models not already retrieved 
+ from a file location) will be saved, if the server permits 
+ saving to an arbitrary location. 
+ <notes>This location applies to functions such as: 
+ <tt><b><a class="method" href="t-pfcModel-Model.html#Save">pfcModel.Save()</a></b></tt>
+ <tt><b><a class="method" href="t-pfcSession-BaseSession.html#CopyFileToWS">pfcBaseSession.CopyFileToWS()</a></b></tt>
+ 
+</notes>
+ 
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>TargetFolder</b></tt>
+</dt>
+<dd>Target folder location. Pass <tt>null</tt> to unset this value</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetWsimpexFolderoption">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetWsimpexFolderoption</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;Folder)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Set a workspace folder to import/export data to/from (when applicable).
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Folder</b></tt>
+</dt>
+<dd>Path of the folder. Can be <tt>null</tt>.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SynchronizeServer">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWPP-ServerSynchronizeConflicts.html">pfcServerSynchronizeConflicts</a></tt></td><td class="func-name"><tt>SynchronizeServer</tt></td><td class="func-params"><tt>
+ (string&nbsp;ServerAlias, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWPP-ServerSynchronizeOptions.html">pfcServerSynchronizeOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Synchronizes the full content on the local cache with
+ the content on the server. Applies only to ProductPoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ServerAlias</b></tt>
+</dt>
+<dd>The server alias</dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Synchronization options.Pass <tt>null</tt> for now.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Conflicts encountered during synchronization</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UnlockServerObjects">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWPP-ServerLockConflicts.html">pfcServerLockConflicts</a></tt></td><td class="func-name"><tt>UnlockServerObjects</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Objs)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Unlock a set of objects on the primary server.
+ Applies only to ProductPoint servers.
+ <br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Objs</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Unlock conflicts.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

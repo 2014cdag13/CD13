@@ -1,0 +1,666 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="JGeomRep" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Geometry Representations</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANJGEOMREP0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.33.1" class="ChapterTitle">Geometry Representations</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0">This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes the geometry representations of the data used by <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="JGeomRep_SurfacesdataStructuresSurfaceParame-BCB53713_35_10">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.33.3.1" class="Heading1">Surface Parameterization</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="2"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">A surface in <span class=" x-ph-1-0">Creo Parametric</span> contains data that describes the boundary of the surface, and a pointer to the primitive surface on which it lies. The primitive
+                  surface is a three-dimensional geometric surface parameterized by two variables (<span class=" x-parmname-3-0">u</span> and <span class=" x-parmname-3-0">v</span>). The surface boundary consists of closed loops (contours) of edges. Each edge is attached to two surfaces, and each edge
+                  contains the <span class=" x-parmname-3-0">u</span> and <span class=" x-parmname-3-0">v</span> values of the portion of the boundary that it forms for both surfaces. Surface boundaries are traversed clockwise around
+                  the outside of a surface, so an edge has a direction in each surface with respect to the direction of traversal.
+               </div>
+               <div class=" x-p-7-0">This section describes the surface parameterization. The surfaces are listed in order of complexity. For ease of use, the
+                  alphabetical listing of the data structures is as follows:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_Cone-BCB5460635_27" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Cone</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_CoonsPatchesgeometryRepresentationC-BCB55E3935_30" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Coons Patch</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_Cylinder-BCB542BC35_33" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Cylinder</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_SurfacescylindricalSplineCylinderss-BCB56D5035_36" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Cylindrical Spline Surface</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_FilletSurfacesgeometryRepresentatio-BCB5610D35_39" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Fillet Surface</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_SurfacesgeneralSurfaceOfRevolutionG-BCB5524035_42" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">General Surface of Revolution</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_NURBSrepresentationNURBS-BCB57FD635_45" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">NURBS</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_Plane-BCB53C7435_48" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Plane</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_RuledSurfacesgeometryRepresentation-BCB555EE35_51" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Ruled Surface</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_SurfacessplineSplinessurfaceSurface-BCB564BE35_54" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Spline Surface</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_TabulatedCylindersgeometryRepresent-BCB55A4335_57" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Tabulated Cylinder</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_Torus-BCB54CE535_60" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Torus</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_Plane-BCB53C7435_48">
+               
+               <a name="3"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.4.1" class="Heading2">Plane</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="4"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.4.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomrea.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">The <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"></span>plane entity consists of two perpendicular unit vectors (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e2</span></span>), the normal to the plane (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e3</span></span>), and the origin of the plane.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]       Unit vector, in the u direction
+e2[3]       Unit vector, in the v direction
+e3[3]       Normal to the plane
+origin[3]   Origin of the plane
+</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x, y, z) = u * e1 + v * e2 + origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_Cylinder-BCB542BC35_33">
+               
+               <a name="5"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.5.1" class="Heading2">Cylinder</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="6"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.5.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre2.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">The generating curve of a cylinder is a line, parallel to the axis, at a distance <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R</span></span> from the axis. The radial distance of a point is constant, and the height of the point is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]       Unit vector, in the u direction
+e2[3]       Unit vector, in the v direction
+e3[3]       Normal to the plane
+origin[3]   Origin of the cylinder
+radius      Radius of the cylinder
+</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x, y, z) = radius * [cos(u) * e1 + sin(u) * e2] +
+           v * e3 + origin</span></pre><div class=" x-p-7-0">Engineering Notes:</div>
+                  <div class=" x-p-7-0">For the cylinder, cone, torus, and general surface of revolution, a local coordinate system is used that consists of three
+                     orthogonal unit vectors (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1</span></span>, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e2</span></span>, and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e3</span></span>) and an origin. The curve lies in the plane of <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e3</span></span>, and is rotated in the direction from <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1</span></span> to <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e2</span></span>. The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u</span></span> surface parameter determines the angle of rotation, and the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span> parameter determines the position of the point on the generating curve.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_Cone-BCB5460635_27">
+               
+               <a name="7"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.6.1" class="Heading2">Cone</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="8"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.6.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre3.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">The generating curve of a cone is a line at an angle alpha to the axis of revolution that intersects the axis at the origin.
+                     The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span> parameter is the height of the point along the axis, and the radial distance of the point is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v * tan(alpha)</span></span>. 
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]      Unit vector, in the u direction
+e2[3]      Unit vector, in the v direction
+e3[3]      Normal to the plane
+origin[3]  Origin of the cone
+alpha      Angle between the axis of the cone 
+           and the generating line</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x, y, z) = v * tan(alpha) * [cos(u) * e1 + 
+            sin(u) * e2] + v * e3 + origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_Torus-BCB54CE535_60">
+               
+               <a name="9"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.7.1" class="Heading2">Torus</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="10"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.7.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre4.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0"><span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"></span>The generating curve of a torus is an arc of radius <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R2</span></span> with its center at a distance <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R1</span></span> from the origin. The starting point of the generating arc is located at a distance <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R1 + R2</span></span> from the origin, in the direction of the first vector of the local coordinate system. The radial distance of a point on the
+                     torus is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R1 + R2 * cos(v)</span></span>, and the height of the point along the axis of revolution is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R2 * sin(v)</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]      Unit vector, in the u direction
+e2[3]      Unit vector, in the v direction
+e3[3]      Normal to the plane
+origin[3]  Origin of the torus
+radius1    Distance from the center of the 
+           generating arc to the axis of 
+           revolution
+radius2    Radius of the generating arc
+</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x, y, z) = (R1 + R2 * cos(v)) * [cos(u) * e1 + 
+            sin(u) * e2] + R2 * sin(v) * e3 + 
+            origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_SurfacesgeneralSurfaceOfRevolutionG-BCB5524035_42">
+               
+               <a name="11"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.8.1" class="Heading2">General Surface of Revolution</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="12"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="13"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.8.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre5.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">A general surface of revolution is created by rotating a curve entity, usually a spline, around an axis. The curve is evaluated
+                     at the normalized parameter <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span>, and the resulting point is rotated around the axis through an angle <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u</span></span>. The surface of revolution data structure consists of a local coordinate system and a curve structure. 
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]       Unit vector, in the u direction
+e2[3]       Unit vector, in the v direction
+e3[3]       Normal to the plane
+origin[3]   Origin of the surface of revolution
+curve       Generating curve</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">curve(v) = (c1, c2, c3) is a point on the curve.
+
+(x, y, z) = [c1 * cos(u) - c2 * sin(u)] * e1 + 
+            [c1 * sin(u) + c2 * cos(u)] * e2 + 
+            c3 * e3 + origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_RuledSurfacesgeometryRepresentation-BCB555EE35_51">
+               
+               <a name="14"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.9.1" class="Heading2">Ruled Surface</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="15"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="16"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.9.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre6.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">A ruled surface is the surface generated by interpolating linearly between corresponding points of two curve entities. The
+                     <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u</span></span> coordinate is the normalized parameter at which both curves are evaluated, and the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span> coordinate is the linear parameter between the two points. The curves are not defined in the local coordinate system of the
+                     part, so the resulting point must be transformed by the local coordinate system of the surface.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]      Unit vector, in the u direction
+e2[3]      Unit vector, in the v direction
+e3[3]      Normal to the plane
+origin[3]  Origin of the ruled surface
+curve_1    First generating curve
+curve_2    Second generating curve</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x', y', z') is the point in local coordinates.
+(x', y', z') = (1 - v) * C1(u) + v * C2(u)
+(x, y, z) = x' * e1 + y' * e2 + z' * e3 + origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_TabulatedCylindersgeometryRepresent-BCB55A4335_57">
+               
+               <a name="17"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.10.1" class="Heading2">Tabulated Cylinder</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="18"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="19"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.10.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre7.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">A tabulated cylinder is calculated by projecting a curve linearly through space. The curve is evaluated at the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u</span></span> parameter, and the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">z</span></span> coordinate is offset by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span> parameter. The resulting point is expressed in local coordinates and must be transformed by the local coordinate system to
+                     be expressed in part coordinates.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]      Unit vector, in the u direction
+e2[3]      Unit vector, in the v direction
+e3[3]      Normal to the plane
+origin[3]  Origin of the tabulated cylinder
+curve      Generating curve</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x', y', z') is the point in local coordinates.
+(x', y', z') = C(u) + (0, 0, v)
+(x, y, z) = x' * e1 + y' * e2 + z' * e3 + origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_CoonsPatchesgeometryRepresentationC-BCB55E3935_30">
+               
+               <a name="20"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.11.1" class="Heading2">Coons Patch</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="21"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.11.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre8.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">A Coons patch is used to blend surfaces together. For example, you would use a Coons patch at a corner where three fillets
+                     (each of a different radius) meet.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">le_curve               u = 0 boundary
+ri_curve               u = 1 boundary
+dn_curve               v = 0 boundary
+up_curve               v = 1 boundary
+point_matrix[2][2]     Corner points
+uvder_matrix[2][2]     Corner mixed derivatives</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_FilletSurfacesgeometryRepresentatio-BCB5610D35_39">
+               
+               <a name="22"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.12.1" class="Heading2">Fillet Surface</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="23"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="24"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.12.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomre9.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">A fillet surface is found where a round or a fillet is placed on a curved edge, or on an edge with non-constant arc radii.
+                     On a straight edge, a cylinder would be used to represent the fillet.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pnt_spline   P(v) spline running along the u = 0 boundary
+ctr_spline   C(v) spline along the centers of the
+             fillet arcs
+tan_spline   T(v) spline of unit tangents to the
+             axis of the fillet arcs</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">R(v) = P(v) - C(v)
+(x,y,z) = C(v) + R(v) * cos(u) + T(v) X R(v) * 
+          sin(u)</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_SurfacessplineSplinessurfaceSurface-BCB564BE35_54">
+               
+               <a name="25"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.13.1" class="Heading2">Spline Surface</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="26"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="27"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="28"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="29"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.13.3.1">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomr10.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">The parametric spline surface is a nonuniform bicubic spline surface that passes through a grid with tangent vectors given
+                     at each point. The grid is curvilinear in <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">uv</span></span> space. Use this for bicubic blending between corner points.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u_par_arr[]     Point parameters, in the u
+                direction, of size Nu
+v_par_arr[]     Point parameters, in the v
+                direction, of size Nv
+point_arr[][3]  Array of interpolant points, of
+                size Nu x Nv
+u_tan_arr[][3]  Array of u tangent vectors
+                at interpolant points, of size
+                Nu x Nv
+v_tan_arr[][3]  Array of v tangent vectors at
+                interpolant points, of size
+                Nu x Nv
+uvder_arr[][3]  Array of mixed derivatives at
+                interpolant points, of size
+                Nu x Nv</span></pre><div class=" x-p-7-0">Engineering Notes:</div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">Allows for a unique 3x3 polynomial around every patch.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">There is second order continuity across patch boundaries.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0">The point and tangent vectors represent the ordering of an array of <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">[i][j]</span></span>, where u varies with , and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span> varies with <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">j</span></span>. In walking through the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">point_arr[][3]</span></span>, you will find that the innermost variable representing <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v(j)</span></span> varies first.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_SurfacesNURBSgeometryRepresentation-BCB56941_35_247">
+               
+               <a name="30"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.14.1" class="Heading2">NURBS Surface</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="31"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="32"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The NURBS surface is defined by basis functions (in <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">v</span></span>), expandable arrays of knots, weights, and control points.
+                  </div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.14.3.2">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomr11.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">deg[2]             Degree of the basis
+                   functions (in u and v)
+u_par_arr[]        Array of knots on the 
+                   parameter line u
+v_par_arr[]        Array of knots on the
+                   parameter line v
+wghts[]            Array of weights for
+                   rational NURBS, otherwise
+                   NULL
+c_point_arr[][3]   Array of control points</span></pre><div class=" x-p-7-0">Definition:</div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.14.3.6">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/nurbs_surface_definition.gif"></div>
+                  </div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">k   = degree in u
+l   = degree in v
+N1  = (number of knots in u) - (degree in u) - 2
+N2  = (number of knots in v) - (degree in v) - 2
+Bi,k = basis function in u
+Bj, l  = basis function in v
+wij  = weights
+Ci, j   = control points (x,y,z) * wi,j</span></pre><div class=" x-p-7-0">Engineering Notes:</div>
+                  <div class=" x-p-7-0">The <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">weights</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">c_points_arr</span></span> arrays represent matrices of size <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">wghts[N1+1] [N2+1]</span></span> and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">c_points_arr [N1+1] [N2+1]</span></span>. Elements of the matrices are packed into arrays in row-major order.
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_SurfacescylindricalSplineCylinderss-BCB56D5035_36">
+               
+               <a name="33"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.3.15.1" class="Heading2">Cylindrical Spline Surface</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="34"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="35"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="36"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The cylindrical spline surface is a nonuniform bicubic spline surface that passes through a grid with tangent vectors given
+                     at each point. The grid is curvilinear in modeling space.
+                  </div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.3.15.3.2">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomr13.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">e1[3]      x' vector of the local coordinate
+           system
+e2[3]      y' vector of the local coordinate
+           system
+e3[3]      z' vector of the local coordinate
+           system, which corresponds to the
+           axis of revolution of the surface
+origin[3]  Origin of the local coordinate
+           system
+splsrf     Spline surface data structure</span></pre><div class=" x-p-7-0">The spline surface data structure contains the following fields:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">u_par_arr[]         Point parameters, in the
+                    u direction, of size Nu
+v_par_arr[]         Point parameters, in the
+                    v direction, of size Nv
+point_arr[][3]      Array of points, in 
+                    cylindrical coordinates,
+                    of size Nu x Nv. The array
+                    components are as follows:
+                        point_arr[i][0] - Radius
+                        point_arr[i][1] - Theta
+                        point_arr[i][2] - Z
+u_tan_arr[][3]      Array of u tangent vectors.
+                    in cylindrical coordinates,
+                    of size Nu x Nv
+v_tan_arr[][3]      Array of v tangent vectors,
+                    in cylindrical coordinates,
+                    of size Nu x Nv
+uvder_arr[][3]      Array of mixed derivatives,
+                    in cylindrical coordinates,
+                    of size Nu x Nv</span></pre><div class=" x-p-7-0">Engineering Notes:</div>
+                  <div class=" x-p-7-0">If the surface is represented in cylindrical coordinates (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">r</span></span>, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">theta</span></span>, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">z</span></span>), the local coordinate system values (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">x'</span></span>,<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets"> y'</span></span>, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">z'</span></span>) are interpreted as follows:
+                  </div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">x' = r cos (theta)
+y' = r sin (theta)
+z' = z</span></pre><div class=" x-p-7-0">A cylindrical spline surface can be obtained, for example, by creating a smooth rotational blend (shown in the figure).</div>
+                  <div class=" x-p-7-0">In some cases, you can replace a cylindrical spline surface with a surface such as a plane, cylinder, or cone. For example,
+                     in the figure, the cylindrical spline surface <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">S1</span></span> was replaced with a cone (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">r1 = r2, r3 = r4, and r1 ? r3</span></span>).
+                  </div>
+                  <div class=" x-p-7-0">If a replacement cannot be done (such as for the surface <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">S0</span></span> in the figure (<span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ra ? rb or rc ? rd</span></span>)), leave it as a cylindrical spline surface representation.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JGeomRep_CurvesdataStructuresEdgeAndCurvePar-BCB57146_35_307">
+            
+            <a name="37"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.33.4.1" class="Heading1">Edge and Curve Parameterization</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="38"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">This parameterization represents edges (line, arc, and spline) as well as the curves (line, arc, spline, and NURBS) within
+                  the surfaces.
+               </div>
+               <div class=" x-p-7-0">This section describes edges and curves, arranged in order of complexity. For ease of use, the alphabetical listing is as
+                  follows:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_ArcsrepresentationArc-BCB578CE35_332" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Arc</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_LinesrepresentationLine-BCB574A635_335" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Line</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_NURBSrepresentationNURBS-BCB57FD635_45" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">NURBS</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><a href="#JGeomRep_SplinesrepresentationSpline-BCB57CED35_341" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Spline</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_LinesrepresentationLine-BCB574A635_335">
+               
+               <a name="39"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.4.4.1" class="Heading2">Line</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="40"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">end1[3]   Starting point of the line
+end2[3]   Ending point of the line</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">(x, y, z) = (1 - t) * end1 + t * end2</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_ArcsrepresentationArc-BCB578CE35_332">
+               
+               <a name="41"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.4.5.1" class="Heading2">Arc</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="42"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The arc entity is defined by a plane in which the arc lies. The arc is centered at the origin, and is parameterized by the
+                     angle of rotation from the first plane unit vector in the direction of the second plane vector. The start and end angle parameters
+                     of the arc and the radius are also given. The direction of the arc is counterclockwise if the start angle is less than the
+                     end angle, otherwise it is clockwise.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">vector1[3]    First vector that defines the
+              plane of the arc
+vector2[3]    Second vector that defines the
+              plane of the arc
+origin[3]     Origin that defines the plane
+              of the arc
+start_angle   Angular parameter of the starting
+              point
+end_angle     Angular parameter of the ending
+              point
+radius        Radius of the arc.</span></pre><div class=" x-p-7-0">Parameterization:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">t' (the unnormalized parameter) is 
+   (1 - t) * start_angle + t * end_angle
+(x, y, z) = radius * [cos(t') * vector1 +
+   sin(t') * vector2] + origin</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_SplinesrepresentationSpline-BCB57CED35_341">
+               
+               <a name="43"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.4.6.1" class="Heading2">Spline</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="44"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The spline curve entity is a nonuniform cubic spline, defined by a series of three-dimensional points, tangent vectors at
+                     each point, and an array of unnormalized spline parameters at each point.
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">par_arr[]     Array of spline parameters
+              (t) at each point.
+pnt_arr[][3]  Array of spline interpolant points
+tan_arr[][3]  Array of tangent vectors at
+              each point</span></pre><div class=" x-p-7-0">Parameterization:</div>
+                  <div class=" x-p-7-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">x</span></span>, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">y</span></span>, and <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">z</span></span> are a series of unique cubic functions, one per segment, fully determined by the starting and ending points, and tangents
+                     of each segment.
+                  </div>
+                  <div class=" x-p-7-0">Let <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">p_max</span></span> be the parameter of the last spline point. Then, <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">t</span></span>, the unnormalized parameter, is <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">t * p_max</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">Locate the th spline segment such that:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">par_arr[i] &lt; t' &lt; par_arr[i+1]</span></pre><div class=" x-p-7-0">(If <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">t</span></span> &lt; 0 or <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">t</span></span> &gt; +1, use the first or last segment.)
+                  </div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">t0 = (t' - par_arr[i])   / (par_arr[i+1] - par_arr[i])
+t1 = (par_arr[i+1] - t') / (par_arr[i+1] - par_arr[i])</span></pre></div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JGeomRep_NURBSrepresentationNURBS-BCB57FD635_45">
+               
+               <a name="45"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.33.4.7.1" class="Heading2">NURBS</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="46"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The NURBS (nonuniform rational B-spline) curve is defined by expandable arrays of knots, weights, and control points.</div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.4.7.3.2">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomr14.gif"></div>
+                  </div>
+                  <div class=" x-p-7-0">Data Format:</div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">degree        Degree of the basis function
+params[]      Array of knots
+weights[]     Array of weights for rational 
+              NURBS, otherwise NULL.
+c_pnts[][3]   Array of control points</span></pre><div class=" x-p-7-0">Definition:</div>
+                  <div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.33.4.7.3.6">
+                     <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/jgeomr15.gif"></div>
+                  </div><pre class=" x-codeblock-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">k     = degree of basis function
+N    = (number of knots) - (degree) - 2
+wi   = weights
+Ci    = control points (x, y, z) * wi
+Bi,k = basis functions</span></pre><div class=" x-p-7-0">By this equation, the number of control points equals <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">N+1</span></span>.
+                  </div>
+                  <div class=" x-p-7-0">References:</div>
+                  <div class=" x-p-7-0">Faux, I.D., M.J. Pratt. Computational Geometry for Design and Manufacture. Ellis Harwood Publishers, 1983.</div>
+                  <div class=" x-p-7-0">Mortenson, M.E. Geometric Modeling. John Wiley &amp; Sons, 1985.</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

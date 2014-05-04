@@ -1,0 +1,326 @@
+<!--
+
+FILE:    models.html
+PURPOSE: Converted Pro/Web.Link demo page for the embedded browser. 
+
+20-NOV-2002  J-03-38   $$1   JCN    Submitted.
+07-MAR-2003  K-01-03   $$2   JCN    UNIX support
+
+
+-->
+
+<html>
+
+<head>
+<title>Web.Link Models Test</title>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script src="../jscript/wl_header.js">
+document.writeln ("Error loading Pro/Web.Link header!");
+</script>
+
+<script language="JavaScript">
+
+
+function WlModelOpenWindowless()
+//	Open a Pro/ENGINEER model without a window.
+{
+    if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlMdlOpen(document.open.ModelName.value,
+                                      document.open.ModelPath.value, false);
+    if (!ret.Status)
+    {
+        alert("pwlMdlOpen failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+}
+
+function WlModelErase()
+//	Erase a model from memory.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlMdlErase(document.erase.ModelNameExt.value);
+    if (!ret.Status)
+    {
+        alert("pwlMdlErase failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+}
+
+function WlModelRename()
+//	Rename a model.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlMdlRename(document.rename.ModelNameExt.value,
+                  document.rename.NewNameExt.value);
+    if (!ret.Status)
+    {
+        alert("pwlMdlRename failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+}
+
+function WlModelsList()
+//	List all the models in the current session.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+ //   var ModelType = document.pwlc.eval(
+  //                      document.list_mdls.ModelType.options[
+   //                         document.list_mdls.ModelType.selectedIndex].value);
+	var ModelType = parseInt (document.list_mdls.ModelType.options[
+                        document.list_mdls.ModelType.selectedIndex].value);
+    var ret = document.pwl.pwlSessionMdlsGet(parseInt(ModelType));
+    if (!ret.Status)
+    {
+        alert("pwlSessionMdlsGet failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    document.list_mdls.ModelNameExts.value = "";
+    for (var i = 0; i < ret.NumMdls; i++)
+    {
+        document.list_mdls.ModelNameExts.value += ret.MdlNameExt.Item(i) + "\n";
+    }
+}
+
+function WlModelGetCurrent()
+//	Get the current model.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlMdlCurrentGet();
+    if (!ret.Status)
+    {
+        alert("pwlMdlCurrentGet failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    document.get_cur.ModelNameExt.value = ret.MdlNameExt;
+}
+
+function WlModelGetDependencies()
+//	Get the dependencies of a model.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlMdlDependenciesGet(
+                  document.get_deps.ModelNameExt.value);
+    if (!ret.Status)
+    {
+        alert("pwlMdlDependenciesGet failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    document.get_deps.ModelNameExts.value = "";
+    for (var i = 0; i < ret.NumMdls; i++)
+    {
+        document.get_deps.ModelNameExts.value += ret.MdlNameExt.Item(i) + "\n";
+    }
+}
+
+function WlModelGetInfo()
+//	Get some information about a model from Pro/INTRALINK.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var info_ret = document.pwl.pwlMdlInfoGet(
+                       document.get_info.ModelNameExt.value);
+    if (!info_ret.Status)
+    {
+        alert("pwlMdlInfoGet failed (" + info_ret.ErrorCode + ")");
+        return ;
+    }
+    document.get_info.Generic.value = info_ret.GenericName;
+
+    // Use the list models select list to convert the type to a string.
+    var ModelType = "Undefined";
+    for (var i = 0; i < document.list_mdls.ModelType.length; i++)
+    {
+        if (parseInt(document.pwlc.eval(
+                document.list_mdls.ModelType.options[i].value)) ==
+            info_ret.MdlType)
+        {
+            ModelType = document.list_mdls.ModelType.options[i].text;
+        }
+    }
+    document.get_info.ModelType.value = ModelType;
+
+    document.get_info.Version.value = "";
+    document.get_info.Revision.value = "";
+    document.get_info.Branch.value = "";
+    document.get_info.ReleaseLevel.value = "";
+    var ret = document.pwl.pwlMdlIntralinkInfoGet(
+                  document.get_info.ModelNameExt.value);
+    if (!ret.Status)
+    {
+        if (ret.ErrorCode != parseInt(document.pwlc.PWL_NOT_IN_SESSION))
+        {
+            alert("pwlMdlIntralinkInfoGet failed (" + ret.ErrorCode + ")");
+        }
+        return ;
+    }
+    document.get_info.Version.value = ret.Version;
+    document.get_info.Revision.value = ret.Revision;
+    document.get_info.Branch.value = ret.Branch;
+    document.get_info.ReleaseLevel.value = ret.ReleaseLevel;
+}
+
+function WlModelGetDirectory ()
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+	var ret = document.pwl.pwlDirectoryCurrentGet ();
+
+	if (!ret.Status)
+        {
+            alert("pwlDirectoryCurrentGet failed (" + ret.ErrorCode + ")");
+        return ;
+	}
+
+	document.get_dir.CurrDirectory.value = ret.DirectoryPath;
+}
+
+function WlModelSetDirectory ()
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+	var ret = document.pwl.pwlDirectoryCurrentSet (document.get_dir.CurrDirectory.value);
+
+	if (!ret.Status)
+        {
+            alert("pwlDirectoryCurrentSet failed (" + ret.ErrorCode + ")");
+        }
+        return ;
+}
+
+function WlModelRunMacro ()
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+	var session = (pfcCreate ("MpfcCOMGlobal")).GetProESession();
+
+	session.RunMacro (document.macro_form.MacroVal.value);
+}
+
+
+
+</script>
+</head>
+
+<body>
+
+<form name="open">
+  <h4>Open a Model Without a Window</h4>
+  <div align="center"><center><p><!-- Input arguments --> Path: <input type="text" name="ModelPath" size="20"> <spacer size="20">
+  Model: <input type="text" name="ModelName" size="20"> <spacer size="20"> <!-- Buttons --> <input type="button"
+  value="Open Model" onclick="WlModelOpenWindowless()"></p>
+  </center></div><hr>
+</form>
+
+<form name="erase">
+  <h4>Erase Model</h4>
+  <div align="center"><center><p><!-- Input arguments --> Model: <input type="text" name="ModelNameExt" size="20"> <!-- Buttons --> <input
+  type="button" value="Erase Model" onclick="WlModelErase()"></p>
+  </center></div><hr>
+</form>
+
+<form name="rename">
+  <h4>Rename Model</h4>
+  <div align="center"><center><p><!-- Input arguments --> Model: <input type="text" name="ModelNameExt" size="20"> <spacer size="20">
+  New Name: <input type="text" name="NewNameExt" size="20"></p>
+  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button" value="Rename Model"
+  onclick="WlModelRename()"></p>
+  </center></div><hr>
+</form>
+
+<form name="list_mdls">
+  <h4>List Models</h4>
+  <div align="center"><center><p><!-- Input arguments --> Model Type:<select name="ModelType" size="1">
+    <option value="1">Assembly</option>
+    <option value="2">Part</option>
+    <option value="PWL_DRAWING">Drawing</option>
+    <option value="PWL_2DSECTION">2D Section</option>
+    <option value="PWL_LAYOUT">Layout</option>
+    <option value="PWL_DWGFORM">Drawing Form</option>
+    <option value="PWL_MFG">Manufaturing</option>
+    <option value="PWL_REPORT">Report</option>
+    <option value="PWL_MARKUP">Markup</option>
+    <option value="PWL_DIAGRAM">Diagram</option>
+  </select></p>
+  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button" value="List Models"
+  onclick="WlModelsList()"></p>
+  </center></div><div align="center"><center><p><!-- Output arguments --> Models:<br>
+  <textarea name="ModelNameExts" rows="4" cols="50"></textarea></p>
+  </center></div><hr>
+</form>
+
+<form name="get_cur">
+  <h4>Get Current Model</h4>
+  <div align="center"><center><p><!-- Buttons --> <input type="button" value="Get Current Model"
+  onclick="WlModelGetCurrent()"></p>
+  </center></div><div align="center"><center><p><!-- Output arguments --> Model: <input type="text"
+  name="ModelNameExt" size="20"></p>
+  </center></div><hr>
+</form>
+
+<form name="get_deps">
+  <h4>Get Model Dependencies</h4>
+  <div align="center"><center><p><!-- Input arguments --> Model: <input type="text" name="ModelNameExt" size="20"></p>
+  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button"
+  value="Get Dependencies" onclick="WlModelGetDependencies()"></p>
+  </center></div><div align="center"><center><p><!-- Output arguments --> Models:<br>
+  <textarea name="ModelNameExts" rows="4" cols="50"></textarea></p>
+  </center></div><hr>
+</form>
+
+<form name="get_info">
+  <h4>Get Information on a Model</h4>
+  <div align="center"><center><p><!-- Input arguments --> Model: <input type="text" name="ModelNameExt" size="20"></p>
+  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button" value="Get Info"
+  onclick="WlModelGetInfo()"></p>
+  </center></div><div align="center"><center><p><!-- Output arguments --> </p>
+  </center></div><div align="center"><center><table>
+    <tr>
+      <td>Generic:</td>
+      <td><input type="text" name="Generic" size="20"></td>
+      <td>Model Type:</td>
+      <td><input type="text" name="ModelType" size="20"></td>
+    </tr>
+    <tr>
+      <td>Version:</td>
+      <td><input type="text" name="Version" size="20"></td>
+      <td>Revision:</td>
+      <td><input type="text" name="Revision" size="20"></td>
+    </tr>
+    <tr>
+      <td>Branch:</td>
+      <td><input type="text" name="Branch" size="20"></td>
+      <td>Release Level:</td>
+      <td><input type="text" name="ReleaseLevel" size="20"></td>
+    </tr>
+  </table>
+  </center></div><hr>
+  <h4>Get Directory</h4>
+</form>
+
+<form name="get_dir">
+  <div align="center"><center><p><!-- Input arguments --> Directory: <input type="text" name="CurrDirectory"
+  size="20"></p>
+  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button" value="Get Directory"
+  onclick="WlModelGetDirectory()" name="GetDirectory"> <input type="button"
+  value="Set Directory" onclick="WlModelSetDirectory()" name="SetDirectory"></p>
+  </center></div>
+</form>
+
+<h4>Run Macro</h4>
+
+<form name="macro_form">
+  <div align="center"><center><p><!-- Input arguments --> Macro: <input type="text" name="MacroVal" size="20"></p>
+  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button" value="Run Macro"
+  onclick="WlModelRunMacro()" name="RunMacro"> </p>
+  </center></div>
+</form>
+</body>
+</html>

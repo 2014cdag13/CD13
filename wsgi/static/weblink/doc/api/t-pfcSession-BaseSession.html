@@ -1,0 +1,5101 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcBaseSession"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      28
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcSession.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcBaseSession</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class defines the information about a Creo Parametric session.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcBase-ActionSource.html">pfcActionSource</a>, 
+        <a class="class" href="t-pfcDisplay-Display.html">pfcDisplay</a>, 
+        <a class="class" href="t-pfcObject-Parent.html">pfcParent</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcSession-Session.html">pfcSession</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#ConnectionId">ConnectionId</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the connection id for the Creo Parametric session that this application is connected to. The identification string can be passed to external asynchronous applications to allow them to connect to this Creo Parametric session.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#CurrentModel">CurrentModel</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The current Creo Parametric object, or <tt>null</tt>, if there is no current object</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-signature"><tt><a class="method" href="#CurrentWindow">CurrentWindow</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The current Creo Parametric window</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-DimDisplayMode.html">pfcDimDisplayMode</a></tt></td><td class="func-signature"><tt><a class="method" href="#DimensionDisplayMode">DimensionDisplayMode</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The current dimension display setting.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AllowDuplicateModelItems">AllowDuplicateModelItems</a>
+ (boolean&nbsp;val)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Turns on/off the control of creating duplicate model items.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AuthenticateBrowser">AuthenticateBrowser</a>
+ (string&nbsp;Username, string&nbsp;Password)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Preset username and password to allow automatic login into HTTP servers that require authentication.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ChangeDirectory">ChangeDirectory</a>
+ (string&nbsp;Path)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Changes Creo Parametric to another working directory.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#CheckoutToWS">CheckoutToWS</a>
+ (<a class="type" href="t-pfcModel-ModelDescriptors.html">pfcModelDescriptors</a>&nbsp;Objects, string&nbsp;WSName, boolean&nbsp;AsLink, <a class="type" href="t-pfcSession-RelCriterion.html">pfcRelCriterion</a>&nbsp;RelCriterion)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Checks out a model from Pro/Intralink into the workspace.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#CopyFileFromWS">CopyFileFromWS</a>
+ (string&nbsp;SourceFile, string&nbsp;TargetDirectory)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Copies a file from a Pro/Intralink or Windchill workspace
+            to a disk location.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#CopyFileToWS">CopyFileToWS</a>
+ (string&nbsp;SourceFile, string&nbsp;TargetWorkspace, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;PrimaryContent)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Copies a file from local disk to a Pro/Intralink or Windchill
+	    workspace; either as a primary document or as secondary
+	    content of an existing document in the workspace.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateAssembly">CreateAssembly</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates an empty assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDrawing-Drawing.html">pfcDrawing</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateDrawingFromTemplate">CreateDrawingFromTemplate</a>
+ (string&nbsp;Name, string&nbsp;Template, <a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;DrawingModel, <a class="type" href="t-pfcDrawing-DrawingCreateOptions.html">pfcDrawingCreateOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a drawing from a template.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateModelWindow">CreateModelWindow</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates or retrieves a window for a specified model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreatePart">CreatePart</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new empty part.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#EraseUndisplayedModels">EraseUndisplayedModels</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Erases models which are not used in any Creo Parametric windows.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelCheck-ModelCheckResults.html">pfcModelCheckResults</a></tt></td><td class="func-signature"><tt><a class="method" href="#ExecuteModelCheck">ExecuteModelCheck</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Model, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelCheck-ModelCheckInstructions.html">pfcModelCheckInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Execute ModelCheck from an external application.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ExportCurrentRasterImage">ExportCurrentRasterImage</a>
+ (string&nbsp;ImageFileName, <a class="type" href="t-pfcWindow-RasterImageExportInstructions.html">pfcRasterImageExportInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Outputs a standard Creo Parametric raster output file (for current Window).
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#ExportDirectVRML">ExportDirectVRML</a>
+ (<a class="type" href="t-pfcModel-VRMLDirectExportInstructions.html">pfcVRMLDirectExportInstructions</a>&nbsp;ExportData)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Exports a Creo Parametric object from disk into VRML format.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSession-WSImportExportMessages.html">pfcWSImportExportMessages</a></tt></td><td class="func-signature"><tt><a class="method" href="#ExportFromCurrentWS">ExportFromCurrentWS</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;FileNames, string&nbsp;TargetLocation, <a class="type" href="t-pfcSession-RelCriterion.html">pfcRelCriterion</a>&nbsp;Dependency)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Export specified objects from the current workspace to a disk in
+            a linked session of Creo Parametric. Can be called only when there 
+            are no objects in session . 
+            The specified objects may be exported along with all or required by
+            Creo Parametric dependents (recursively), according to a specified
+            dependency criterion. All problems (warnings, conflicts or errors)
+            of processing individual objects are logged in proimpex.errors 
+            file created in the Creo Parametric run directory.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#FlushCurrentWindow">FlushCurrentWindow</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Forces the flush of pending display commands
+   on the current window.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetActiveModel">GetActiveModel</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the handle to the active model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetActiveServer">GetActiveServer</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the active server handle .</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetAliasFromAliasedUrl">GetAliasFromAliasedUrl</a>
+ (string&nbsp;AliasedUrl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns server alias from aliased URL.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetByRelationId">GetByRelationId</a>
+ (integer&nbsp;Id)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the model, given its relation identifier.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GetConfigOption">GetConfigOption</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the current value for the specified
+configuration file option.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetConfigOptionValues">GetConfigOptionValues</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the current value(s) for the specified configuration file option.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetCurrentDirectory">GetCurrentDirectory</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the absolute path name of the current working directory for Creo Parametric.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GetCurrentWS">GetCurrentWS</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the name of the Workspace currently registered in Creo Parametric.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GetEnvironmentVariable">GetEnvironmentVariable</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the value a system environment variable.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetImportSourceType">GetImportSourceType</a>
+ (string&nbsp;FileToImport, <a class="type" href="t-pfcImport-NewModelImportType.html">pfcNewModelImportType</a>&nbsp;NewModelType)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the type of model that can be created from a 3D format file.  <b>Note:</b> does not support all types of 3D formats.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetLocalizedMessageContents">GetLocalizedMessageContents</a>
+ (string&nbsp;MsgFile, string&nbsp;Format, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;MessageTexts)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Writes a text message to a buffer string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetMessageContents">GetMessageContents</a>
+ (string&nbsp;MsgFile, string&nbsp;Format, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;MessageTexts)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Writes a text message to a buffer string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetModel">GetModel</a>
+ (string&nbsp;Name, <a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds a model in the Creo Parametric session, given the model name and type.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetModelFromDescr">GetModelFromDescr</a>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds a model in the Creo Parametric session, given the model descriptor.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetModelFromFileName">GetModelFromFileName</a>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Locates and returns a model handle given its file name.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetModelNameFromAliasedUrl">GetModelNameFromAliasedUrl</a>
+ (string&nbsp;AliasedUrl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns model name from aliased URL.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetModelWindow">GetModelWindow</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the window where a Creo Parametric model is displayed.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrintMdlOption.html">pfcPrintMdlOption</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetPrintMdlOptions">GetPrintMdlOptions</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;model)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrinterPCFOptions.html">pfcPrinterPCFOptions</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetPrintPCFOptions">GetPrintPCFOptions</a>
+ (string&nbsp;filename, <a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;model)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrintPlacementOption.html">pfcPrintPlacementOption</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetPrintPlacementOptions">GetPrintPlacementOptions</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrintPrinterOption.html">pfcPrintPrinterOption</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetPrintPrinterOptions">GetPrintPrinterOptions</a>
+ (string&nbsp;printer_type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcProToolkit-Dll.html">pfcDll</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetProToolkitDll">GetProToolkitDll</a>
+ (string&nbsp;ApplicationId)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Finds a Creo Parametric TOOLKIT DLL, given its identifer string.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-ColorRGB.html">pfcColorRGB</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetRGBFromStdColor">GetRGBFromStdColor</a>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;StdClr)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the RGB values for the specified color. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetServerByAlias">GetServerByAlias</a>
+ (string&nbsp;Alias)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the server handle for a given server alias.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetServerByUrl">GetServerByUrl</a>
+ (string&nbsp;Url, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;WorkspaceName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the server handle for a given server url and workspace name.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcServer-ServerLocation.html">pfcServerLocation</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetServerLocation">GetServerLocation</a>
+ (string&nbsp;Url)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the server location handle for a given server url.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#GetUrlFromAliasedUrl">GetUrlFromAliasedUrl</a>
+ (string&nbsp;AliasedUrl)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Converts an an aliased url (wtpub://alias/etc/p.prt) suitable for use in functions 
+   like ProMdlLoad to an unaliased URL (http://windchillserver.ptc.com/etc).</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetWindow">GetWindow</a>
+ (integer&nbsp;Id)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the window object by its identifier.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#Import2DModel">Import2DModel</a>
+ (string&nbsp;NewModelName, <a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type, string&nbsp;FilePath, <a class="type" href="t-pfcModel-Import2DInstructions.html">pfcImport2DInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a two-dimensional model from a geometry file.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#ImportNewModel">ImportNewModel</a>
+ (string&nbsp;FileToImport, <a class="type" href="t-pfcImport-NewModelImportType.html">pfcNewModelImportType</a>&nbsp;NewModelType, <a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type, string&nbsp;NewModelName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcImport-LayerImportFilter.html">pfcLayerImportFilter</a>&nbsp;Filter)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"> Imports a 3D format file as a new model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSession-WSImportExportMessages.html">pfcWSImportExportMessages</a></tt></td><td class="func-signature"><tt><a class="method" href="#ImportToCurrentWS">ImportToCurrentWS</a>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Filepaths, <a class="type" href="t-pfcSession-RelCriterion.html">pfcRelCriterion</a>&nbsp;Dependency)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Import specified objects from a disk to the current workspace in
+            a linked session of Creo Parametric. Can be called only when there 
+            are no objects in session . 
+            The specified objects may be imported along with all or required by
+            Creo Parametric dependents (recursively), according to a specified
+            dependency criterion. All problems (warnings, conflicts or errors)
+            of processing individual objects are logged in proimpex.errors 
+            file created in the Creo Parametric run directory.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsConfigurationSupported">IsConfigurationSupported</a>
+ (<a class="type" href="t-pfcModel-ExportType.html">pfcExportType</a>&nbsp;Type, <a class="type" href="t-pfcExport-AssemblyConfiguration.html">pfcAssemblyConfiguration</a>&nbsp;Configuration)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if an assembly configuration is supported for a particular export type.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsGeometryRepSupported">IsGeometryRepSupported</a>
+ (<a class="type" href="t-pfcModel-ExportType.html">pfcExportType</a>&nbsp;Type, <a class="type" href="t-pfcExport-GeometryFlags.html">pfcGeometryFlags</a>&nbsp;Flags)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if a combination of geometry flags are supported for export to a certain format. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListFiles">ListFiles</a>
+ (string&nbsp;Filter, <a class="type" href="t-pfcSession-FileListOpt.html">pfcFileListOpt</a>&nbsp;Version, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;Path)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a list of the files in the designated directory.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Models.html">pfcModels</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListModels">ListModels</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the list of objects in the Creo Parametric session.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Models.html">pfcModels</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListModelsByType">ListModelsByType</a>
+ (<a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns all of the models of a particular type in the Creo Parametric session.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Servers.html">pfcServers</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListServers">ListServers</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sequence of servers , or <tt>null</tt> if server was not found</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListSubdirectories">ListSubdirectories</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;Path)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the subdirectories in a given directory location.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWindow-Windows.html">pfcWindows</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListWindows">ListWindows</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists all the Creo Parametric windows.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#LoadConfigFile">LoadConfigFile</a>
+ (string&nbsp;ConfigFileName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Reads a configuration file into Creo Parametric.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcProToolkit-Dll.html">pfcDll</a></tt></td><td class="func-signature"><tt><a class="method" href="#LoadProToolkitDll">LoadProToolkitDll</a>
+ (string&nbsp;ApplicationName, string&nbsp;DllPath, string&nbsp;TextPath, boolean&nbsp;UserDisplay)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Causes Creo Parametric to load a Creo Parametric TOOLKIT DLL application. 
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcProToolkit-Dll.html">pfcDll</a></tt></td><td class="func-signature"><tt><a class="method" href="#LoadProToolkitLegacyDll">LoadProToolkitLegacyDll</a>
+ (string&nbsp;ApplicationName, string&nbsp;DllPath, string&nbsp;TextPath, boolean&nbsp;UserDisplay)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Causes Creo Parametric to load a Creo Parametric TOOLKIT DLL non-Unicode application. 
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-signature"><tt><a class="method" href="#OpenFile">OpenFile</a>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified model and displays it in a window.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#PLMSInitialize">PLMSInitialize</a>
+ (string&nbsp;request)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-signature"><tt><a class="method" href="#RegisterServer">RegisterServer</a>
+ (string&nbsp;Alias, string&nbsp;Location, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;WorkspaceName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Registers a server in the session given its root location and an alias. 
+   <notes> This function is only supported in batch mode.  It will not place the registered 
+   server the Creo Parametric server registry UI, and it will not enable all functionality for 
+   the server (for example, the Creo Parametric HTML UI will not work with this server).  
+   To automate registration of servers in interactive mode, use the standard config.fld 
+   setup to preregister the servers. To ensure that the servers are not preregistered when 
+   running Creo Parametric in batch non-graphics mode, set the environment variable PTC_WF_ROOT 
+   to an empty directory before starting Creo Parametric.
+   </notes>
+   
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveAssemSimpRep">RetrieveAssemSimpRep</a>
+ (string&nbsp;AssemName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpRepInstructions.html">pfcSimpRepInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified simplified representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveGeometryPartRep">RetrieveGeometryPartRep</a>
+ (string&nbsp;PartName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified part's geometric simplified
+     representation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveGeomSimpRep">RetrieveGeomSimpRep</a>
+ (string&nbsp;AssemName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the geometry simplified representation of an assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveGraphicsPartRep">RetrieveGraphicsPartRep</a>
+ (string&nbsp;PartName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified part's graphic simplified
+     representation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveGraphicsSimpRep">RetrieveGraphicsSimpRep</a>
+ (string&nbsp;AssemName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the graphics simplified representation of an assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveModel">RetrieveModel</a>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified model into the Creo Parametric session from standard directory.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveModelWithOpts">RetrieveModelWithOpts</a>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr, <a class="type" href="t-pfcSession-RetrieveModelOptions.html">pfcRetrieveModelOptions</a>&nbsp;Opts)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified model into the Creo Parametric session based on the path 
+   specified in the model descriptor.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrievePartSimpRep">RetrievePartSimpRep</a>
+ (string&nbsp;PartName, string&nbsp;RepName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified part's user-defined simplified
+    representation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveSymbolicPartRep">RetrieveSymbolicPartRep</a>
+ (string&nbsp;PartName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the specified part's symbolic simplified
+     representation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#RetrieveSymbolicSimpRep">RetrieveSymbolicSimpRep</a>
+ (string&nbsp;AssemName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the symbolic simplified representation of an assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RunMacro">RunMacro</a>
+ (string&nbsp;Macro)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Runs the specified macro. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a></tt></td><td class="func-signature"><tt><a class="method" href="#Select">Select</a>
+ (<a class="type" href="t-pfcSelect-SelectionOptions.html">pfcSelectionOptions</a>&nbsp;Options, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a>&nbsp;InitialSels)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Allows interactive selection of objects in Creo Parametric.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetConfigOption">SetConfigOption</a>
+ (string&nbsp;Name, string&nbsp;Value)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the value of the specified configuration file option.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetCurrentWS">SetCurrentWS</a>
+ (string&nbsp;NewWSName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Registers a Workspace in Creo Parametric. Only one is allowed at a time, so if one is 
+already registered, the new one will substitute the current one, but only if there
+are no objects in session.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-StdLineStyle.html">pfcStdLineStyle</a></tt></td><td class="func-signature"><tt><a class="method" href="#SetLineStyle">SetLineStyle</a>
+ (<a class="type" href="t-pfcBase-StdLineStyle.html">pfcStdLineStyle</a>&nbsp;NewStyle)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the line style.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetStdColorFromRGB">SetStdColorFromRGB</a>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;StdClr, <a class="type" href="t-pfcBase-ColorRGB.html">pfcColorRGB</a>&nbsp;Color)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables you to set the values of the three color components
+for a standard color in Creo Parametric.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a></tt></td><td class="func-signature"><tt><a class="method" href="#SetTextColor">SetTextColor</a>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;NewColor)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables you to change the text color so any subsequent
+graphics window text is drawn in the specified color.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetWSExportOptions">SetWSExportOptions</a>
+ (<a class="type" href="t-pfcSession-WSExportOptions.html">pfcWSExportOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the option controlling whether or not to export secondary 
+           contents during a call to  <tt><b><a class="method" href="t-pfcSession-BaseSession.html#ExportFromCurrentWS">pfcBaseSession.ExportFromCurrentWS()</a></b></tt>
+  </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcJLink-JLinkApplication.html">pfcJLinkApplication</a></tt></td><td class="func-signature"><tt><a class="method" href="#StartJLinkApplication">StartJLinkApplication</a>
+ (string&nbsp;ApplicationName, string&nbsp;ClassName, string&nbsp;StartMethod, string&nbsp;StopMethod, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;AdditionalClassPath, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;TextPath, boolean&nbsp;UserDisplay)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Register and start a synchronous J-Link application.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="ConnectionId">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>ConnectionId</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the connection id for the Creo Parametric session that this application is connected to. The identification string can be passed to external asynchronous applications to allow them to connect to this Creo Parametric session.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CurrentModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>CurrentModel</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The current Creo Parametric object, or <tt>null</tt>, if there is no current object<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#7">Models: Getting a Model Object</a>, <a href="../manual0/JModel.html#11">Models: Getting a Model Object</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CurrentWindow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-name"><tt>CurrentWindow</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The current Creo Parametric window<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#9">Windows and Views: Getting a Window Object</a>, <a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DimensionDisplayMode">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-DimDisplayMode.html">pfcDimDisplayMode</a></tt></td><td class="func-name"><tt>DimensionDisplayMode</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The current dimension display setting.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AllowDuplicateModelItems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AllowDuplicateModelItems</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;val)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Turns on/off the control of creating duplicate model items.<br>
+<br>Applications have an option to prevent creating ModelItems more 
+        than twice for the same Creo Parametric item. Howerever, this may cause 
+        memory corruption if not handled properly on the application side. 
+        Therefore, this behavior is turned off 
+        by default. Calling <tt><b><a class="method" href="t-pfcSession-BaseSession.html#AllowDuplicateModelItems">pfcBaseSession.AllowDuplicateModelItems()</a></b></tt> 
+        for Boolean.FALSE turns it on. Although 
+        there is no restriction of turning this control off/on at any time 
+        and multiple times, it is recommended doing it not more than once 
+        and right after the session is obtained.
+ <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#25">ModelItem: Duplicating ModelItems</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>val</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AuthenticateBrowser">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AuthenticateBrowser</tt></td><td class="func-params"><tt>
+ (string&nbsp;Username, string&nbsp;Password)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Preset username and password to allow automatic login into HTTP servers that require authentication.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#5">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#11">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#15">Windchill Connectivity APIs: Registering and Activating a Server</a>, <a href="../manual0/wc_apis.html#34">Windchill Connectivity APIs: To Register a Server with an Existing Workspace</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Username</b></tt>
+</dt>
+<dd>The name of user to be used.</dd>
+<dt>
+<tt><b>Password</b></tt>
+</dt>
+<dd>The password of the user to be used.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ChangeDirectory">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ChangeDirectory</tt></td><td class="func-params"><tt>
+ (string&nbsp;Path)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Changes Creo Parametric to another working directory.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#11">Session Objects: Directories</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Path</b></tt>
+</dt>
+<dd>The path to the new directory (relative or absolute).</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CheckoutToWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>CheckoutToWS</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelDescriptors.html">pfcModelDescriptors</a>&nbsp;Objects, string&nbsp;WSName, boolean&nbsp;AsLink, <a class="type" href="t-pfcSession-RelCriterion.html">pfcRelCriterion</a>&nbsp;RelCriterion)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Checks out a model from Pro/Intralink into the workspace.
+<br>
+<br>This method has limited options; PTC recommends using Pro/Intralink Toolkit for more complex checkout operartions.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Objects</b></tt>
+</dt>
+<dd>Files to check out (name and type are required fields).</dd>
+<dt>
+<tt><b>WSName</b></tt>
+</dt>
+<dd>The workspace name.</dd>
+<dt>
+<tt><b>AsLink</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to check out as a link, <tt>false</tt> to check out as a copy.</dd>
+<dt>
+<tt><b>RelCriterion</b></tt>
+</dt>
+<dd>Instructions about how to checkout dependencies.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CopyFileFromWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>CopyFileFromWS</tt></td><td class="func-params"><tt>
+ (string&nbsp;SourceFile, string&nbsp;TargetDirectory)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Copies a file from a Pro/Intralink or Windchill workspace
+            to a disk location.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#84">Windchill Connectivity APIs: File Copy</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SourceFile</b></tt>
+</dt>
+<dd>The path to the file.This must begin with ilws:// or wtws://.</dd>
+<dt>
+<tt><b>TargetDirectory</b></tt>
+</dt>
+<dd>The location on the local disk indicating where to copy the file.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CopyFileToWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>CopyFileToWS</tt></td><td class="func-params"><tt>
+ (string&nbsp;SourceFile, string&nbsp;TargetWorkspace, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;PrimaryContent)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Copies a file from local disk to a Pro/Intralink or Windchill
+	    workspace; either as a primary document or as secondary
+	    content of an existing document in the workspace.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#5">Digital Rights Management: Additional DRM Implications</a>, <a href="../manual0/wc_apis.html#83">Windchill Connectivity APIs: File Copy</a>, <a href="../manual0/wc_apis.html#84">Windchill Connectivity APIs: File Copy</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SourceFile</b></tt>
+</dt>
+<dd>The path to the file</dd>
+<dt>
+<tt><b>TargetWorkspace</b></tt>
+</dt>
+<dd>The destination workspace.</dd>
+<dt>
+<tt><b>PrimaryContent</b></tt>
+</dt>
+<dd>The document which the copy will be attached to,"box7.prt" for example.Pass null to simply copy the file to the workspace.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateAssembly">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>CreateAssembly</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates an empty assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#8">Solid: Getting a Solid Object</a>, <a href="../manual0/JSolid.html#11">Solid: Getting a Solid Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the assembly to create</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new assembly </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateDrawingFromTemplate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDrawing-Drawing.html">pfcDrawing</a></tt></td><td class="func-name"><tt>CreateDrawingFromTemplate</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, string&nbsp;Template, <a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;DrawingModel, <a class="type" href="t-pfcDrawing-DrawingCreateOptions.html">pfcDrawingCreateOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a drawing from a template.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitDrawingCreateErrors.html">pfcXToolkitDrawingCreateErrors</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDrawing-DrawingCreateOption.html">pfcDrawingCreateOption</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#3">Drawings: Creating Drawings from Templates</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The new drawing name.</dd>
+<dt>
+<tt><b>Template</b></tt>
+</dt>
+<dd>The template drawing name.  This should be located in the search path or the system template directory.</dd>
+<dt>
+<tt><b>DrawingModel</b></tt>
+</dt>
+<dd>The name and type of the solid model to use while populating template views.</dd>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Sequence of options to use while creating the drawing.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created drawing.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateModelWindow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-name"><tt>CreateModelWindow</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates or retrieves a window for a specified model.
+<br>
+<br>If the window is already open with the model attached,
+the function returns the window object. If there is an
+empty window open, the function attaches the object to it.
+Otherwise, the function creates a new window and attaches
+the model to it.
+<p></p>
+
+Note that if the function creates a new window for an object, it
+does not automatically display the object in the window. To display 
+the model, you must explicitly call the function <tt><b><a class="method" href="t-pfcModel-Model.html#Display">pfcModel.Display()</a></b></tt> . 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#10">Windows and Views: Getting a Window Object</a>, <a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Mdl</b></tt>
+</dt>
+<dd>The model that will be displayed in (or associated with) the window.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new or retrieved window</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreatePart">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-name"><tt>CreatePart</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new empty part.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#7">Solid: Getting a Solid Object</a>, <a href="../manual0/JSolid.html#11">Solid: Getting a Solid Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the part</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new part</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="EraseUndisplayedModels">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>EraseUndisplayedModels</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Erases models which are not used in any Creo Parametric windows.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Erase">pfcModel.Erase()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel-Model.html#EraseWithDependencies">pfcModel.EraseWithDependencies()</a></b></tt>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExecuteModelCheck">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelCheck-ModelCheckResults.html">pfcModelCheckResults</a></tt></td><td class="func-name"><tt>ExecuteModelCheck</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Model, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelCheck-ModelCheckInstructions.html">pfcModelCheckInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Execute ModelCheck from an external application.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#75">Models: Running ModelCHECK</a>, <a href="../manual0/JModel.html#83">Models: Running ModelCHECK</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Model</b></tt>
+</dt>
+<dd>The model.</dd>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>The ModelCheck instructions.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>A summary of the results of the ModelCheck run.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExportCurrentRasterImage">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ExportCurrentRasterImage</tt></td><td class="func-params"><tt>
+ (string&nbsp;ImageFileName, <a class="type" href="t-pfcWindow-RasterImageExportInstructions.html">pfcRasterImageExportInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Outputs a standard Creo Parametric raster output file (for current Window).
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ImageFileName</b></tt>
+</dt>
+<dd>An output filename, including the extension</dd>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>An Raster-Export-Instructions object that controls the Raster-Image export operation. All of these objects inherit from  <tt><b><tt><b><a class="enumtype" href="t-pfcWindow-RasterImageExportInstructions.html">pfcRasterImageExportInstructions</a></b></tt></b></tt> .</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExportDirectVRML">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>ExportDirectVRML</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-VRMLDirectExportInstructions.html">pfcVRMLDirectExportInstructions</a>&nbsp;ExportData)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Exports a Creo Parametric object from disk into VRML format.
+<br>
+<br>This function does not retrieve the model. 
+<p></p>
+
+See <tt><b><tt><b><a class="enumtype" href="t-pfcModel-VRMLExportInstructions.html">pfcVRMLExportInstructions</a></b></tt></b></tt> for a description of the files produced by the export.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#34">Interface: Export Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ExportData</b></tt>
+</dt>
+<dd>pfcVRMLDirectExportInstructions</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ExportFromCurrentWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSession-WSImportExportMessages.html">pfcWSImportExportMessages</a></tt></td><td class="func-name"><tt>ExportFromCurrentWS</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;FileNames, string&nbsp;TargetLocation, <a class="type" href="t-pfcSession-RelCriterion.html">pfcRelCriterion</a>&nbsp;Dependency)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Export specified objects from the current workspace to a disk in
+            a linked session of Creo Parametric. Can be called only when there 
+            are no objects in session . 
+            The specified objects may be exported along with all or required by
+            Creo Parametric dependents (recursively), according to a specified
+            dependency criterion. All problems (warnings, conflicts or errors)
+            of processing individual objects are logged in proimpex.errors 
+            file created in the Creo Parametric run directory.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#72">Windchill Connectivity APIs: Import and Export</a>, <a href="../manual0/wc_apis.html#81">Windchill Connectivity APIs: Import and Export</a>, <a href="../manual0/wc_apis.html#84">Windchill Connectivity APIs: File Copy</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileNames</b></tt>
+</dt>
+<dd>A sequence of strings (file names ) to export.</dd>
+<dt>
+<tt><b>TargetLocation</b></tt>
+</dt>
+<dd>The export target directory.</dd>
+<dt>
+<tt><b>Dependency</b></tt>
+</dt>
+<dd>Instructions about how to export dependencies</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Import/export messages.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FlushCurrentWindow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>FlushCurrentWindow</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Forces the flush of pending display commands
+   on the current window.
+   <br>
+<br>IMPORTANT: Excessive use of this method will cause major
+   slow down on systems running Vista or Windows 7. It is recommended to 
+   call this method only after completing all display operations.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#41">Windows and Views: Window Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetActiveModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetActiveModel</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the handle to the active model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#8">Models: Getting a Model Object</a>, <a href="../manual0/JModel.html#11">Models: Getting a Model Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The active model</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetActiveServer">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-name"><tt>GetActiveServer</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the active server handle .<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#21">Windchill Connectivity APIs: Information on Servers in Session</a>, <a href="../manual0/wc_apis.html#24">Windchill Connectivity APIs: Information on Servers in Session</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The server handle, or <tt>null</tt> if active server was not found</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetAliasFromAliasedUrl">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetAliasFromAliasedUrl</tt></td><td class="func-params"><tt>
+ (string&nbsp;AliasedUrl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns server alias from aliased URL.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#94">Windchill Connectivity APIs: Utility APIs</a>, <a href="../manual0/wc_apis.html#95">Windchill Connectivity APIs: Utility APIs</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AliasedUrl</b></tt>
+</dt>
+<dd>The aliased URL.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The server alias.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetByRelationId">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetByRelationId</tt></td><td class="func-params"><tt>
+ (integer&nbsp;Id)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the model, given its relation identifier.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#10">Models: Getting a Model Object</a>, <a href="../manual0/JModel.html#11">Models: Getting a Model Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Id</b></tt>
+</dt>
+<dd>The identifier</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetConfigOption">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GetConfigOption</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the current value for the specified
+configuration file option.
+<br>
+<br>The maximum length of a configuration option value returned by this function is 80 characters.  For
+access to larger values, use <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetConfigOptionValues">pfcBaseSession.GetConfigOptionValues()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetConfigOptionValues">pfcBaseSession.GetConfigOptionValues()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#SetConfigOption">pfcBaseSession.SetConfigOption()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the configuration file option whose value you want. Thisstring can contain uppercase and lowercase letters.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The value</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetConfigOptionValues">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>GetConfigOptionValues</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the current value(s) for the specified configuration file option.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetConfigOption">pfcBaseSession.GetConfigOption()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#SetConfigOption">pfcBaseSession.SetConfigOption()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#17">Session Objects: Configuration Options</a>, <a href="../manual0/JSession.html#19">Session Objects: Configuration Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the configuration file option whose value you want. Thisstring can contain uppercase and lowercase letters.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The sequence of values.  This may contain one value, if the option is not a multi-valued option.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCurrentDirectory">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetCurrentDirectory</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the absolute path name of the current working directory for Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#10">Session Objects: Directories</a>, <a href="../manual0/JSession.html#11">Session Objects: Directories</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The absolute path</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetCurrentWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GetCurrentWS</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the name of the Workspace currently registered in Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>&nbsp; </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetEnvironmentVariable">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GetEnvironmentVariable</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the value a system environment variable.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the variable.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The value, or <tt>null</tt> if the variable is not set.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetImportSourceType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td><td class="func-name"><tt>GetImportSourceType</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileToImport, <a class="type" href="t-pfcImport-NewModelImportType.html">pfcNewModelImportType</a>&nbsp;NewModelType)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the type of model that can be created from a 3D format file.  <b>Note:</b> does not support all types of 3D formats.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#137">Interface: Importing 3D Geometry</a>, <a href="../manual0/Jinterface.html#138">Interface: Importing 3D Geometry</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileToImport</b></tt>
+</dt>
+<dd>The name of the file.</dd>
+<dt>
+<tt><b>NewModelType</b></tt>
+</dt>
+<dd>The type of information contained in the file.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The type of file that can be created from the geometry file.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetLocalizedMessageContents">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetLocalizedMessageContents</tt></td><td class="func-params"><tt>
+ (string&nbsp;MsgFile, string&nbsp;Format, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;MessageTexts)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Writes a text message to a buffer string.<br>
+<br>This method supports non-ASCII character strings as messages.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#51">Session Objects: Accessing the Message Window</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>MsgFile</b></tt>
+</dt>
+<dd>The name of the message file containing the 
+ format.</dd>
+<dt>
+<tt><b>Format</b></tt>
+</dt>
+<dd>The format of the message: the first line of 
+ the section of the message file that uniquely identifies 
+ the message.</dd>
+<dt>
+<tt><b>MessageTexts</b></tt>
+</dt>
+<dd>A sequence of strings which will replace 
+ any occurrences of %#w in the message file, where '#' is the numerical 
+ identifier of the replacement.  This method does not support formats 
+ using %#s.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The buffer string.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetMessageContents">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetMessageContents</tt></td><td class="func-params"><tt>
+ (string&nbsp;MsgFile, string&nbsp;Format, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;MessageTexts)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Writes a text message to a buffer string.<br>
+<br>This method supports only ASCII character strings as texts.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#50">Session Objects: Accessing the Message Window</a>, <a href="../manual0/JSession.html#51">Session Objects: Accessing the Message Window</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>MsgFile</b></tt>
+</dt>
+<dd>The name of the message file containing the 
+ format</dd>
+<dt>
+<tt><b>Format</b></tt>
+</dt>
+<dd>The format of the message: the first line 
+ of the section of the message file that uniquely identifies 
+ the message</dd>
+<dt>
+<tt><b>MessageTexts</b></tt>
+</dt>
+<dd>A sequence of strings which will replace 
+ any occurrences of %#s in the message format, where '#' is the numerical 
+ identifier of the replacement.  This method does not support formats 
+ using %#w.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The buffer string.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetModel</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, <a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds a model in the Creo Parametric session, given the model name and type.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromDescr">pfcBaseSession.GetModelFromDescr()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#6">Models: Getting a Model Object</a>, <a href="../manual0/JModel.html#11">Models: Getting a Model Object</a>, <a href="../manual0/jdrawfns.html#9">Drawings: Obtaining Drawing Models</a>, <a href="../manual0/jdrawfns.html#12">Drawings: Obtaining Drawing Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the model</dd>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The model type</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The requested model or <tt>null</tt>, if no model with the specified parameters has been found in session</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModelFromDescr">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetModelFromDescr</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds a model in the Creo Parametric session, given the model descriptor.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModel">pfcBaseSession.GetModel()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#10">Drawings: Obtaining Drawing Models</a>, <a href="../manual0/jdrawfns.html#12">Drawings: Obtaining Drawing Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>MdlDescr</b></tt>
+</dt>
+<dd>The model descriptor</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The requested model or <tt>null</tt>, if no model with the specified parameters has been found in session</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModelFromFileName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetModelFromFileName</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Locates and returns a model handle given its file name.
+<br>
+<br>File name format should be of the form <b>&lt;model name&gt;.&lt;extension&gt;</b>, without a path.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The Creo Parametric model file name.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model handle, or <tt>null</tt>, if the model was not found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModelNameFromAliasedUrl">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetModelNameFromAliasedUrl</tt></td><td class="func-params"><tt>
+ (string&nbsp;AliasedUrl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns model name from aliased URL.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#93">Windchill Connectivity APIs: Utility APIs</a>, <a href="../manual0/wc_apis.html#95">Windchill Connectivity APIs: Utility APIs</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AliasedUrl</b></tt>
+</dt>
+<dd>The aliased URL.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model name.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModelWindow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-name"><tt>GetModelWindow</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;Mdl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the window where a Creo Parametric model is displayed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Mdl</b></tt>
+</dt>
+<dd>The model.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The window, or <tt>null</tt>, if the model is not displayed.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetPrintMdlOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrintMdlOption.html">pfcPrintMdlOption</a></tt></td><td class="func-name"><tt>GetPrintMdlOptions</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;model)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp;<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#202">Interface: Model Options</a>, <a href="../manual0/Jinterface.html#213">Interface: Model Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>model</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetPrintPCFOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrinterPCFOptions.html">pfcPrinterPCFOptions</a></tt></td><td class="func-name"><tt>GetPrintPCFOptions</tt></td><td class="func-params"><tt>
+ (string&nbsp;filename, <a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;model)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp;<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>filename</b></tt>
+</dt>
+<dd></dd>
+<dt>
+<tt><b>model</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetPrintPlacementOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrintPlacementOption.html">pfcPrintPlacementOption</a></tt></td><td class="func-name"><tt>GetPrintPlacementOptions</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp;<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#187">Interface: Placement Options</a>, <a href="../manual0/Jinterface.html#199">Interface: Placement Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetPrintPrinterOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcExport-PrintPrinterOption.html">pfcPrintPrinterOption</a></tt></td><td class="func-name"><tt>GetPrintPrinterOptions</tt></td><td class="func-params"><tt>
+ (string&nbsp;printer_type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp;<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#165">Interface: Printer Options</a>, <a href="../manual0/Jinterface.html#184">Interface: Printer Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>printer_type</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetProToolkitDll">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcProToolkit-Dll.html">pfcDll</a></tt></td><td class="func-name"><tt>GetProToolkitDll</tt></td><td class="func-params"><tt>
+ (string&nbsp;ApplicationId)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Finds a Creo Parametric TOOLKIT DLL, given its identifer string.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#24">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>, <a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ApplicationId</b></tt>
+</dt>
+<dd>The DLL's identifier string, acquired from either:<ul type="disc">
+
+<li>
+ A call to ProToolkitDllIdGet within the DLL application</li>
+
+<li>
+ The Id attribute in the <tt><b><tt><b><a class="enumtype" href="t-pfcProToolkit-Dll.html">pfcDll</a></b></tt></b></tt> interface.</li>
+
+</ul>
+
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The DLL object, or <tt>null</tt> if the DLL was not found in session.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetRGBFromStdColor">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-ColorRGB.html">pfcColorRGB</a></tt></td><td class="func-name"><tt>GetRGBFromStdColor</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;StdClr)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the RGB values for the specified color. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#27">Session Objects: Colors and Line Styles</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>StdClr</b></tt>
+</dt>
+<dd>The color type</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The RGB values</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetServerByAlias">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-name"><tt>GetServerByAlias</tt></td><td class="func-params"><tt>
+ (string&nbsp;Alias)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the server handle for a given server alias.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#22">Windchill Connectivity APIs: Information on Servers in Session</a>, <a href="../manual0/wc_apis.html#24">Windchill Connectivity APIs: Information on Servers in Session</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Alias</b></tt>
+</dt>
+<dd>The name used by Creo Parametric to refer to this server.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The server handle  , or <tt>null</tt> if server with input alias was not found</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetServerByUrl">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-name"><tt>GetServerByUrl</tt></td><td class="func-params"><tt>
+ (string&nbsp;Url, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;WorkspaceName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the server handle for a given server url and workspace name.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#23">Windchill Connectivity APIs: Information on Servers in Session</a>, <a href="../manual0/wc_apis.html#24">Windchill Connectivity APIs: Information on Servers in Session</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Url</b></tt>
+</dt>
+<dd>The url of server.</dd>
+<dt>
+<tt><b>WorkspaceName</b></tt>
+</dt>
+<dd>The workspace name on the server.Can be <tt>null</tt>.
+   If <tt>null</tt>, and more then one server with the url is registered, then function 
+   returns one of the registered servers. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The server handle  , or <tt>null</tt> if server with input url was not found</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetServerLocation">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcServer-ServerLocation.html">pfcServerLocation</a></tt></td><td class="func-name"><tt>GetServerLocation</tt></td><td class="func-params"><tt>
+ (string&nbsp;Url)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the server location handle for a given server url.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#6">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Url</b></tt>
+</dt>
+<dd>The url of server.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The server location handle.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetUrlFromAliasedUrl">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>GetUrlFromAliasedUrl</tt></td><td class="func-params"><tt>
+ (string&nbsp;AliasedUrl)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Converts an an aliased url (wtpub://alias/etc/p.prt) suitable for use in functions 
+   like ProMdlLoad to an unaliased URL (http://windchillserver.ptc.com/etc).<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#95">Windchill Connectivity APIs: Utility APIs</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AliasedUrl</b></tt>
+</dt>
+<dd>The aliased URL.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The unaliased URL.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetWindow">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-name"><tt>GetWindow</tt></td><td class="func-params"><tt>
+ (integer&nbsp;Id)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the window object by its identifier.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#13">Windows and Views: Getting a Window Object</a>, <a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Id</b></tt>
+</dt>
+<dd>The identifier of the window </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The window that corresponds to the given identifier</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Import2DModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>Import2DModel</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewModelName, <a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type, string&nbsp;FilePath, <a class="type" href="t-pfcModel-Import2DInstructions.html">pfcImport2DInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a two-dimensional model from a geometry file.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcModel-STEPImport2DInstructions.html">pfcSTEPImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-IGESImport2DInstructions.html">pfcIGESImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DXFImport2DInstructions.html">pfcDXFImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModel-DWGImport2DInstructions.html">pfcDWGImport2DInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcModel::SETImport2DInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcModel::CADAMImport2DInstructions&gt;
+  </b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#135">Interface: Importing 2D Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewModelName</b></tt>
+</dt>
+<dd>The new model name.</dd>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The new model type. </dd>
+<dt>
+<tt><b>FilePath</b></tt>
+</dt>
+<dd>The full path to the file to import.</dd>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Instructions for importing the file.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The newly created two dimensional model.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ImportNewModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>ImportNewModel</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileToImport, <a class="type" href="t-pfcImport-NewModelImportType.html">pfcNewModelImportType</a>&nbsp;NewModelType, <a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type, string&nbsp;NewModelName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcImport-LayerImportFilter.html">pfcLayerImportFilter</a>&nbsp;Filter)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br> Imports a 3D format file as a new model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#138">Interface: Importing 3D Geometry</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileToImport</b></tt>
+</dt>
+<dd> Full path to the file to be imported.</dd>
+<dt>
+<tt><b>NewModelType</b></tt>
+</dt>
+<dd>The type of model to be imported.  Use the method <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetImportSourceType">pfcBaseSession.GetImportSourceType()</a></b></tt> to automatically determine the model type for some format types.</dd>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of file being imported.</dd>
+<dt>
+<tt><b>NewModelName</b></tt>
+</dt>
+<dd>New name for the created model.</dd>
+<dt>
+<tt><b>Filter</b></tt>
+</dt>
+<dd> Pass <tt>null</tt> for this argument. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd> The newly imported part or assembly, drawing.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ImportToCurrentWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSession-WSImportExportMessages.html">pfcWSImportExportMessages</a></tt></td><td class="func-name"><tt>ImportToCurrentWS</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-stdcols-stringseq.html">stringseq</a>&nbsp;Filepaths, <a class="type" href="t-pfcSession-RelCriterion.html">pfcRelCriterion</a>&nbsp;Dependency)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Import specified objects from a disk to the current workspace in
+            a linked session of Creo Parametric. Can be called only when there 
+            are no objects in session . 
+            The specified objects may be imported along with all or required by
+            Creo Parametric dependents (recursively), according to a specified
+            dependency criterion. All problems (warnings, conflicts or errors)
+            of processing individual objects are logged in proimpex.errors 
+            file created in the Creo Parametric run directory.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Adrm.html#5">Digital Rights Management: Additional DRM Implications</a>, <a href="../manual0/wc_apis.html#43">Windchill Connectivity APIs: Upload</a>, <a href="../manual0/wc_apis.html#73">Windchill Connectivity APIs: Import and Export</a>, <a href="../manual0/wc_apis.html#81">Windchill Connectivity APIs: Import and Export</a>, <a href="../manual0/wc_apis.html#84">Windchill Connectivity APIs: File Copy</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Filepaths</b></tt>
+</dt>
+<dd>A sequence of strings - file paths (absolute or relative to 
+                                   current working directory) to objects to import.</dd>
+<dt>
+<tt><b>Dependency</b></tt>
+</dt>
+<dd>Instructions about how to import dependencies</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Import/export messages.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsConfigurationSupported">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsConfigurationSupported</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ExportType.html">pfcExportType</a>&nbsp;Type, <a class="type" href="t-pfcExport-AssemblyConfiguration.html">pfcAssemblyConfiguration</a>&nbsp;Configuration)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if an assembly configuration is supported for a particular export type.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#IsGeometryRepSupported">pfcBaseSession.IsGeometryRepSupported()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#87">Interface: Export Utilities</a>, <a href="../manual0/Jinterface.html#88">Interface: Export Utilities</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The format of the export.</dd>
+<dt>
+<tt><b>Configuration</b></tt>
+</dt>
+<dd>The configuration type.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if this type is supported, <tt>false</tt> if not.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsGeometryRepSupported">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsGeometryRepSupported</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ExportType.html">pfcExportType</a>&nbsp;Type, <a class="type" href="t-pfcExport-GeometryFlags.html">pfcGeometryFlags</a>&nbsp;Flags)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if a combination of geometry flags are supported for export to a certain format. 
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#IsConfigurationSupported">pfcBaseSession.IsConfigurationSupported()</a></b></tt>, <tt><b><a class="method" href="t-pfcExport-GeometryFlags.html#Create">pfcGeometryFlags.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#88">Interface: Export Utilities</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The format of the export.</dd>
+<dt>
+<tt><b>Flags</b></tt>
+</dt>
+<dd>The geometry flags.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if the format supports these flags, <tt>false</tt> if the flags cannot be used with this format.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListFiles">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>ListFiles</tt></td><td class="func-params"><tt>
+ (string&nbsp;Filter, <a class="type" href="t-pfcSession-FileListOpt.html">pfcFileListOpt</a>&nbsp;Version, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;Path)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a list of the files in the designated directory.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#ListSubdirectories">pfcBaseSession.ListSubdirectories()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#13">Session Objects: File Handling</a>, <a href="../manual0/JSession.html#14">Session Objects: File Handling</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Filter</b></tt>
+</dt>
+<dd>A filename filter, such as "*.prt"</dd>
+<dt>
+<tt><b>Version</b></tt>
+</dt>
+<dd>Flag indicating if all versions, or the latest versions should be found.  Also allows alphatical sorting of the returned list.</dd>
+<dt>
+<tt><b>Path</b></tt>
+</dt>
+<dd>The directory</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of files found, including the full path name.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListModels">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Models.html">pfcModels</a></tt></td><td class="func-name"><tt>ListModels</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the list of objects in the Creo Parametric session.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#9">Models: Getting a Model Object</a>, <a href="../manual0/JModel.html#11">Models: Getting a Model Object</a>, <a href="../manual0/jdrawfns.html#11">Drawings: Obtaining Drawing Models</a>, <a href="../manual0/jdrawfns.html#12">Drawings: Obtaining Drawing Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of models</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListModelsByType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Models.html">pfcModels</a></tt></td><td class="func-name"><tt>ListModelsByType</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelType.html">pfcModelType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns all of the models of a particular type in the Creo Parametric session.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#12">Drawings: Obtaining Drawing Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of model to locate.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of model objects.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListServers">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-Servers.html">pfcServers</a></tt></td><td class="func-name"><tt>ListServers</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sequence of servers , or <tt>null</tt> if server was not found<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#24">Windchill Connectivity APIs: Information on Servers in Session</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListSubdirectories">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>ListSubdirectories</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;Path)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the subdirectories in a given directory location.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#14">Session Objects: File Handling</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Path</b></tt>
+</dt>
+<dd>The directory.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of subdirectories.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListWindows">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWindow-Windows.html">pfcWindows</a></tt></td><td class="func-name"><tt>ListWindows</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists all the Creo Parametric windows.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#12">Windows and Views: Getting a Window Object</a>, <a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of windows</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LoadConfigFile">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>LoadConfigFile</tt></td><td class="func-params"><tt>
+ (string&nbsp;ConfigFileName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Reads a configuration file into Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#19">Session Objects: Configuration Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ConfigFileName</b></tt>
+</dt>
+<dd>The output file name, including the extension.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LoadProToolkitDll">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcProToolkit-Dll.html">pfcDll</a></tt></td><td class="func-name"><tt>LoadProToolkitDll</tt></td><td class="func-params"><tt>
+ (string&nbsp;ApplicationName, string&nbsp;DllPath, string&nbsp;TextPath, boolean&nbsp;UserDisplay)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Causes Creo Parametric to load a Creo Parametric TOOLKIT DLL application. 
+   <br>
+<br>The application's <b>user_initialize()</b> function will be called as the application starts.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#22">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>, <a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ApplicationName</b></tt>
+</dt>
+<dd>The name of the application. Application names must be unique within the Creo Parametric session.</dd>
+<dt>
+<tt><b>DllPath</b></tt>
+</dt>
+<dd>The full path to the DLL binary file.</dd>
+<dt>
+<tt><b>TextPath</b></tt>
+</dt>
+<dd>The full path to the directory containing the DLL text, menu and resource files.</dd>
+<dt>
+<tt><b>UserDisplay</b></tt>
+</dt>
+<dd>If <tt>true</tt>, the application will be visible from the <i>Auxiliary Applications</i> dialog box, and the user will be allowed to stop it.  If errors occur on startup, those errors will be presented to the user.  If <tt>false</tt>, the application will be invisible to the user.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The Creo Parametric TOOLKIT DLL handle.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="LoadProToolkitLegacyDll">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcProToolkit-Dll.html">pfcDll</a></tt></td><td class="func-name"><tt>LoadProToolkitLegacyDll</tt></td><td class="func-params"><tt>
+ (string&nbsp;ApplicationName, string&nbsp;DllPath, string&nbsp;TextPath, boolean&nbsp;UserDisplay)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Causes Creo Parametric to load a Creo Parametric TOOLKIT DLL non-Unicode application. 
+   <br>
+<br>This API is similar to <tt><b><a class="method" href="t-pfcSession-BaseSession.html#LoadProToolkitDll">pfcBaseSession.LoadProToolkitDll()</a></b></tt>. Its purpose is to communicate to Creo Parametric that the loaded dll should be treated as a non-Unicode (pre-Wildfire 4.0) application. <b>WARNING:</b> this API should be used only by a pre-Wildfire 4.0 application to load a pre-Wildfire 4.0 dll.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#23">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>, <a href="../manual0/japplib.html#28">Task Based Application Libraries: Launching a Creo Parametric TOOLKIT DLL</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ApplicationName</b></tt>
+</dt>
+<dd>The name of the application. Application names must be unique within the Creo Parametric session.</dd>
+<dt>
+<tt><b>DllPath</b></tt>
+</dt>
+<dd>The full path to the DLL binary file.</dd>
+<dt>
+<tt><b>TextPath</b></tt>
+</dt>
+<dd>The full path to the directory containing the DLL text, menu and resource files.</dd>
+<dt>
+<tt><b>UserDisplay</b></tt>
+</dt>
+<dd>If <tt>true</tt>, the application will be visible from the <i>Auxiliary Applications</i> dialog box, and the user will be allowed to stop it.  If errors occur on startup, those errors will be presented to the user.  If <tt>false</tt>, the application will be invisible to the user.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The Creo Parametric TOOLKIT DLL handle.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="OpenFile">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcWindow-Window.html">pfcWindow</a></tt></td><td class="func-name"><tt>OpenFile</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified model and displays it in a window.
+<br>
+<br>This method is equivalent to calling <tt><b><a class="method" href="t-pfcSession-BaseSession.html#RetrieveModel">pfcBaseSession.RetrieveModel()</a></b></tt> , <tt><b><a class="method" href="t-pfcSession-BaseSession.html#CreateModelWindow">pfcBaseSession.CreateModelWindow()</a></b></tt> , and <tt><b><a class="method" href="t-pfcModel-Model.html#Display">pfcModel.Display()</a></b></tt> .
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#31">Models: Retrieving Models</a>, <a href="../manual0/JModel.html#32">Models: Retrieving Models</a>, <a href="../manual0/JWinView.html#14">Windows and Views: Getting a Window Object</a>, <a href="../manual0/JWinView.html#15">Windows and Views: Getting a Window Object</a>, <a href="../manual0/wc_apis.html#58">Windchill Connectivity APIs: Retrieval</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>MdlDescr</b></tt>
+</dt>
+<dd>The model to retrieve</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new window</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PLMSInitialize">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>PLMSInitialize</tt></td><td class="func-params"><tt>
+ (string&nbsp;request)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp;<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>request</b></tt>
+</dt>
+<dd></dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RegisterServer">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcServer-Server.html">pfcServer</a></tt></td><td class="func-name"><tt>RegisterServer</tt></td><td class="func-params"><tt>
+ (string&nbsp;Alias, string&nbsp;Location, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;WorkspaceName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Registers a server in the session given its root location and an alias. 
+   <notes> This function is only supported in batch mode.  It will not place the registered 
+   server the Creo Parametric server registry UI, and it will not enable all functionality for 
+   the server (for example, the Creo Parametric HTML UI will not work with this server).  
+   To automate registration of servers in interactive mode, use the standard config.fld 
+   setup to preregister the servers. To ensure that the servers are not preregistered when 
+   running Creo Parametric in batch non-graphics mode, set the environment variable PTC_WF_ROOT 
+   to an empty directory before starting Creo Parametric.
+   </notes>
+   
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#13">Windchill Connectivity APIs: Registering and Activating a Server</a>, <a href="../manual0/wc_apis.html#15">Windchill Connectivity APIs: Registering and Activating a Server</a>, <a href="../manual0/wc_apis.html#34">Windchill Connectivity APIs: To Register a Server with an Existing Workspace</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Alias</b></tt>
+</dt>
+<dd>The name used by Creo Parametric to refer to this server.</dd>
+<dt>
+<tt><b>Location</b></tt>
+</dt>
+<dd>The root location for the server.</dd>
+<dt>
+<tt><b>WorkspaceName</b></tt>
+</dt>
+<dd>The name of the workspace to use.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The registered server handle.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveAssemSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>RetrieveAssemSimpRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;AssemName, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpRepInstructions.html">pfcSimpRepInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified simplified representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#8">Simplified Representations: Retrieving Simplified Representations</a>, <a href="../manual0/JSimpRep.html#12">Simplified Representations: Retrieving Simplified Representations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AssemName</b></tt>
+</dt>
+<dd>The name of the assembly to retrieve.</dd>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>The simplified representation Instructions - the internal data required to define a simplified representation.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the assembly.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveGeometryPartRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-name"><tt>RetrieveGeometryPartRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;PartName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified part's geometric simplified
+     representation.<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>PartName</b></tt>
+</dt>
+<dd>The name of the part to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the part.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveGeomSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>RetrieveGeomSimpRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;AssemName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the geometry simplified representation of an assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#9">Simplified Representations: Retrieving Simplified Representations</a>, <a href="../manual0/JSimpRep.html#12">Simplified Representations: Retrieving Simplified Representations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AssemName</b></tt>
+</dt>
+<dd>The name of the assembly to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the assembly.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveGraphicsPartRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-name"><tt>RetrieveGraphicsPartRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;PartName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified part's graphic simplified
+     representation.<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>PartName</b></tt>
+</dt>
+<dd>The name of the part to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the part.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveGraphicsSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>RetrieveGraphicsSimpRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;AssemName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the graphics simplified representation of an assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#10">Simplified Representations: Retrieving Simplified Representations</a>, <a href="../manual0/JSimpRep.html#12">Simplified Representations: Retrieving Simplified Representations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AssemName</b></tt>
+</dt>
+<dd>The name of the assembly to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the assembly.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>RetrieveModel</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified model into the Creo Parametric session from standard directory.
+<br>
+<br>The method does not create a window for the model or display
+it anywhere. The model can be retrieved only from standard directory. Path argument in model 
+   descriptor is ignored by this api.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModel">pfcBaseSession.GetModel()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetModelFromDescr">pfcBaseSession.GetModelFromDescr()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#29">Models: Retrieving Models</a>, <a href="../manual0/JModel.html#32">Models: Retrieving Models</a>, <a href="../manual0/jdrawfns.html#8">Drawings: Obtaining Drawing Models</a>, <a href="../manual0/wc_apis.html#56">Windchill Connectivity APIs: Retrieval</a>, <a href="../manual0/wc_apis.html#58">Windchill Connectivity APIs: Retrieval</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>MdlDescr</b></tt>
+</dt>
+<dd>The information about the model to retrieve</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The retrieved model</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveModelWithOpts">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>RetrieveModelWithOpts</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a>&nbsp;MdlDescr, <a class="type" href="t-pfcSession-RetrieveModelOptions.html">pfcRetrieveModelOptions</a>&nbsp;Opts)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified model into the Creo Parametric session based on the path 
+   specified in the model descriptor.<br>
+<br>The method does not create a window for the model or display
+it anywhere.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#30">Models: Retrieving Models</a>, <a href="../manual0/JModel.html#32">Models: Retrieving Models</a>, <a href="../manual0/wc_apis.html#57">Windchill Connectivity APIs: Retrieval</a>, <a href="../manual0/wc_apis.html#58">Windchill Connectivity APIs: Retrieval</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>MdlDescr</b></tt>
+</dt>
+<dd>The information about the model to retrieve</dd>
+<dt>
+<tt><b>Opts</b></tt>
+</dt>
+<dd>Options for retrieval</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The retrieved model</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrievePartSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-name"><tt>RetrievePartSimpRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;PartName, string&nbsp;RepName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified part's user-defined simplified
+    representation.<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>PartName</b></tt>
+</dt>
+<dd>The name of the part to retrieve.</dd>
+<dt>
+<tt><b>RepName</b></tt>
+</dt>
+<dd>The name of the user-defined simplified 
+    representation.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the part.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveSymbolicPartRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-Part.html">pfcPart</a></tt></td><td class="func-name"><tt>RetrieveSymbolicPartRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;PartName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the specified part's symbolic simplified
+     representation.<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>PartName</b></tt>
+</dt>
+<dd>The name of the part to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the part.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RetrieveSymbolicSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>RetrieveSymbolicSimpRep</tt></td><td class="func-params"><tt>
+ (string&nbsp;AssemName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the symbolic simplified representation of an assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSimpRep.html#11">Simplified Representations: Retrieving Simplified Representations</a>, <a href="../manual0/JSimpRep.html#12">Simplified Representations: Retrieving Simplified Representations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>AssemName</b></tt>
+</dt>
+<dd>The name of the assembly to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The handle to the assembly.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RunMacro">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RunMacro</tt></td><td class="func-params"><tt>
+ (string&nbsp;Macro)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Runs the specified macro. 
+<br>
+<br>Macros may only run when control is returned to Creo Parametric. If control is maintained by a J-Link program, the macro will be stored for later running.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#22">Session Objects: Macros</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Macro</b></tt>
+</dt>
+<dd>The macro to run</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Select">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a></tt></td><td class="func-name"><tt>Select</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSelect-SelectionOptions.html">pfcSelectionOptions</a>&nbsp;Options, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a>&nbsp;InitialSels)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Allows interactive selection of objects in Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#5">Selection: Interactive Selection</a>, <a href="../manual0/JSelection.html#8">Selection: Interactive Selection</a>, <a href="../manual0/jdrawfns.html#140">Drawings: Selecting Drawing Tables and Cells</a>, <a href="../manual0/jdrawfns.html#143">Drawings: Selecting Drawing Tables and Cells</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>The selection options, including the option keywords and maximum number ofselections allowed</dd>
+<dt>
+<tt><b>InitialSels</b></tt>
+</dt>
+<dd>A list of initial selections, which will be included in the return.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>A list of selected objects</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetConfigOption">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetConfigOption</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, string&nbsp;Value)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the value of the specified configuration file option.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetConfigOptionValues">pfcBaseSession.GetConfigOptionValues()</a></b></tt>, <tt><b><a class="method" href="t-pfcSession-BaseSession.html#GetConfigOption">pfcBaseSession.GetConfigOption()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#18">Session Objects: Configuration Options</a>, <a href="../manual0/JSession.html#19">Session Objects: Configuration Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the configuration file option. This string can include uppercase and lowercase letters.</dd>
+<dt>
+<tt><b>Value</b></tt>
+</dt>
+<dd>The value of the option, as it must appear in the configuration file.  If the option is a multivalued option,such as a path, this will add a new value to the array of values that already exist.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetCurrentWS">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetCurrentWS</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewWSName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Registers a Workspace in Creo Parametric. Only one is allowed at a time, so if one is 
+already registered, the new one will substitute the current one, but only if there
+are no objects in session.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewWSName</b></tt>
+</dt>
+<dd>The name of the Workspace.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetLineStyle">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-StdLineStyle.html">pfcStdLineStyle</a></tt></td><td class="func-name"><tt>SetLineStyle</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-StdLineStyle.html">pfcStdLineStyle</a>&nbsp;NewStyle)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the line style.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGraphics.html#7">Graphics: Displaying Graphics</a>, <a href="../manual0/JSession.html#29">Session Objects: Colors and Line Styles</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewStyle</b></tt>
+</dt>
+<dd>The new line style</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The previous line style</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetStdColorFromRGB">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetStdColorFromRGB</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;StdClr, <a class="type" href="t-pfcBase-ColorRGB.html">pfcColorRGB</a>&nbsp;Color)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables you to set the values of the three color components
+for a standard color in Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGraphics.html#7">Graphics: Displaying Graphics</a>, <a href="../manual0/JSession.html#26">Session Objects: Colors and Line Styles</a>, <a href="../manual0/JSession.html#29">Session Objects: Colors and Line Styles</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>StdClr</b></tt>
+</dt>
+<dd>The RGB values</dd>
+<dt>
+<tt><b>Color</b></tt>
+</dt>
+<dd>The color type</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetTextColor">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a></tt></td><td class="func-name"><tt>SetTextColor</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;NewColor)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables you to change the text color so any subsequent
+graphics window text is drawn in the specified color.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSession.html#28">Session Objects: Colors and Line Styles</a>, <a href="../manual0/JSession.html#29">Session Objects: Colors and Line Styles</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewColor</b></tt>
+</dt>
+<dd>The new color to be used for text</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The previous text color </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetWSExportOptions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetWSExportOptions</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSession-WSExportOptions.html">pfcWSExportOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the option controlling whether or not to export secondary 
+           contents during a call to  <tt><b><a class="method" href="t-pfcSession-BaseSession.html#ExportFromCurrentWS">pfcBaseSession.ExportFromCurrentWS()</a></b></tt>
+  
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#79">Windchill Connectivity APIs: Import and Export</a>, <a href="../manual0/wc_apis.html#81">Windchill Connectivity APIs: Import and Export</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd>Export options object of type <tt><b><tt><b><a class="enumtype" href="t-pfcSession-WSExportOptions.html">pfcWSExportOptions</a></b></tt></b></tt>.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StartJLinkApplication">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcJLink-JLinkApplication.html">pfcJLinkApplication</a></tt></td><td class="func-name"><tt>StartJLinkApplication</tt></td><td class="func-params"><tt>
+ (string&nbsp;ApplicationName, string&nbsp;ClassName, string&nbsp;StartMethod, string&nbsp;StopMethod, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;AdditionalClassPath, 
+   /*&nbsp;optional&nbsp;*/&nbsp;string&nbsp;TextPath, boolean&nbsp;UserDisplay)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Register and start a synchronous J-Link application.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcJLink-JLinkApplication.html#ExecuteTask">pfcJLinkApplication.ExecuteTask()</a></b></tt>, <tt><b><a class="method" href="t-pfcJLink-JLinkApplication.html#Stop">pfcJLinkApplication.Stop()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#30">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>, <a href="../manual0/japplib.html#33">Task Based Application Libraries: Launching Tasks from J-Link Task Libraries</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ApplicationName</b></tt>
+</dt>
+<dd>The application name.</dd>
+<dt>
+<tt><b>ClassName</b></tt>
+</dt>
+<dd>The application Java class.</dd>
+<dt>
+<tt><b>StartMethod</b></tt>
+</dt>
+<dd>Static method used to intialize the application.</dd>
+<dt>
+<tt><b>StopMethod</b></tt>
+</dt>
+<dd>Static method used to terminate the application.</dd>
+<dt>
+<tt><b>AdditionalClassPath</b></tt>
+</dt>
+<dd>Additional elements to be added to the front of the system CLASSPATH. Can be <tt>null</tt>. If more than one path is being added, they must be separated using the appropriate path separator (';' on Windows and ':' on UNIX).</dd>
+<dt>
+<tt><b>TextPath</b></tt>
+</dt>
+<dd>The application text path for menus and messaging. If <tt>null</tt>, the function uses the current directory.</dd>
+<dt>
+<tt><b>UserDisplay</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to show application startup failure messages to the user, and to show the application in the Auxiliary Applications dialog.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The J-Link application handle.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</body>
+</html>

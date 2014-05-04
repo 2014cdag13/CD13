@@ -1,0 +1,642 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDetailSymbolDefItem"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      142
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDetail.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDetailSymbolDefItem</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a symbol definition in a Creo Parametric model.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#GetDetailItem">pfcDetailItemOwner.GetDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#ListDetailItems">pfcDetailItemOwner.ListDetailItems()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#RetrieveSymbolDefinition">pfcDetailItemOwner.RetrieveSymbolDefinition()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateDetailItem">CreateDetailItem</a>
+ (<a class="type" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a detail item in the symbol definition.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateSubgroup">CreateSubgroup</a>
+ (<a class="type" href="t-pfcDetail-DetailSymbolGroupInstructions.html">pfcDetailSymbolGroupInstructions</a>&nbsp;Instructions, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Create a subgroup in the specified symbol group. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetDetailItem">GetDetailItem</a>
+ (<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type, integer&nbsp;Id)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a detail item in a symbol definition, given its id and type.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetInstructions">GetInstructions</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns an instructions data object describing how a symbol definition is constructed.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsSubgroupLevelExclusive">IsSubgroupLevelExclusive</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Determine if the subgroups stored in the symbol definition on 
+  the indicated level are exclusive.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItems.html">pfcDetailItems</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListDetailItems">ListDetailItems</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the detail items in the symbol definition.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroups.html">pfcDetailSymbolGroups</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListSubgroups">ListSubgroups</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">List the subgroups in the symbol definition.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Modify">Modify</a>
+ (<a class="type" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Modifies a symbol definition.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetSubgroupLevelExclusive">SetSubgroupLevelExclusive</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Set the symbol groups exclusive at specified level.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetSubgroupLevelIndependent">SetSubgroupLevelIndependent</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Set the symbol groups independent at specified level.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="CreateDetailItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-name"><tt>CreateDetailItem</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a detail item in the symbol definition.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#202">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#262">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#263">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>The data item instructions.  This should be a <tt><b><tt><b><a class="enumtype" href="t-pfcDetail-DetailEntityInstructions.html">pfcDetailEntityInstructions</a></b></tt></b></tt> or <tt><b><tt><b><a class="enumtype" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></b></tt></b></tt> object.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The detail item created in the symbol definition.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateSubgroup">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a></tt></td><td class="func-name"><tt>CreateSubgroup</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailSymbolGroupInstructions.html">pfcDetailSymbolGroupInstructions</a>&nbsp;Instructions, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Create a subgroup in the specified symbol group. <br>
+<br>If no symbol group is specificed, 
+ the subgroup is created under the top level symbol group.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#297">Drawings: Detail Symbol Groups</a>, <a href="../manual0/jdrawfns.html#299">Drawings: Detail Symbol Groups</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>The characteristics for creating 
+ the subgroup.</dd>
+<dt>
+<tt><b>ParentGroup</b></tt>
+</dt>
+<dd>The symbol group under which the subgroup 
+ is to be made.
+ </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The symbol group.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetDetailItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItem.html">pfcDetailItem</a></tt></td><td class="func-name"><tt>GetDetailItem</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type, integer&nbsp;Id)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a detail item in a symbol definition, given its id and type.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The detail type.</dd>
+<dt>
+<tt><b>Id</b></tt>
+</dt>
+<dd>The integer identifier.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The detail item, or <tt>null</tt>, if the item was not found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetInstructions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a></tt></td><td class="func-name"><tt>GetInstructions</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns an instructions data object describing how a symbol definition is constructed.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#261">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The instructions data object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsSubgroupLevelExclusive">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsSubgroupLevelExclusive</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Determine if the subgroups stored in the symbol definition on 
+  the indicated level are exclusive.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#293">Drawings: Detail Symbol Groups</a>, <a href="../manual0/jdrawfns.html#294">Drawings: Detail Symbol Groups</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ParentGroup</b></tt>
+</dt>
+<dd>The exclusiveness is determined at the level
+  of this symbol group. If not specifed, the top level is assumed.
+ </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if the subgroups are exclusive and <tt>false</tt> 
+ if independent.
+ </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListDetailItems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailItems.html">pfcDetailItems</a></tt></td><td class="func-name"><tt>ListDetailItems</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailType.html">pfcDetailType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the detail items in the symbol definition.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#260">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#261">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of detail items to list.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The items found, or <tt>null</tt>, if no items were found.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListSubgroups">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroups.html">pfcDetailSymbolGroups</a></tt></td><td class="func-name"><tt>ListSubgroups</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>List the subgroups in the symbol definition.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#292">Drawings: Detail Symbol Groups</a>, <a href="../manual0/jdrawfns.html#294">Drawings: Detail Symbol Groups</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of sub symbol groups.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Modify">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Modify</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailSymbolDefInstructions.html">pfcDetailSymbolDefInstructions</a>&nbsp;Instructions)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Modifies a symbol definition.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#259">Drawings: Detail Symbol Definitions</a>, <a href="../manual0/jdrawfns.html#263">Drawings: Detail Symbol Definitions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Instructions</b></tt>
+</dt>
+<dd>Data object containing modifications to the symbol definition. </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetSubgroupLevelExclusive">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetSubgroupLevelExclusive</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Set the symbol groups exclusive at specified level.<br>
+<br>Once set exclusive, only one of the groups at this level may be active 
+  in the model at any time.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#298">Drawings: Detail Symbol Groups</a>, <a href="../manual0/jdrawfns.html#299">Drawings: Detail Symbol Groups</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ParentGroup</b></tt>
+</dt>
+<dd>The symbol groups at the level of this 
+ symbol group are set exclusive. If not specified, the top level 
+ is assumed. </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetSubgroupLevelIndependent">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetSubgroupLevelIndependent</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailSymbolGroup.html">pfcDetailSymbolGroup</a>&nbsp;ParentGroup)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Set the symbol groups independent at specified level.<br>
+<br>Once set independent, any number of groups at this level may be active 
+  in the model at any time.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#299">Drawings: Detail Symbol Groups</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ParentGroup</b></tt>
+</dt>
+<dd>The symbol groups at the level of this 
+ symbol group are set independent. If not specified, the top level is 
+ assumed.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

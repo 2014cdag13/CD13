@@ -1,0 +1,618 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcSelection"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      458
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcSelect.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSelection</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class represents a selection.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Object.html">pfcObject</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#Depth">Depth</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The depth of the selection</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a></tt></td><td class="func-signature"><tt><a class="method" href="#Params">Params</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The UV parameters</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></tt></td><td class="func-signature"><tt><a class="method" href="#Path">Path</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The component path</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Point">Point</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The point</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#SelectionString">SelectionString</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Web.Link style selection string representation for this selection.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelItem">SelItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The selected model item</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelModel">SelModel</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The selected model</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelTableCell">SelTableCell</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The table cell, or <tt>null</tt>, if the selection does not represent a drawing table cell selection.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#SelTableSegment">SelTableSegment</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The drawing table segment, or <tt>null</tt>, if the selection does not contain a drawing table.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelView2D">SelView2D</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The drawing view, or <tt>null</tt>, if the selection does not contain a drawing view.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#TParam">TParam</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The T parameter of an edge or curve</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Display">Display</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Displays the selection. Note that this is a one-time action
+(the next repaint will erase this display).
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Highlight">Highlight</a>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;Color)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Highlights the selection in the current window.
+The selection remains highlighted until you call the 
+<b>Unhighlight()</b> function.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#UnHighlight">UnHighlight</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes the highlighting from the selection 
+highlighted by a previous call to the <b>Highlight()</b> function.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Depth">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>Depth</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The depth of the selection<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#18">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Params">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-UVParams.html">pfcUVParams</a></tt></td><td class="func-name"><tt>Params</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The UV parameters<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#15">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Path">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ComponentPath.html">pfcComponentPath</a></tt></td><td class="func-name"><tt>Path</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The component path<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#14">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Point">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>Point</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The point<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#17">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelectionString">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>SelectionString</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Web.Link style selection string representation for this selection.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></tt></td><td class="func-name"><tt>SelItem</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The selected model item<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#16">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JSelection.html#13">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#34">Selection: Programmatic Selection</a>, <a href="../manual0/JSelection.html#36">Selection: Programmatic Selection</a>, <a href="../manual0/jdrawfns.html#104">Drawings: Obtaining Drawing Dimensions</a>, <a href="../manual0/jdrawfns.html#141">Drawings: Selecting Drawing Tables and Cells</a>, <a href="../manual0/jdrawfns.html#143">Drawings: Selecting Drawing Tables and Cells</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>SelModel</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The selected model<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModel.html#5">Models: Getting a Model Object</a>, <a href="../manual0/JModel.html#11">Models: Getting a Model Object</a>, <a href="../manual0/JSelection.html#12">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelTableCell">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcTable-TableCell.html">pfcTableCell</a></tt></td><td class="func-name"><tt>SelTableCell</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The table cell, or <tt>null</tt>, if the selection does not represent a drawing table cell selection.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#20">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#35">Selection: Programmatic Selection</a>, <a href="../manual0/JSelection.html#36">Selection: Programmatic Selection</a>, <a href="../manual0/jdrawfns.html#142">Drawings: Selecting Drawing Tables and Cells</a>, <a href="../manual0/jdrawfns.html#143">Drawings: Selecting Drawing Tables and Cells</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelTableSegment">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>SelTableSegment</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The drawing table segment, or <tt>null</tt>, if the selection does not contain a drawing table.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>, <a href="../manual0/jdrawfns.html#143">Drawings: Selecting Drawing Tables and Cells</a>, <a href="../manual0/jdrawfns.html#173">Drawings: Drawing Table Segments</a>, <a href="../manual0/jdrawfns.html#177">Drawings: Drawing Table Segments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelView2D">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcView2D-View2D.html">pfcView2D</a></tt></td><td class="func-name"><tt>SelView2D</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The drawing view, or <tt>null</tt>, if the selection does not contain a drawing view.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#19">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#36">Selection: Programmatic Selection</a>, <a href="../manual0/jdrawfns.html#73">Drawings: Obtaining Drawing Views</a>, <a href="../manual0/jdrawfns.html#77">Drawings: Obtaining Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TParam">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>TParam</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The T parameter of an edge or curve<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#16">Selection: Accessing Selection Data</a>, <a href="../manual0/JSelection.html#21">Selection: Accessing Selection Data</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Display">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Display</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Displays the selection. Note that this is a one-time action
+(the next repaint will erase this display).
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#28">Selection: Controlling Selection Display</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Highlight">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Highlight</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-StdColor.html">pfcStdColor</a>&nbsp;Color)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Highlights the selection in the current window.
+The selection remains highlighted until you call the 
+<b>Unhighlight()</b> function.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#26">Selection: Controlling Selection Display</a>, <a href="../manual0/JSelection.html#28">Selection: Controlling Selection Display</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Color</b></tt>
+</dt>
+<dd>The highlight color</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UnHighlight">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>UnHighlight</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes the highlighting from the selection 
+highlighted by a previous call to the <b>Highlight()</b> function.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSelection.html#27">Selection: Controlling Selection Display</a>, <a href="../manual0/JSelection.html#28">Selection: Controlling Selection Display</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

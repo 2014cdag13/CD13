@@ -1,0 +1,266 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcSelectionEvaluator"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      461
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcInterference.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcSelectionEvaluator</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class allows the computation of clearances and inteferences between two selected objects.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Object.html">pfcObject</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-SelectionPair.html">pfcSelectionPair</a></tt></td><td class="func-signature"><tt><a class="method" href="#Selections">Selections</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The SelectionPair: the pair of selected objects.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcInterference-ClearanceData.html">pfcClearanceData</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComputeClearance">ComputeClearance</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables the user to compute the clearance between two selected parts or surfaces.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcInterference-InterferenceVolume.html">pfcInterferenceVolume</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComputeInterference">ComputeInterference</a>
+ (boolean&nbsp;SolidOnly)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables the user to measure the interference between the two specified parts.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcInterference-CriticalDistanceData.html">pfcCriticalDistanceData</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComputeNearestCriticalDistance">ComputeNearestCriticalDistance</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables the user to find the nearest local minimum (not the absolute minimum) of the distance function between two selected objects.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Selections">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-SelectionPair.html">pfcSelectionPair</a></tt></td><td class="func-name"><tt>Selections</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The SelectionPair: the pair of selected objects.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#139">Geometry Evaluation: Analyzing Interference Information</a>, <a href="../manual0/JGeom.html#142">Geometry Evaluation: Analyzing Interference Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="ComputeClearance">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcInterference-ClearanceData.html">pfcClearanceData</a></tt></td><td class="func-name"><tt>ComputeClearance</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables the user to compute the clearance between two selected parts or surfaces.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#141">Geometry Evaluation: Analyzing Interference Information</a>, <a href="../manual0/JGeom.html#142">Geometry Evaluation: Analyzing Interference Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The ClearanceData object that represents the value of the computed clearance, indicates if interference is detected and the closest points (in the respective part's coordinate systems).</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ComputeInterference">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcInterference-InterferenceVolume.html">pfcInterferenceVolume</a></tt></td><td class="func-name"><tt>ComputeInterference</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;SolidOnly)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables the user to measure the interference between the two specified parts.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#140">Geometry Evaluation: Analyzing Interference Information</a>, <a href="../manual0/JGeom.html#142">Geometry Evaluation: Analyzing Interference Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SolidOnly</b></tt>
+</dt>
+<dd>Specifies whether to compute only solid interfaces or to also compute surface interfaces.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The InterferenceVolume object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ComputeNearestCriticalDistance">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcInterference-CriticalDistanceData.html">pfcCriticalDistanceData</a></tt></td><td class="func-name"><tt>ComputeNearestCriticalDistance</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables the user to find the nearest local minimum (not the absolute minimum) of the distance function between two selected objects.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JGeom.html#142">Geometry Evaluation: Analyzing Interference Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The CriticalDistanceData object that represents the local minimum distance between two selected objects, two 3d points two surface UV-parameters where the distance is calculated.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

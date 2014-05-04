@@ -1,0 +1,402 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="Adrm" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Digital Rights Management</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANADRM0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.31.1" class="ChapterTitle">Digital Rights Management</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0">This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes the implications of DRM on <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> applications.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="Adrm_Introduction-BCBDB3E6_33_10">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.31.3.1" class="Heading1">Introduction</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Digital Rights Management (DRM) helps to control access to your intellectual property. Intellectual property could be sensitive
+                  design and engineering information that you have stored within <span class=" x-ph-1-0">Creo Parametric</span> parts, assemblies, or drawings. You can control access by applying policies to these <span class=" x-ph-1-0">Creo Parametric</span> objects. Such objects remain protected by the policies even after they are distributed or downloaded. <span class=" x-ph-1-0">Creo Parametric</span> objects for which you have applied policies are called DRM-protected objects. For more information on the use of DRM in <span class=" x-ph-1-0">Creo Parametric Creo Parametric 4.0</span>, refer to the DRM online help.
+               </div>
+               <div class=" x-p-7-0">The following sections describe how <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> applications deal with DRM-protected objects.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="Adrm_ImplicationsOfDRMOnJ-LinkProWeb.Lin-BCBDAF16_33_22">
+            
+            <a name="2"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.31.4.1" class="Heading1">Implications of DRM on <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Any <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application accessing DRM-protected objects can run only in interactive <span class=" x-ph-1-0">Creo Parametric</span> sessions having <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permissions. As <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> applications can extract content from models into an unprotected format, <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> applications will not run in a <span class=" x-ph-1-0">Creo Parametric</span> session lacking <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission.
+               </div>
+               <div class=" x-p-7-0">If the user tries to open a model lacking the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission into a session with a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application running, <span class=" x-ph-1-0">Creo Parametric</span> prompts the user to spawn a new session. Also, new <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> applications will not be permitted to start when the <span class=" x-ph-1-0">Creo Parametric</span> session lacks <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission.
+               </div>
+               <div class=" x-p-7-0">If a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application tries to open a model lacking <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission from an interactive <span class=" x-ph-1-0">Creo Parametric</span> session, the application throws the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception.
+               </div>
+               <div class=" x-p-7-0">When a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application tries to open a protected model from a non-interactive or batch mode application, the session cannot prompt for
+                  DRM authentication, instead the application throws the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitAuthenticationFailure</span></span> exception.
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="Adrm_ExceptionTypes-BCBD7D29_33_71">
+               
+               <a name="3"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.31.4.3.1" class="Heading2">Exception Types</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Some <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> methods require specific permissions in order to operate on a DRM-protected object. If these methods cannot proceed due to
+                     DRM restrictions, the following exceptions are thrown:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span>&#8212;Thrown if the method cannot proceed due to lack of needed permissions.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitAuthenticationFailure</span></span>&#8212;Thrown if the object cannot be opened because the policy server could not be contacted or if the user was unable to interactively
+                                    login to the server.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                              <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitUserAbort</span></span>&#8212;Thrown if the object cannot be operated upon because the user cancelled the action at some point.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">The following table lists the methods along with the permission required and implications of operating on DRM-protected objects.</div>
+                  <div class=" x-table-2-0 x-table-2-3" id="styler-id1.1.1.31.4.3.2.4">
+                     <table xmlns="" cellpadding="6.666666666666667" class=" x-tgroup-1-0" frame="box" rules="none" style="border-collapse: collapse; border-width: 1pt; " width="100%">
+                        <colgroup>
+                           <col width="240">
+                           <col width="64">
+                           <col width="177.60000000000002">
+                        </colgroup>
+                        <thead align="left" class=" x-thead-1-0" style="font-weight: bold" valign="top">
+                           <tr class=" x-row-2-0">
+                              <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                                 <div class=" x-p-3-0">Methods</div>
+                              </th>
+                              <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                                 <div class=" x-p-3-0">Permission Required</div>
+                              </th>
+                              <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                                 <div class=" x-p-3-0">Implications</div>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody class=" x-tbody-1-0" valign="top">
+                           <tr class=" x-row-2-0">
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">AssemSimpRep</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Create</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">DrawingFromTemplate</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">GraphicsSimpRep</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">GeomSimpRep</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">Model</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ModelWithOpts</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PartSimpRep</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Retrieve</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SymbolicSimpRep</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">OPEN</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0">If file has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">OPEN</span></span> and <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permissions, model opens after authentication.
+                                 </div>
+                                 <div class=" x-p-7-0">Throws the <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><br xmlns="" class="empty"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception otherwise.
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class=" x-row-2-0">
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Rename()</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">OPEN</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0">File is saved with the current policy to disk if it has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission.
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class=" x-row-2-0">
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Backup()</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Copy()</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0">File is saved with the current policy to disk if it has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span> and <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permissions.
+                                 </div>
+                                 <div class=" x-p-7-0">Throws the <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><br xmlns="" class="empty"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception if model has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission, but lacks <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span> permission.
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class=" x-row-2-0">
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Save()</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0">File is saved with the current policy to disk if it has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span> and <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permissions.
+                                 </div>
+                                 <div class=" x-p-7-0">Throws the <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><br xmlns="" class="empty"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception if model has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission, but lacks <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span> permission.
+                                 </div>
+                                 <div class=" x-p-7-0">Throws the <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><br xmlns="" class="empty"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception if the assembly file has models with <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission, but lacking <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SAVE</span></span> permission.
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class=" x-row-2-0">
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Export()</span></span> for <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PlotInstructions</span></span></div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Model.Export</span></span> for <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="3"><span class="cf-Monospace-combined-European_Alphabets">pfc</span></span></span><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ProductViewExportInstructions</span></span> (only if the input model is a drawing)
+                                 </div>
+                                 <div class=" x-p-7-0"><span class=" x-cmdname-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.Export</span><br xmlns="" class="empty"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">CurrentRasterImage</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PRINT</span></span></div>
+                              </td>
+                              <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                                 <div class=" x-p-3-0">Drawing file is printed if it has <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PRINT</span></span> permission.
+                                 </div>
+                                 <div class=" x-p-7-0">Throws the <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><br xmlns="" class="empty"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception if drawing file lacks <span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">PRINT</span></span> permission.
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="Adrm_CopyPermissionToInteractivelyOpenMo-BCBDAAA5_33_223">
+               
+               <a name="4"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.31.4.4.1" class="Heading2">Copy Permission to Interactively Open Models</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">When the user tries to open protected content lacking <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission through the <span class=" x-ph-1-0">Creo Parametric</span> user interface with a <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application running in the same session:
+                  </div>
+                  <div class=" x-ol-6-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-11-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">1.</td>
+                              <td><span class=" x-p-4-0"><span class=" x-ph-1-0">Creo Parametric</span> checks for the authentication credentials through the user interface, if they are not already established.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">2.</td>
+                              <td><span class=" x-p-4-0">If the user has permission to open the file, <span class=" x-ph-1-0">Creo Parametric</span> checks if the permission level includes <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span>. If the level includes <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span>, <span class=" x-ph-1-0">Creo Parametric</span> opens the file.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">3.</td>
+                              <td><span class=" x-p-4-0">If <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">COPY</span></span> permission is not included, the following message is displayed:</span><div class=" x-fig-2-0 x-fig-2-2" id="styler-id1.1.1.31.4.4.2.2.3.2">
+                                    <div class=" x-image-1-0 x-image-1-1"><img alt="Image" src="graphics/drm_confirm.gif"></div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">4.</td>
+                              <td><span class=" x-p-4-0">If the user clicks <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Cancel</span></span>, the file is not opened in the current <span class=" x-ph-1-0">Creo Parametric</span> session and no new session is spawned.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">5.</td>
+                              <td><span class=" x-p-4-0">If the user clicks <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">OK</span></span>, an additional session of <span class=" x-ph-1-0">Creo Parametric</span> is spawned which does not permit any <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> application. <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> applications set to automatically start by <span class=" x-ph-1-0">Creo Parametric</span> will not be started. Asynchronous applications will be unable to connect to this session.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">6.</td>
+                              <td><span class=" x-p-4-0">The new session of <span class=" x-ph-1-0">Creo Parametric</span> is automatically authenticated with the same session credentials as were used in the previous session.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">7.</td>
+                              <td><span class=" x-p-4-0">The model that <span class=" x-ph-1-0">Creo Parametric</span> was trying to load in the previous session is loaded in this session.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">8.</td>
+                              <td><span class=" x-p-4-0">Other models already open in the previous session will not be loaded in the new session.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">9.</td>
+                              <td><span class=" x-p-4-0">Session settings from the previous session will not be carried into the new session.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-12-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0.00em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; ">10.</td>
+                              <td><span class=" x-p-4-0">The new session will be granted the licenses currently used by the previous session. This means that the next time the user
+                                    tries to do something in the previous session, <span class=" x-ph-1-0">Creo Parametric</span> must obtain a new license from the license server. If the license is not available, the action will be blocked with an appropriate
+                                    message.</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="Adrm_AdditionalDRMImplications-BCBDD88C_33_275">
+            
+            <a name="5"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.31.5.1" class="Heading1">Additional DRM Implications</div>
+            <div class=" x-body-3-0">
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.CheckIsSaveAllowed()</span></span> returns <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">false</span></span> if prevented from save by DRM restrictions.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.CopyFileToWS()</span></span> is designed to fail and throw the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitNoPermission</span></span> exception if passed a DRM-protected <span class=" x-ph-1-0">Creo Parametric</span> model file.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.ImportToCurrentWS()</span></span> reports a conflict in its output text file and does not copy a DRM-protected <span class=" x-ph-1-0">Creo Parametric</span> model file to the Workspace.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0">While erasing an active <span class=" x-ph-1-0">Creo Parametric</span> model with DRM restrictions, the methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Erase()</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.EraseWithDependencies()</span></span> do not clear the data in the memory until the control returns to <span class=" x-ph-1-0">Creo Parametric</span> from the <span class=" x-ph-1-0">Creo Parametric TOOLKIT</span> application. Thus, the <span class=" x-ph-1-0">Creo Parametric</span> session permissions may also not be cleared immediately after these methods return.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
