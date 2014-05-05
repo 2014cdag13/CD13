@@ -65,6 +65,9 @@
 <v t="kmolII_lite.20140504183918.1840" a="E"><vh>@path 2ag10</vh>
 <v t="kmolII_lite.20140504183918.1842"><vh>@edit doc.txt</vh></v>
 </v>
+<v t="kmolII_lite.20140505132647.1633" a="E"><vh>@path 2ag13</vh>
+<v t="kmolII_lite.20140505132647.1634"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
@@ -507,5 +510,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
 <t tx="kmolII_lite.20140504183918.1840"></t>
+<t tx="kmolII_lite.20140505132647.1633"></t>
 </tnodes>
 </leo_file>
