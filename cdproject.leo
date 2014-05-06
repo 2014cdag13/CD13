@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -54,7 +54,7 @@
 <v t="course-mde-tw.20140417093332.2049"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051"><vh>@path 2ag2</vh>
+<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
@@ -75,7 +75,7 @@
 <v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="123.20140502221015.1628"><vh>@path 2ag21</vh>
+<v t="123.20140502221015.1628" a="E"><vh>@path 2ag21</vh>
 <v t="123.20140502221015.1630"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140424070658.1679"><vh>@path coursemdetw</vh>
@@ -191,7 +191,7 @@ d = c.scanAllDirectives(p)
 filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
-directory = "V:/project/2014cdb/wsgi/doc/"
+directory = "V:/project/2014cda/wsgi/doc/"
 # 定義一個空數列
 filenames = []
 for (path, dirs, files) in os.walk(directory):
