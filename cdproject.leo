@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -33,6 +33,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="kmolII_lite.20140429092233.1586" a="E"><vh>@path 2ag4</vh>
+<v t="kmolII_lite.20140429092233.1589"><vh>@edit V:\2014cda\wsgi\doc\2ag4\doc.txt</vh></v>
+</v>
 <v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
@@ -299,5 +302,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
+<t tx="kmolII_lite.20140429092233.1586"></t>
 </tnodes>
 </leo_file>
