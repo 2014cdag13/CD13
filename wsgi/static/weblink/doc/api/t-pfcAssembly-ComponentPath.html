@@ -1,0 +1,380 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcComponentPath"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      55
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcAssembly.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcComponentPath</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class identifies and locates a component within an assembly.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Object.html">pfcObject</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-intseq.html">intseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#ComponentIds">ComponentIds</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The path from the root assembly to the component through various subassembliescontaining this component. Each element of this sequence is an identifierof a component feature in its parent assembly.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a></tt></td><td class="func-signature"><tt><a class="method" href="#Leaf">Leaf</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The model associated with the component the path points to</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-signature"><tt><a class="method" href="#Root">Root</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The root assembly</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#GetIsVisible">GetIsVisible</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;InRep)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns a flag indicating whether a given component is visible in a simplified representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetTransform">GetTransform</a>
+ (boolean&nbsp;BottomUp)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the transformation matrix from the coordinate system of 
+the root assemby to the coordinate system of the model pointed to 
+by the component path, or from the coordinate system of the model to
+the coordinate system of the root assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetTransform">SetTransform</a>
+ (boolean&nbsp;BottomUp, <a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;position)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the position of the component described by the component path.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="ComponentIds">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-intseq.html">intseq</a></tt></td><td class="func-name"><tt>ComponentIds</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The path from the root assembly to the component through various subassembliescontaining this component. Each element of this sequence is an identifierof a component feature in its parent assembly.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#22">Assemblies and Components: Component Path Information</a>, <a href="../manual0/jassembly.html#26">Assemblies and Components: Component Path Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Leaf">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a></tt></td><td class="func-name"><tt>Leaf</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The model associated with the component the path points to<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#10">Solid: Getting a Solid Object</a>, <a href="../manual0/JSolid.html#11">Solid: Getting a Solid Object</a>, <a href="../manual0/jassembly.html#23">Assemblies and Components: Component Path Information</a>, <a href="../manual0/jassembly.html#26">Assemblies and Components: Component Path Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Root">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></tt></td><td class="func-name"><tt>Root</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The root assembly<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#9">Solid: Getting a Solid Object</a>, <a href="../manual0/JSolid.html#11">Solid: Getting a Solid Object</a>, <a href="../manual0/jassembly.html#21">Assemblies and Components: Component Path Information</a>, <a href="../manual0/jassembly.html#26">Assemblies and Components: Component Path Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="GetIsVisible">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>GetIsVisible</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a>&nbsp;InRep)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns a flag indicating whether a given component is visible in a simplified representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#26">Assemblies and Components: Component Path Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>InRep</b></tt>
+</dt>
+<dd>The simplfied representation, or <tt>null</tt>, to use the active representation.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if the component is visible, <tt>false</tt> otherwise.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetTransform">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-name"><tt>GetTransform</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;BottomUp)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the transformation matrix from the coordinate system of 
+the root assemby to the coordinate system of the model pointed to 
+by the component path, or from the coordinate system of the model to
+the coordinate system of the root assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#110">Windows and Views: Transformations</a>, <a href="../manual0/jassembly.html#24">Assemblies and Components: Component Path Information</a>, <a href="../manual0/jassembly.html#26">Assemblies and Components: Component Path Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>BottomUp</b></tt>
+</dt>
+<dd>If you request the transformation from the model to theassembly, this is <tt>true</tt>. Otherwise, this is <tt>false</tt>. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The transformation matrix </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetTransform">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetTransform</tt></td><td class="func-params"><tt>
+ (boolean&nbsp;BottomUp, <a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;position)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the position of the component described by the component path.
+<br>
+<br>The component will be temporarily moved to the new location without affecting its constraints or actual position.  Takes effect only when the assembly is using DynamicPositioning.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcAssembly-Assembly.html">pfcAssembly</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#25">Assemblies and Components: Component Path Information</a>, <a href="../manual0/jassembly.html#26">Assemblies and Components: Component Path Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>BottomUp</b></tt>
+</dt>
+<dd>
+<tt>true</tt> if the transformation is from the member to the assembly, <tt>false</tt> if the transformation is from the assembly to the member.</dd>
+<dt>
+<tt><b>position</b></tt>
+</dt>
+<dd>The location of the member with respect to the root assembly.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

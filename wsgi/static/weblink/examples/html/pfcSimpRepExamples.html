@@ -1,0 +1,125 @@
+<!--  
+
+02-Aug-10   L-05-28   $$1   pdeshmuk      Created.
+
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcSimpRepExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function deleteItemsInSimpRep_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+
+	try
+		{		
+			deleteItemsInSimpRep ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+function addItemsInSimpRep_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+
+	try
+		{
+			addItemsInSimpRep ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Simplified Representation Examples</h1>
+
+<p align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=CR>
+
+<table border=2 cellspacing=1 style='border-color:inherit; width:100%;
+ mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt' bordercolor="#000000">
+ <tr>
+  <td valign=top style='border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-top:1px solid #FFFFFF; border-bottom:medium none #FFFFFF; width:-17%;padding-left:5.4pt; padding-right:5.4pt; padding-top:0in; padding-bottom:0in' colspan="3">
+  <h3>
+    <b><font size="4">Deleting&nbsp; and adding simplified representation data items</font></b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h3>
+  <p class=MsoNormal align="justify">This example function (ôdeleteItemsö) deletes
+  one item from the simplified representation data.<span
+  style="mso-spacerun: yes">á The example function (&quot;addItems&quot;) adds an item 
+  into the simplified representation data.</span></p>
+  <p class=MsoNormal align="justify">The current model must be an
+  assembly.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-top:medium none #FFFFFF; border-bottom:1px solid #FFFFFF; width:33%;padding-left:5.4pt; padding-right:5.4pt; padding-top:0in; padding-bottom:0in'>
+    <input type="button" onclick="deleteItemsInSimpRep_wrapper()" value="Delete item" size = "12"/></td>
+  <td valign=top style='border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-top:medium none #FFFFFF; border-bottom:1px solid #FFFFFF; width:33%;padding-left:5.4pt; padding-right:5.4pt; padding-top:0in; padding-bottom:0in'>
+    <input type="button" onclick="addItemsInSimpRep_wrapper()" value="Add item" size = "12"/></td>
+  <td valign=top style='border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-top:medium none #FFFFFF; border-bottom:1px solid #FFFFFF; width:34%;padding-left:5.4pt; padding-right:5.4pt; padding-top:0in; padding-bottom:0in'>
+  Number of items <input type="text" readonly ="yes" id=numItems name="1" value="" size="9" ></td>
+ </tr>
+</table>
+
+<form name=HC>
+
+<table border=0 cellpadding=0 style='mso-cellspacing:1.5pt' width="26">
+ <tr>
+  <td valign=top style='width:6;border:.5pt solid #FFFFFF;
+  padding-left:5.4pt; padding-right:5.4pt; padding-top:0in; padding-bottom:0in'>
+  &nbsp;</td>
+ </tr>
+</table>
+
+</form>
+
+<form name=AC>
+
+<table border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:.5pt solid #FFFFFF;
+  padding-left:5.4pt; padding-right:5.4pt; padding-top:0in; padding-bottom:0in'>
+  &nbsp;</td>
+ </tr>
+</table>
+
+</form>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

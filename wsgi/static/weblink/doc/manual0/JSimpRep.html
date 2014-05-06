@@ -1,0 +1,779 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="JSimpRep" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Simplified Representations</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANJSIMPREP0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.23.1" class="ChapterTitle">Simplified Representations</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> gives programmatic access to all the simplified representation functionality of <span class=" x-ph-1-0">Creo Parametric</span>. Create simplified representations either permanently or on the fly and save, retrieve, or modify them by adding or deleting
+               items.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="JSimpRep_Overview-BCC381C4_25_9">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.23.3.1" class="Heading1">Overview</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Using <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>, you can create and manipulate assembly simplified representations just as you can using <span class=" x-ph-1-0">Creo Parametric</span> interactively.
+               </div>
+               <div class=" x-note-2-0 x-note-2-3">
+                  <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> supports simplified representation of assemblies only, not parts.
+                  </div>
+               </div>
+               <div class=" x-p-7-0">Simplified representations are identified by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimRep</span></span> class. This class is a child of <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ModelItem</span></span>, so you can use the methods dealing with <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ModelItems</span></span> to collect, inspect, and modify simplified representations.
+               </div>
+               <div class=" x-p-7-0">The information required to create and modify a simplified representation is stored in a class called <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> which contains several data objects and fields, including:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">String</span></span>&#8212;The name of the simplified representation</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepAction</span></span>&#8212;The rule that controls the default treatment of items in the simplified representation.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItem</span></span>&#8212;An array of assembly components and the actions applied to them in the simplified representation.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">A <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItem</span></span> is identified by the assembly component path to that item. Each <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItem</span></span> has it&#8217;s own <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepAction</span></span> assigned to it. <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepAction</span></span> is a visible data object that includes a field of type <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepActionType</span></span>. You can use the <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepAction.Action()</span></span> to set the actions. To delete an existing item, you must set the action as NULL.
+               </div>
+               <div class=" x-p-7-0"><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpActionType</span></span> is an enumerated type that specifies the possible treatment of items in a simplified representation. The possible values
+                  are as follows
+               </div>
+               <div class=" x-table-2-0 x-table-2-3" id="styler-id1.1.1.23.3.2.8">
+                  <table xmlns="" cellpadding="6.666666666666667" class=" x-tgroup-1-0" frame="box" rules="none" style="border-collapse: collapse; border-width: 1pt; " width="100%">
+                     <colgroup>
+                        <col>
+                        <col>
+                     </colgroup>
+                     <thead align="left" class=" x-thead-1-0" style="font-weight: bold" valign="top">
+                        <tr class=" x-row-2-0">
+                           <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                              <div class=" x-p-3-0">Values</div>
+                           </th>
+                           <th class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; " valign="top">
+                              <div class=" x-p-3-0">Action</div>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody class=" x-tbody-1-0" valign="top">
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_NONE</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">No action is specified.</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_REVERSE</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Reverse the default rule for this component (for example, include it if the default rule is exclude).</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_INCLUDE</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Include this component in the simplified representation.</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_EXCLUDE</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Exclude this component from the simplified representation.</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_SUBSTITUTE</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Substitute the component in the simplified representation.</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_GEOM</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Use only the geometrical representation of the component.</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_GRAPHICS</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Use only the graphics representation of the component.</div>
+                           </td>
+                        </tr>
+                        <tr class=" x-row-2-0">
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0"><span class=" x-codeph-1-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_SYMB</span></span></div>
+                           </td>
+                           <td class="entry-in-tbody" style="border-width: 1pt; border-right-style: solid; border-bottom-style: solid; ">
+                              <div class=" x-p-3-0">Use the symbolic representation of the component.</div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSimpRep_RetrievesimplifiedRepresentationsRe-BCC38B20_25_152">
+            
+            <a name="2"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.23.4.1" class="Heading1">Retrieving Simplified Representations</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="3"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="4"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="5"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="6"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="7"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods Introduced:</div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="8"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#RetrieveAssemSimpRep">pfcBaseSession.RetrieveAssemSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="9"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#RetrieveGeomSimpRep">pfcBaseSession.RetrieveGeomSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="10"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#RetrieveGraphicsSimpRep">pfcBaseSession.RetrieveGraphicsSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="11"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSession-BaseSession.html#RetrieveSymbolicSimpRep">pfcBaseSession.RetrieveSymbolicSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="12"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-RetrieveExistingSimpRepInstructions.html#Create">pfcRetrieveExistingSimpRepInstructions.Create()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">You can retrieve a named simplified representation from a model using the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.RetrieveAssemSimpRep()</span></span>, which is analogous to the Assembly mode option <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Retrieve Rep</span></span> in the <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">SIMPLFD REP</span></span> menu. This method retrieves the object of an existing simplified representation from an assembly without fetching the generic
+                  representation into memory. The method takes two arguments, the name of the assembly and the simplified representation data.
+                  
+               </div>
+               <div class=" x-p-7-0">To retrieve an existing simplified representation, pass an instance of <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.pfcSimpRep.RetrieveExistingSimpRepInstructions_Create</span></span> and specify its name as the second argument to this method. <span class=" x-ph-1-0">Creo Parametric</span> retrieves that representation and any active submodels and returns the object to the simplified representation as a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcAssembly.Assembly</span></span> object.
+               </div>
+               <div class=" x-p-7-0">You can retrieve geometry, graphics, and symbolic simplified representations into session using the methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.RetrieveGeomSimpRep()</span></span>, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.RetrieveGraphicsSimpRep()</span></span>, and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcBaseSession.RetrieveSymbolicSimpRep()</span></span> respectively. Like <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSession.BaseSession.RetrieveAssemSimpRep</span></span>, these methods retrieve the simplified representation without bringing the master representation into memory. Supply the
+                  name of the assembly whose simplified representation is to be retrieved as the input parameter for these methods. The methods
+                  output the assembly. They do not display the simplified representation.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSimpRep_CreatingAndDeletingSimplifiedSimpli-BCC39570_25_199">
+            
+            <a name="13"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.23.5.1" class="Heading1">Creating and Deleting Simplified Representations</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="14"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="15"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="16"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="17"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="18"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods Introduced:</div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="19"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-CreateNewSimpRepInstructions.html#Create">pfcCreateNewSimpRepInstructions.Create()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="20"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSolid-Solid.html#CreateSimpRep">pfcSolid.CreateSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="21"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSolid-Solid.html#DeleteSimpRep">pfcSolid.DeleteSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">To create a simplified representation, you must allocate and fill a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object by calling the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcCreateNewSimpRepInstructions.Create()</span></span>. Specify the name of the new simplified representation as an input to this method. You should also set the default action
+                  type and add <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItems</span></span> to the object.
+               </div>
+               <div class=" x-p-7-0">To generate the new simplified representation, call <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.CreateSimpRep()</span></span>. This method returns the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRep</span></span> object for the new representation.
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.Solid.DeleteSimpRep</span></span> deletes a simplified representation from its model owner. The method requires only the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRep</span></span> object as input.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSimpRep_ExtractingInformationAboutSimplifie-BCC39A7B_25_243">
+            
+            <a name="22"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.23.6.1" class="Heading1">Extracting Information About Simplified Representations</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="23"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="24"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="25"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRep.html#GetInstructions">pfcSimpRep.GetInstructions()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="26"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInstructions.html#DefaultAction">pfcSimpRepInstructions.DefaultAction</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="27"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-CreateNewSimpRepInstructions.html#NewSimpName">pfcCreateNewSimpRepInstructions.NewSimpName</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="28"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInstructions.html#IsTemporary">pfcSimpRepInstructions.IsTemporary</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="29"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInstructions.html#Items">pfcSimpRepInstructions.Items</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">Given the object to a simplified representation, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.GetInstructions()</span></span> fills out the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object.
+               </div>
+               <div class=" x-p-7-0">The <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRepInstructions.DefaultAction</span></span>, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcCreateNewSimpRepInstructions.NewSimpName</span></span>, and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRepInstructions.IsTemporary</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="3">properties</span></span> return the associated values contained in the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span>object.
+               </div>
+               <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.SimpRepInstructions.GetItems</span></span> returns all the items that make up the simplified representation.
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSimpRep_ModifysimplifiedRepresentationsSimp-BCC3FA2D_25_304">
+            
+            <a name="30"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.23.7.1" class="Heading1">Modifying Simplified Representations</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="31"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="32"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="33"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRep.html#GetInstructions">pfcSimpRep.GetInstructions()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="34"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRep.html#SetInstructions">pfcSimpRep.SetInstructions()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="35"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInstructions.html#DefaultAction">pfcSimpRepInstructions.DefaultAction</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="36"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-CreateNewSimpRepInstructions.html#NewSimpName">pfcCreateNewSimpRepInstructions.NewSimpName</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="37"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInstructions.html#IsTemporary">pfcSimpRepInstructions.IsTemporary</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">Using <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>, you can modify the attributes of existing simplified representations. After you create or retrieve a simplified representation,
+                  you can make calls to the  methods listed in this section to designate new values for the fields in the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object.
+               </div>
+               <div class=" x-p-7-0">To modify an existing simplified representation retrieve it and then get the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object by calling <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.GetInstructions()</span></span>. If you created the representation programmatically within the same application, the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object is already available. Once you have modified the data object, reassign it to the corresponding simplified representation
+                  by calling the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.SetInstructions()</span></span>.
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JSimpRep_AddingItemsToAndDeletingItemsFromAS-BCC3FE27_25_349">
+               
+               <a name="38"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.23.7.4.1" class="Heading2">Adding Items to and Deleting Items from a Simplified Representation</div>
+               <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="39"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="40"></a><span class=" x-indexterm-1-0"></span></div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+                  </div>
+                  <div class=" x-ul-2-0">
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="41"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInstructions.html#Items">pfcSimpRepInstructions.Items</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="42"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepItem.html#Create">pfcSimpRepItem.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="43"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRep.html#SetInstructions">pfcSimpRep.SetInstructions()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="44"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepReverse.html#Create">pfcSimpRepReverse.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="45"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepInclude.html#Create">pfcSimpRepInclude.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="46"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepExclude.html#Create">pfcSimpRepExclude.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="47"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepSubstitute.html#Create">pfcSimpRepSubstitute.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="48"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepGeom.html#Create">pfcSimpRepGeom.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                        <col style="width: 0em">
+                        <col style="width: 18pt">
+                        <col>
+                        <tbody>
+                           <tr valign="baseline">
+                              <td align="right"></td>
+                              <td align="left" style="word-break: keep-all; "></td>
+                              <td><span class=" x-p-4-0"><a name="49"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSimpRep-SimpRepGraphics.html#Create">pfcSimpRepGraphics.Create()</A></li></span></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class=" x-p-7-0">You can add and delete items from the list of components in a simplified representation using <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>. If you created a simplified representation using the option <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Exclude</span></span> as the default rule, you would generate a list containing the items you want to include. Similarly, if the default rule for
+                     a simplified representation is <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Include</span></span>, you can add the items that you want to be excluded from the simplified representation to the list, setting the value of
+                     the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepActionType</span></span> to <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SIMPREP_EXCLUDE</span></span>.
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JSimpRep_HowToAddItems-BCC40277_25_400">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.23.7.4.4.1">How to Add Items</div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-ol-6-0">
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-11-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0.00em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">1.</td>
+                                 <td><span class=" x-p-4-0">Get the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object, as described in the previous section.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0.00em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">2.</td>
+                                 <td><span class=" x-p-4-0">Specify the action to be applied to the item with a call to one of following methods.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0.00em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">3.</td>
+                                 <td><span class=" x-p-4-0">Initialize a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItem</span></span> object for the item by calling the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRepItem.Create()</span></span>.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-15-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0.00em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">4.</td>
+                                 <td><span class=" x-p-4-0">Add the item to the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItem</span></span> sequence. Put the new <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> using <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRepInstructions.Items</span></span>.</span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" class=" x-li-12-0" style="table-layout: fixed; " width="100%">
+                           <col style="width: 0.00em">
+                           <col style="width: 18pt">
+                           <col>
+                           <tbody>
+                              <tr valign="baseline">
+                                 <td align="right"></td>
+                                 <td align="left" style="word-break: keep-all; ">5.</td>
+                                 <td><span class=" x-p-4-0">Reassign the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepInstructions</span></span> object to the corresponding <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRep</span></span> object by calling <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.SetInstructions()</span></span></span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class=" x-topic-11-0 x-topic-11-1" id="JSimpRep_HowToRemoveItems-BCC40487_25_441">
+                  
+                  <div class=" x-title-22-0 x-title-22-1" combinedFontName="off" id="styler-id1.1.1.23.7.4.5.1">How to Remove Items</div>
+                  <div class=" x-body-3-0">
+                     <div class=" x-p-7-0">Follow the procedure above, except remove the unwanted <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRepItem</span></span> from the sequence.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JSimpRep_SimplifiedRepresentationsutilitiesU-BCC40619_25_449">
+            
+            <a name="50"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.23.8.1" class="Heading1">Simplified Representation Utilities</div>
+            <div class=" x-abstract-1-0"><a xmlns="" class="indexterm" name="51"></a><span class=" x-indexterm-1-0"></span><a xmlns="" class="indexterm" name="52"></a><span class=" x-indexterm-1-0"></span></div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Methods Introduced:</div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="53"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ModelItemOwner.html#ListItems">pfcModelItemOwner.ListItems()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="54"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-ModelItemOwner.html#GetItemById">pfcModelItemOwner.GetItemById()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="55"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSolid-Solid.html#GetSimpRep">pfcSolid.GetSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="56"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSolid-Solid.html#SelectSimpRep">pfcSolid.SelectSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="57"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSolid-Solid.html#ActivateSimpRep">pfcSolid.ActivateSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="58"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcSolid-Solid.html#GetActiveSimpRep">pfcSolid.GetActiveSimpRep()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">This section describes the utility methods that relate to simplified representations. </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItemOwner.ListItems()</span></span> can list all of the simplified representations in a Solid. 
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItemOwner.GetItemById()</span></span> initializes a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSimpRep.SimpRep</span></span> object. It takes an integer id.
+               </div>
+               <div class=" x-note-2-0 x-note-2-3">
+                  <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                  <div class=" x-p-7-0"><span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span> supports simplified representation of Assemblies only, not Parts. 
+                  </div>
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"></span><span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.GetSimpRep()</span></span> initializes a <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">SimpRep</span></span> object. The method takes the following arguments:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; ">&#8226;&nbsp;</td>
+                           <td><span class=" x-p-4-0"><span class=" x-parmname-3-0">SimpRepname</span> The name of the simplified representation in the solid. If you specify this argument, the method ignores the <span class=" x-parmname-3-0">rep_id</span>.</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.SelectSimpRep()</span></span> creates a <span class=" x-ph-1-0">Creo Parametric</span> menu to enable interactive selection. The method takes the owning solid as input, and outputs the object to the selected
+                  simplified representation. If you choose the <span class=" x-uicontrol-6-0" combinedFontName="Sanserif-combined"><span xmlns="" class="cf-Sanserif-combined-Default">Quit</span></span> menu button, the method throws an exception <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">XToolkitUserAbort</span></span></div>
+               <div class=" x-p-7-0">The methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.Solid.GetActiveSimpRep</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.ActivateSimpRep()</span></span> enable you to find and get the currently active simplified representation, respectively. Given an assembly object, <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.Solid.GetActiveSimpRep</span></span> returns the object to the currently active simplified representation. If the current representation is the master representation,
+                  the return is null.
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcSolid.Solid.ActivateSimpRep</span></span> activates the requested simplified representation.
+               </div>
+               <div class=" x-p-7-0">To set a simplified representation to be the currently displayed model, you must also call <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.ModelDisplay</span></span>.
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

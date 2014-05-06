@@ -1,17 +1,39 @@
-2014cda
-=======
-course-mde-tw joined
+# 協同產品設計實習
 
-config local git
+國立虎尾科技大學機械設計工程系
 
-git config --global user.email "course@mde.tw"
+2014 年春季班四技設二甲課程
 
-git config --global user.name "course-mde-tw"
+# 使用工具
 
-git add .
+* 電腦輔助機械設計軟體: PTC Creo
 
-git commit -m "commit message"
+* 程式語言: Python 3
 
-git push
+* 網際框架: CherryPy
 
-use username and password to complete the push
+* 整合資料管理系統: Leo Editor
+
+* 協同版次管理: Github
+
+* 雲端平台: OpenShift
+
+* 協同版次管理: Bitbucket
+
+# 專案名稱: 2014cda
+
+* course-mde-tw joined
+
+* config local git
+
+* git config --global user.email "course@mde.tw"
+
+* git config --global user.name "course-mde-tw"
+
+* git add .
+
+* git commit -m "commit message"
+
+* git push
+
+use username and password to complete the push or setup OpenSSL keys to verify account

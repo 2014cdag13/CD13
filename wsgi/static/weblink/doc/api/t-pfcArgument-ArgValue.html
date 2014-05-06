@@ -1,0 +1,345 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcArgValue"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      8
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcArgument.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcArgValue</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents an argument value, which may be one of several different types.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateASCIIStringArgValue">MpfcArgument.CreateASCIIStringArgValue()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateBoolArgValue">MpfcArgument.CreateBoolArgValue()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateDoubleArgValue">MpfcArgument.CreateDoubleArgValue()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateIntArgValue">MpfcArgument.CreateIntArgValue()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateSelectionArgValue">MpfcArgument.CreateSelectionArgValue()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateStringArgValue">MpfcArgument.CreateStringArgValue()</a></b></tt></b></tt>, <tt><b><tt><b><a class="func" href="t-pfcArgument-MpfcArgument.html#CreateTransformArgValue">MpfcArgument.CreateTransformArgValue()</a></b></tt></b></tt>, <tt><b><a class="method" href="t-pfcArgument-Argument.html#Create">pfcArgument.Create()</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Union Discriminant</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>/*&nbsp;readonly&nbsp;*/&nbsp;<a class="" href="t-pfcArgument-ArgValueType.html">pfcArgValueType</a></tt></td><td class="func-signature"><tt><a class="method" href="#ArgValue">discr</a></tt></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the union discriminant value.</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#ASCIIStringValue">ASCIIStringValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains a character string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#BoolValue">BoolValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains a boolean.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#DoubleValue">DoubleValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains a double.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#IntValue">IntValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains an integer.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelectionValue">SelectionValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains a Creo Parametric selection.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#StringValue">StringValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains a string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#TransformValue">TransformValue</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Used if the argument value contains a coordinate transformation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="discr"></a><b>Union Discriminant</b>
+<br>
+<hr>
+<br>
+<a name="discr">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>/*&nbsp;readonly&nbsp;*/&nbsp;<a class="" href="t-pfcArgument-ArgValueType.html">pfcArgValueType</a></tt></td><td class="func-name"><tt>discr</tt></td>
+</tr>
+</table>
+</a>
+<br>Returns the union discriminant value.<br>
+<br>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="ASCIIStringValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>ASCIIStringValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains a character string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#13">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="BoolValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>BoolValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains a boolean.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#12">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DoubleValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>DoubleValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains a double.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#11">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IntValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>IntValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains an integer.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#10">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelectionValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selection.html">pfcSelection</a></tt></td><td class="func-name"><tt>SelectionValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains a Creo Parametric selection.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#15">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StringValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>StringValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains a string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#14">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TransformValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-name"><tt>TransformValue</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Used if the argument value contains a coordinate transformation.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/japplib.html#16">Task Based Application Libraries: Managing Application Arguments</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

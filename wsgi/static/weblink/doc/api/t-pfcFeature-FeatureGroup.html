@@ -1,0 +1,387 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcFeatureGroup"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      235
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcFeature.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcFeatureGroup</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes a feature group.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Object.html">pfcObject</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#GroupLeader">GroupLeader</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The group leader Feature</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#GroupName">GroupName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the group.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsTableDriven">IsTableDriven</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Reports whether the UDF is table-driven.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-GroupPattern.html">pfcGroupPattern</a></tt></td><td class="func-signature"><tt><a class="method" href="#Pattern">Pattern</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The group pattern, if the group is a member of a pattern.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#UDFInstanceName">UDFInstanceName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If the group is an instance of a UDF, this is the UDF instance name. Otherwise this will be NULL.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#UDFName">UDFName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If the group represents a UDF, this is the UDF name. If the group is not a UDF, this will be NULL. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListMembers">ListMembers</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the members of a feature group.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUDFGroup-UDFDimensions.html">pfcUDFDimensions</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListUDFDimensions">ListUDFDimensions</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Lists the dimensions of a user defined feature group.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="GroupLeader">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>GroupLeader</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The group leader Feature<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#14">Features: Access to Features</a>, <a href="../manual0/JFeat.html#19">Features: Access to Features</a>, <a href="../manual0/JFeat.html#70">Features: Feature Groups and Patterns</a>, <a href="../manual0/JFeat.html#73">Features: Feature Groups and Patterns</a>, <a href="../manual0/JFeat.html#74">Features: Feature Groups</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GroupName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>GroupName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the group.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsTableDriven">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsTableDriven</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Reports whether the UDF is table-driven.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Pattern">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcFeature-GroupPattern.html">pfcGroupPattern</a></tt></td><td class="func-name"><tt>Pattern</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The group pattern, if the group is a member of a pattern.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#69">Features: Feature Groups and Patterns</a>, <a href="../manual0/JFeat.html#73">Features: Feature Groups and Patterns</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UDFInstanceName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>UDFInstanceName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If the group is an instance of a UDF, this is the UDF instance name. Otherwise this will be NULL.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#81">Features: Read Access to Groups and User Defined Features</a>, <a href="../manual0/JFeat.html#83">Features: Read Access to Groups and User Defined Features</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UDFName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>UDFName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If the group represents a UDF, this is the UDF name. If the group is not a UDF, this will be NULL. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#80">Features: Read Access to Groups and User Defined Features</a>, <a href="../manual0/JFeat.html#83">Features: Read Access to Groups and User Defined Features</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="ListMembers">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Features.html">pfcFeatures</a></tt></td><td class="func-name"><tt>ListMembers</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the members of a feature group.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#74">Features: Feature Groups</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The features that are members of the group.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListUDFDimensions">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcUDFGroup-UDFDimensions.html">pfcUDFDimensions</a></tt></td><td class="func-name"><tt>ListUDFDimensions</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Lists the dimensions of a user defined feature group.
+<br>
+<br>The UDF dimensions are the dimensions in the UDF for which Creo Parametric prompts
+when creating the UDF.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JFeat.html#82">Features: Read Access to Groups and User Defined Features</a>, <a href="../manual0/JFeat.html#83">Features: Read Access to Groups and User Defined Features</a>, <a href="../manual0/JFeat.html#103">Features: Creating a Custom UDF</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of UDF Dimensions.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

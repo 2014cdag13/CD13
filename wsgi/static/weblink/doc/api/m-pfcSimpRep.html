@@ -1,0 +1,255 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+	 CIP JavaScript documentation for module "pfcSimpRep"
+	</title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      1,
+      47
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;Module
+     </td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Module "pfcSimpRep"</h2>
+<b>Description</b>
+<br>
+<br>Contains interfaces related to simplified representations.
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Enumerated Types</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcSimpRep-SimpRepActionType.html">pfcSimpRepActionType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type lists the supported types of actions.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcSimpRep-SubstType.html">pfcSubstType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type lists the supported types of substitution.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcSimpRep-SimpRepType.html">pfcSimpRepType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type contains the types of simplified representation.
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Classes</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-CreateNewSimpRepInstructions.html">pfcCreateNewSimpRepInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Subclass of pfcSimpRepInstructions; used to create a new representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-RetrieveExistingSimpRepInstructions.html">pfcRetrieveExistingSimpRepInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to retrieve an existing simplified representation of an assembly.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class defines a simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepAction.html">pfcSimpRepAction</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to classes that specify the action (exclude, include, substitute, etc.) to apply to the simplified representation items.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepCompItemPath.html">pfcSimpRepCompItemPath</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This type of path points to a component.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepExclude.html">pfcSimpRepExclude</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Exclude this component from the simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepFeatItemPath.html">pfcSimpRepFeatItemPath</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This type of path points to a feature that is not a component.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepGeom.html">pfcSimpRepGeom</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Use the "geometry only" representation of the component.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepGraphics.html">pfcSimpRepGraphics</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Use the "graphics only" representation of the component.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepInclude.html">pfcSimpRepInclude</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Include this component in the simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepInstructions.html">pfcSimpRepInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to classes containing the data required to define a simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepItem.html">pfcSimpRepItem</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Defines the status of the component or feature in a simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepItemPath.html">pfcSimpRepItemPath</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base interface that identifies a simplified representation item.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepNone.html">pfcSimpRepNone</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepReverse.html">pfcSimpRepReverse</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Reverse the default rule for the component in the 
+simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepSubstitute.html">pfcSimpRepSubstitute</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Substitute the component in the simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepSymb.html">pfcSimpRepSymb</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Use the symbolic representation of the component.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SubstAsmRep.html">pfcSubstAsmRep</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Substitutes an assembly with a simplified representation.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SubstEnvelope.html">pfcSubstEnvelope</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Substitute with an envelope.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SubstInterchg.html">pfcSubstInterchg</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Substitute using an interchange assembly or a family table.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-Substitution.html">pfcSubstitution</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to classes that represents all types of substitution; it specifies the substitution type and substitute data.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SubstPrtRep.html">pfcSubstPrtRep</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Substitute a part with a simplified representation.
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Collections</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpRepItems.html">pfcSimpRepItems</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Array of pfcSimpRepItems.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcSimpRep-SimpReps.html">pfcSimpReps</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of simplified rep objects.
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

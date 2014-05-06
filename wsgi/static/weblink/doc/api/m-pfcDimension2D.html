@@ -1,0 +1,185 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+	 CIP JavaScript documentation for module "pfcDimension2D"
+	</title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      1,
+      13
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;Module
+     </td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Module "pfcDimension2D"</h2>
+<b>Description</b>
+<br>
+<br>This module contains drawing dimension related interfaces.
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Enumerated Types</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDimension2D-DimensionSenseType.html">pfcDimensionSenseType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type contains the options used for dimensions to attach to entities in a drawing.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDimension2D-DimensionPointType.html">pfcDimensionPointType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type contains the types of point references used by a <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-PointDimensionSense.html">pfcPointDimensionSense</a></b></tt></b></tt> object.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDimension2D-DimensionLinAOCTangentType.html">pfcDimensionLinAOCTangentType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type contains the types of references used by a <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-LinAOCTangentDimensionSense.html">pfcLinAOCTangentDimensionSense</a></b></tt></b></tt> object.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type contains the possible types indicating the orientation of the dimension in 
+cases where this cannot be deduced from the attachments themselves. 
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Classes</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-AngleDimensionSense.html">pfcAngleDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type referring to the angle between two straight entities. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-Dimension2D.html">pfcDimension2D</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface represents a dimension or reference dimension in a drawing.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-DimensionAngleOptions.html">pfcDimensionAngleOptions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains the flags used by a <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-AngleDimensionSense.html">pfcAngleDimensionSense</a></b></tt></b></tt> object.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-DimensionSense.html">pfcDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is the parent for interfaces used for dimensions to attach to entities in a drawing.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-DrawingDimCreateInstructions.html">pfcDrawingDimCreateInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is used for creating a drawing dimension.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-EmptyDimensionSense.html">pfcEmptyDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type with no specific information.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-LinAOCTangentDimensionSense.html">pfcLinAOCTangentDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type referring to a dimension using the perpendicular distance between a line and a tangent to an arc or a circle which is parallel to the line.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-PointDimensionSense.html">pfcPointDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type referring to point on an entity.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-PointToAngleDimensionSense.html">pfcPointToAngleDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type referring to the angle between a line entity and the tangent to a curved entity at one of its ends. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-SplinePointDimensionSense.html">pfcSplinePointDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type referring to a spline point on an entity.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-TangentIndexDimensionSense.html">pfcTangentIndexDimensionSense</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is a dimension sense type referring to an attachment to a tangent of the entity, which is an arc or circle.
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Collections</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-Dimension2Ds.html">pfcDimension2Ds</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains a sequence of dimension sense objects.
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

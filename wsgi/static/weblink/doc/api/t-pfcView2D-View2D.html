@@ -1,0 +1,806 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcView2D"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      600
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcView2D.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcView2D</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface represents a drawing view in Creo Parametric.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#List2DViews">pfcModel2D.List2DViews()</a></b></tt>, <tt><b><a class="method" href="t-pfcModel2D-Model2D.html#GetViewByName">pfcModel2D.GetViewByName()</a></b></tt>, <tt><b><a class="method" href="t-pfcSelect-Selection.html#SelView2D">pfcSelection.SelView2D</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Child.html">pfcChild</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-ViewDisplay.html">pfcViewDisplay</a></tt></td><td class="func-signature"><tt><a class="method" href="#Display">Display</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The drawing view display settings.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsBackground">IsBackground</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp; </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsViewdisplayLayerDependent">IsViewdisplayLayerDependent</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">&nbsp; </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#Name">Name</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The drawing view name.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Outline">Outline</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The outline of the drawing view, in screen coordinates.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#Scale">Scale</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The drawing view scale.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Delete">Delete</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;DeleteChildren)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes a specified drawing view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#GetIsScaleUserdefined">GetIsScaleUserdefined</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Identifies if the drawing view has a user-defined scale.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcLayer-DisplayStatus.html">pfcDisplayStatus</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetLayerDisplayStatus">GetLayerDisplayStatus</a>
+ (<a class="type" href="t-pfcLayer-Layer.html">pfcLayer</a>&nbsp;Layer)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the display status of the specified layer in the drawing view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetModel">GetModel</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Get the model displayed in the drawing view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#GetSheetNumber">GetSheetNumber</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the sheet where the view is located.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSimpRep">GetSimpRep</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Get the Simplified Representation.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetTransform">GetTransform</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the coordinate transformation matrix for the drawing view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Regenerate">Regenerate</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Regenerates the drawing view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetLayerDisplayStatus">SetLayerDisplayStatus</a>
+ (<a class="type" href="t-pfcLayer-Layer.html">pfcLayer</a>&nbsp;Layer, <a class="type" href="t-pfcLayer-DisplayStatus.html">pfcDisplayStatus</a>&nbsp;Status)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the display status for the layer in the drawing view.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Translate">Translate</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;ByVector)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Moves the drawing view by the specified vector.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Display">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcView2D-ViewDisplay.html">pfcViewDisplay</a></tt></td><td class="func-name"><tt>Display</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The drawing view display settings.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#88">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsBackground">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsBackground</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp; <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#81">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsViewdisplayLayerDependent">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsViewdisplayLayerDependent</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>&nbsp; <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#87">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Name">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>Name</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The drawing view name.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#90">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Outline">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Outline3D.html">pfcOutline3D</a></tt></td><td class="func-name"><tt>Outline</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The outline of the drawing view, in screen coordinates.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#85">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Scale">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>Scale</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The drawing view scale.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#83">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Delete">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Delete</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;DeleteChildren)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes a specified drawing view.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#96">Drawings: Drawing Views Operations</a>, <a href="../manual0/jdrawfns.html#98">Drawings: Drawing Views Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>DeleteChildren</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to delete the children of the view, <tt>false</tt> or <tt>null</tt> to prevent deletion of the view if it has children.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetIsScaleUserdefined">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>GetIsScaleUserdefined</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Identifies if the drawing view has a user-defined scale.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#84">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>
+<tt>true</tt> if the view scale is user-defined, <tt>false</tt> if it uses the default scale for this sheet and model.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetLayerDisplayStatus">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcLayer-DisplayStatus.html">pfcDisplayStatus</a></tt></td><td class="func-name"><tt>GetLayerDisplayStatus</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcLayer-Layer.html">pfcLayer</a>&nbsp;Layer)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the display status of the specified layer in the drawing view.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#86">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Layer</b></tt>
+</dt>
+<dd>The specified layer.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The layer display status.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>GetModel</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Get the model displayed in the drawing view.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#82">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The model.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSheetNumber">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>GetSheetNumber</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the sheet where the view is located.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#80">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The sheet number.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSimpRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>GetSimpRep</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Get the Simplified Representation.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd> The Simplified Representation </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetTransform">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-name"><tt>GetTransform</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the coordinate transformation matrix for the drawing view.
+<br>
+<br>The transformation matrix is a combination of the following factors:
+   <ul>
+<li>The location of the view origin with respect to the drawing origin.
+   </li>
+<li>The scale of the view units with respect to the drawing units.</li>
+   
+<li>The rotation of the model with respect to the drawing coordinate system.
+   </li>
+</ul>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#89">Drawings: Drawing View Information</a>, <a href="../manual0/jdrawfns.html#91">Drawings: Drawing View Information</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The transformation matrix.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Regenerate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Regenerate</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Regenerates the drawing view.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#97">Drawings: Drawing Views Operations</a>, <a href="../manual0/jdrawfns.html#98">Drawings: Drawing Views Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetLayerDisplayStatus">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetLayerDisplayStatus</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcLayer-Layer.html">pfcLayer</a>&nbsp;Layer, <a class="type" href="t-pfcLayer-DisplayStatus.html">pfcDisplayStatus</a>&nbsp;Status)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the display status for the layer in the drawing view.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#98">Drawings: Drawing Views Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Layer</b></tt>
+</dt>
+<dd>The layer.</dd>
+<dt>
+<tt><b>Status</b></tt>
+</dt>
+<dd>The display status.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Translate">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Translate</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;ByVector)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Moves the drawing view by the specified vector.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#95">Drawings: Drawing Views Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ByVector</b></tt>
+</dt>
+<dd>The transformation vector.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/*
+	HISTORY:
+
+  23-OCT-02 J-03-36 JCN  $$1  Created.
+
+ */
+
+body.frame-file-list, body.frame-file, body.frame-entity
+{
+ background-color: white
+}
+
+a.file:link, a.file:visited, a.const:link, a.const:visited,
+a.class:link, a.class:visited, a.enumtype:link, a.enumtype:visited,
+a.func:link, a.func:visited, a.method:link, a.method:visited,
+a.bold:link, a.bold:visited
+{
+ font-weight: bold
+}
+
+a.type:link, a.type:visited
+{
+ font-weight: normal
+}
+
+table.toolbar
+{
+ background-color: #ccffff
+}
+ 
+td.toolbar-navigation
+{
+ text-align: left;
+ font-weight: bold
+}
+ 
+td.toolbar-frame-links
+{
+ text-align: center;
+ font-size: small
+}
+
+td.toolbar-lib-name
+{
+ text-align: right;
+ font-weight: bold
+}
+
+table.files-frame, table.entities-frame
+{
+ border-style: none
+}
+
+th.files-frame, th.entities-frame
+{
+ text-align: left;
+ font-weight: bold
+}
+
+td.files-frame, td.entities-frame
+{
+}
+
+table.files, table.entities, table.method-summary
+{
+ border-style: none
+}
+
+th.files, th.entities, th.method-summary
+{
+ text-align: left;
+ font-weight: bold
+}
+
+td.files-name, td.entities-name
+{
+}
+
+td.files-text, td.entities-text
+{
+}
+
+table.method-def
+{
+ background-color: #ccffff
+}
+
+table.method-doc
+{
+}
+
+td.return-type
+{
+ text-align: right;
+ vertical-align: top
+}
+
+td.func-signature
+{
+ vertical-align: top
+}
+
+td.func-name
+{
+ vertical-align: top;
+ font-weight: bold
+}
+
+td.func-params
+{
+ vertical-align: top
+}
+

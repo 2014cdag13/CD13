@@ -1,0 +1,472 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDetailNoteInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      138
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDetail.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDetailNoteInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface contains information used to describe a detail note item.  
+It may be used when creating detail notes (<tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#CreateDetailItem">pfcDetailSymbolDefItem.CreateDetailItem()</a></b></tt>), or accessing existing notes (<tt><b><a class="method" href="t-pfcDetail-DetailNoteItem.html#Modify">pfcDetailNoteItem.Modify()</a></b></tt> and <tt><b><a class="method" href="t-pfcDetail-DetailNoteItem.html#GetInstructions">pfcDetailNoteItem.GetInstructions()</a></b></tt>).
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcDetail-DetailCreateInstructions.html">pfcDetailCreateInstructions</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-ColorRGB.html">pfcColorRGB</a></tt></td><td class="func-signature"><tt><a class="method" href="#Color">Color</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The color of the detail item.  If <tt>null</tt>, the default drawing color is used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-HorizontalJustification.html">pfcHorizontalJustification</a></tt></td><td class="func-signature"><tt><a class="method" href="#Horizontal">Horizontal</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The horizontal justification.  </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsDisplayed">IsDisplayed</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the note is currently displayed.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsMirrored">IsMirrored</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the note is mirrored.  <tt>null</tt> or <tt>false</tt> if it has normal orientation.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsReadOnly">IsReadOnly</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the note is readonly. <tt>null</tt> or <tt>false</tt> if it is user editable.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailLeaders.html">pfcDetailLeaders</a></tt></td><td class="func-signature"><tt><a class="method" href="#Leader">Leader</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The note attachment information, including placement and leaders.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#TextAngle">TextAngle</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The text angle used for the note.  <tt>null</tt> indicates 0.0.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailTextLines.html">pfcDetailTextLines</a></tt></td><td class="func-signature"><tt><a class="method" href="#TextLines">TextLines</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sequence of lines contained in the note.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-VerticalJustification.html">pfcVerticalJustification</a></tt></td><td class="func-signature"><tt><a class="method" href="#Vertical">Vertical</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The vertical justification.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-pfcDetail-DetailTextLines.html">pfcDetailTextLines</a>&nbsp;inTextLines)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a data object used to describe how a detail note item should be construct, when passed to <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#CreateDetailItem">pfcDetailSymbolDefItem.CreateDetailItem()</a></b></tt>, or <tt><b><a class="method" href="t-pfcDetail-DetailNoteItem.html#Modify">pfcDetailNoteItem.Modify()</a></b></tt>.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Color">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-ColorRGB.html">pfcColorRGB</a></tt></td><td class="func-name"><tt>Color</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The color of the detail item.  If <tt>null</tt>, the default drawing color is used.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#224">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Horizontal">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-HorizontalJustification.html">pfcHorizontalJustification</a></tt></td><td class="func-name"><tt>Horizontal</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The horizontal justification.  <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#222">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsDisplayed">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsDisplayed</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the note is currently displayed.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#219">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsMirrored">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsMirrored</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the note is mirrored.  <tt>null</tt> or <tt>false</tt> if it has normal orientation.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#221">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsReadOnly">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsReadOnly</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the note is readonly. <tt>null</tt> or <tt>false</tt> if it is user editable.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#220">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Leader">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-DetailLeaders.html">pfcDetailLeaders</a></tt></td><td class="func-name"><tt>Leader</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The note attachment information, including placement and leaders.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#225">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TextAngle">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>TextAngle</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The text angle used for the note.  <tt>null</tt> indicates 0.0.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TextLines">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDetail-DetailTextLines.html">pfcDetailTextLines</a></tt></td><td class="func-name"><tt>TextLines</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sequence of lines contained in the note.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#218">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Vertical">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcDetail-VerticalJustification.html">pfcVerticalJustification</a></tt></td><td class="func-name"><tt>Vertical</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The vertical justification.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#223">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDetail-DetailNoteInstructions.html">pfcDetailNoteInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcDetail-DetailTextLines.html">pfcDetailTextLines</a>&nbsp;inTextLines)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a data object used to describe how a detail note item should be construct, when passed to <tt><b><a class="method" href="t-pfcDetail-DetailItemOwner.html#CreateDetailItem">pfcDetailItemOwner.CreateDetailItem()</a></b></tt>, <tt><b><a class="method" href="t-pfcDetail-DetailSymbolDefItem.html#CreateDetailItem">pfcDetailSymbolDefItem.CreateDetailItem()</a></b></tt>, or <tt><b><a class="method" href="t-pfcDetail-DetailNoteItem.html#Modify">pfcDetailNoteItem.Modify()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#217">Drawings: Instructions</a>, <a href="../manual0/jdrawfns.html#226">Drawings: Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>inTextLines</b></tt>
+</dt>
+<dd>Sequence of text line data objects describing the contents of the note.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created data object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcLayerExportOptions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      312
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcExport.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcLayerExportOptions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface contains options used to control the export of layers.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExport-ACIS3DExportInstructions.html">pfcACIS3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcExport::CATIA3DExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-CATIAModel3DExportInstructions.html">pfcCATIAModel3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-IGES3DNewExportInstructions.html">pfcIGES3DNewExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b>
+   &lt;reference to unknown entity pfcExport::SET3DExportInstructions&gt;
+  </b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-STEP3DExportInstructions.html">pfcSTEP3DExportInstructions</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-VDA3DExportInstructions.html">pfcVDA3DExportInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#LayerSetupFile">LayerSetupFile</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Full path to the layer setup file, which contains mappings from the Creo Parametric layer names to layer names or ids that should be used in the exported file.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#UseAutoId">UseAutoId</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> to automatically assign unique integer ids to each layer, <tt>false</tt> to maintain the Creo Parametric layer names.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcExport-LayerExportOptions.html">pfcLayerExportOptions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new  object used to indicate how layers should be treated during export of a model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="LayerSetupFile">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>LayerSetupFile</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Full path to the layer setup file, which contains mappings from the Creo Parametric layer names to layer names or ids that should be used in the exported file.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UseAutoId">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>UseAutoId</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> to automatically assign unique integer ids to each layer, <tt>false</tt> to maintain the Creo Parametric layer names.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcExport-LayerExportOptions.html">pfcLayerExportOptions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new  object used to indicate how layers should be treated during export of a model.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcExport-Export3DInstructions.html">pfcExport3DInstructions</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#71">Interface: Export Instructions</a>, <a href="../manual0/Jinterface.html#85">Interface: Export Instructions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new layer options object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

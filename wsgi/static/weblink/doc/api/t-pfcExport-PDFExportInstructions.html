@@ -1,0 +1,247 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcPDFExportInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      377
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcExport.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcPDFExportInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface is used to export a model to a PDF file. The model must be displayed in window
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#FilePath">FilePath</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the output file.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-PDFOptions.html">pfcPDFOptions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Options">Options</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The PDF export options.  If <tt>null</tt>, the default values are used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#ProfilePath">ProfilePath</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">
+       The Profile path. Can be <tt>null</tt> Currently used only for drawings
+       <note>
+         If you specify non <tt>null</tt> Profile path the PDF export options will be ignored on call to <tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>
+       
+</note>
+     
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcExport-PDFExportInstructions.html">pfcPDFExportInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates an instructions object used to export a solid model to a PDF file.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="FilePath">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>FilePath</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the output file.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#56">Interface: Exporting to PDF and U3D</a>, <a href="../manual0/Jinterface.html#61">Interface: Exporting to PDF and U3D</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Options">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcExport-PDFOptions.html">pfcPDFOptions</a></tt></td><td class="func-name"><tt>Options</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The PDF export options.  If <tt>null</tt>, the default values are used.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#57">Interface: Exporting to PDF and U3D</a>, <a href="../manual0/Jinterface.html#61">Interface: Exporting to PDF and U3D</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ProfilePath">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>ProfilePath</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+       The Profile path. Can be <tt>null</tt> Currently used only for drawings
+       <note>
+         If you specify non <tt>null</tt> Profile path the PDF export options will be ignored on call to <tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt>
+       
+</note>
+     
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#58">Interface: Exporting to PDF and U3D</a>, <a href="../manual0/Jinterface.html#61">Interface: Exporting to PDF and U3D</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcExport-PDFExportInstructions.html">pfcPDFExportInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates an instructions object used to export a solid model to a PDF file.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/Jinterface.html#55">Interface: Exporting to PDF and U3D</a>, <a href="../manual0/Jinterface.html#61">Interface: Exporting to PDF and U3D</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

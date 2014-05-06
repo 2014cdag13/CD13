@@ -1,0 +1,350 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcServerLocation"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      467
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcServer.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcServerLocation</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes server location.<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcObject-Child.html">pfcChild</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcServer-NonRegisteredServer.html">pfcNonRegisteredServer</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcServer-Server.html">pfcServer</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Class">Class</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the class of the server . The values of the server class are "Windchill" and  
+  "ProjectLink." "Windchill" denotes either a Windchill Classic PDM or a Windchill PDMLink server,  
+  while "ProjectLink" denotes Windchill ProjectLink type of servers.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Location">Location</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the codebase URL . </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Version">Version</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the version of Windchill that is configured on the server, for example, "7.0" or "8.0."  
+  </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcServer-WorkspaceDefinitions.html">pfcWorkspaceDefinitions</a></tt></td><td class="func-signature"><tt><a class="method" href="#CollectWorkspaces">CollectWorkspaces</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the list of the workspaces .</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteWorkspace">DeleteWorkspace</a>
+ (string&nbsp;WorkspaceName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes a workspace.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListContexts">ListContexts</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Gets the list of the contexts</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Class">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Class</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the class of the server . The values of the server class are "Windchill" and  
+  "ProjectLink." "Windchill" denotes either a Windchill Classic PDM or a Windchill PDMLink server,  
+  while "ProjectLink" denotes Windchill ProjectLink type of servers.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#7">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#11">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Location">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Location</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the codebase URL . <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#8">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#11">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Version">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Version</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the version of Windchill that is configured on the server, for example, "7.0" or "8.0."  
+  <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#9">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#11">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="CollectWorkspaces">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcServer-WorkspaceDefinitions.html">pfcWorkspaceDefinitions</a></tt></td><td class="func-name"><tt>CollectWorkspaces</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the list of the workspaces .<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#11">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#28">Windchill Connectivity APIs: Accessing Workspaces</a>, <a href="../manual0/wc_apis.html#34">Windchill Connectivity APIs: To Register a Server with an Existing Workspace</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of <tt><b><tt><b><a class="enumtype" href="t-pfcServer-WorkspaceDefinitions.html">pfcWorkspaceDefinitions</a></b></tt></b></tt> objects</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteWorkspace">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteWorkspace</tt></td><td class="func-params"><tt>
+ (string&nbsp;WorkspaceName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes a workspace.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitCheckoutConflict.html">pfcXToolkitCheckoutConflict</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#32">Windchill Connectivity APIs: Creating and Modifying the Workspace</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>WorkspaceName</b></tt>
+</dt>
+<dd>The workspace name.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListContexts">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>ListContexts</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Gets the list of the contexts<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#10">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#11">Windchill Connectivity APIs: Accessing Information Before Registering a Server</a>, <a href="../manual0/wc_apis.html#35">Windchill Connectivity APIs: To Register a Server with a New Workspace</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>Sequence of context strings</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

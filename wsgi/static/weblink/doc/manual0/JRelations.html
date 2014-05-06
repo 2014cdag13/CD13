@@ -1,0 +1,164 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">
+      <meta name="ch:resourceid" content="JRelations" scheme="atiChunkerMeta">
+      
+      
+      
+      
+      
+      
+      <link href="css/styler.css" rel="stylesheet" type="text/css">
+      <title>Relations</title>
+   
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  function findProperNode() { top.frames[0].document.apiwizard.manual("MANJRELATIONS0", location.hash); }
+</SCRIPT>
+
+</head>
+   <body onLoad="findProperNode()">
+      
+         
+         <a name="0"> </a><div class=" x-title-65-0 x-title-65-1" combinedFontName="off" id="styler-id1.1.1.19.1" class="ChapterTitle">Relations</div>
+         <div class=" x-body-2-0">
+            <div class=" x-p-7-0">This <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> describes how to access relations on all models and model items in <span class=" x-ph-1-0">Creo Parametric</span> using the methods provided in <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>.
+            </div>
+         </div>
+         <div class=" x-topic-4-0 x-topic-4-1 x-topic-4-2" combinedFontName="off" id="JRelations_AccessingRelations-B9266571_21_11">
+            
+            <a name="1"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.19.3.1" class="Heading1">Accessing Relations</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">In <span class=" x-ph-1-0"><span xmlns="" profilecode="1">Web.Link</span></span>, the set of relations on any model or model item is represented by the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">RelationOwner</span></span> <span class=" x-ph-1-0"><span xmlns="" profilecode="1">class</span></span>. Models, features, surfaces, and edges inherit from this interface, because each object can be assigned relations in <span class=" x-ph-1-0">Creo Parametric</span>.
+               </div>
+               <div class=" x-p-7-0">Methods <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Properties </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="2"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-RelationOwner.html#RegenerateRelations">pfcRelationOwner.RegenerateRelations()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="3"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-RelationOwner.html#DeleteRelations">pfcRelationOwner.DeleteRelations()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="4"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-RelationOwner.html#Relations">pfcRelationOwner.Relations</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="5"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModelItem-RelationOwner.html#EvaluateExpression">pfcRelationOwner.EvaluateExpression()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcRelationOwner.RegenerateRelations()</span></span> regenerates the relations assigned to the owner item. It also determines whether the specified relation set is valid.
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcRelationOwner.DeleteRelations()</span></span> deletes all the relations assigned to the owner item.
+               </div>
+               <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcRelationOwner.Relations</span></span> returns the list of initial relations assigned to the owner item as a sequence of strings.
+               </div>
+               <div class=" x-p-7-0">The method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModelItem.RelationOwner.EvaluateExpression</span></span> evaluates the given relations-based expression, and returns the resulting value in the form of the <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfc</span></span><span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">ParamValue</span></span> object. Refer to the section <a href="JDims.html" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">The ParamValue Object</a> in the <span class=" x-ph-1-0"><span xmlns="" profilecode="100000000">section</span></span> <a href="JDims.html" class=" x-xref-4-0 x-xref-4-3 x-xref-4-4 x-xref-4-6">Dimensions and Parameters</a> for more information on this object.
+               </div>
+            </div>
+            <div class=" x-topic-11-0 x-topic-11-1" id="JRelations_Example1AddingRelationsBetweenParam-B925BE7E_21_63">
+               
+               <a name="6"> </a><div class=" x-title-27-0 x-title-27-2" combinedFontName="off" id="styler-id1.1.1.19.3.3.1" class="Heading2">Example 1: Adding Relations between Parameters in a Solid Model</div>
+               <div class=" x-body-3-0">
+                  <div class=" x-p-7-0">The sample code in the file <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="1"><span class="cf-Monospace-combined-European_Alphabets">pfcRelationExamples.js</span></span></span> located at <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" profilecode="1"><span class="cf-Monospace-combined-European_Alphabets">&lt;creo_weblink_loadpoint&gt;/weblinkexamples/jscript</span></span></span> demonstrates how to add relations between parameters in a solid model.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" x-topic-8-0 x-topic-8-1 x-topic-8-2" id="JRelations_AccessingPostRegenerationRelations-4310D87C_21_73">
+            
+            <a name="7"> </a><div class=" x-title-33-0 x-title-33-2" combinedFontName="off" id="styler-id1.1.1.19.4.1" class="Heading1">Accessing Post Regeneration Relations</div>
+            <div class=" x-body-3-0">
+               <div class=" x-p-7-0">Method <span class=" x-ph-1-0"><span xmlns="" profilecode="3">and Property </span></span>Introduced:
+               </div>
+               <div class=" x-ul-2-0">
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-13-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="8"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModel-Model.html#PostRegenerationRelations">pfcModel.PostRegenerationRelations</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-16-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="9"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModel-Model.html#RegeneratePostRegenerationRelations">pfcModel.RegeneratePostRegenerationRelations()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class=" x-li-14-0" style="table-layout: fixed; " width="100%">
+                     <col style="width: 0em">
+                     <col style="width: 18pt">
+                     <col>
+                     <tbody>
+                        <tr valign="baseline">
+                           <td align="right"></td>
+                           <td align="left" style="word-break: keep-all; "></td>
+                           <td><span class=" x-p-4-0"><a name="10"> </a><span class=" x-apiname-3-0" mcad="FunctionList"><li class="FunctionList"><A HREF="../api/t-pfcModel-Model.html#DeletePostRegenerationRelations">pfcModel.DeletePostRegenerationRelations()</A></li></span></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class=" x-p-7-0">The <span class=" x-ph-1-0"><span xmlns="" profilecode="3">property</span></span> <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.PostRegenerationRelations</span></span> lists the post-regeneration relations assigned to the model. It can be <span class=" x-codeph-2-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">NULL</span></span>, if not set.
+               </div>
+               <div class=" x-note-2-0 x-note-2-3">
+                  <div class=" x--ufe-note-1-0 x--ufe-note-1-1" combinedFontName="off">Note</div>
+                  <div class=" x-p-7-0">To work with post-regeneration relations, use the post-regeneration relations attribute in the methods <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcRelationOwner.RegenerateRelations()</span></span> and <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcRelationOwner.DeleteRelations()</span></span>.
+                  </div>
+               </div>
+               <div class=" x-p-7-0">You can regenerate the relation sets post-regeneration in a model using the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.RegeneratePostRegenerationRelations()</span></span>.
+               </div>
+               <div class=" x-p-7-0">To delete all the post-regeneration relations in the specified model, call the method <span class=" x-cmdname-3-0" combinedFontName="Monospace-combined"><span xmlns="" class="cf-Monospace-combined-European_Alphabets">pfcModel.Model.DeletePostRegenerationRelations</span></span>.
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

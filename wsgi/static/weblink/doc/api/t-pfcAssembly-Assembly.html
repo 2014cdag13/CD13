@@ -1,0 +1,657 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcAssembly"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      13
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcAssembly.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcAssembly</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes an assembly.    
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcSolid-Solid.html">pfcSolid</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#DynamicPositioning">DynamicPositioning</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If the assembly uses dynamic positioning, this attribute is <tt>true</tt>; otherwise, it is <tt>false</tt></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsExploded">IsExploded</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">If the assembly is exploded, this attribute is <tt>true</tt>; otherwise, it is<tt>false</tt></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#AssembleByCopy">AssembleByCopy</a>
+ (string&nbsp;NewModelName, <a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;ModelToCopy, boolean&nbsp;LeaveUnplaced)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Assembles a copy of a model into the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-signature"><tt><a class="method" href="#AssembleComponent">AssembleComponent</a>
+ (<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;Model, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;Position)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Assembles the model into the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AssembleSkeleton">AssembleSkeleton</a>
+ (<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;SkeletonModel)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds a skeleton model in the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AssembleSkeletonByCopy">AssembleSkeletonByCopy</a>
+ (string&nbsp;NewSkeletonName, <a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;SkeletonToCopy)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Copies the specified template model into the assembly as a skeleton model.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#DeleteSkeleton">DeleteSkeleton</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes the skeleton model from the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Explode">Explode</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Explodes the specified assembly.  The function invalidates
+the display list, but the application needs to repaint the
+window.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ExplodedState.html">pfcExplodedState</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetActiveExplodedState">GetActiveExplodedState</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the current active exploded state in the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-ExplodedState.html">pfcExplodedState</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetDefaultExplodedState">GetDefaultExplodedState</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the default exploded state in the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetSkeleton">GetSkeleton</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the skeleton model in the assembly.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#UnExplode">UnExplode</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Unexplodes the assembly.  The function invalidates
+the display list, but the application needs to repaint the
+window.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="DynamicPositioning">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>DynamicPositioning</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If the assembly uses dynamic positioning, this attribute is <tt>true</tt>; otherwise, it is <tt>false</tt>
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsExploded">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>IsExploded</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>If the assembly is exploded, this attribute is <tt>true</tt>; otherwise, it is<tt>false</tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#52">Assemblies and Components: Exploded Assemblies</a>, <a href="../manual0/jassembly.html#57">Assemblies and Components: Exploded Assemblies</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AssembleByCopy">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>AssembleByCopy</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewModelName, <a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;ModelToCopy, boolean&nbsp;LeaveUnplaced)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Assembles a copy of a model into the assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#29">Assemblies and Components: Assembling Components</a>, <a href="../manual0/jassembly.html#31">Assemblies and Components: Assembling Components</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewModelName</b></tt>
+</dt>
+<dd>The name of the new copy of the model.</dd>
+<dt>
+<tt><b>ModelToCopy</b></tt>
+</dt>
+<dd>The template model to copy.</dd>
+<dt>
+<tt><b>LeaveUnplaced</b></tt>
+</dt>
+<dd>
+<tt>true</tt> to leave the component unplaced, <tt>false</tt> to place the component in the default location. </dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new assembly component feature object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AssembleComponent">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcFeature-Feature.html">pfcFeature</a></tt></td><td class="func-name"><tt>AssembleComponent</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;Model, 
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;Position)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Assembles the model into the assembly.
+<br>
+<br>The new component will be packaged at the designated location.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#28">Assemblies and Components: Assembling Components</a>, <a href="../manual0/jassembly.html#31">Assemblies and Components: Assembling Components</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Model</b></tt>
+</dt>
+<dd>The model to assemble.</dd>
+<dt>
+<tt><b>Position</b></tt>
+</dt>
+<dd>The initial position of the component.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new component feature object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AssembleSkeleton">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AssembleSkeleton</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;SkeletonModel)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds a skeleton model in the assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#59">Assemblies and Components: Skeleton Models</a>, <a href="../manual0/jassembly.html#63">Assemblies and Components: Skeleton Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>SkeletonModel</b></tt>
+</dt>
+<dd>The skeleton model.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="AssembleSkeletonByCopy">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AssembleSkeletonByCopy</tt></td><td class="func-params"><tt>
+ (string&nbsp;NewSkeletonName, <a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a>&nbsp;SkeletonToCopy)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Copies the specified template model into the assembly as a skeleton model.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#60">Assemblies and Components: Skeleton Models</a>, <a href="../manual0/jassembly.html#63">Assemblies and Components: Skeleton Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>NewSkeletonName</b></tt>
+</dt>
+<dd>The name of the new skeleton model.</dd>
+<dt>
+<tt><b>SkeletonToCopy</b></tt>
+</dt>
+<dd>The template model to copy.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="DeleteSkeleton">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>DeleteSkeleton</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes the skeleton model from the assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#62">Assemblies and Components: Skeleton Models</a>, <a href="../manual0/jassembly.html#63">Assemblies and Components: Skeleton Models</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Explode">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Explode</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Explodes the specified assembly.  The function invalidates
+the display list, but the application needs to repaint the
+window.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#53">Assemblies and Components: Exploded Assemblies</a>, <a href="../manual0/jassembly.html#57">Assemblies and Components: Exploded Assemblies</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetActiveExplodedState">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcAssembly-ExplodedState.html">pfcExplodedState</a></tt></td><td class="func-name"><tt>GetActiveExplodedState</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the current active exploded state in the assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#55">Assemblies and Components: Exploded Assemblies</a>, <a href="../manual0/jassembly.html#57">Assemblies and Components: Exploded Assemblies</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The active exploded state, or <tt>null</tt>, if the assembly is not exploded.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetDefaultExplodedState">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcAssembly-ExplodedState.html">pfcExplodedState</a></tt></td><td class="func-name"><tt>GetDefaultExplodedState</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the default exploded state in the assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#56">Assemblies and Components: Exploded Assemblies</a>, <a href="../manual0/jassembly.html#57">Assemblies and Components: Exploded Assemblies</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The default exploded state.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetSkeleton">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a></tt></td><td class="func-name"><tt>GetSkeleton</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the skeleton model in the assembly.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#61">Assemblies and Components: Skeleton Models</a>, <a href="../manual0/jassembly.html#63">Assemblies and Components: Skeleton Models</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The skeleton model.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="UnExplode">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>UnExplode</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Unexplodes the assembly.  The function invalidates
+the display list, but the application needs to repaint the
+window.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jassembly.html#54">Assemblies and Components: Exploded Assemblies</a>, <a href="../manual0/jassembly.html#57">Assemblies and Components: Exploded Assemblies</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

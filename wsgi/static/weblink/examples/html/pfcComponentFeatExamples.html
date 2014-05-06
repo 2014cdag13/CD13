@@ -1,0 +1,212 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+
+-->
+<html>
+
+<head>
+<title>Pro/Web.Link examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcComponentFeatExamples.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function replaceBoltsInAssembly_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+
+	try
+		{
+			replaceBoltsInAssembly ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+function highlightConstraints_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			highlightConstraints ();
+		}
+	catch (err)
+		{
+					alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+function assembleByDatums_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			assembleByDatums (document.AC.componentName.value);
+		}
+	catch (err)
+		{
+					alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Component Feature Examples</h1>
+
+<p align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=CR>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Replacing components</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“replaceBoltsInAssembly”) replaces
+  one instance of a component with another in an assembly.<span
+  style="mso-spacerun: yes">  </span>The current model must be an
+  assembly.<span style="mso-spacerun: yes">  </span>It should contain a subcomponent
+  “bolt.prt” with instances “slot7_8” and “phillips7_8”.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'>
+  <input type=button value="Replace Bolts" id=button1 name=button1 onclick="replaceBoltsInAssembly_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<form name=HC>
+
+<table border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Accessing component assembly constraints</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“highlightConstraints”) highlights each
+  of the pairs of constraints for a selected component visually, and lists the
+  type and offset values for the component.<span style="mso-spacerun: yes"> 
+  </span>The current model must be an assembly.<span style="mso-spacerun:
+  yes">  </span>Select a component feature from the window to show its
+  constraints.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'>
+  <input type=button value="Highlight Constraints" id=button1 name=button1
+  onclick="highlightConstraints_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=AC>
+
+<table border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Assembling components</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“assembleByDatums”) auto-assembles
+  the component entered below by aligning datums. Enter the component name as
+  ??????.prt or ?????.asm.<span style="mso-spacerun: yes">  </span>The current
+  model must be an assembly.</p>
+  <p class=MsoNormal>The required datum pairs are </p>
+  <table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+   border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+   <tr>
+    <td width=613 valign=top style='width:459.95pt;border:solid windowtext .5pt;
+    padding:0in 5.4pt 0in 5.4pt'>
+    <h2>Assembly datum</h2>
+    </td>
+    <td width=613 valign=top style='width:459.95pt;border:solid windowtext .5pt;
+    border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <h2>Component Datum</h2>
+    </td>
+   </tr>
+   <tr>
+    <td width=613 valign=top style='width:459.95pt;border:solid windowtext .5pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal>ASM_D_FRONT</p>
+    </td>
+    <td width=613 valign=top style='width:459.95pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal>COMP_D_FRONT</p>
+    </td>
+   </tr>
+   <tr>
+    <td width=613 valign=top style='width:459.95pt;border:solid windowtext .5pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal>ASM_D_TOP</p>
+    </td>
+    <td width=613 valign=top style='width:459.95pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal>COMP_D_TOP</p>
+    </td>
+   </tr>
+   <tr>
+    <td width=613 valign=top style='width:459.95pt;border:solid windowtext .5pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal>ASM_D_RIGHT</p>
+    </td>
+    <td width=613 valign=top style='width:459.95pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+    padding:0in 5.4pt 0in 5.4pt'>
+    <p class=MsoNormal>COMP_D_RIGHT</p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>If any of the required datums are not found the component will
+  be underconstrained and the Component placement UI will come up so the
+  problem can be corrected.<span style="mso-spacerun: yes">  </span><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'><INPUT TYPE="text" NAME="componentName"
+  id=componentName>
+  <input type=button value=Assemble id=button1 name=button1 onclick="assembleByDatums_wrapper()">
+  </p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcDrawingDimCreateInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      179
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcDimension2D.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcDrawingDimCreateInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface is used for creating a drawing dimension.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#CreateDrawingDimension">pfcModel2D.CreateDrawingDimension()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#114">Drawings: Creating Drawing Dimensions</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a></tt></td><td class="func-signature"><tt><a class="method" href="#Attachments">Attachments</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The entities that the dimension references.  The selections should include the drawing model view.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#Display">Display</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Whether or not to display the new dimension upon creation.  The default is <tt>true</tt>.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#IsRefDimension">IsRefDimension</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the dimension should be a reference dimension, <tt>null</tt> or <tt>false</tt> otherwise.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a></tt></td><td class="func-signature"><tt><a class="method" href="#OrientationHint">OrientationHint</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The orientation hint for proper dimension placement.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a></tt></td><td class="func-signature"><tt><a class="method" href="#Senses">Senses</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The dimension senses associated with the dimension attachments.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector2D.html">pfcVector2D</a></tt></td><td class="func-signature"><tt><a class="method" href="#TextLocation">TextLocation</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The location of the dimension text, in screen coordinates.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDimension2D-DrawingDimCreateInstructions.html">pfcDrawingDimCreateInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a>&nbsp;Attachments, <a class="type" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a>&nbsp;Senses, <a class="type" href="t-pfcBase-Vector2D.html">pfcVector2D</a>&nbsp;TextLocation, <a class="type" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a>&nbsp;Hint)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Create an instructions object used to create a new dimension in a drawing.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Attachments">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a></tt></td><td class="func-name"><tt>Attachments</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The entities that the dimension references.  The selections should include the drawing model view.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Display">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>Display</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Whether or not to display the new dimension upon creation.  The default is <tt>true</tt>.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IsRefDimension">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>IsRefDimension</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the dimension should be a reference dimension, <tt>null</tt> or <tt>false</tt> otherwise.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="OrientationHint">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a></tt></td><td class="func-name"><tt>OrientationHint</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The orientation hint for proper dimension placement.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Senses">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a></tt></td><td class="func-name"><tt>Senses</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The dimension senses associated with the dimension attachments.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TextLocation">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector2D.html">pfcVector2D</a></tt></td><td class="func-name"><tt>TextLocation</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The location of the dimension text, in screen coordinates.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcDimension2D-DrawingDimCreateInstructions.html">pfcDrawingDimCreateInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcSelect-Selections.html">pfcSelections</a>&nbsp;Attachments, <a class="type" href="t-pfcDimension2D-DimensionSenses.html">pfcDimensionSenses</a>&nbsp;Senses, <a class="type" href="t-pfcBase-Vector2D.html">pfcVector2D</a>&nbsp;TextLocation, <a class="type" href="t-pfcDimension2D-OrientationHint.html">pfcOrientationHint</a>&nbsp;Hint)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Create an instructions object used to create a new dimension in a drawing.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#CreateDrawingDimension">pfcModel2D.CreateDrawingDimension()</a></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-AngleDimensionSense.html">pfcAngleDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-EmptyDimensionSense.html">pfcEmptyDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-LinAOCTangentDimensionSense.html">pfcLinAOCTangentDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-PointDimensionSense.html">pfcPointDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-PointToAngleDimensionSense.html">pfcPointToAngleDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-SplinePointDimensionSense.html">pfcSplinePointDimensionSense</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcDimension2D-TangentIndexDimensionSense.html">pfcTangentIndexDimensionSense</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#106">Drawings: Creating Drawing Dimensions</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Attachments</b></tt>
+</dt>
+<dd>The attachment point(s) used to place the dimension.</dd>
+<dt>
+<tt><b>Senses</b></tt>
+</dt>
+<dd>The dimension senses corresponding to each attachment point. There should be one dimension sense for each attachment point.</dd>
+<dt>
+<tt><b>TextLocation</b></tt>
+</dt>
+<dd>The point used to calculate the location of the dimension text.</dd>
+<dt>
+<tt><b>Hint</b></tt>
+</dt>
+<dd>The orientation hint for the dimension.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created instructions object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

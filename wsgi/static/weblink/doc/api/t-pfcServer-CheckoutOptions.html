@@ -1,0 +1,344 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcCheckoutOptions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      41
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcServer.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcCheckoutOptions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes checkout options.<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-ServerDependency.html">pfcServerDependency</a></tt></td><td class="func-signature"><tt><a class="method" href="#Dependency">Dependency</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the dependency rule while checking out dependents of the object that is selected for  
+  checkout.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#Download">Download</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the checkout type as download or link. Download specifies that the object content is  
+  downloaded and checked out while link specifies that only the metadata is downloaded and checked out. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-ServerIncludeInstances.html">pfcServerIncludeInstances</a></tt></td><td class="func-signature"><tt><a class="method" href="#IncludeInstances">IncludeInstances</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the rule while including instances from the family table during checkout. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#Readonly">Readonly</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the checkout type as a read-only checkout. This option is applicable only if the checkout   
+  type is link. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelectedIncludes">SelectedIncludes</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sequence of URL's to the selected includes, if include option = SERVER_INCLUDE_SELECTED.  
+  Can be <tt>null</tt></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Version">Version</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the version of the object that is checked out. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a new <tt><b><tt><b><a class="enumtype" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a></b></tt></b></tt> object.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Dependency">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-ServerDependency.html">pfcServerDependency</a></tt></td><td class="func-name"><tt>Dependency</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the dependency rule while checking out dependents of the object that is selected for  
+  checkout.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#63">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Download">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>Download</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the checkout type as download or link. Download specifies that the object content is  
+  downloaded and checked out while link specifies that only the metadata is downloaded and checked out. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#67">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="IncludeInstances">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcServer-ServerIncludeInstances.html">pfcServerIncludeInstances</a></tt></td><td class="func-name"><tt>IncludeInstances</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the rule while including instances from the family table during checkout. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#65">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Readonly">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>Readonly</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the checkout type as a read-only checkout. This option is applicable only if the checkout   
+  type is link. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#68">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelectedIncludes">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>SelectedIncludes</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sequence of URL's to the selected includes, if include option = SERVER_INCLUDE_SELECTED.  
+  Can be <tt>null</tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#64">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Version">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Version</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the version of the object that is checked out. <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#66">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a new <tt><b><tt><b><a class="enumtype" href="t-pfcServer-CheckoutOptions.html">pfcCheckoutOptions</a></b></tt></b></tt> object.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/wc_apis.html#62">Windchill Connectivity APIs: Checkout and Download</a>, <a href="../manual0/wc_apis.html#68">Windchill Connectivity APIs: Checkout and Download</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new object. </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

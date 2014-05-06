@@ -1,0 +1,436 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcParameterOwner"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      390
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcModelItem.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcParameterOwner</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This is a base class for an object that has parameters associated with it
+(such as model or model item).
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b><a class="enumtype" href="t-pfcModel-Model.html">pfcModel</a></b></tt></b></tt>, <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcBase-ActionSource.html">pfcActionSource</a>, 
+        <a class="class" href="t-pfcObject-Parent.html">pfcParent</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Known Subclasses:</b>
+</dt>
+<dd>
+<tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcModel-Model.html">pfcModel</a></b></tt>, 
+        <tt><b><a class="enumtype" href="t-pfcPart-Material.html">pfcMaterial</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateParam">CreateParam</a>
+ (string&nbsp;Name, <a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a>&nbsp;Value)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds the specified parameter to the database and returns it.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-signature"><tt><a class="method" href="#CreateParamWithUnits">CreateParamWithUnits</a>
+ (string&nbsp;Name, <a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a>&nbsp;Value, <a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a>&nbsp;Units)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds the specified parameter to the database and initializes the handle. The parameter will be created with units.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetParam">GetParam</a>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the parameter specified by name. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameters.html">pfcParameters</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListParams">ListParams</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Provides a list of parameters associated with the parameter owner.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelectParam">SelectParam</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables a user to select parameters interactively from a list.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-Parameters.html">pfcParameters</a></tt></td><td class="func-signature"><tt><a class="method" href="#SelectParameters">SelectParameters</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ParameterSelectionOptions.html">pfcParameterSelectionOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Enables a user to select parameters interactively from a list displayed 
+based on the parameter selection options specified.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="CreateParam">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-name"><tt>CreateParam</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, <a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a>&nbsp;Value)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds the specified parameter to the database and returns it.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#23">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#29">Dimensions and Parameters: Creating and Accessing Parameters</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The owner (a model item or solid)</dd>
+<dt>
+<tt><b>Value</b></tt>
+</dt>
+<dd>The initial data the parameter will hold</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The newly created parameter </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CreateParamWithUnits">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-name"><tt>CreateParamWithUnits</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name, <a class="type" href="t-pfcModelItem-ParamValue.html">pfcParamValue</a>&nbsp;Value, <a class="type" href="t-pfcUnits-Unit.html">pfcUnit</a>&nbsp;Units)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds the specified parameter to the database and initializes the handle. The parameter will be created with units.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#24">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#29">Dimensions and Parameters: Creating and Accessing Parameters</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>Name of the parameter.</dd>
+<dt>
+<tt><b>Value</b></tt>
+</dt>
+<dd>The initial data the parameter will hold.<i>Note</i>, the value should be of type <i>double</i>.</dd>
+<dt>
+<tt><b>Units</b></tt>
+</dt>
+<dd>The units assigned to this parameter.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The newly created parameter.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetParam">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-name"><tt>GetParam</tt></td><td class="func-params"><tt>
+ (string&nbsp;Name)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the parameter specified by name. 
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#25">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#29">Dimensions and Parameters: Creating and Accessing Parameters</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Name</b></tt>
+</dt>
+<dd>The name of the parameter to query.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The retrived parameter, or <tt>null</tt> if the parameter owner does not have a parameter with the name specified.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListParams">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameters.html">pfcParameters</a></tt></td><td class="func-name"><tt>ListParams</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Provides a list of parameters associated with the parameter owner.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#26">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#29">Dimensions and Parameters: Creating and Accessing Parameters</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of parameters, or <tt>null</tt>, if no parameters have been found</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelectParam">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-Parameter.html">pfcParameter</a></tt></td><td class="func-name"><tt>SelectParam</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables a user to select parameters interactively from a list.
+<br>
+<br>The top model from which the parameters will be selected must be displayed in 
+the current window.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#27">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#29">Dimensions and Parameters: Creating and Accessing Parameters</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of selected parameters, or <tt>null</tt> if no parameters were selected.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SelectParameters">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-Parameters.html">pfcParameters</a></tt></td><td class="func-name"><tt>SelectParameters</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcModelItem-ParameterSelectionOptions.html">pfcParameterSelectionOptions</a>&nbsp;Options)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Enables a user to select parameters interactively from a list displayed 
+based on the parameter selection options specified.
+   <br>
+<br>The top model from which the parameters will be selected must be displayed in 
+the current window.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JDims.html#28">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#29">Dimensions and Parameters: Creating and Accessing Parameters</a>, <a href="../manual0/JDims.html#35">Dimensions and Parameters: Parameter Selection Options</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Options</b></tt>
+</dt>
+<dd> The parameter selection options.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The list of selected parameters.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

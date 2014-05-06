@@ -1,0 +1,311 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcTableRetrieveInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      547
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcTable.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcTableRetrieveInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This interface contains information needed to retrieve a table from disk.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcTable-TableOwner.html#RetrieveTable">pfcTableOwner.RetrieveTable()</a></b></tt>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#FileName">FileName</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Name, excluding the extension.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Path">Path</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Path to the table file, or <tt>null</tt>, if the file is in the working directory.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Position">Position</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The position for the retrieved table.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-signature"><tt><a class="method" href="#ReferenceRep">ReferenceRep</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The simplified representation to use when copying data in the table.  If <tt>null</tt>, the master representation of the reference solid will be used.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a></tt></td><td class="func-signature"><tt><a class="method" href="#ReferenceSolid">ReferenceSolid</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The solid model from which to copy data into the table.  If <tt>null</tt>, the table will not use any solid model data.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#Version">Version</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The file version, or <tt>null</tt>, for the latest file.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcTable-TableRetrieveInstructions.html">pfcTableRetrieveInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (string&nbsp;FileName, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Position)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a data object containing instructions to retrieve a drawing table.  Pass this function to <tt><b><a class="method" href="t-pfcTable-TableOwner.html#RetrieveTable">pfcTableOwner.RetrieveTable()</a></b></tt>.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="FileName">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>FileName</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Name, excluding the extension.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Path">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Path</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Path to the table file, or <tt>null</tt>, if the file is in the working directory.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Position">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>Position</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The position for the retrieved table.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ReferenceRep">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSimpRep-SimpRep.html">pfcSimpRep</a></tt></td><td class="func-name"><tt>ReferenceRep</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The simplified representation to use when copying data in the table.  If <tt>null</tt>, the master representation of the reference solid will be used.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ReferenceSolid">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcSolid-Solid.html">pfcSolid</a></tt></td><td class="func-name"><tt>ReferenceSolid</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The solid model from which to copy data into the table.  If <tt>null</tt>, the table will not use any solid model data.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Version">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>Version</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The file version, or <tt>null</tt>, for the latest file.<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcTable-TableRetrieveInstructions.html">pfcTableRetrieveInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Position)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a data object containing instructions to retrieve a drawing table.  Pass this function to <tt><b><a class="method" href="t-pfcTable-TableOwner.html#RetrieveTable">pfcTableOwner.RetrieveTable()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#148">Drawings: Retrieving Drawing Tables</a>, <a href="../manual0/jdrawfns.html#149">Drawings: Retrieving Drawing Tables</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The name of the table file.</dd>
+<dt>
+<tt><b>Position</b></tt>
+</dt>
+<dd>The location for the retrieved table.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created data object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

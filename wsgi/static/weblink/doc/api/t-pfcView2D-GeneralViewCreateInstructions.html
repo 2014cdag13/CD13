@@ -1,0 +1,385 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcGeneralViewCreateInstructions"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      262
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcView2D.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcGeneralViewCreateInstructions</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This is the interface used for creating general drawing views.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#CreateView">pfcModel2D.CreateView()</a></b></tt>, <tt><b><a class="method" href="t-pfcBase-Transform3D.html#Create">pfcTransform3D.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcView2D-View2DCreateInstructions.html">pfcView2DCreateInstructions</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#Exploded">Exploded</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text"><tt>true</tt> if the view should be an exploded view, <tt>null</tt> or <tt>false</tt> otherwise.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Location">Location</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The location on the sheet where the view should be placed.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Orientation">Orientation</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The orientation of the model in the view.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-signature"><tt><a class="method" href="#Scale">Scale</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The scale of the view (<tt>null</tt> to use the default scale).</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-signature"><tt><a class="method" href="#SheetNumber">SheetNumber</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The sheet number in which to create the view.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-signature"><tt><a class="method" href="#ViewModel">ViewModel</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The solid model to display in the view.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcView2D-GeneralViewCreateInstructions.html">pfcGeneralViewCreateInstructions</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;ViewModel, integer&nbsp;SheetNumber, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Location, <a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;Orientation)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates an instructions data object used for creating general drawing views.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Exploded">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>Exploded</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>
+<tt>true</tt> if the view should be an exploded view, <tt>null</tt> or <tt>false</tt> otherwise.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#63">Drawings: Creating Drawing Views</a>, <a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Location">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>Location</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The location on the sheet where the view should be placed.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#60">Drawings: Creating Drawing Views</a>, <a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Orientation">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-name"><tt>Orientation</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The orientation of the model in the view.<br>
+<br>The transformation matrix must only consist of the rotation to be 
+   applied to the model. It must not consist of any displacement or scale
+   components. If necessary, set the displacement to {0, 0, 0} using 
+   <tt><b><a class="method" href="t-pfcBase-Transform3D.html#SetOrigin">pfcTransform3D.SetOrigin()</a></b></tt> and remove any scaling 
+   factor by normalizing the matrix.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#62">Drawings: Creating Drawing Views</a>, <a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Scale">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;number</tt></td><td class="func-name"><tt>Scale</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The scale of the view (<tt>null</tt> to use the default scale).<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SheetNumber">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>integer</tt></td><td class="func-name"><tt>SheetNumber</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The sheet number in which to create the view.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#61">Drawings: Creating Drawing Views</a>, <a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ViewModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModel-Model.html">pfcModel</a></tt></td><td class="func-name"><tt>ViewModel</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The solid model to display in the view.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#59">Drawings: Creating Drawing Views</a>, <a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcView2D-GeneralViewCreateInstructions.html">pfcGeneralViewCreateInstructions</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModel-Model.html">pfcModel</a>&nbsp;ViewModel, integer&nbsp;SheetNumber, <a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Location, <a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a>&nbsp;Orientation)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates an instructions data object used for creating general drawing views.
+<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcModel2D-Model2D.html#CreateView">pfcModel2D.CreateView()</a></b></tt>, <tt><b><a class="method" href="t-pfcBase-Transform3D.html#Create">pfcTransform3D.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#58">Drawings: Creating Drawing Views</a>, <a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>ViewModel</b></tt>
+</dt>
+<dd>The solid model to display in the view.</dd>
+<dt>
+<tt><b>SheetNumber</b></tt>
+</dt>
+<dd>The sheet number in which to create the view.</dd>
+<dt>
+<tt><b>Location</b></tt>
+</dt>
+<dd>The location on the sheet where the view should be placed.</dd>
+<dt>
+<tt><b>Orientation</b></tt>
+</dt>
+<dd>The orientation of the model in the view.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The created data object.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

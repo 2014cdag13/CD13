@@ -1,0 +1,195 @@
+<!--  
+
+14-NOV-2002   J-03-38 $$1  JCN     Submitted.
+07-MAR-2003   K-01-03 $$2  JCN     UNIX support
+02-FEB-2004   K-01-23 $$3  ALS     Added Netscape Security Check.
+
+-->
+<html>
+
+<head>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcDrawingExamples.js">
+ document.writeln ("Error loading header!");
+</script>
+
+<script language="JavaScript">
+function createDrawingFromTemplate_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			createDrawingFromTemplate (document.CD.newDrawing.value);
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+function listSheets_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			listSheets ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+function listViews_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			listViews ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+function replaceModels_wrapper ()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{
+			replaceModels ();
+		}
+	catch (err)
+		{
+			alert ("Exception occurred: "+pfcGetExceptionType (err));
+		}
+}
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Drawing Examples</h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal align=right style='text-align:right'>Page 1<o:p></o:p></p>
+
+<form name=CD>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Creating drawings from templates</h3>
+  <p>This example function (“createDrawingFromTemplate()”) demonstrates
+  creation of drawings using Pro/Web.Link.<span style="mso-spacerun: yes"> 
+  </span>The drawing template used is hardcoded (“c_drawing”) in the function
+  and may be modified as needed.<span style="mso-spacerun: yes">  </span>The
+  name of the new drawing should be supplied in the input panel below.<span
+  style="mso-spacerun: yes">  </span>A solid model should be current model.</p>
+  <p align=center style='text-align:center'><INPUT TYPE="text" NAME="newDrawing">
+  <input type=button value="Create New Drawing" onclick="createDrawingFromTemplate_wrapper()">
+  </p>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=LS>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Listing drawing sheets</h3>
+  <p>This example function (&quot;listSheets()&quot;) demonstrates the use of methods
+  in the pfcSheetOwner class. A drawing must be the Pro/ENGINEER current model
+  for this example. <o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center'>
+  <input type=button value="Sheet Info" onclick="listSheets_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=LV>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Listing drawing views</h3>
+  <p>This example function (“listViews()”) demonstrates the use of the properties
+  and methods in the pfcView2D class.<span style="mso-spacerun: yes">  </span>A
+  drawing must the Pro/ENGINEER current model for this example.<o:p></o:p></p>
+  <p align=center style='text-align:center'>
+  <input type=button value="View Info" id=button2 name=button2 onclick="listViews_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+</form>
+
+<form name=RM>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Replacing drawing models</h3>
+  <p>This example function (“replaceModels()”) demonstrates access to drawing
+  models.<span style="mso-spacerun: yes">  </span>Any solid model instances
+  will be replaced by their generic.<span style="mso-spacerun: yes"> 
+  </span>Similar to the Pro/ENGINEER behavior,<span style="mso-spacerun: yes"> 
+  </span>the function will not replace models if the target generic model is
+  already present in the drawing.<o:p></o:p></p>
+  <p align=center style='text-align:center'>
+  <input type=button value="Replace Instances" id=button1 name=button1 onclick="replaceModels_wrapper()">
+  <![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p align=center style='text-align:center'><a href="pfcDrawingExamples2.html">More
+Examples</a></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

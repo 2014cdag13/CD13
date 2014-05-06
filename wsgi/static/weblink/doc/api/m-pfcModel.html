@@ -1,0 +1,719 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+	 CIP JavaScript documentation for module "pfcModel"
+	</title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      1,
+      30
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;Module
+     </td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Module "pfcModel"</h2>
+<b>Description</b>
+<br>
+<br>Contains interfaces related to models and model operations.
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Enumerated Types</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-ModelType.html">pfcModelType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type lists the supported model types.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-ExportType.html">pfcExportType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Enumeration of the available export-instructions classes.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-CGMExportType.html">pfcCGMExportType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Enumeration that indicates whether a CGM export file should be ASCII (clear text) or binary (mil spec).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-CGMScaleType.html">pfcCGMScaleType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Enumeration that indicates whether a CGM export file should include abstract or metric units
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-ImportType.html">pfcImportType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Enumeration of the available import-instructions classes.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-PlotPaperSize.html">pfcPlotPaperSize</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type specifies the size of the paper used for the plot.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-Export2DSheetOption.html">pfcExport2DSheetOption</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type specifies the sheet options used for exporting drawings.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-FacetControlFlag.html">pfcFacetControlFlag</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Use these flags to get a good facet quality without providing explicit control settings.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-PlotPageRange.html">pfcPlotPageRange</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type specifies which pages to plot.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-IntfType.html">pfcIntfType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Enumeration of the available interface-type classes (for import feature creation).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>enum</tt></td><td class="entities-name"><tt><a class="enumtype" href="t-pfcModel-OperationType.html">pfcOperationType</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This enumerated type is used in creating import features.
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Classes</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ASSEMTreeCFGImportInstructions.html">pfcASSEMTreeCFGImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import from an assembly tree configuration.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-BOMExportInstructions.html">pfcBOMExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a BOM for an assembly.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-CableParamsFileInstructions.html">pfcCableParamsFileInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export cable parameters from an assembly.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-CableParamsImportInstructions.html">pfcCableParamsImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import from a cable parameters file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-CATIAFacetsExportInstructions.html">pfcCATIAFacetsExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in CATIA format (as a faceted model).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-CGMFILEExportInstructions.html">pfcCGMFILEExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a drawing in CGM format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ConfigImportInstructions.html">pfcConfigImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import from a configuration file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ConnectorParamExportInstructions.html">pfcConnectorParamExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to write the parameters of a connector to a file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ConnectorParamsImportInstructions.html">pfcConnectorParamsImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import parameters of a connector from a file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-CoordSysExportInstructions.html">pfcCoordSysExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class of classes that export files with information that describes  faceted, solid models (without datums and surfaces).
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-CopyInstructions.html">pfcCopyInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Not used. Reserved for the future. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-Dependency.html">pfcDependency</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Describes a first-level dependency for an object.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-DWGImport2DInstructions.html">pfcDWGImport2DInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains instructions used for importing a DWG file into Creo Parametric.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-DWGSetupExportInstructions.html">pfcDWGSetupExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a drawing setup file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-DWGSetupImportInstructions.html">pfcDWGSetupImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import (read) from the a drawing setup (DWG_SETUP) type file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-DXFExportInstructions.html">pfcDXFExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a drawing in DXF format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-DXFImport2DInstructions.html">pfcDXFImport2DInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains instructions used for importing a 2-D DXF file into Creo Parametric.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-Export2DOption.html">pfcExport2DOption</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">
+      This interface is used to create options for 2D Export
+    </td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ExportInstructions.html">pfcExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to all the export-instructions classes that govern the exporting of Creo Parametric data with <tt><b><a class="method" href="t-pfcModel-Model.html#Export">pfcModel.Export()</a></b></tt> .
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-FeatIdExportInstructions.html">pfcFeatIdExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class of instructions classes that export data for a single feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-FeatInfoExportInstructions.html">pfcFeatInfoExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Class that exports data about a specific feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-FIATExportInstructions.html">pfcFIATExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in FIAT format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-GeomExportFlags.html">pfcGeomExportFlags</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Specifies extend-surface and Bezier options for use when exporting geometric information from a model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-GeomExportInstructions.html">pfcGeomExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to classes used to export precise geometric information from a model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IGES3DExportInstructions.html">pfcIGES3DExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in IGES format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IGESFileExportInstructions.html">pfcIGESFileExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a drawing in IGES format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IGESImport2DInstructions.html">pfcIGESImport2DInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains instructions used for importing a 2-D IGES file into Creo Parametric.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IGESSectionImportInstructions.html">pfcIGESSectionImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import (read) into a section model from the IGES format file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-Import2DInstructions.html">pfcImport2DInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains instructions used for importing a 2-D file into Creo Parametric.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ImportFeatAttr.html">pfcImportFeatAttr</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This specifies the information for importing a feature. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ImportInstructions.html">pfcImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to all the import-instructions classes that govern the importing (reading) of Creo Parametric related data with <tt><b><a class="method" href="t-pfcModel-Model.html#Import">pfcModel.Import()</a></b></tt> .
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfACIS.html">pfcIntfACIS</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">An ACIS file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfAI.html">pfcIntfAI</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfCatiaCGR.html">pfcIntfCatiaCGR</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A CatiaCGR file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfCatiaPart.html">pfcIntfCatiaPart</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A CatiaPart file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfCatiaProduct.html">pfcIntfCatiaProduct</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfCDRS.html">pfcIntfCDRS</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A CDRS file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfDataSource.html">pfcIntfDataSource</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to several classes that represent the source of data from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfDXF.html">pfcIntfDXF</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A DXF file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfICEM.html">pfcIntfICEM</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">An ICEM file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfIges.html">pfcIntfIges</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">An IGES file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfJT.html">pfcIntfJT</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A JT file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfNeutral.html">pfcIntfNeutral</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Not implemented. This class represents using neutral file information in a session to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfNeutralFile.html">pfcIntfNeutralFile</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A neutral file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfParaSolid.html">pfcIntfParaSolid</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A ParaSolid file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfProductView.html">pfcIntfProductView</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfStep.html">pfcIntfStep</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A STEP file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfSTL.html">pfcIntfSTL</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A STL file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfUG.html">pfcIntfUG</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfVDA.html">pfcIntfVDA</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">A VDA file from which to create an import feature.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-IntfVRML.html">pfcIntfVRML</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-InventorExportInstructions.html">pfcInventorExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in Inventor format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-MaterialExportInstructions.html">pfcMaterialExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a material from a part.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-MedusaExportInstructions.html">pfcMedusaExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is used to export a Medusa format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-MFGCLExportInstructions.html">pfcMFGCLExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Base class to classes that export cutter-location files.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-MFGFeatCLExportInstructions.html">pfcMFGFeatCLExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a cutter location (CL) file for one NC sequence in a manufacturing assembly. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-MFGOperCLExportInstructions.html">pfcMFGOperCLExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export from a manufacturing assembly a cutter location (CL) file for all the NC sequences in an operation. 
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-Model.html">pfcModel</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies the information about a model which is currently in session.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ModelDescriptor.html">pfcModelDescriptor</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class includes the information that identifies a Creo Parametric model or file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ModelInfoExportInstructions.html">pfcModelInfoExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export information about a model, including units information, features, and children.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ModelOId.html">pfcModelOId</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class describes a model identifier.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-PlotInstructions.html">pfcPlotInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Instructions object used to plot drawings.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ProgramExportInstructions.html">pfcProgramExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a program file for a part or assembly, which can be edited to change the model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ProgramImportInstructions.html">pfcProgramImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import (read) from the PROGRAM type file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-RelationExportInstructions.html">pfcRelationExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a list of the relations and parameters in a part or assembly.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-RelationImportInstructions.html">pfcRelationImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import (read) from the RELATION type file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-RenderExportInstructions.html">pfcRenderExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in RENDER format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-SliceExportData.html">pfcSliceExportData</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies data for slice export.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-SpoolImportInstructions.html">pfcSpoolImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import from the spool.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-STEP2DExportInstructions.html">pfcSTEP2DExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface is used to export a non-solid model to STEP format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-STEPExportInstructions.html">pfcSTEPExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in STEP format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-STEPImport2DInstructions.html">pfcSTEPImport2DInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This interface contains instructions used for importing a 2-D STEP file into Creo Parametric.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-STLASCIIExportInstructions.html">pfcSTLASCIIExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly to an ASCII STL file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-STLBinaryExportInstructions.html">pfcSTLBinaryExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly to a binary STL file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-VDAExportInstructions.html">pfcVDAExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Used to export a part or assembly in VDA format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-VRMLDirectExportInstructions.html">pfcVRMLDirectExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to direct export VRML data from inpute to output file.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-VRMLExportInstructions.html">pfcVRMLExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">Class that provides two subclasses to export a solid from Creo Parametric, or a Creo Parametric solid from disk, into VRML format.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-VRMLModelExportInstructions.html">pfcVRMLModelExportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to export VRML data from a model.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-WireListImportInstructions.html">pfcWireListImportInstructions</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This class specifies instructions used to import a WIRELIST file.
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<table border="0" class="entities">
+<tr>
+<th colspan="2" class="entities">Collections</th>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-Dependencies.html">pfcDependencies</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This data type is used to specify the first-level dependencies for an object.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-FacetControlFlags.html">pfcFacetControlFlags</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-ModelDescriptors.html">pfcModelDescriptors</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This data type is used to specify an array of model descriptors.
+</td>
+</tr>
+<tr>
+<td width="1%"><tt>class</tt></td><td class="entities-name"><tt><a class="class" href="t-pfcModel-Models.html">pfcModels</a></tt></td>
+</tr>
+<tr>
+<td></td><td class="entities-text">This data type is used to specify a list of models.
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

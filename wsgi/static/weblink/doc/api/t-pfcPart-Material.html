@@ -1,0 +1,1815 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcMaterial"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      327
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcPart.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcMaterial</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class provides information about a material.
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-ParameterOwner.html">pfcParameterOwner</a>, 
+        <a class="class" href="t-pfcObject-Child.html">pfcChild</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#BendTable">BendTable</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The bend table</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-signature"><tt><a class="method" href="#Condition">Condition</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The condition</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#CrossHatchFile">CrossHatchFile</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the cross-hatching file used in detailing for this material.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Description">Description</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The material description string.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#Emissivity">Emissivity</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The emissivity</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#FailureCriterion">FailureCriterion</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The failure criterion.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#FatigueMaterialFinish">FatigueMaterialFinish</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The fatigue material finish.  
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#FatigueMaterialType">FatigueMaterialType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The fatigue material type.  
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#FatigueType">FatigueType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The fatigue type.  
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#Hardness">Hardness</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The hardness</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#HardnessType">HardnessType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The hardness type.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-signature"><tt><a class="method" href="#Id">Id</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The id of the material</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#InitBendYFactor">InitBendYFactor</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The initial bend Y-factor</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#MassDensity">MassDensity</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The mass density</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#MaterialModel">MaterialModel</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The type of hyperelastic material model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-signature"><tt><a class="method" href="#ModelDefByTests">ModelDefByTests</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies whether the selected hyperelastic material model is 
+  	defined using test data.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#Name">Name</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The name of the material</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PermittedFailureCriteria">PermittedFailureCriteria</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A list of the permitted string values for the material failure criterion.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PermittedFatigueMaterialFinishes">PermittedFatigueMaterialFinishes</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A list of the permitted string values for the material fatigue material finish.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PermittedFatigueMaterialTypes">PermittedFatigueMaterialTypes</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A list of the permitted string values for the material fatigue material type.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PermittedFatigueTypes">PermittedFatigueTypes</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A list of the permitted string values for the material fatigue type.
+   </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PermittedMaterialModels">PermittedMaterialModels</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A list of the permitted string values for the material model.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-signature"><tt><a class="method" href="#PermittedSubTypes">PermittedSubTypes</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">A list of the permitted string values for the material sub type.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#PoissonRatio">PoissonRatio</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic Poisson's ratio</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#ShearModulus">ShearModulus</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic shear modulus</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#SpecificHeat">SpecificHeat</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The specific heat</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#StressLimCompress">StressLimCompress</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic compression ultimate stress.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#StressLimShear">StressLimShear</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The shear ultimate stress.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#StressLimTension">StressLimTension</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic tensile ultimate stress.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#StructDampCoef">StructDampCoef</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The structural damping coefficient</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-MaterialType.html">pfcMaterialType</a></tt></td><td class="func-signature"><tt><a class="method" href="#StructuralMaterialType">StructuralMaterialType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The material type for the structural properties.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-signature"><tt><a class="method" href="#SubType">SubType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic material type's sub type.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-MaterialType.html">pfcMaterialType</a></tt></td><td class="func-signature"><tt><a class="method" href="#ThermalMaterialType">ThermalMaterialType</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The material type for the thermal properties.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#ThermConductivity">ThermConductivity</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic thermal conductivity</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#ThermExpCoef">ThermExpCoef</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic thermal expansion coefficient</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#ThermExpRefTemp">ThermExpRefTemp</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The thermal expansion reference temperature</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-signature"><tt><a class="method" href="#YoungModulus">YoungModulus</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The isotropic Young's modulus</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Delete">Delete</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes the material from the part's database.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcPart-MaterialProperty.html">pfcMaterialProperty</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetPropertyValue">GetPropertyValue</a>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns the value and units for a material property.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RemoveProperty">RemoveProperty</a>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes a material property.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Save">Save</a>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Writes the specified part material to a file.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetPropertyUnits">SetPropertyUnits</a>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type, string&nbsp;Units, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Convert)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the units for a material property.  </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetPropertyValue">SetPropertyValue</a>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type, <a class="type" href="t-pfcPart-MaterialProperty.html">pfcMaterialProperty</a>&nbsp;Value)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Sets the value and units for a material property.  </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="BendTable">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>BendTable</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The bend table<br>
+<br>
+	If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#126">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Condition">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>string</tt></td><td class="func-name"><tt>Condition</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The condition<br>
+<br>
+	If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#125">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="CrossHatchFile">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>CrossHatchFile</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the cross-hatching file used in detailing for this material.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#127">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Description">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Description</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The material description string.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#114">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Emissivity">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>Emissivity</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The emissivity<br>
+<br>
+	If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.
+   <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FailureCriterion">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>FailureCriterion</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The failure criterion.
+   <br>
+<br>Must be one of the members of <tt><b><a class="method" href="t-pfcPart-Material.html#PermittedFailureCriteria">pfcMaterial.PermittedFailureCriteria</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#121">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FatigueMaterialFinish">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>FatigueMaterialFinish</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The fatigue material finish.  
+   <br>
+<br>Must be one of the members of <tt><b><a class="method" href="t-pfcPart-Material.html#PermittedFatigueMaterialFinishes">pfcMaterial.PermittedFatigueMaterialFinishes</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#119">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FatigueMaterialType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>FatigueMaterialType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The fatigue material type.  
+   <br>
+<br>Must be one of the members of <tt><b><a class="method" href="t-pfcPart-Material.html#PermittedFatigueMaterialTypes">pfcMaterial.PermittedFatigueMaterialTypes</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#117">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="FatigueType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>FatigueType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The fatigue type.  
+   <br>
+<br>Must be one of the members of <tt><b><a class="method" href="t-pfcPart-Material.html#PermittedFatigueTypes">pfcMaterial.PermittedFatigueTypes</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#115">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Hardness">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>Hardness</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The hardness<br>
+<br>
+	If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#123">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="HardnessType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>HardnessType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The hardness type.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#124">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Id">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;integer</tt></td><td class="func-name"><tt>Id</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The id of the material<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="InitBendYFactor">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>InitBendYFactor</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The initial bend Y-factor<br>
+<br>
+	If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.
+   <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="MassDensity">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>MassDensity</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The mass density<br>
+<br>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. 
+	<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="MaterialModel">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>MaterialModel</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The type of hyperelastic material model.<br>
+<br>Must be one of the members of <tt><b><a class="method" href="t-pfcPart-Material.html#PermittedMaterialModels">pfcMaterial.PermittedMaterialModels</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#128">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ModelDefByTests">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean</tt></td><td class="func-name"><tt>ModelDefByTests</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies whether the selected hyperelastic material model is 
+  	defined using test data.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Name">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>Name</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The name of the material<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PermittedFailureCriteria">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PermittedFailureCriteria</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A list of the permitted string values for the material failure criterion.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#122">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PermittedFatigueMaterialFinishes">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PermittedFatigueMaterialFinishes</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A list of the permitted string values for the material fatigue material finish.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#120">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PermittedFatigueMaterialTypes">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PermittedFatigueMaterialTypes</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A list of the permitted string values for the material fatigue material type.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#118">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PermittedFatigueTypes">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PermittedFatigueTypes</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A list of the permitted string values for the material fatigue type.
+   <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#116">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PermittedMaterialModels">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PermittedMaterialModels</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A list of the permitted string values for the material model.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#129">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PermittedSubTypes">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;readonly&nbsp;*/&nbsp;<a class="type" href="t-stdcols-stringseq.html">stringseq</a></tt></td><td class="func-name"><tt>PermittedSubTypes</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>A list of the permitted string values for the material sub type.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#107">Solid: Accessing Material Types</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="PoissonRatio">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>PoissonRatio</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic Poisson's ratio<br>
+<br>
+	If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.
+   <br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ShearModulus">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>ShearModulus</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic shear modulus<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SpecificHeat">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>SpecificHeat</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The specific heat<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StressLimCompress">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>StressLimCompress</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic compression ultimate stress.<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+<li>Compression stress values must be negative.</li>
+	
+<li>If the current material failure criterion doesn't accept this type, an attempt to set it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitBadContext.html">pfcXToolkitBadContext</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StressLimShear">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>StressLimShear</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The shear ultimate stress.<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+<li>If the current material failure criterion doesn't accept this type, an attempt to set it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitBadContext.html">pfcXToolkitBadContext</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StressLimTension">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>StressLimTension</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic tensile ultimate stress.<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+<li>If the current material failure criterion doesn't accept this type, an attempt to set it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitBadContext.html">pfcXToolkitBadContext</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StructDampCoef">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>StructDampCoef</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The structural damping coefficient<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="StructuralMaterialType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-MaterialType.html">pfcMaterialType</a></tt></td><td class="func-name"><tt>StructuralMaterialType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The material type for the structural properties.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#104">Solid: Accessing Material Types</a>, <a href="../manual0/JSolid.html#107">Solid: Accessing Material Types</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SubType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;string</tt></td><td class="func-name"><tt>SubType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic material type's sub type.<br>
+<br>Must be one of the members of <tt><b><a class="method" href="t-pfcPart-Material.html#PermittedSubTypes">pfcMaterial.PermittedSubTypes</a></b></tt>
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#106">Solid: Accessing Material Types</a>, <a href="../manual0/JSolid.html#107">Solid: Accessing Material Types</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ThermalMaterialType">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcPart-MaterialType.html">pfcMaterialType</a></tt></td><td class="func-name"><tt>ThermalMaterialType</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The material type for the thermal properties.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#105">Solid: Accessing Material Types</a>, <a href="../manual0/JSolid.html#107">Solid: Accessing Material Types</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ThermConductivity">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>ThermConductivity</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic thermal conductivity<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ThermExpCoef">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>ThermExpCoef</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic thermal expansion coefficient<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ThermExpRefTemp">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>ThermExpRefTemp</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The thermal expansion reference temperature<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="YoungModulus">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>number</tt></td><td class="func-name"><tt>YoungModulus</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The isotropic Young's modulus<br>
+<br>
+<ul>
+<li>This accesses the property value in the units of the model that owns
+	this material.  To access the value using its assigned units as you would
+	find in the user interface, use <tt><b><a class="method" href="t-pfcPart-Material.html#GetPropertyValue">pfcMaterial.GetPropertyValue()</a></b></tt> and
+	<tt><b><a class="method" href="t-pfcPart-Material.html#SetPropertyValue">pfcMaterial.SetPropertyValue()</a></b></tt>. </li>
+	
+<li>If this property is not set on the material, an attempt to retrieve it will throw 
+	a <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitNotFound.html">pfcXToolkitNotFound</a></b></tt></b></tt> exception.</li>
+	
+</ul>
+   
+<br>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Delete">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Delete</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes the material from the part's database.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#98">Solid: Materials</a>, <a href="../manual0/JSolid.html#102">Solid: Materials</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetPropertyValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcPart-MaterialProperty.html">pfcMaterialProperty</a></tt></td><td class="func-name"><tt>GetPropertyValue</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns the value and units for a material property.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#110">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of property to retrieve.</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd> The value and units, or <i>null</i>, if the property is not set on the material.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RemoveProperty">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RemoveProperty</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes a material property.<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#113">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of property to remove.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Save">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Save</tt></td><td class="func-params"><tt>
+ (string&nbsp;FileName)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Writes the specified part material to a file.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#97">Solid: Materials</a>, <a href="../manual0/JSolid.html#102">Solid: Materials</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>FileName</b></tt>
+</dt>
+<dd>The name of the output material file</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetPropertyUnits">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetPropertyUnits</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type, string&nbsp;Units, 
+   /*&nbsp;optional&nbsp;*/&nbsp;boolean&nbsp;Convert)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the units for a material property.  <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#112">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of property to set.</dd>
+<dt>
+<tt><b>Units</b></tt>
+</dt>
+<dd> The units to use for the property. </dd>
+<dt>
+<tt><b>Convert</b></tt>
+</dt>
+<dd> 
+<i>true</i> to convert the property value to the new units.  
+				<i>false</i> or <i>null</i> to interpret the current value in the new units.</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetPropertyValue">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetPropertyValue</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcPart-MaterialPropertyType.html">pfcMaterialPropertyType</a>&nbsp;Type, <a class="type" href="t-pfcPart-MaterialProperty.html">pfcMaterialProperty</a>&nbsp;Value)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Sets the value and units for a material property.  <br>
+<br>If the property doesn't exist on the material,
+			this method creates it.<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><a class="method" href="t-pfcPart-MaterialProperty.html#Create">pfcMaterialProperty.Create()</a></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JSolid.html#111">Solid: Accessing Material Properties</a>, <a href="../manual0/JSolid.html#130">Solid: Accessing Material Properties</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Type</b></tt>
+</dt>
+<dd>The type of property to set.</dd>
+<dt>
+<tt><b>Value</b></tt>
+</dt>
+<dd> The value and units to use for the property </dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

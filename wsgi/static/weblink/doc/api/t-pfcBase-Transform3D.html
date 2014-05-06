@@ -1,0 +1,703 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcTransform3D"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      558
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcBase.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcTransform3D</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class provides information about a coordinate system transformation. 
+<br>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Matrix3D.html">pfcMatrix3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Matrix">Matrix</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The transformation matrix</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#Create">Create</a>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Matrix3D.html">pfcMatrix3D</a>&nbsp;Matrix)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Creates a <i>Transform3D</i> object. 
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetOrigin">GetOrigin</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the point that represents the origin of the coordinate system.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetXAxis">GetXAxis</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the vector that represents the X-axis.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetYAxis">GetYAxis</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the vector that represents the Y-axis.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#GetZAxis">GetZAxis</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Retrieves the vector that represents the Z-axis.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Invert">Invert</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Inverts the 4 x 4 matrix contained in the transform object.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetOrigin">SetOrigin</a>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method specifies the point that represents the origin of the coordinate system.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetXAxis">SetXAxis</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns a vector that representing the X-axis of the coordinate system.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetYAxis">SetYAxis</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method specifies a vector that represents the Y-axis of the coordinate system.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#SetZAxis">SetZAxis</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Specifies the vector that represents the Z-axis of the coordinate system.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#TransformPoint">TransformPoint</a>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Transforms the specified point using the   
+transformation matrix (both shift and rotation).
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-signature"><tt><a class="method" href="#TransformVector">TransformVector</a>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Transforms the specified vector by the given 
+transformation matrix (rotation only).
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Matrix">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Matrix3D.html">pfcMatrix3D</a></tt></td><td class="func-name"><tt>Matrix</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The transformation matrix<br>
+<dl>
+<dt>
+<b>See Also:</b>
+</dt>
+<dd>
+<tt><b><tt><b>
+   &lt;reference to unknown entity wfcSession::CreateMatrix3D&gt;
+  </b></tt></b></tt>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#90">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="Create">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>static&nbsp;<a class="type" href="t-pfcBase-Transform3D.html">pfcTransform3D</a></tt></td><td class="func-name"><tt>Create</tt></td><td class="func-params"><tt>
+ (
+   /*&nbsp;optional&nbsp;*/&nbsp;<a class="type" href="t-pfcBase-Matrix3D.html">pfcMatrix3D</a>&nbsp;Matrix)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Creates a <i>Transform3D</i> object. 
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Matrix</b></tt>
+</dt>
+<dd>The transformation matrix</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The new <i>Transform3D</i>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetOrigin">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>GetOrigin</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the point that represents the origin of the coordinate system.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#91">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The origin</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetXAxis">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-name"><tt>GetXAxis</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the vector that represents the X-axis.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#92">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The X-axis</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetYAxis">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-name"><tt>GetYAxis</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the vector that represents the Y-axis.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#93">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The Y-axis</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="GetZAxis">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-name"><tt>GetZAxis</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Retrieves the vector that represents the Z-axis.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#94">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The Z-axis</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Invert">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Invert</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Inverts the 4 x 4 matrix contained in the transform object.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#87">Windows and Views: Transformations</a>, <a href="../manual0/JWinView.html#94">Windows and Views: Transformations</a>, <a href="../manual0/JWinView.html#97">Windows and Views: Transformations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetOrigin">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetOrigin</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method specifies the point that represents the origin of the coordinate system.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/jdrawfns.html#64">Drawings: Creating Drawing Views</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Input</b></tt>
+</dt>
+<dd>The three-dimensional point that represents the origin</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetXAxis">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetXAxis</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns a vector that representing the X-axis of the coordinate system.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Input</b></tt>
+</dt>
+<dd>The X-axis</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetYAxis">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetYAxis</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method specifies a vector that represents the Y-axis of the coordinate system.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Input</b></tt>
+</dt>
+<dd>The Y-axis</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="SetZAxis">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>SetZAxis</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Specifies the vector that represents the Z-axis of the coordinate system.
+<br>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Input</b></tt>
+</dt>
+<dd>The Z-axis</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TransformPoint">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a></tt></td><td class="func-name"><tt>TransformPoint</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Point3D.html">pfcPoint3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Transforms the specified point using the   
+transformation matrix (both shift and rotation).
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#88">Windows and Views: Transformations</a>, <a href="../manual0/JWinView.html#94">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Input</b></tt>
+</dt>
+<dd>The point to transform</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The resulting point. Note that this can be the same as the<i>Input</i> point.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="TransformVector">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a></tt></td><td class="func-name"><tt>TransformVector</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcBase-Vector3D.html">pfcVector3D</a>&nbsp;Input)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Transforms the specified vector by the given 
+transformation matrix (rotation only).
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JWinView.html#89">Windows and Views: Transformations</a>, <a href="../manual0/JWinView.html#94">Windows and Views: Transformations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Input</b></tt>
+</dt>
+<dd>The vector to transform</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>The resulting vector. Note that this can be the same as the<i>Input</i> vector.</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

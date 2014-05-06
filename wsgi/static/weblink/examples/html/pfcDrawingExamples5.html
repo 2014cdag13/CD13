@@ -1,0 +1,88 @@
+<!--  
+
+23-JUL-2007   L-01-35 $$1  SNV     Created and submitted
+
+-->
+
+<html>
+
+<head>
+<title>Pro/Web.Link Examples</title>
+</head>
+
+<script src="../jscript/pfcUtils.js">
+</script>
+<script  src="../jscript/pfcDrawingExamples5.js">
+ document.writeln ("Error loading script!");
+</script>
+
+<script language="JavaScript">
+function placeDetailSymbol_wrapper()
+{
+      if (!pfcIsWindows())
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+	try
+		{			
+			placeDetailSymbol (document.TM.selectOpts.value , document.TM.variableText.value , parseFloat (document.TM.symHeight.value));
+		}
+	catch (err)
+		{
+					alert ("Exception occurred: "+pfcGetExceptionType(err));
+		}
+}
+
+</script>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Pro/Web.Link Drawing Examples</h1>
+
+<p class=MsoNormal align=right style='text-align:right'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<form name=TM>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width="100%" valign=top style='width:100.0%;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3>Modifying dimension tolerances</h3>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal>This example function (“placeDetailSymbol”) creates a free instance of a symbol 
+  definition (“detail_symbol_example.sym”) with drawing unit heights, variable text and
+  groups. A symbol is placed with no leaders at a 
+  specified location.<span style="mso-spacerun: yes">  
+  </span>The current model must be a drawing.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <input type=button value="Place Symbol" id=button1 name=button1 onclick="placeDetailSymbol_wrapper()">
+  <p class=MsoNormal align=center style='text-align:center'>Variable Text : <INPUT TYPE="text" NAME="variableText" VALUE="VAR_TEXT"
+  id=variableText>
+  <p class=MsoNormal align=center style='text-align:center'>Symbol Height : <INPUT TYPE="text" NAME="symHeight" VALUE="1.0"
+  id=symHeight>
+  
+  <p class=MsoNormal align=center style='text-align:center'>Group Name    : <SELECT NAME="selectOpts" SIZE="4"
+  id=selectOpts>
+  <OPTION VALUE="ALL">ALL
+  <OPTION VALUE="GROUP1">GROUP1
+  <OPTION VALUE="GROUP1">GROUP2
+  <OPTION VALUE="NONE">NONE
+    
+  </p>
+  <p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p align=center style='text-align:center;tab-stops:374.25pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

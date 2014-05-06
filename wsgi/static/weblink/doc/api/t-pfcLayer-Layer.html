@@ -1,0 +1,382 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>
+     CIP JavaScript documentation for class "
+	pfcLayer"
+    </title>
+<link href="cipdoc_default.css" type="text/css" rel="stylesheet">
+<script language="JAVASCRIPT">
+  function findProperNode ()
+  {  
+   
+     top.frames [0].document.apiwizard.api (
+      2,
+      310
+     ); 
+    
+  } 
+ </script>
+</head>
+<body onLoad="findProperNode()" class="frame-entity">
+<table cellspacing="0" width="100%" border="0" class="toolbar">
+<tr>
+<td class="toolbar-navigation"><a href="library.html">Library</a>&nbsp;|&nbsp;<a href="m-pfcLayer.html">Module</a></td><td class="toolbar-lib-name">
+  
+ </td>
+</tr>
+</table>
+<hr>
+<h2>Class&nbsp;pfcLayer</h2>
+<hr>
+<br>
+<b>Description</b>
+<br>
+<br>This class describes a layer.
+<br>
+<br>The possible values for the display status are as follows:
+<ul type="disc">
+
+
+<li>
+LAYER_NORMAL
+</li>
+
+<li>
+LAYER_DISPLAY
+</li>
+
+<li>
+LAYER_BLANK
+</li>
+
+<li>
+LAYER_HIDDEN
+</li>
+
+</ul>
+
+
+<br>
+<dl>
+<dt>
+<b>Direct Parent Classes:</b>
+</dt>
+<dd>
+<a class="class" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>
+</dd>
+</dl>
+<br>
+<hr>
+<br>
+<b>Property Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcLayer-DisplayStatus.html">pfcDisplayStatus</a></tt></td><td class="func-signature"><tt><a class="method" href="#Status">Status</a></tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">The display status</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Method Summary</b>
+<br>
+<br>
+<table cellpadding="3" border="0" class="method-summary">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#AddItem">AddItem</a>
+ (<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;Item)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Adds the specified item to the layer.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#Delete">Delete</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Deletes the layer.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-signature"><tt><a class="method" href="#HasUnsupportedItems">HasUnsupportedItems</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Returns <tt>true</tt> if the layer contains one or more item types 
+  not supported as <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt> objects in 
+  PFC.  Returns <tt>false</tt> otherwise. </td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-ModelItems.html">pfcModelItems</a></tt></td><td class="func-signature"><tt><a class="method" href="#ListItems">ListItems</a>
+ ()
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">This method returns only items which are supported as 
+   <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt> objects in PFC. To identify
+    if the layer has any items not supported in PFC, use 
+   <tt><b><a class="method" href="t-pfcLayer-Layer.html#HasUnsupportedItems">pfcLayer.HasUnsupportedItems()</a></b></tt>.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-signature"><tt><a class="method" href="#RemoveItem">RemoveItem</a>
+ (<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;Item)
+</tt></td>
+</tr>
+<tr>
+<td></td><td colspan="2" class="entities-text">Removes the specified item from the layer.
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<b>Property Detail</b>
+<br>
+<hr>
+<br>
+<a name="Status">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcLayer-DisplayStatus.html">pfcDisplayStatus</a></tt></td><td class="func-name"><tt>Status</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>The display status<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#39">ModelItem: Layer Operations</a>, <a href="../manual0/JModelitem.html#43">ModelItem: Layer Operations</a>
+</dd>
+</dl>
+<br>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<br>
+<b>Method Detail</b>
+<br>
+<hr>
+<br>
+<a name="AddItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>AddItem</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;Item)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Adds the specified item to the layer.
+<br>
+<br>
+ The following items cannot be added to a layer: <tt>ITEM_SURFACE, ITEM_EDGE,
+  ITEM_COORD_SYS, ITEM_AXIS, ITEM_SIMPREP, ITEM_DTL_SYM_DEFINITION,
+  ITEM_DTL_OLE_OBJECT, ITEM_EXPLODED_STATE</tt>.
+ For these items the method will throw  
+ <tt><b><tt><b><a class="enumtype" href="t-pfcExceptions-XToolkitInvalidType.html">pfcXToolkitInvalidType</a></b></tt></b></tt> exception.
+ <br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#41">ModelItem: Layer Operations</a>, <a href="../manual0/JModelitem.html#43">ModelItem: Layer Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Item</b></tt>
+</dt>
+<dd>The item to add</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="Delete">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>Delete</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Deletes the layer.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#43">ModelItem: Layer Operations</a>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="HasUnsupportedItems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>boolean</tt></td><td class="func-name"><tt>HasUnsupportedItems</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Returns <tt>true</tt> if the layer contains one or more item types 
+  not supported as <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt> objects in 
+  PFC.  Returns <tt>false</tt> otherwise. <br>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="ListItems">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt><a class="type" href="t-pfcModelItem-ModelItems.html">pfcModelItems</a></tt></td><td class="func-name"><tt>ListItems</tt></td><td class="func-params"><tt>
+ ()
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>This method returns only items which are supported as 
+   <tt><b><tt><b><a class="enumtype" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a></b></tt></b></tt> objects in PFC. To identify
+    if the layer has any items not supported in PFC, use 
+   <tt><b><a class="method" href="t-pfcLayer-Layer.html#HasUnsupportedItems">pfcLayer.HasUnsupportedItems()</a></b></tt>.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#12">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JModelitem.html#16">ModelItem: Getting ModelItem Objects</a>, <a href="../manual0/JModelitem.html#40">ModelItem: Layer Operations</a>, <a href="../manual0/JModelitem.html#43">ModelItem: Layer Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Returns:</b>
+</dt>
+<dd>An array of the items on the layer </dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<a name="RemoveItem">
+<table cellpadding="5" cellspacing="0" border="0" class="method-def">
+<tr>
+<td class="return-type"><tt>void</tt></td><td class="func-name"><tt>RemoveItem</tt></td><td class="func-params"><tt>
+ (<a class="type" href="t-pfcModelItem-ModelItem.html">pfcModelItem</a>&nbsp;Item)
+</tt></td>
+</tr>
+</table>
+</a>
+<table border="0" class="method-doc">
+<tr>
+<td></td><td>
+<br>Removes the specified item from the layer.
+<br>
+<dl>
+<dt>
+<b>Manual References:</b>
+</dt>
+<dd>
+<a href="../manual0/JModelitem.html#42">ModelItem: Layer Operations</a>, <a href="../manual0/JModelitem.html#43">ModelItem: Layer Operations</a>
+</dd>
+</dl>
+<dl>
+<dt>
+<b>Parameters:</b>
+</dt>
+<dd>
+<dl>
+<dt>
+<tt><b>Item</b></tt>
+</dt>
+<dd>The layer item to remove</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>
