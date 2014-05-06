@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -39,7 +39,6 @@
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
 <v t="course-mde-tw.20140422221207.1747"><vh>注意事項</vh></v>
-<v t="course-mde-tw.20140417093332.2059"><vh>@button pandoc</vh></v>
 <v t="2014spring.20140430205920.1897"><vh>@button pandoc_auto</vh></v>
 <v t="course-mde-tw.20140417093332.2060" a="E"><vh>@path wsgi/doc</vh>
 <v t="course-mde-tw.20140417093332.2061"><vh>@edit title.txt</vh></v>
@@ -47,11 +46,6 @@
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-
-<v t="kmolII_lite.20140506091209.1637" a="E"><vh>@path 2ag4</vh>
-<v t="kmolII_lite.20140506091209.1638"><vh>@edit doc.txt</vh></v>
-</v>
-
 <v t="2014pythonE.20140503095658.1615" a="E"><vh>@path 2ag17</vh>
 <v t="2014pythonE.20140503095658.1616"><vh>@edit doc.txt</vh></v>
 </v>
@@ -61,39 +55,46 @@
 <v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429104126.1755"><vh>@path 2ag3</vh>
+<v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
 <v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140506113008.1809" a="E"><vh>@path 2ag6</vh>
-<v t="2014pythonE.20140506113008.1810" a="O"><vh>@edit doc.txt</vh></v>
+<v t="2014spring.20140506161101.1960" a="E"><vh>@path 2ag4</vh>
+<v t="2014spring.20140506161101.1961"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140430001511.1599" a="E"><vh>@path 2ag5</vh>
+<v t="kmolII_lite.20140430001511.1599"><vh>@path 2ag5</vh>
 <v t="kmolII_lite.20140430001511.1600"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1843" a="E"><vh>@path 2ag7</vh>
+<v t="2014spring.20140506161101.1964" a="E"><vh>@path 2ag6</vh>
+<v t="2014spring.20140506161101.1965"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140429160432.1843"><vh>@path 2ag7</vh>
 <v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140504183918.1840" a="E"><vh>@path 2ag10</vh>
-<v t="kmolII_lite.20140504183918.1842"><vh>@edit doc.txt</vh></v>
+<v t="2014spring.20140506161101.1968"><vh>@path 2ag10</vh>
+<v t="2014spring.20140506161101.1969"><vh>@edit doc.txt</vh></v>
 </v>
-
-<v t="kmolII_lite.20140506112810.1641" a="E"><vh>@path 2ag11</vh>
-<v t="kmolII_lite.20140506112810.1642"><vh>@edit doc.txt</vh></v>
-
-<v t="kmolII_lite.20140506115221.1639" a="E"><vh>@path 2ag12</vh>
-<v t="kmolII_lite.20140506115221.1640"><vh>@edit doc.txt</vh></v>
-
+<v t="2014spring.20140506161101.1972"><vh>@path 2ag11</vh>
+<v t="2014spring.20140506161101.1973"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140505132647.1633"><vh>@path 2ag13</vh>
-<v t="kmolII_lite.20140505132647.1634"><vh>@edit doc.txt</vh></v>
+<v t="2014spring.20140506161101.1976" a="E"><vh>@path 2ag12</vh>
+<v t="2014spring.20140506161101.1977"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014spring.20140506161101.1956"><vh>@path 2ag13</vh>
+<v t="2014spring.20140506161101.1957"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014spring.20140506161101.1980" a="E"><vh>@path 2ag14</vh>
+<v t="2014spring.20140506161101.1981"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140429160432.1847"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="123.20140502221015.1628"><vh>@path 2ag21</vh>
+<v t="2014spring.20140506161101.1984" a="E"><vh>@path 2ag17</vh>
+<v t="2014spring.20140506161101.1985"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="123.20140502221015.1628" a="E"><vh>@path 2ag21</vh>
 <v t="123.20140502221015.1630"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140424070658.1679"><vh>@path coursemdetw</vh>
+<v t="2014pythonE.20140424070658.1679" a="E"><vh>@path coursemdetw</vh>
 <v t="2014pythonE.20140424070658.1680"><vh>@auto doc.txt</vh></v>
 </v>
 </v>
@@ -127,22 +128,6 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429160432.1843"></t>
 <t tx="2014pythonE.20140429160432.1847"></t>
 <t tx="2014pythonE.20140503095658.1615"></t>
-<t tx="2014pythonE.20140506113008.1809"></t>
-<t tx="2014pythonE.20140506113008.1810">@nocolor
-網際鼓式煞車設計(2ag6)
-===
-
-有關鼓式煞車
-
-程式設計架構
-===
-
-鼓式煞車
-
-結果與討論
-===
-
-這裡是結果與討論</t>
 <t tx="2014spring.20140430165707.2063">0. 請各組閱讀
 
 https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
@@ -219,10 +204,10 @@ d = c.scanAllDirectives(p)
 # 最後再利用 insert 將標題頁面放入數列最前頭
 '''
 # 這裡是原先使用的手動檔名排序數列, 好處為可以任意編排次序
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt', '2bg14/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
-directory = "V:/project/2014cdb/wsgi/doc/"
+directory = "V:/project/2014cda/wsgi/doc/"
 # 定義一個空數列
 filenames = []
 for (path, dirs, files) in os.walk(directory):
@@ -235,7 +220,7 @@ filenames.sort(key=natural_keys)
 # 利用 insert 以 0 為索引, 將 title.txt 放在數列最前頭
 filenames.insert(0, directory+"title.txt")
 # 以下將依據 filenames 數列中的檔案合併為 result.txt 之後再進行文書處理轉換
-with open('V:/project/2014cdb/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
+with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
         #fname = directory+fname
         with open(fname, encoding="utf-8") as infile:
@@ -683,6 +668,14 @@ asmcomp.SetConstraints (constrs, void null);
   assembly.Regenerate (void null);
   session.GetModelWindow (assembly).Repaint();
 &lt;/script&gt;</t>
+<t tx="2014spring.20140506161101.1956"></t>
+<t tx="2014spring.20140506161101.1960"></t>
+<t tx="2014spring.20140506161101.1964"></t>
+<t tx="2014spring.20140506161101.1968"></t>
+<t tx="2014spring.20140506161101.1972"></t>
+<t tx="2014spring.20140506161101.1976"></t>
+<t tx="2014spring.20140506161101.1980"></t>
+<t tx="2014spring.20140506161101.1984"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
@@ -804,73 +797,6 @@ doc
 % 新細明體
 % 文鼎ＰＬ新宋
 \setCJKmainfont{新細明體}</t>
-<t tx="course-mde-tw.20140417093332.2059">@language python
-import os
-'''
-c is the commander of the outline containing the script.
-g is Leo's leo.core.leoGlobals module.
-p is the presently selected position, the same as c.p.
-'''
-d = c.scanAllDirectives(p)
-#g.es(d)
-# d 為 commander 由目前所在目錄進行指令設定掃描
-# d 資料格式為 dictionary
-''' 
-實際操作下, d 為 
-{'tabwidth': -4, 'lineending': None, 'language': 'python', 'encoding': None, 'pluginsList': [], 'pagewidth': 70, 'wrap': True, 'path': 'D:\\github\\mdeCourse\\2013spring', 'delims': ('#', '', '')}
-'''
-#在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
-# 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
-
-filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag4/doc.txt', '2ag5/doc.txt','2ag6/doc.txt', '2ag14/doc.txt','coursemdetw/doc.txt']
-
-
-directory = "V:/project/2014cda/wsgi/doc/"
-with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
-    for fname in filenames:
-        fname = directory+fname
-        with open(fname, encoding="utf-8") as infile:
-            for line in infile:
-                outfile.write(line)
-            outfile.write("\n\n")
-
-# 將目錄指到 pandoc
-mandir = d.get('path') + "/wsgi/pandoc"
-g.es(mandir)
-os.chdir(mandir)
-# 先轉一份 html 
-os.system("V:\\apps\\pandoc\\pandoc.exe -s result.txt -o result.html")
-# 利用 pandoc 將 demo.txt 轉為 demo.tex, 在此決定是否要有 toc
-os.system("V:\\apps\\pandoc\\pandoc.exe -s result.txt --toc -o result.tex")
-# 中文設定必須要放在 begin document 之前
-setup = ''' 
-\\usepackage{xeCJK}    % 中英文字行分開設置 
-\\usepackage[T1]{fontspec}    %設定字體用 
-\\usepackage{graphicx} 
-\\usepackage{fancyvrb} % for frame on Verbatim 
-\\setCJKmainfont{新細明體}
-'''
-# 在 demo.tex 最前頭加上"中文設定"
-file = open("result.tex", "r", encoding="utf-8")
-lines = file.read().splitlines()
-file.close()
-file = open("result.tex", "w", encoding="utf-8")
-for i in range(len(lines)):
-    # 設法將中文設定放在文件開始之前, 以便蓋掉之前的設定
-    if "\\begin{document}" in lines[i]:
-        file.write(setup+lines[i]+"\n")
-    else:
-        file.write(lines[i]+"\n")
-file.close()
-target_name = "result"
-filename = target_name+".tex"
-os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xelatex.exe -no-pdf -interaction=nonstopmode "+filename)
-os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xelatex.exe -no-pdf -interaction=nonstopmode "+filename)
-filename = target_name+".xdv"
-os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xdvipdfmx.exe -vv -E "+filename)
-
-filename = target_name+".pdf"
-os.system(filename)</t>
 <t tx="course-mde-tw.20140417093332.2060"></t>
 <t tx="course-mde-tw.20140417093332.2063">@language md
 "# This is my README" 
@@ -918,10 +844,5 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
-<t tx="kmolII_lite.20140504183918.1840"></t>
-<t tx="kmolII_lite.20140505132647.1633"></t>
-<t tx="kmolII_lite.20140506091209.1637"></t>
-<t tx="kmolII_lite.20140506112810.1641"></t>
-<t tx="kmolII_lite.20140506115221.1639"></t>
 </tnodes>
 </leo_file>
