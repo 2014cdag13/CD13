@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -44,7 +44,6 @@
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-
 <v t="kmolII_lite.20140506091209.1637" a="E"><vh>@path 2ag4</vh>
 <v t="kmolII_lite.20140506091209.1638"><vh>@edit doc.txt</vh></v>
 </v>
@@ -69,10 +68,13 @@
 <v t="kmolII_lite.20140504183918.1840" a="E"><vh>@path 2ag10</vh>
 <v t="kmolII_lite.20140504183918.1842"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140505132647.1633" a="E"><vh>@path 2ag13</vh>
+<v t="kmolII_lite.20140506112810.1641" a="E"><vh>@path 2ag11</vh>
+<v t="kmolII_lite.20140506112810.1642"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="kmolII_lite.20140505132647.1633"><vh>@path 2ag13</vh>
 <v t="kmolII_lite.20140505132647.1634"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
+<v t="2014pythonE.20140429160432.1847"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="123.20140502221015.1628" a="E"><vh>@path 2ag21</vh>
@@ -519,5 +521,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140504183918.1840"></t>
 <t tx="kmolII_lite.20140505132647.1633"></t>
 <t tx="kmolII_lite.20140506091209.1637"></t>
+<t tx="kmolII_lite.20140506112810.1641"></t>
 </tnodes>
 </leo_file>
