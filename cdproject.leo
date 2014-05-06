@@ -44,7 +44,7 @@
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<<<<<<< HEAD
+
 <v t="kmolII_lite.20140506091209.1637" a="E"><vh>@path 2ag4</vh>
 <v t="kmolII_lite.20140506091209.1638"><vh>@edit doc.txt</vh></v>
 </v>
