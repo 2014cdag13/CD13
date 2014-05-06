@@ -44,16 +44,19 @@
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<<<<<<< HEAD
 <v t="kmolII_lite.20140506091209.1637" a="E"><vh>@path 2ag4</vh>
 <v t="kmolII_lite.20140506091209.1638"><vh>@edit doc.txt</vh></v>
 </v>
+=======
+>>>>>>> 8720d8221fa606ce56a215d422934b0e83dda6e2
 <v t="2014pythonE.20140503095658.1615" a="E"><vh>@path 2ag17</vh>
 <v t="2014pythonE.20140503095658.1616"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2049"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
+<v t="course-mde-tw.20140417093332.2051"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
@@ -68,8 +71,13 @@
 <v t="kmolII_lite.20140504183918.1840" a="E"><vh>@path 2ag10</vh>
 <v t="kmolII_lite.20140504183918.1842"><vh>@edit doc.txt</vh></v>
 </v>
+<<<<<<< HEAD
 <v t="kmolII_lite.20140506112810.1641" a="E"><vh>@path 2ag11</vh>
 <v t="kmolII_lite.20140506112810.1642"><vh>@edit doc.txt</vh></v>
+=======
+<v t="kmolII_lite.20140506115221.1639" a="E"><vh>@path 2ag12</vh>
+<v t="kmolII_lite.20140506115221.1640"><vh>@edit doc.txt</vh></v>
+>>>>>>> 8720d8221fa606ce56a215d422934b0e83dda6e2
 </v>
 <v t="kmolII_lite.20140505132647.1633"><vh>@path 2ag13</vh>
 <v t="kmolII_lite.20140505132647.1634"><vh>@edit doc.txt</vh></v>
@@ -77,7 +85,7 @@
 <v t="2014pythonE.20140429160432.1847"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="123.20140502221015.1628" a="E"><vh>@path 2ag21</vh>
+<v t="123.20140502221015.1628"><vh>@path 2ag21</vh>
 <v t="123.20140502221015.1630"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140424070658.1679"><vh>@path coursemdetw</vh>
@@ -190,10 +198,10 @@ d = c.scanAllDirectives(p)
 # 最後再利用 insert 將標題頁面放入數列最前頭
 '''
 # 這裡是原先使用的手動檔名排序數列, 好處為可以任意編排次序
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt', '2bg14/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
-directory = "V:/project/2014cda/wsgi/doc/"
+directory = "V:/project/2014cdb/wsgi/doc/"
 # 定義一個空數列
 filenames = []
 for (path, dirs, files) in os.walk(directory):
@@ -421,10 +429,7 @@ d = c.scanAllDirectives(p)
 '''
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
-
-filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag4/doc.txt', '2ag5/doc.txt', 'coursemdetw/doc.txt']
-
-
+filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag5/doc.txt', '2ag14/doc.txt', 'coursemdetw/doc.txt']
 directory = "V:/project/2014cda/wsgi/doc/"
 with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
@@ -520,7 +525,11 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430001511.1599"></t>
 <t tx="kmolII_lite.20140504183918.1840"></t>
 <t tx="kmolII_lite.20140505132647.1633"></t>
+<<<<<<< HEAD
 <t tx="kmolII_lite.20140506091209.1637"></t>
 <t tx="kmolII_lite.20140506112810.1641"></t>
+=======
+<t tx="kmolII_lite.20140506115221.1639"></t>
+>>>>>>> 8720d8221fa606ce56a215d422934b0e83dda6e2
 </tnodes>
 </leo_file>
