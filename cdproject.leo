@@ -44,7 +44,6 @@
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-
 <v t="kmolII_lite.20140506091209.1637" a="E"><vh>@path 2ag4</vh>
 <v t="kmolII_lite.20140506091209.1638"><vh>@edit doc.txt</vh></v>
 </v>
@@ -57,8 +56,11 @@
 <v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2ag2</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429104126.1755" a="E"><vh>@path 2ag3</vh>
+<v t="2014pythonE.20140429104126.1755"><vh>@path 2ag3</vh>
 <v t="2014pythonE.20140429104126.1756"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140506113008.1809" a="E"><vh>@path 2ag6</vh>
+<v t="2014pythonE.20140506113008.1810" a="O"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="kmolII_lite.20140430001511.1599" a="E"><vh>@path 2ag5</vh>
 <v t="kmolII_lite.20140430001511.1600"><vh>@edit doc.txt</vh></v>
@@ -112,6 +114,22 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429160432.1843"></t>
 <t tx="2014pythonE.20140429160432.1847"></t>
 <t tx="2014pythonE.20140503095658.1615"></t>
+<t tx="2014pythonE.20140506113008.1809"></t>
+<t tx="2014pythonE.20140506113008.1810">@nocolor
+網際鼓式煞車設計(2ag6)
+===
+
+有關鼓式煞車
+
+程式設計架構
+===
+
+鼓式煞車
+
+結果與討論
+===
+
+這裡是結果與討論</t>
 <t tx="2014spring.20140430165707.2063">0. 請各組閱讀
 
 https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
@@ -420,7 +438,7 @@ d = c.scanAllDirectives(p)
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
 
-filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag4/doc.txt', '2ag5/doc.txt', 'coursemdetw/doc.txt']
+filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag4/doc.txt', '2ag5/doc.txt','2ag6/doc.txt','coursemdetw/doc.txt']
 
 
 directory = "V:/project/2014cda/wsgi/doc/"
