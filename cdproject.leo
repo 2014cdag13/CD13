@@ -30,11 +30,14 @@
 <v t="course-mde-tw.20140417093332.2028"><vh>@file application</vh></v>
 </v>
 <v t="2014spring.20140503125211.2097" a="E"><vh>分組程式開發</vh>
-<v t="2014spring.20140503125211.2098" a="E"><vh>@path wsgi/programs/cdag1</vh>
+<v t="2014spring.20140503125211.2098"><vh>@path wsgi/programs/cdag1</vh>
 <v t="2014spring.20140503125211.2099"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2100" a="E"><vh>@path wsgi/programs/cdag2</vh>
+<v t="2014spring.20140503125211.2100"><vh>@path wsgi/programs/cdag2</vh>
 <v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
+<v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
@@ -676,6 +679,7 @@ asmcomp.SetConstraints (constrs, void null);
 <t tx="2014spring.20140506161101.1976"></t>
 <t tx="2014spring.20140506161101.1980"></t>
 <t tx="2014spring.20140506161101.1984"></t>
+<t tx="2014spring.20140506174436.1831"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */

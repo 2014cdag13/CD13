@@ -474,6 +474,10 @@ root.cdag1 = cdag1.CDAG1()
 import programs.cdag2 as cdag2
 root.cdag2 = cdag2.CDAG2()
 
+# 以下為 cdag30 的模組導入與連結設定
+import programs.cdag30 as cdag30
+root.cdag30 = cdag30.CDAG30()
+
 # 假如在 os 環境變數中存在 'OPENSHIFT_REPO_DIR', 表示程式在 OpenShift 環境中執行
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
     # 雲端執行啟動
