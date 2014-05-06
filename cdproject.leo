@@ -44,9 +44,12 @@
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<<<<<<< HEAD
 <v t="kmolII_lite.20140506091209.1637" a="E"><vh>@path 2ag4</vh>
 <v t="kmolII_lite.20140506091209.1638"><vh>@edit doc.txt</vh></v>
 </v>
+=======
+>>>>>>> 06bd24783e524a7f8a63d7bcd8d846318cbeb93a
 <v t="2014pythonE.20140503095658.1615" a="E"><vh>@path 2ag17</vh>
 <v t="2014pythonE.20140503095658.1616"><vh>@edit doc.txt</vh></v>
 </v>
@@ -418,7 +421,11 @@ d = c.scanAllDirectives(p)
 '''
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
+<<<<<<< HEAD
 filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag4/doc.txt', '2ag5/doc.txt', 'coursemdetw/doc.txt']
+=======
+filenames = ['title.txt', '2ag1/doc.txt', '2ag2/doc.txt', '2ag3/doc.txt', '2ag5/doc.txt', 'coursemdetw/doc.txt']
+>>>>>>> 06bd24783e524a7f8a63d7bcd8d846318cbeb93a
 directory = "V:/project/2014cda/wsgi/doc/"
 with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
@@ -514,6 +521,9 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430001511.1599"></t>
 <t tx="kmolII_lite.20140504183918.1840"></t>
 <t tx="kmolII_lite.20140505132647.1633"></t>
+<<<<<<< HEAD
 <t tx="kmolII_lite.20140506091209.1637"></t>
+=======
+>>>>>>> 06bd24783e524a7f8a63d7bcd8d846318cbeb93a
 </tnodes>
 </leo_file>

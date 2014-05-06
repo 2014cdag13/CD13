@@ -93,7 +93,7 @@ markdown inside HTML block elements
 ﻿網際鼓式煞車設計(2ag4)
 ===
 
-有關鼓式煞車g4
+有關鼓式煞車
 
 程式設計架構
 ===
