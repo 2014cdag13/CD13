@@ -1,0 +1,170 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<script src="../jscript/pfcUtils.js">
+</script>
+<script src="../jscript/wl_header.js">
+// document.writeln ("Error loading Pro/Web.Link header!");
+</script>
+
+<script type = "text/javascript">
+
+//var codart;
+//var locate = window.location
+
+// Function to create the activeX objects that are the interface to Web.Link.
+function pfcCreate (className)
+{
+	if (navigator.appName.indexOf ("Microsoft") != -1)
+		return new ActiveXObject ("pfc."+className);
+	else
+		alert ("Only only Internet Explorer is supported for Pro/ENGINEER Wildfire");
+}
+
+// This function just clears the results div.
+function Clear ()
+{
+	ResultDIV.innerHTML="";
+	mGlob = pfcCreate("MpfcCOMGlobal");
+	var oSession = mGlob.GetProESession();
+}
+
+function ListComponents()
+{
+	// Get Session, Model.
+	mGlob = pfcCreate("MpfcCOMGlobal");
+	var session = mGlob.GetProESession();
+	var assembly = session.CurrentModel;
+	
+	if (assembly.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+	throw new Error (0, "Modello corrente non e un assieme");
+
+	/*--------------------------------------------------------------------*\
+	Visit the assembly components
+	\*--------------------------------------------------------------------*/
+	var components = assembly.ListFeaturesByType (false,
+	pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+
+	var assem = components.Item(0);
+	for (ii = 0; ii < components.Count; ii++)
+	{
+		var component = components.Item(ii);
+		var desc = component.ModelDescr;
+		var name = component.GetName();
+		var type = component.CompType;		
+		
+		alert(desc);
+		alert(name);
+		alert(type);
+		
+	}
+}
+
+function WlModelGetCurrent()
+//	Get the current model.
+{
+if (!pfcIsWindows())
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    var ret = document.pwl.pwlMdlCurrentGet();
+    if (!ret.Status)
+    {
+        alert("pwlMdlCurrentGet failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    document.get_cur.ModelNameExt.value = ret.MdlNameExt;
+    document.get_deps.ModelNameExt.value = ret.MdlNameExt;
+}
+
+function WlModelGetDependencies()
+//	Get the dependencies of a model.
+{
+    var ret = document.pwl.pwlMdlDependenciesGet(
+                  document.get_deps.ModelNameExt.value);
+    if (!ret.Status)
+    {
+        alert("pwlMdlDependenciesGet failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    document.get_deps.ModelNameExts.value = "";
+    for (var i = 0; i < ret.NumMdls; i++)
+    {
+        document.get_deps.ModelNameExts.value += ret.MdlNameExt.Item(i) + "\n";
+    }
+}
+
+function WriteBomToFile(passForm) {
+
+    var cur = document.pwl.pwlMdlCurrentGet();
+	var assembly = cur.MdlNameExt;
+	var str, oggetto, point;
+	
+	point = assembly.lastIndexOf(".");
+	oggetto = assembly.substring(0, point);
+	
+	var fileName = "G:\\SCOUT\\" + oggetto + ".db";
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+	var s = fso.CreateTextFile(fileName, true);
+    var ret = document.pwl.pwlMdlDependenciesGet(
+                  document.get_deps.ModelNameExt.value);
+    if (!ret.Status)
+    {
+        alert("pwlMdlDependenciesGet failed (" + ret.ErrorCode + ")");
+        return ;
+    }
+    for (var i = 0; i < ret.NumMdls; i++)
+    {
+		str = ret.MdlNameExt.Item(i);
+		point = str.lastIndexOf(".");
+		oggetto = str.substring(0, point);
+        s.WriteLine(oggetto + ";1;\n");
+    }
+	
+	s.Close();
+}
+
+ function WriteToFile(passForm) {
+    
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+	var s = fso.CreateTextFile("c:\\Test.txt", true);
+	s.WriteLine('Hello');
+	s.Close();
+}
+
+</script>
+
+	<INPUT type="button" value="BOM" onclick="ListComponents()">
+	<BR></BR>
+	<INPUT type="button" value="File 14" onclick="WriteToFile(this)">
+	<BR></BR>
+	<form name="get_cur">
+	  <h4>Assembly corrente</h4>
+	  <div align="center"><center><p><!-- Buttons --> 
+	  		<input type="button" value="Attiva modello corrente"
+	  onclick="WlModelGetCurrent()"></p>
+	  </center></div><div align="center"><center><p><!-- Output arguments --> Model: <input type="text"
+	  name="ModelNameExt" size="20"></p>
+	  </center></div><hr>
+	</form>
+
+	<form name="get_deps">
+	  <h4>Lettura modelli associati</h4>
+	  <div align="center"><center><p><!-- Input arguments --> Model: 
+	  		<input type="text" name="ModelNameExt" size="20"></p>
+	  </center></div><div align="center"><center><p><!-- Buttons --> <input type="button"
+	  value="Prendi dipendenze" onclick="WlModelGetDependencies()"></p>
+	  </center></div><div align="center"><center><p><!-- Output arguments --> Models:<br>
+	  <textarea name="ModelNameExts" rows="4" cols="50"></textarea></p>
+	  </center></div><hr>
+	</form>
+
+	<INPUT type="button" value="Scrivi" onclick="WriteBomToFile(this)">
+	
+	<a href="http://srv2003:8080/belt">Home page</a>
+	
+
+
+</body>
+</html>

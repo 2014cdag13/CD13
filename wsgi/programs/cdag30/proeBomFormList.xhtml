@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<a:loadScript src="resource:///page/proe/library.js"/>		
+
+		<style>
+        	.col {width:100px;}
+			.label{font-weight:bold;}        
+		</style>
+
+<div class="section"><span class="errors"> <h:messages
+	globalOnly="true" /> </span> 
+
+
+	<h:form name ="get_deps">
+	<rich:panel id="scoutBomPanel">
+	
+		<f:facet name="header">Distinta</f:facet>
+		<a:outputPanel id="proeBomList">
+			<table>
+				<tbody>
+					<tr>
+						<td colspan="2"><span class="errors"> <h:messages
+							globalOnly="true" /> </span></td>
+					</tr>
+				</tbody>
+			</table>
+			<h:outputLink value="/belt/page/proe/assembly.html">
+				<f:verbatim>Scrivi Distinta</f:verbatim>				
+			</h:outputLink>
+			<br></br><p/>
+			<h:commandButton  onclick="ListComponents();return false" value="Estrai distinta da ProE" />
+			<br></br><p/>
+			<br></br><p/>
+			<h:inputTextarea name="ModelNameExts" rows="4" cols="50">
+			<br></br>
+					
+			</h:inputTextarea>
+									
+		</a:outputPanel>
+	</rich:panel>
+</h:form>
+</div>
+</html>
+

@@ -22,7 +22,10 @@
 <v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
 <v t="2014spring.20140430175148.1771"><vh>@edit README.md</vh></v>
 <v t="2014spring.20140430205920.1773"><vh>分散式課程評量</vh></v>
-<v t="2014spring.20140430165707.2063"><vh>第十一週任務</vh></v>
+<v t="2014spring.20140430165707.2063" a="E"><vh>第十一週任務</vh>
+<v t="2014spring.20140506093255.1795"><vh>組立約束條件</vh></v>
+<v t="2014spring.20140506093255.1796"><vh>組立 0 程式</vh></v>
+</v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028"><vh>@file application</vh></v>
 </v>
@@ -271,6 +274,377 @@ root.c2g1 = c2g1.C2G1()
     3. 完成後先在近端測試, 完全符合需求且根據標準流程, 拉下目前協同專案區最新的 github 程式碼後, 檢驗 .leo 是否可以正確開啟, 各對應目錄是否正確配置, application 是否可以正確執行後, 再推送到協同專案區, 並與各分組的 OpenShift 雲端網站進行同步.</t>
 <t tx="2014spring.20140503125211.2098"></t>
 <t tx="2014spring.20140503125211.2100"></t>
+<t tx="2014spring.20140506093255.1795">Constraint Attributes
+約束條件屬性
+
+Methods and Properties Introduced:
+衍生的方法與性質
+
+pfcConstraintAttributes.Create()
+建立約束條件屬性
+
+pfcConstraintAttributes.Force
+強制約束條件
+
+pfcConstraintAttributes.Ignore
+忽略約束條件
+
+The method pfcConstraintAttributes.Create() returns the constraint attributes object based on the values of the following input
+parameters:
+約束條件建立方法, 依照下列輸入變數而傳回不同的約束條件屬性
+
+• Ignore—Constraint is ignored during regeneration. Use this capability to store extra constraints on the component, which allows you to quickly toggle between different constraints.
+是否忽略 – 約束條件在更新模型時是否忽略, 可以利用此一忽略特性, 將額外的約束條件附加在組立元件上, 讓使用者可在不同約束條件間切換
+
+• Force—Constraint has to be forced for line and point alignment.
+是否強制 – 當使用線或點對齊約束時, 可以強制進行約束.
+
+• None—No constraint attributes. This is the default value.
+無約束屬性 – 內定為無約束屬性.
+
+static pfcConstraintAttributes Create (boolean Force, boolean Ignore)
+
+Creates a new constraint attributes object.
+用來建立新的約束條件屬性物件
+
+Parameters:
+輸入變數
+
+Force
+強制變數
+
+true if the constraint should be forced (required for ASM_CONSTRAINT_PNT_ON_LINE).
+若設為真, 表示約束條件將會強制執行 (使用點在線上約束時必須設為真)
+
+Ignore
+忽略變數
+
+true if the constraint is stored with the component, but not enforced. false if the constraint is enforced.
+若設為真, 表示約束將附加在元件上, 但卻不強制執行, 若設為偽, 則該約束條件將會強制執行</t>
+<t tx="2014spring.20140506093255.1796">&lt;!-- 組立 0 程式 --&gt;
+&lt;script src="jscript/weblink/pfcUtils.js"&gt;
+&lt;/script&gt;&lt;script language="JavaScript"&gt;
+      if (!pfcIsWindows())
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+  var session = pfcGetProESession();
+// 建立擺放零件的位置矩陣
+  var identityMatrix = pfcCreate ("pfcMatrix3D");
+  for (var x = 0; x &lt; 4; x++)
+    for (var y = 0; y &lt; 4; y++)
+      {
+    if (x == y)
+      identityMatrix.Set (x, y, 1.0);
+    else
+      identityMatrix.Set (x, y, 0.0);
+      }
+  var transf = pfcCreate ("pfcTransform3D").Create (identityMatrix);
+// 取得目前的工作目錄
+  var currentDir = session.getCurrentDirectory();
+// 以目前已開檔, 作為 model
+  var model = session.CurrentModel;
+// 查驗有無 model, 或 model 類別是否為組立件
+  if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+    throw new Error (0, "Current model is not an assembly.");
+  
+  var assembly = model;
+  
+  var descr =
+    pfcCreate ("pfcModelDescriptor").CreateFromFileName ("link1.prt");
+// 若 link1.prt 在 session 則直接取用
+  var componentModel = session.GetModelFromDescr (descr);
+  
+// 若 link1.prt 不在 session 則從工作目錄中載入 session
+  var componentModel = session.RetrieveModel(descr);
+// 若 link1.prt 已經在 session 則放入組立檔中
+  if (componentModel != void null)
+    {
+  var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    }
+//  設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
+  var asmDatums = new Array ("ASM_FRONT", "ASM_TOP", "ASM_RIGHT");
+// 設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
+  var compDatums = new Array ("FRONT",
+                  "TOP",
+                  "RIGHT");
+// 建立約束條件變數
+  var constrs = pfcCreate ("pfcComponentConstraints");
+  
+// 利用迴圈分別約束組立與零件檔中的三個定位平面
+  for (var i = 0; i &lt; 3; i++)
+    {
+// 設定組立參考面
+      var asmItem =
+    assembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,
+                asmDatums [i]);
+// 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+      if (asmItem == void null)
+    {
+      interactFlag = true;
+      continue;
+    }
+// 設定零件參考面
+      var compItem =
+    componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,
+                      compDatums [i]);
+// 若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+      if (compItem == void null)
+    {
+      interactFlag = true;
+      continue;
+    }
+// 建立 ids 變數, intseq 為 sequence of integers 為資料類別, 使用者可以經由整數索引擷取此資料類別的元件, 第一個索引為 0
+var ids = pfcCreate ("intseq");
+// 建立路徑變數
+      var path = pfcCreate ("MpfcAssembly").CreateComponentPath (assembly,
+                                 ids);
+// 採用互動式設定相關的變數
+      var MpfcSelect = pfcCreate ("MpfcSelect");
+      var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, path);
+      var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+      var constr = pfcCreate ("pfcComponentConstraint").Create (
+                                pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+       
+      constr.AssemblyReference  = asmSel;
+      constr.ComponentReference = compSel;
+       
+      constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+// 將互動選擇相關資料, 附加在程式約束變數之後
+      constrs.Append (constr);
+    }
+// 設定組立約束條件
+asmcomp.SetConstraints (constrs, void null);
+        try
+        {
+                  document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+            }
+    catch (err)
+        {
+            alert ("Exception occurred: "+pfcGetExceptionType (err));
+        }
+  assembly.Regenerate (void null);
+  session.GetModelWindow (assembly).Repaint();
+&lt;/script&gt;
+&lt;!-- 以下為組立 1 程式 --&gt;
+script src="jscript/weblink/pfcUtils.js"&gt;
+&lt;/script&gt;&lt;script language="JavaScript"&gt;
+      if (!pfcIsWindows())
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+  var session = pfcGetProESession();
+// 建立擺放零件的位置矩陣
+  var identityMatrix = pfcCreate ("pfcMatrix3D");
+  for (var x = 0; x &lt; 4; x++)
+    for (var y = 0; y &lt; 4; y++)
+      {
+    if (x == y)
+      identityMatrix.Set (x, y, 1.0);
+    else
+      identityMatrix.Set (x, y, 0.0);
+      }
+  var transf = pfcCreate ("pfcTransform3D").Create (identityMatrix);
+// 取得目前的工作目錄
+  var currentDir = session.getCurrentDirectory();
+// 以目前已開檔, 作為 model
+  var model = session.CurrentModel;
+// 查驗有無 model, 或 model 類別是否為組立件
+  if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+    throw new Error (0, "Current model is not an assembly.");
+  
+  var assembly = model;
+  
+  var descr =
+    pfcCreate ("pfcModelDescriptor").CreateFromFileName ("link1.prt");
+// 若 link1.prt 在 session 則直接取用
+  var componentModel = session.GetModelFromDescr (descr);
+  
+// 若 link1.prt 不在 session 則從工作目錄中載入 session
+  var componentModel = session.RetrieveModel(descr);
+// 若 link1.prt 已經在 session 則放入組立檔中
+  if (componentModel != void null)
+    {
+// 注意這個 asmcomp 即為設定約束條件的本體
+// asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+  var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    }
+var ids = pfcCreate ("intseq");
+// 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+  var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+var featID = components.Item(0).Id;
+ids.Append(featID);
+// 在 assembly 模型中建立子零件所對應的路徑
+var subPath =
+    pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+document.write("id 為:"+subPath.ComponentIds(0));
+      subassembly = subPath.Leaf;
+//  設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
+  var asmDatums = new Array ("RIGHT", "TOP", "FRONT");
+// 設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
+  var compDatums = new Array ("TOP",
+                  "FRONT",
+                  "RIGHT");
+// 建立約束條件變數
+  var constrs = pfcCreate ("pfcComponentConstraints");
+// 利用迴圈分別約束組立與零件檔中的三個定位平面
+  for (var i = 0; i &lt; 3; i++)
+    {
+// 設定組立參考面, asmItem 為 model item
+      var asmItem =
+    subassembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,
+                asmDatums [i]);
+// 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+      if (asmItem == void null)
+    {
+      interactFlag = true;
+      continue;
+    }
+// 設定零件參考面, compItem 為 model item
+      var compItem =
+    componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,
+                      compDatums [i]);
+// 若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+      if (compItem == void null)
+    {
+      interactFlag = true;
+      continue;
+    }
+// 採用互動式設定相關的變數
+      var MpfcSelect = pfcCreate ("MpfcSelect");
+      var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+      var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+      var constr = pfcCreate ("pfcComponentConstraint").Create (
+                                pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+       
+      constr.AssemblyReference  = asmSel;
+      constr.ComponentReference = compSel;
+       
+      constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+// 將互動選擇相關資料, 附加在程式約束變數之後
+      constrs.Append (constr);
+    }
+// 設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+// 請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+asmcomp.SetConstraints (constrs, void null);
+        try
+        {
+                  document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+            }
+    catch (err)
+        {
+            alert ("Exception occurred: "+pfcGetExceptionType (err));
+        }
+  assembly.Regenerate (void null);
+  session.GetModelWindow (assembly).Repaint();
+&lt;/script&gt;
+&lt;!-- 以下為多重組立函式 --&gt;
+希望改寫成函式, 可以針對特定約束執行多重自動組立
+&lt;script src="jscript/weblink/pfcUtils.js"&gt;
+&lt;/script&gt;&lt;script language="JavaScript"&gt;
+      if (!pfcIsWindows())
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+  var session = pfcGetProESession();
+// 建立擺放零件的位置矩陣
+  var identityMatrix = pfcCreate ("pfcMatrix3D");
+  for (var x = 0; x &lt; 4; x++)
+    for (var y = 0; y &lt; 4; y++)
+      {
+    if (x == y)
+      identityMatrix.Set (x, y, 1.0);
+    else
+      identityMatrix.Set (x, y, 0.0);
+      }
+  var transf = pfcCreate ("pfcTransform3D").Create (identityMatrix);
+// 取得目前的工作目錄
+  var currentDir = session.getCurrentDirectory();
+// 以目前已開檔, 作為 model
+  var model = session.CurrentModel;
+// 查驗有無 model, 或 model 類別是否為組立件
+  if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+    throw new Error (0, "Current model is not an assembly.");
+  
+  var assembly = model;
+  
+  var descr =
+    pfcCreate ("pfcModelDescriptor").CreateFromFileName ("link1.prt");
+// 若 link1.prt 在 session 則直接取用
+  var componentModel = session.GetModelFromDescr (descr);
+  
+// 若 link1.prt 不在 session 則從工作目錄中載入 session
+  var componentModel = session.RetrieveModel(descr);
+// 若 link1.prt 已經在 session 則放入組立檔中
+  if (componentModel != void null)
+    {
+// 注意這個 asmcomp 即為設定約束條件的本體
+// asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+  var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    }
+var ids = pfcCreate ("intseq");
+// 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+  var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+var featID = components.Item(0).Id;
+ids.Append(featID);
+// 在 assembly 模型中建立子零件所對應的路徑
+var subPath =
+    pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+document.write("id 為:"+subPath.ComponentIds(0));
+      subassembly = subPath.Leaf;
+//  設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
+  var asmDatums = new Array ("RIGHT", "TOP", "FRONT");
+// 設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
+  var compDatums = new Array ("TOP",
+                  "FRONT",
+                  "RIGHT");
+// 建立約束條件變數
+  var constrs = pfcCreate ("pfcComponentConstraints");
+// 利用迴圈分別約束組立與零件檔中的三個定位平面
+  for (var i = 0; i &lt; 3; i++)
+    {
+// 設定組立參考面, asmItem 為 model item
+      var asmItem =
+    subassembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,
+                asmDatums [i]);
+// 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+      if (asmItem == void null)
+    {
+      interactFlag = true;
+      continue;
+    }
+// 設定零件參考面, compItem 為 model item
+      var compItem =
+    componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,
+                      compDatums [i]);
+// 若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+      if (compItem == void null)
+    {
+      interactFlag = true;
+      continue;
+    }
+// 採用互動式設定相關的變數
+      var MpfcSelect = pfcCreate ("MpfcSelect");
+      var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+      var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+      var constr = pfcCreate ("pfcComponentConstraint").Create (
+                                pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+       
+      constr.AssemblyReference  = asmSel;
+      constr.ComponentReference = compSel;
+       
+      constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+// 將互動選擇相關資料, 附加在程式約束變數之後
+      constrs.Append (constr);
+    }
+// 設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+// 請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+asmcomp.SetConstraints (constrs, void null);
+        try
+        {
+                  document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+            }
+    catch (err)
+        {
+            alert ("Exception occurred: "+pfcGetExceptionType (err));
+        }
+  assembly.Regenerate (void null);
+  session.GetModelWindow (assembly).Repaint();
+&lt;/script&gt;</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
