@@ -157,13 +157,13 @@ var assembly = model;
 	}
 
 // 建立約束條件變數
-var constrs = pfcCreate ("pfcComponentConstraints");
+var constrs = pfcCreate("pfcComponentConstraints");
 //設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
-var asmDatums = new Array ("ASM_FRONT", "ASM_TOP", "ASM_RIGHT");
+var asmDatums = new Array("ASM_FRONT", "ASM_TOP", "ASM_RIGHT");
 //設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
-var compDatums = new Array ("FRONT", "TOP", "RIGHT");
+var compDatums = new Array("FRONT", "TOP", "RIGHT");
 	//建立 ids 變數, intseq 為 sequence of integers 為資料類別, 使用者可以經由整數索引擷取此資料類別的元件, 第一個索引為 0
-	var ids = pfcCreate ("intseq");
+	var ids = pfcCreate("intseq");
 	//建立路徑變數
 	var path = pfcCreate ("MpfcAssembly").CreateComponentPath (assembly, ids);
 	//採用互動式設定相關的變數
@@ -181,23 +181,23 @@ for (var i = 0; i < 3; i++)
 	}
 	//設定零件參考面
 	var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, compDatums [i]);
-	//若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+	// 若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
 	if (compItem == void null)
 	{
 		interactFlag = true;
 		continue;
 	}
-	var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, path);
-	var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
-	var constr = pfcCreate ("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+	var asmSel = MpfcSelect.CreateModelItemSelection(asmItem, path);
+	var compSel = MpfcSelect.CreateModelItemSelection(compItem, void null);
+	var constr = pfcCreate("pfcComponentConstraint").Create(pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
 	constr.AssemblyReference = asmSel;
 	constr.ComponentReference = compSel;
 	constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
-	//將互動選擇相關資料, 附加在程式約束變數之後
+	// 將互動選擇相關資料, 附加在程式約束變數之後
 	constrs.Append (constr);
 }
 
-//設定組立約束條件
+// 設定組立約束條件
 asmcomp.SetConstraints (constrs, void null);
 /**-------------------------------------------------------------------------------------------------------------------**/
 
@@ -207,42 +207,63 @@ var componentModel = session.GetModelFromDescr (descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
 {
-	var asmcomp = assembly.AssembleComponent (componentModel, transf);
+            // 將所取得的零件,  以 transf 座標轉換矩陣所示方位放入組立檔
+	var asmcomp = assembly.AssembleComponent(componentModel, transf);
 }
-var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+// 依零件特徵型別從 assembly 物件中, 建立一個組立特徵物件
+var components = assembly.ListFeaturesByType(true, pfcCreate("pfcFeatureType").FEATTYPE_COMPONENT);
+// 從組立特徵物件變數中 index 為 0 的特徵, 取出其特徵 id
 var featID = components.Item(0).Id;
 
+// 將所取到的特徵 id 附加在 sequence of integer 變數 ids 數列中
 ids.Append(featID);
-var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+// 利用 ids 在 assembly 物件中, 建立對應的次組立特徵路徑
+var subPath = pfcCreate("MpfcAssembly").CreateComponentPath( assembly, ids);
+// 從此特徵路徑中取出次組立物件,  設為 subassembly 物件
 subassembly = subPath.Leaf;
-var asmDatums = new Array ("A_1", "TOP", "ASM_TOP");
-var compDatums = new Array ("A_1", "TOP", "TOP");
+var asmDatums = new Array("A_1", "TOP", "ASM_TOP");
+var compDatums = new Array("A_1", "TOP", "TOP");
+// 建立一個 ALIGN 加上 MATE 的組立關係陣列變數
 var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+// 建立一個以元件平面為基準的模型元件類別陣列變數
 var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
-var constrs = pfcCreate ("pfcComponentConstraints");
+// 建立一個元件約束條件變數
+var constrs = pfcCreate("pfcComponentConstraints");
 for (var i = 0; i < 2; i++)
 	{
+                    // 從次組立件中, 以平面定位取出對應用的平面
 		var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
 		if (asmItem == void null)
 		{
+                                // 若無法取得此定位平面, 則採互動模式選擇
 			interactFlag = true;
 			continue;
 		}
+                    // 依照相同的平面定位方式, 從 componentModel 中取出要組立的對應平面
 		var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
 		if (compItem == void null)
 		{
 			interactFlag = true;
 			continue;
 		}
-		var MpfcSelect = pfcCreate ("MpfcSelect");
+		var MpfcSelect = pfcCreate("MpfcSelect");
+                    // 根據 subPath 選擇 asmItem, 也就是次組立元件的定位平面
 		var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+                    // 從 根數列中選擇 compItem 定位用的平面
 		var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
-		var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+                    // 根據 ALIGN 建立約束關係變數
+		var constr = pfcCreate("pfcComponentConstraint").Create (relation[i]);
+                    // 分別將 asmSel 與 compSel 套入約束關係中
 		constr.AssemblyReference  = asmSel;
 		constr.ComponentReference = compSel;
+                    // 除了所選擇的約束關係外, 其餘約束套用內定關係 (因為第二個變數為 false)
+                    // 若第二個變數為 true, 則表示不要套用所選擇約束關係之外的內定約束
+                    // 若要組立 closed-chain, 則最後一個連桿必須設為 true, 表示不強加內定的約束關係
 		constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
-		constrs.Append (constr);
+                    // 將組立條件附加到 constrs 約束條件變數
+		constrs.Append(constr);
 	}
+// 利用 constrs 約束關係設定 asmcomp 物件的組立約束
 asmcomp.SetConstraints (constrs, void null);
 
 	
