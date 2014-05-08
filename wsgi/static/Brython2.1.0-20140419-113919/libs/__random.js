@@ -6,7 +6,8 @@ $module = (function($B){
     
     return {
         choice:function(seq){
-            return getattr(seq,'__getitem__')(getattr(seq,'__len__')()*Math.random())
+            var rank = parseInt(getattr(seq,'__len__')()*Math.random())
+            return getattr(seq,'__getitem__')(rank)
         },
         random:function(){
           if(arguments.length > 0){

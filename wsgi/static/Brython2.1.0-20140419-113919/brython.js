@@ -1,8 +1,8 @@
 // brython.js www.brython.info
 // version [3, 3, 0, 'alpha', 0]
-// implementation [2, 1, 0, 'rc', 2]
+// implementation [2, 1, 0, 'final', 0]
 // version compiled from commented, indented source files at https://bitbucket.org/olemis/brython/src
-// modified for UTF-8 identifier, 2014.04.12 version
+// modified for UTF-8 identifier, 2014.04.19 version
 
 var __BRYTHON__=__BRYTHON__ ||{}
 if(__BRYTHON__.isa_web_worker==true){
@@ -61,10 +61,9 @@ __BRYTHON__.has_websocket=(function(){
 try{var x=window.WebSocket;return x!==undefined}
 catch(err){return false}
 })()
-__BRYTHON__.implementation=[2, 1, 0, 'rc', 2]
+__BRYTHON__.implementation=[2, 1, 0, 'final', 0]
 __BRYTHON__.version_info=[3, 3, 0, 'alpha', 0]
 __BRYTHON__.builtin_module_names=["posix","builtins",
-"crypto_js",
 "hashlib",
 "javascript",
 "json",
@@ -1602,6 +1601,10 @@ if(pnode.children[rank]===ctx_node){break}
 var new_node=new $Node()
 var js='throw UnboundLocalError("local variable '+"'"
 js +=varname+"'"+' referenced before assignment")'
+if(ctx.tree[0].type=='condition' && 
+ctx.tree[0].token=='elif'){
+js='else if(true){'+js+'}'
+}
 new $NodeJSCtx(new_node,js)
 pnode.insert(rank,new_node)
 }
@@ -2435,7 +2438,7 @@ if(elt.type==='condition' && elt.token==='elif'){flag=false}
 else if(elt.type==='except'){flag=false}
 else if(elt.type==='single_kw'){flag=false}
 if(flag){
-var js='__BRYTHON__.line_info=['+node.line_num+',"'+node.module+'"];'
+var js='__BRYTHON__.set_line('+node.line_num+',"'+node.module+'");'
 if(node.module===undefined){console.log('tiens, module undef !')}
 js +='None;'
 var new_node=new $Node()
@@ -3978,6 +3981,8 @@ __BRYTHON__.$py_next_hash=-Math.pow(2,53)
 if(options===undefined){options={'debug':0}}
 if(typeof options==='number'){options={'debug':options}}
 __BRYTHON__.debug=options.debug
+if(options.static_stdlib_import===undefined){options.static_stdlib_import=true}
+__BRYTHON__.static_stdlib_import=options.static_stdlib_import
 if(options.open !==undefined){__BRYTHON__.builtins.$open=options.open}
 __BRYTHON__.builtins.$CORS=false 
 if(options.CORS !==undefined){__BRYTHON__.builtins.$CORS=options.CORS}
@@ -5350,6 +5355,10 @@ window.IDBRequest.prototype.pyresult=function(){
 return jsobject2pyobject(this.result)
 }
 }
+$B.set_line=function(line_num,module_name){
+$B.line_info=[line_num, module_name]
+return $B.builtins.None
+}
 $B.$iterator=function(items,klass){
 var res={
 __class__:klass,
@@ -6456,6 +6465,9 @@ $res=req.responseText
 }
 var fake_qs='?foo='+Math.random().toString(36).substr(2,8)
 req.open('GET',file+fake_qs,false)
+if(mode.search('b')>-1){
+req.overrideMimeType('text/plain; charset=iso-8859-1')
+}
 req.send()
 if($res.constructor===Error){throw $res}
 var lines=$res.split('\n')
@@ -6793,6 +6805,7 @@ BaseException.$dict=__builtins__.$BaseExceptionDict
 __builtins__.BaseException=BaseException
 $B.exception=function(js_exc){
 if(js_exc.py_error && $B.debug>0){
+console.log(js_exc.info)
 }
 if(!js_exc.py_error){
 if($B.debug>0 && js_exc.info===undefined){
@@ -7101,6 +7114,261 @@ $JSObjectDict.$factory=JSObject
 $B.JSObject=JSObject
 $B.JSConstructor=JSConstructor
 })(__BRYTHON__)
+;(function(){
+var stdlib=[
+["builtins","js"],
+["hashlib","js"],
+["javascript","js"],
+["json","js"],
+["marshal","js"],
+["math","js"],
+["modulefinder","js"],
+["time","js"],
+["_ajax","js"],
+["_browser","js"],
+["_html","js"],
+["_io","js"],
+["_jsre","js"],
+["_multiprocessing","js"],
+["_os","js"],
+["_posixsubprocess","js"],
+["_svg","js"],
+["_sys","js"],
+["_timer","js"],
+["_websocket","js"],
+["__random","js"],
+["aes","js"],
+["hmac-md5","js"],
+["hmac-ripemd160","js"],
+["hmac-sha1","js"],
+["hmac-sha224","js"],
+["hmac-sha256","js"],
+["hmac-sha3","js"],
+["hmac-sha384","js"],
+["hmac-sha512","js"],
+["md5","js"],
+["pbkdf2","js"],
+["rabbit-legacy","js"],
+["rabbit","js"],
+["rc4","js"],
+["ripemd160","js"],
+["sha1","js"],
+["sha224","js"],
+["sha256","js"],
+["sha3","js"],
+["sha384","js"],
+["sha512","js"],
+["tripledes","js"],
+["abc","py"],
+["antigravity","py"],
+["atexit","py"],
+["base64","py"],
+["binascii","py"],
+["bisect","py"],
+["calendar","py"],
+["codecs","py"],
+["colorsys","py"],
+["configparser","py"],
+["Clib","py"],
+["copy","py"],
+["copyreg","py"],
+["datetime","py"],
+["decimal","py"],
+["difflib","py"],
+["dis","py"],
+["errno","py"],
+["external_import","py"],
+["fnmatch","py"],
+["formatter","py"],
+["functools","py"],
+["gc","py"],
+["genericpath","py"],
+["getopt","py"],
+["heapq","py"],
+["imp","py"],
+["inspect","py"],
+["io","py"],
+["itertools","py"],
+["keyword","py"],
+["linecache","py"],
+["locale","py"],
+["markdown2","py"],
+["numbers","py"],
+["operator","py"],
+["optparse","py"],
+["os","py"],
+["pickle","py"],
+["platform","py"],
+["posix","py"],
+["posixpath","py"],
+["pprint","py"],
+["pwd","py"],
+["pydoc","py"],
+["pyre","py"],
+["queue","py"],
+["random","py"],
+["re","py"],
+["reprlib","py"],
+["select","py"],
+["shutil","py"],
+["signal","py"],
+["site","py"],
+["socket","py"],
+["sre_compile","py"],
+["sre_constants","py"],
+["sre_parse","py"],
+["stat","py"],
+["string","py"],
+["struct","py"],
+["subprocess","py"],
+["sys","py"],
+["sysconfig","py"],
+["tarfile","py"],
+["tempfile","py"],
+["textwrap","py"],
+["this","py"],
+["threading","py"],
+["token","py"],
+["tokenize","py"],
+["traceback","py"],
+["types","py"],
+["VFS_import","py"],
+["warnings","py"],
+["weakref","py"],
+["webbrowser","py"],
+["_abcoll","py"],
+["_codecs","py"],
+["_collections","py"],
+["_dummy_thread","py"],
+["_functools","py"],
+["_imp","py"],
+["_markupbase","py"],
+["_pyio","py"],
+["_random","py"],
+["_socket","py"],
+["_sre","py"],
+["_string","py"],
+["_struct","py"],
+["_sysconfigdata","py"],
+["_testcapi","py"],
+["_thread","py"],
+["_threading_local","py"],
+["_warnings","py"],
+["_weakref","py"],
+["_weakrefset","py"],
+["browser.ajax","py"],
+["browser.html","py"],
+["browser.indexed_db","py"],
+["browser.local_storage","py"],
+["browser.markdown","py"],
+["browser.svg","py"],
+["browser.timer","py"],
+["browser.websocket","py"],
+["browser","py",true],
+["collections.abc","py"],
+["collections","py",true],
+["html.entities","py"],
+["html.parser","py"],
+["html","py",true],
+["http.cookies","py"],
+["http","py",true],
+["importlib.abc","py"],
+["importlib.machinery","py"],
+["importlib.util","py"],
+["importlib._bootstrap","py"],
+["importlib","py",true],
+["logging.config","py"],
+["logging.handlers","py"],
+["logging","py",true],
+["multiprocessing.pool","py"],
+["multiprocessing.process","py"],
+["multiprocessing.util","py"],
+["multiprocessing","py",true],
+["multiprocessing.dummy.connection","py"],
+["multiprocessing.dummy","py",true],
+["pydoc_data.topics","py"],
+["pydoc_data","py",true],
+["site-packages.test_sp","py"],
+["test.pystone","py"],
+["test.regrtest","py"],
+["test.re_tests","py"],
+["test.support","py"],
+["test.test_int","py"],
+["test.test_re","py"],
+["test","py",true],
+["ui.dialog","py"],
+["ui.progressbar","py"],
+["ui.slider","py"],
+["ui.widget","py"],
+["ui","py",true],
+["unittest.case","py"],
+["unittest.loader","py"],
+["unittest.main","py"],
+["unittest.mock","py"],
+["unittest.result","py"],
+["unittest.runner","py"],
+["unittest.signals","py"],
+["unittest.suite","py"],
+["unittest.util","py"],
+["unittest","py",true],
+["unittest.__main__","py"],
+["unittest.test.dummy","py"],
+["unittest.test.support","py"],
+["unittest.test.test_assertions","py"],
+["unittest.test.test_break","py"],
+["unittest.test.test_case","py"],
+["unittest.test.test_discovery","py"],
+["unittest.test.test_functiontestcase","py"],
+["unittest.test.test_loader","py"],
+["unittest.test.test_program","py"],
+["unittest.test.test_result","py"],
+["unittest.test.test_runner","py"],
+["unittest.test.test_setups","py"],
+["unittest.test.test_skipping","py"],
+["unittest.test.test_suite","py"],
+["unittest.test._test_warnings","py"],
+["unittest.test","py",true],
+["unittest.test.testmock.support","py"],
+["unittest.test.testmock.testcallable","py"],
+["unittest.test.testmock.testhelpers","py"],
+["unittest.test.testmock.testmagicmethods","py"],
+["unittest.test.testmock.testmock","py"],
+["unittest.test.testmock.testpatch","py"],
+["unittest.test.testmock.testsentinel","py"],
+["unittest.test.testmock.testwith","py"],
+["unittest.test.testmock","py",true],
+["urllib.parse","py"],
+["urllib.request","py"],
+["urllib","py",true],
+["xml","py",true],
+["xml.dom.domreg","py"],
+["xml.dom.expatbuilder","py"],
+["xml.dom.minicompat","py"],
+["xml.dom.minidom","py"],
+["xml.dom.NodeFilter","py"],
+["xml.dom.pulldom","py"],
+["xml.dom.xmlbuilder","py"],
+["xml.dom","py",true],
+["xml.etree.cElementTree","py"],
+["xml.etree.ElementInclude","py"],
+["xml.etree.ElementPath","py"],
+["xml.etree.ElementTree","py"],
+["xml.etree","py",true],
+["xml.parsers.expat","py"],
+["xml.parsers","py",true],
+["xml.sax.expatreader","py"],
+["xml.sax.handler","py"],
+["xml.sax.saxutils","py"],
+["xml.sax.xmlreader","py"],
+["xml.sax._exceptions","py"],
+["xml.sax","py",true],
+]
+__BRYTHON__.stdlib={}
+for(var i=0;i<stdlib.length;i++){
+var mod=stdlib[i]
+__BRYTHON__.stdlib[mod[0]]=mod.slice(1)
+}
+})()
 
 ;(function($B){
 var __builtins__=$B.builtins
@@ -7338,6 +7606,24 @@ var res=[]
 var mod
 var stored=__BRYTHON__.imported[mod_name]
 if(stored===undefined){
+var stdlib_path=__BRYTHON__.stdlib[mod_name]
+if(__BRYTHON__.static_stdlib_import && stdlib_path!==undefined){
+var module={name:mod_name}
+if(stdlib_path[0]=='py'){
+__BRYTHON__.modules[module.name]={__class__:$B.$ModuleDict}
+__BRYTHON__.imported[module.name]={__class__:$B.$ModuleDict}
+var path='Lib/'+mod_name.split('.').join('/')
+if(stdlib_path[1]){path+='/__init__'}
+mod=$B.$import_py(module, __BRYTHON__.brython_path+path)
+mod.$package=stdlib_path[1]
+__BRYTHON__.modules[module.name]=mod
+__BRYTHON__.imported[module.name]=__BRYTHON__.modules[module.name]
+}else{
+mod=$B.$import_js(module)
+__BRYTHON__.modules[module.name]=mod
+__BRYTHON__.imported[module.name]=__BRYTHON__.modules[module.name]
+}
+}else{
 mod={}
 var parts=mod_name.split('.')
 for(var i=0;i<parts.length;i++){
@@ -7351,6 +7637,7 @@ module.package_only=true
 }
 __BRYTHON__.modules[module.name]=$B.$import_single(module,origin)
 __BRYTHON__.imported[module.name]=__BRYTHON__.modules[module.name]
+}
 }
 }
 }else{
@@ -9513,9 +9800,10 @@ if(!isinstance(sub,str)){throw __builtins__.TypeError(
 if(!isinstance(start,__builtins__.int)||!isinstance(end,__builtins__.int)){throw __builtins__.TypeError(
 "slice indices must be integers or None or have an __index__ method")}
 var s=self.substring(start,end)
-var reversed=''
+var reversed='',rsub=''
 for(var i=s.length-1;i>=0;i--){reversed +=s.charAt(i)}
-var res=reversed.search($re_escape(sub))
+for(var i=sub.length-1;i>=0;i--){rsub +=sub.charAt(i)}
+var res=reversed.search($re_escape(rsub))
 if(res==-1){return -1}
 else{return start+s.length-1-res-sub.length+1}
 }
@@ -10034,8 +10322,9 @@ return true
 $B.$isNodeList=function(nodes){
 try{
 var result=Object.prototype.toString.call(nodes)
+var re=new RegExp("^\\[object (HTMLCollection|NodeList|Object)\\]$")
 return(typeof nodes==='object'
-&& /^\[object(HTMLCollection|NodeList|Object)\]$/.test(result)
+&& re.exec(result)!==null
 && nodes.hasOwnProperty('length')
 &&(nodes.length==0 ||(typeof nodes[0]==="object" && nodes[0].nodeType > 0))
 )
@@ -10340,13 +10629,14 @@ if(isinstance(arguments[i],JSObject)){
 args.push(arguments[i].js)
 }else if(isinstance(arguments[i],DOMNode)){
 args.push(arguments[i].elt)
-}else if(arguments[i]===None){
+}else if(arguments[i]===__builtins__.None){
 args.push(null)
 }else{
 args.push(arguments[i])
 }
 }
-return __BRYTHON__.$JS2Py(f.apply(elt,args))
+var result=f.apply(elt,args)
+return __BRYTHON__.$JS2Py(result)
 }
 })(res,self.elt)
 func.__name__=attr
