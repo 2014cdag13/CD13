@@ -117,7 +117,7 @@ $(function(){
     if inOpenshift:
         outstring += '''
 <script type="text/javascript">
-if ((location.href.search(/http:/) != -1) && (location.href.search(login/) != -1)) \
+if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1)) \
 window.location= 'https://' + location.host + location.pathname + location.search;
 </script>
 '''
@@ -1393,7 +1393,7 @@ if (!newfile.Status) {
         if inOpenshift:
             outstring += '''
     <script type="text/javascript">
-    if ((location.href.search(/http:/) != -1) && (location.href.search(login/) != -1)) \
+    if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1)) \
     window.location= 'https://' + location.host + location.pathname + location.search;
     </script>
     '''
