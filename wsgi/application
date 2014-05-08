@@ -477,6 +477,8 @@ application_conf = {
 root = CDProject()
 # 導入 CMSimply 內容管理模組
 root.cmsimply = cmsimply.CMSimply()
+# 導入 Download
+root.cmsimply.download = cmsimply.Download()
 #####################################################
 # 導入協同程式 cdag1
 #####################################################
