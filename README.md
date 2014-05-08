@@ -26,9 +26,9 @@
 
 * config local git
 
-* git config --global user.email "course@mde.tw"
+* git config --global user.email "組別對應電子郵箱"
 
-* git config --global user.name "course-mde-tw"
+* git config --global user.name "組別代號"
 
 * git add .
 
