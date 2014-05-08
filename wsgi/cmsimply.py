@@ -980,7 +980,7 @@ remotePath:function(){
 <script src="/static/axuploader.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
-$('.prova').axuploader({url:'/imageaxupload', allowExt:['jpg','png','gif'],
+$('.prova').axuploader({url:'imageaxupload', allowExt:['jpg','png','gif'],
 finish:function(x,files)
         {
             alert('All files have been uploaded: '+files);
