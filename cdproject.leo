@@ -22,12 +22,16 @@
 <v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
 <v t="2014spring.20140430175148.1771"><vh>@edit README.md</vh></v>
 <v t="2014spring.20140430205920.1773"><vh>分散式課程評量</vh></v>
-<v t="2014spring.20140430165707.2063" a="E"><vh>第十一週任務</vh>
+<v t="2014spring.20140430165707.2063"><vh>第十一週任務</vh>
 <v t="2014spring.20140506093255.1795"><vh>組立約束條件</vh></v>
 <v t="2014spring.20140506093255.1796"><vh>組立 0 程式</vh></v>
 </v>
+<v t="2014spring.20140508134612.2129"><vh>第十二週任務</vh></v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
-<v t="course-mde-tw.20140417093332.2028"><vh>@file application</vh></v>
+<v t="course-mde-tw.20140417093332.2028" a="E"
+expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
+<v t="2014spring.20140508134612.2197"
+expanded="2014spring.20140508134612.2221,2014spring.20140508134612.2262,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2097" a="E"><vh>分組程式開發</vh>
 <v t="2014spring.20140503125211.2098"><vh>@path wsgi/programs/cdag1</vh>
@@ -680,6 +684,25 @@ asmcomp.SetConstraints (constrs, void null);
 <t tx="2014spring.20140506161101.1980"></t>
 <t tx="2014spring.20140506161101.1984"></t>
 <t tx="2014spring.20140506174436.1831"></t>
+<t tx="2014spring.20140508134612.2129">總結目前所完成的相關配置與任務
+
+  - 最初利用 Dokuwiki on OpenShift 建立多人協同的  wiki 寫作系統
+  
+  好處是此一系統可以由管理者自由掌控, 所有內容都是純文字檔案, 無需資料庫
+  
+  -  接著, 為了讓管理者可以利用程式控管 Dokuwiki 多人模式下的帳號與密碼, 採用 Python 3 與  sha1 編碼, 產生多人帳號與密碼, 並且可以自由控管各帳號所能擷取的頁面
+  
+  - 近端與遠端的 Dokuwiki 可以嵌入 STL 零件, 設計圖片, Vimeo 影片等產品設計相關內容
+  
+  - 接著為了利用 Python 3 控管多人所建立的文書處理與產品設計程式內容, 利用 Leo Editor 與 CherryPy 建立一個 Github 上全班協同的專案倉儲, 所有 collaborators 可以自由更新專案內容, 而且可以自由編寫 Github 所提供的 Wiki 系統.
+  
+   - 此外全班協同專案中, 除了各組協同文書處理外, 也透過 CherryPy 與 Python 3 的模組導入, 讓各組各自擁有網際協同程式模組的控制權, 可以利用 Creo Pro/Web.Link 建立網際協同設計程式.
+   
+   - 協同倉儲的 CherryPy 程式除了可在 Github 上進行版次管理外, 也可與對應的 Bitbucket 倉儲與 OpenShift 雲端網站進行同步, 而雲端網站的同步設定則分為全班協同網站(由老師控管) 以即由各組自行設定對應的 OpenShift 雲端網站兩種.
+   
+   本週的任務一即是希望透過目前已經完成的協同環境配置, 利用流程圖進行表示, 將各模組的功能與設置目的加以整合, 並將內容放入各組的文書處理區.
+   
+   但是, 由於全班協同的雲端網站目前並沒有內容管理系統, 因此本週將設法嵌入 CMSimply 套件, 充當全班協同網站的內容管理系統, 以便導引全班協同的相關內容.</t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
