@@ -74,8 +74,11 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140506161101.1964" a="E"><vh>@path 2ag6</vh>
 <v t="2014spring.20140506161101.1965"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1843"><vh>@path 2ag7</vh>
+<v t="2014pythonE.20140429160432.1843" a="E"><vh>@path 2ag7</vh>
 <v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140512203125.1905" a="E"><vh>@path 2ag9</vh>
+<v t="2014pythonE.20140512203125.1906"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140506161101.1968"><vh>@path 2ag10</vh>
 <v t="2014spring.20140506161101.1969"><vh>@edit doc.txt</vh></v>
@@ -135,6 +138,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429160432.1843"></t>
 <t tx="2014pythonE.20140429160432.1847"></t>
 <t tx="2014pythonE.20140503095658.1615"></t>
+<t tx="2014pythonE.20140512203125.1905"></t>
 <t tx="2014spring.20140430165707.2063">0. 請各組閱讀
 
 https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
