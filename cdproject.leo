@@ -40,8 +40,13 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140503125211.2100"><vh>@path wsgi/programs/cdag2</vh>
 <v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
 </v>
+<<<<<<< HEAD
+<v t="2014pythonE.20140513091822.1741" a="E"><vh>@path wsgi/programs/cdag17</vh>
+<v t="2014pythonE.20140513091822.1742"><vh>@edit __init__.py</vh></v>
+=======
 <v t="kmolII_lite.20140513100409.1741" a="E"><vh>@path wsgi/programs/cdag10</vh>
 <v t="kmolII_lite.20140513100409.1742"><vh>@edit __init__.py</vh></v>
+>>>>>>> 06b4a5250653389e386ed3526d054110b92d6f80
 </v>
 <v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
@@ -56,9 +61,6 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="2014pythonE.20140503095658.1615" a="E"><vh>@path 2ag17</vh>
-<v t="2014pythonE.20140503095658.1616"><vh>@edit doc.txt</vh></v>
-</v>
 <v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2ag1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
@@ -98,7 +100,7 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140506161101.1980" a="E"><vh>@path 2ag14</vh>
 <v t="2014spring.20140506161101.1981"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140429160432.1847"><vh>@path 2ag16</vh>
+<v t="2014pythonE.20140429160432.1847" a="E"><vh>@path 2ag16</vh>
 <v t="2014pythonE.20140429160432.1848"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140506161101.1984" a="E"><vh>@path 2ag17</vh>
@@ -143,8 +145,8 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140429104126.1755"></t>
 <t tx="2014pythonE.20140429160432.1843"></t>
 <t tx="2014pythonE.20140429160432.1847"></t>
-<t tx="2014pythonE.20140503095658.1615"></t>
 <t tx="2014pythonE.20140512203125.1905"></t>
+<t tx="2014pythonE.20140513091822.1741"></t>
 <t tx="2014spring.20140430165707.2063">0. 請各組閱讀
 
 https://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:2014s_week10
