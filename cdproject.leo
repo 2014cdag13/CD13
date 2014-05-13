@@ -104,6 +104,9 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140506161101.1984" a="E"><vh>@path 2ag17</vh>
 <v t="2014spring.20140506161101.1985"><vh>@edit doc.txt</vh></v>
 </v>
+<v t="kmolII_lite.20140513101057.1749" a="E"><vh>@path 2ag18</vh>
+<v t="kmolII_lite.20140513101057.1750"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="123.20140502221015.1628" a="E"><vh>@path 2ag21</vh>
 <v t="123.20140502221015.1630"><vh>@edit doc.txt</vh></v>
 </v>
@@ -879,5 +882,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
 <t tx="kmolII_lite.20140513100409.1741"></t>
+<t tx="kmolII_lite.20140513101057.1749"></t>
 </tnodes>
 </leo_file>
