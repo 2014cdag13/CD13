@@ -40,8 +40,13 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140503125211.2100"><vh>@path wsgi/programs/cdag2</vh>
 <v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
 </v>
+<<<<<<< HEAD
 <v t="2014pythonE.20140513091822.1741" a="E"><vh>@path wsgi/programs/cdag17</vh>
 <v t="2014pythonE.20140513091822.1742"><vh>@edit __init__.py</vh></v>
+=======
+<v t="kmolII_lite.20140513100409.1741" a="E"><vh>@path wsgi/programs/cdag10</vh>
+<v t="kmolII_lite.20140513100409.1742"><vh>@edit __init__.py</vh></v>
+>>>>>>> 06b4a5250653389e386ed3526d054110b92d6f80
 </v>
 <v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
@@ -875,5 +880,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
+<t tx="kmolII_lite.20140513100409.1741"></t>
 </tnodes>
 </leo_file>
