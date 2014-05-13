@@ -1,14 +1,14 @@
 import cherrypy
 
-# 這是 CDAG14 類別的定義
-class CDAG14(object):
+# 這是 CDAG17 類別的定義
+class CDAG17(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
     def index(self, *args, **kwargs):
         outstring = '''
-這是 2014CDA 協同專案下的 cdag14 分組程式開發網頁, 以下為 W12 的任務執行內容.<br />
+這是 2014CDA 協同專案下的 cdag17 分組程式開發網頁, 以下為 W12 的任務執行內容.<br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
-<a href="cube1">cdag14 正方體參數繪圖</a>(尺寸變數 a, b, c)<br /><br />
+<a href="cube1">cdag17 正方體參數繪圖</a>(尺寸變數 a, b, c)<br /><br />
 <a href="fourbar1">四連桿組立</a><br /><br />
 請確定下列連桿位於 V:/home/fourbar 目錄中, 且開啟空白 Creo 組立檔案.<br />
 <a href="/static/fourbar.7z">fourbar.7z</a>(滑鼠右鍵存成 .7z 檔案)<br />
@@ -18,10 +18,10 @@ class CDAG14(object):
     ''' 
     假如採用下列規畫
     
-    import programs.cdag14 as cdag14
-    root.cdag14 = cdag14.CDAG14()
+    import programs.cdag17 as cdag17
+    root.cdag17 = cdag17.CDAG17()
     
-    則程式啟動後, 可以利用 /cdag14/cube1 呼叫函式執行
+    則程式啟動後, 可以利用 /cdag17/cube1 呼叫函式執行
     '''
     @cherrypy.expose
     def cube1(self, *args, **kwargs):
