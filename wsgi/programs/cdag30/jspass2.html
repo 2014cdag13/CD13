@@ -1,0 +1,90 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+<head>
+
+  <title>JSPASS2</title>
+  <meta name="keywords" content="">
+  <meta name="Generator" content="HTMLpad">
+
+</head>
+<body bgcolor="ffffff">
+
+
+
+<FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns" SIZE="85">
+</FORM>
+
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str){
+
+theleft = str.indexOf("=") + 1;
+theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+document.write("First Name is " +delineate(text));
+
+</SCRIPT>
+
+
+
+
+
+<br><br>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate2(str){
+
+point = str.lastIndexOf("=");
+
+return(str.substring(point+1,str.length));
+}
+document.write("Last Name is " +delineate2(text));
+
+</SCRIPT>
+
+<br><br>
+
+
+<FORM NAME="cow1">
+First Name: <INPUT TYPE="text" NAME="boy1">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var zork2 = delineate(text)
+document.cow1.boy1.value = zork2
+
+
+</SCRIPT>
+
+<FORM NAME="cow">
+Last Name: <INPUT TYPE="text" NAME="boy">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var zork = delineate2(text)
+document.cow.boy.value = zork
+
+</SCRIPT>
+
+
+<CENTER>Click BACK</CENTER>
+
+</body>
+</html>

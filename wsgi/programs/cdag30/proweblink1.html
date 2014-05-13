@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+	<title>Components Interaction</title>
+	<link rel="STYLESHEET" type="text/css" href="resource/foundation.css">
+</head>
+
+<body>
+
+<table width="300" height="60" cellspacing="0" cellpadding="0" border="0" background="images/header.jpg" style="position: absolute; top: 0em; left: 0em; right: 0em">
+	<tr valign="middle" height=60 cellpadding="0" cellspacing="0">
+		<td width="300">
+			<a href="4c_AssembliesInteraction1.html"><P class=title><strong>Components</strong></P></a>
+		</td>
+		<td background="images/bkgnd.jpg" height="60" align=center cellpadding="0" cellspacing="0">
+			<img src="images/trans_logo_95_32.gif">
+		</td>
+	</tr>
+</table>
+
+<DIV style="position: absolute; top: 65; left: 0em">
+
+<TABLE WIDTH="300">
+	<TR>
+		<TD>
+			<FONT CLASS=subtitle>Instruction:</FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<LI>Open Landing Gear 0406 Assembly.</LI>
+			<LI>Need Light_0406 part in Session.</LI>
+			<LI>Show Assembly Constraints (CON).</LI>
+			<LI>Assemble Components (ASS).</LI>
+			<LI>Replace Component (REP.)</LI>
+		</TD>
+	</TR>
+</TABLE>
+
+<HR>
+
+<TABLE WIDTH="300">
+	<TR>
+		<TD>
+			<FONT CLASS=subtitle>Controls:</FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<input type="button" value="CON" onClick="HighlightConstraints()">
+			<INPUT TYPE="BUTTON" VALUE="ASS" ONCLICK="AssemblingComponents('LIGHT_0406.PRT')">
+			<input type="button" value="REP" onclick="ReplaceLights()">
+			<INPUT TYPE="BUTTON" VALUE="CLR" ONCLICK="Clear()">
+		</TD>
+	</TR>
+</TABLE>
+
+<HR>
+
+<FONT CLASS=subtitle>Result Of Action</FONT>
+
+<DIV ID=ResultDIV ></DIV>
+
+
+<SCRIPT>
+
+
+// Function to create the activeX objects that are the interface to Web.Link.
+function pfcCreate (className)
+{
+	if (navigator.appName.indexOf ("Microsoft") != -1)
+		return new ActiveXObject ("pfc."+className);
+	else
+		alert ("Only only Internet Explorer is supported for Pro/ENGINEER Wildfire");
+}
+
+
+// This function just clears the results div.
+function Clear ()
+{
+	ResultDIV.innerHTML="";
+	mGlob = pfcCreate("MpfcCOMGlobal");
+	var oSession = mGlob.GetProESession();
+	
+	var Wind=oSession.CurrentWindow;	
+	Wind.Repaint();
+}
+
+
+//The following example demonstrates how to assemble a component into an
+//assembly, and how to constrain the component by aligning datum planes.
+//If the complete set of datum planes is not found, the function will show
+//the component constraint dialog to the user to allow them to adjust the
+//placement as they wish.
+/*=====================================================================*\
+FUNCTION: UserAssembleByDatums
+PURPOSE:  Assemble a component by aligning named datums.         
+\*=====================================================================*/
+function AssemblingComponents(componentFilename /* string as ?????.??? */)
+{
+	ResultDIV.innerHTML="";
+	
+	// The idea of the interact flag is that the system carries out its tasks automatically
+	// unless the system can't find something, essentially the user then has to use his
+	// knowledge to fill in the blanks.
+	var interactFlag = false;
+	var identityMatrix = pfcCreate ("pfcMatrix3D");
+	for (var x = 0; x < 4; x++)
+	{
+		for (var y = 0; y < 4; y++)
+		{
+			if (x == y)
+			identityMatrix.Set (x, y, 1.0);
+		  	else
+			identityMatrix.Set (x, y, 0.0);
+		}
+	}
+	var transf = pfcCreate ("pfcTransform3D").Create (identityMatrix);
+
+	//Get the current session and assembly (note can obtain session handle in one line...
+  	var session = pfcCreate ("MpfcCOMGlobal").GetProESession ();
+	var model = session.CurrentModel;
+	if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+	      throw new Error (0, "Current model is not an assembly.");
+
+	var assembly = model;
+	
+	// Get a handle to the in-session Component...
+	var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName (componentFilename);
+	var componentModel = session.GetModelFromDescr (descr);
+	
+	// Basically if the previous line failed, this tries to open it from disk.
+	if (componentModel == void null)
+	{
+		componentModel = session.RetrieveModel (descr);
+	}
+ 	
+	// THIS ASSEMBLES THE FIRST LIGHT
+	//Set up the arrays of datum names
+ 	var asmDatums = new Array (	"LIGHT_VERT", 
+								"LIGHT_HORIZ", 
+								"LIGHT_BACK");
+	var compDatums = new Array ("DTM1", 
+								"DTM2", 
+								"DTM3");
+	  
+
+  	//Package the component initially
+	var asmcomp = assembly.AssembleComponent (componentModel, transf);
+	  
+
+  	//Prepare the constraints array
+    var constrs = pfcCreate ("pfcComponentConstraints");
+  
+    for (var i = 0; i < 3; i++)
+	{
+		//Find the assembly datum 
+		var asmItem = assembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, asmDatums [i]);
+		if (asmItem == void null) 
+		{
+			interactFlag = true;
+		    continue;
+		}
+        
+		//Find the component datum
+		var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,compDatums [i]);
+		
+		if (compItem == void null) 
+		{
+			interactFlag = true;
+		    continue;
+		}
+
+  		//For the assembly reference, initialize a component path.
+  		//This is necessary even if the reference geometry is in the assembly.
+	    var ids = pfcCreate ("intseq");
+	    var path = pfcCreate ("MpfcAssembly").CreateComponentPath (assembly,ids);
+								    
+		//Allocate the references
+		var MpfcSelect = pfcCreate ("MpfcSelect");
+	    var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, path);
+	    var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+
+  		// Create an alignment constraint object.
+	    var constr = pfcCreate ("pfcComponentConstraint").Create (
+			pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+   
+   		// Set the constraint objects properties.
+	    constr.AssemblyReference  = asmSel;
+	    constr.ComponentReference = compSel;
+	    
+		// Assign the constraint attributes.
+	    constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+   		
+		// Append the constraint object to the list of constraints.
+	    constrs.Append (constr);
+	}
+	
+  	//Set the assembly component constraints and regenerate the assembly.
+    asmcomp.SetConstraints (constrs, void null);
+    assembly.Regenerate (void null);
+    session.GetModelWindow (assembly).Repaint();
+
+	
+	// THIS ASSEMBLES THE SECOND LIGHT
+	//Set up the arrays of datum names
+ 	var asmDatums = new Array (	"R_LIGHT_VERT", 
+								"LIGHT_HORIZ", 
+								"LIGHT_BACK");
+	var compDatums = new Array ("DTM1", 
+								"DTM2", 
+								"DTM3");
+	  
+
+  	//Package the component initially
+	var asmcomp = assembly.AssembleComponent (componentModel, transf);
+	  
+
+  	//Prepare the constraints array
+    var constrs = pfcCreate ("pfcComponentConstraints");
+  
+    for (var i = 0; i < 3; i++)
+	{
+		//Find the assembly datum 
+		var asmItem = assembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, asmDatums [i]);
+		if (asmItem == void null) 
+		{
+			interactFlag = true;
+		    continue;
+		}
+        
+		//Find the component datum
+		var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,compDatums [i]);
+		
+		if (compItem == void null) 
+		{
+			interactFlag = true;
+		    continue;
+		}
+
+  		//For the assembly reference, initialize a component path.
+  		//This is necessary even if the reference geometry is in the assembly.
+	    var ids = pfcCreate ("intseq");
+	    var path = pfcCreate ("MpfcAssembly").CreateComponentPath (assembly,ids);
+								    
+		//Allocate the references
+		var MpfcSelect = pfcCreate ("MpfcSelect");
+	    var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, path);
+	    var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+
+  		//Allocate and fill the constraint.
+	    var constr = pfcCreate ("pfcComponentConstraint").Create (
+			pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+   
+	    constr.AssemblyReference  = asmSel;
+	    constr.ComponentReference = compSel;
+	    constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+		
+	    constrs.Append (constr);
+	}
+
+
+  	//Set the assembly component constraints and regenerate the assembly.
+    asmcomp.SetConstraints (constrs, void null);
+    assembly.Regenerate (void null);
+    session.GetModelWindow (assembly).Repaint();
+
+  	//If any of the expect datums was not found, prompt the user to constrain
+  	//the new component.
+    if (interactFlag)
+	{
+		alert ("Unable to locate all required datum references.  New component is packaged.");
+	    asmcomp.RedefineThroughUI();
+	}
+	
+	// Explaination of events.
+	ResultDIV.innerHTML="Two Light_0406 parts were assembled programmatically by Pro/Web.Link";
+}
+
+
+
+/*=====================================================================*\
+ This function displays each constraint of the component visually on 
+ the screen, and includes a text explanation for each constraint.
+\*=====================================================================*/
+/*=====================================================================*\
+FUNCTION: highlightConstraints
+PURPOSE:  Highlights and labels a component's constraints
+\*=====================================================================*/
+function HighlightConstraints()
+{
+	ResultDIV.innerHTML="Pick a COMPONENT then pick OK.";
+	
+	var Output=	"<TABLE><TR>"+
+				"<TD><STRONG>Idx</STRONG></TD>"+
+				"<TD><STRONG>Type</STRONG></TD>"+
+				"<TD><STRONG>Offset</STRONG></TD>"+
+				"</TR>";
+	
+  	//Get the Session.
+	var session = pfcCreate ("MpfcCOMGlobal").GetProESession ();
+	
+	// Set up a selection options object and set its options...
+	var options = pfcCreate ("pfcSelectionOptions").Create ("membfeat");
+	options.MaxNumSels  = 1;
+	var selections = session.Select (options, void null);
+	if (selections == void null || selections.Count == 0)
+	    return;
+	
+	    
+	selections.Item(0).UnHighlight();
+	
+	var feature = selections.Item (0).SelItem;
+	
+	if (feature.FeatType != pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT)
+	    return;
+
+	var asmcomp = feature;
+
+	var constrs = asmcomp.GetConstraints ();
+	
+	if (constrs == void null || constrs.Count == 0)
+	    return;
+	
+	for (var i = 0; i < constrs.Count; i++)
+	{
+		//Highlight the assembly reference geometry
+		var c = constrs.Item (i);
+
+		var asmRef = c.AssemblyReference;
+		
+		if (asmRef != void null)
+		    asmRef.Highlight (pfcCreate ("pfcStdColor").COLOR_ERROR);
+
+		//Highlight the component reference geometry
+		var compRef = c.ComponentReference;
+		
+		if (compRef != void null)
+		    compRef.Highlight (pfcCreate ("pfcStdColor").COLOR_WARNING);
+
+
+		//Prepare and display the message text.
+		var offset = c.Offset;
+		var cType  = c.Type;
+		var cTypeString = constraintTypeToString (cType);
+	
+		Output=Output + "<TR>"+
+						"<TD>"+(i+1) +"</TD>"+
+						"<TD>"+ cTypeString +"</TD>"+
+						"<TD>"+ offset+"</TD>"+
+						"</TR>";
+	
+		/*//Clean up the UI for the next constraint
+		if (asmRef != void null)
+		{
+			asmRef.UnHighlight ();
+		}
+	    
+		if (compRef != void null)
+		{
+			compRef.UnHighlight ();
+		}*/
+	}
+	Output=Output+"</TABLE>";
+	
+	ResultDIV.innerHTML=Output;
+}
+
+
+ 
+/*=====================================================================*\
+FUNCTION: constraintTypeToString
+PURPOSE:  Utility: convert the constraint type to a string for printing
+\*=====================================================================*/
+function constraintTypeToString (type /* pfcComponentConstraintType */)
+{	
+	var constrTypeClass = pfcCreate ("pfcComponentConstraintType");
+	switch (type)
+	{
+	    case constrTypeClass.ASM_CONSTRAINT_MATE:
+			return ("Mate");		
+	    case constrTypeClass.ASM_CONSTRAINT_MATE_OFF:
+			return ("Mate Offset");		
+	    case constrTypeClass.ASM_CONSTRAINT_ALIGN:
+			return ("Align");		
+	    case constrTypeClass.ASM_CONSTRAINT_ALIGN_OFF:
+			return ("Align Offset");		
+	    case constrTypeClass.ASM_CONSTRAINT_INSERT:
+			return ("Insert");		
+	    case constrTypeClass.ASM_CONSTRAINT_ORIENT:
+			return ("Orient");		
+	    case constrTypeClass.ASM_CONSTRAINT_CSYS:
+			return ("Csys");		
+	    case constrTypeClass.ASM_CONSTRAINT_TANGENT:
+			return ("Tangent");		
+	    case constrTypeClass.ASM_CONSTRAINT_PNT_ON_SRF:
+			return ("Point on Surf");		
+	    case constrTypeClass.ASM_CONSTRAINT_EDGE_ON_SRF:
+			return ("Edge on Surf");		
+	    case constrTypeClass.ASM_CONSTRAINT_DEF_PLACEMENT:
+			return ("Default");		
+	    case constrTypeClass.ASM_CONSTRAINT_SUBSTITUTE:
+			return ("Substitute");		
+	    case constrTypeClass.ASM_CONSTRAINT_PNT_ON_LINE:
+			return ("Point on Line");		
+	    case constrTypeClass.ASM_CONSTRAINT_FIX:
+			return ("Fix");		
+	    case constrTypeClass.ASM_CONSTRAINT_AUTO:
+			return ("Auto");		
+	    default:
+			return ("Unrecognized Type");		
+    }
+}
+
+
+/*
+  Replaces all occurrences of the LIGHT_0406 with a new instance LIGHT_0406_INST.  
+  It uses the methods and properties available in the pfcComponentFeat class, including
+  CreateModelReplace (), which creates a replacement operation
+  for a component, and ModelDescr, which returns the model
+  descriptor corresponding to a particular component feature.
+*/
+function ReplaceLights()
+{
+	ResultDIV.innerHTML="";
+	
+	var oldInstance = "LIGHT_0406";
+	var newInstance = "LIGHT_0406_INST";
+
+	//Get the current assembly 
+ 	var session = pfcCreate ("MpfcCOMGlobal").GetProESession ();
+	var CurWind = session.CurrentWindow;
+	
+   	var assembly = session.CurrentModel;
+
+   	if (assembly.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+		throw new Error (0, "Current model is not an assembly");
+
+	//Get the new instance model for use in replacement
+    var bolt = session.GetModel ("LIGHT_0406", pfcCreate ("pfcModelType").MDL_PART);
+	
+   	var row = bolt.GetRow (newInstance);  
+   	var newBolt = row.CreateInstance();
+
+   	var replaceOps = pfcCreate ("pfcFeatureOperations");
+ 
+
+   	//Visit the assembly components		
+   	var components = assembly.ListFeaturesByType (false,
+					pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+
+   	for (ii = 0; ii < components.Count; ii++)
+	{
+		var component = components.Item(ii);
+		var desc = component.ModelDescr;
+
+		if (desc.InstanceName == oldInstance)
+		{
+			var replace = component.CreateReplaceOp (newBolt);
+
+			replaceOps.Append (replace);
+		}
+	}
+	
+   //Carry out the replacements
+  	assembly.ExecuteFeatureOps (replaceOps, void null);
+	
+	// Refresh the window.
+	CurWind.Repaint();
+	
+	// Output the explaination.
+	ResultDIV.innerHTML="Two instances of the lights were replaced by an alternate family member";
+	
+	return;
+}
+
+
+</SCRIPT>
+
+</body>
+
+</html>

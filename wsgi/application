@@ -8,6 +8,7 @@
 ########################### 1. 導入所需模組
 import cherrypy
 import os
+import cmsimply
 
 ########################### 2. 設定近端與遠端目錄
 # 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
@@ -30,7 +31,7 @@ class CDProject(object):
     'tools.encode.encoding': 'utf-8',
     'tools.sessions.on' : True,
     'tools.sessions.storage_type' : 'file',
-    'tools.sessions.locking' : 'explicit',
+    #'tools.sessions.locking' : 'explicit',
     'tools.sessions.storage_path' : data_dir+'/tmp',
     # session timeout is 60 minutes
     'tools.sessions.timeout' : 60
@@ -55,6 +56,11 @@ class CDProject(object):
                 os.makedirs(download_root_dir+"tmp")
             except:
                 print("mkdir error")
+        if not os.path.isdir(data_dir+"brython_programs"):
+            try:
+                os.makedirs(data_dir+"brython_programs")
+            except:
+                print("mkdir error")
         if not os.path.isdir(data_dir+"calc_programs"):
             try:
                 os.makedirs(data_dir+"calc_programs")
@@ -64,6 +70,7 @@ class CDProject(object):
     #@+node:course-mde-tw.20140417093332.2032: *3* index
     @cherrypy.expose
     def index(self, input1=None, input2=None):
+        raise cherrypy.HTTPRedirect("/cmsimply")
         return "設定與 Github 同步"+str(input1)
     #@+node:course-mde-tw.20140417093332.2033: *3* default
     # default method, if there is no corresponding method, cherrypy will redirect to default method
@@ -444,23 +451,34 @@ class CDProject(object):
 #@-others
 ########################### 4. 安排啟動設定
 # 配合程式檔案所在目錄設定靜態目錄或靜態檔案
-application_conf = {'/static':{
+application_conf = {
+        '/static':{
         'tools.staticdir.on': True,
         'tools.staticdir.dir': _curdir+"/static"},
-        '/downloads':{
-        'tools.staticdir.on': True,
-        'tools.staticdir.dir': data_dir+"/downloads"},
         '/images':{
         'tools.staticdir.on': True,
         'tools.staticdir.dir': data_dir+"/images"},
+        '/downloads':{
+        'tools.staticdir.on': True,
+        'tools.staticdir.dir': data_dir+"/downloads"},
+        '/brython_programs':{
+        'tools.staticdir.on': True,
+        'tools.staticdir.dir': data_dir+"/brython_programs"},
         '/calc_programs':{
         'tools.staticdir.on': True,
-        'tools.staticdir.dir': data_dir+"/calc_programs"}
+        'tools.staticdir.dir': data_dir+"/calc_programs"},
+        '/':{
+        'tools.staticdir.on': True,
+        'tools.staticdir.dir': _curdir+"/static/openjscad"}
     }
 
 ########################### 5. 在近端或遠端啟動程式
 # 利用 HelloWorld() class 產生案例物件
 root = CDProject()
+# 導入 CMSimply 內容管理模組
+root.cmsimply = cmsimply.CMSimply()
+# 導入 Download
+root.cmsimply.download = cmsimply.Download()
 #####################################################
 # 導入協同程式 cdag1
 #####################################################
@@ -473,6 +491,10 @@ root.cdag1 = cdag1.CDAG1()
 # 以下為 cdag2 的模組導入與連結設定
 import programs.cdag2 as cdag2
 root.cdag2 = cdag2.CDAG2()
+
+# 以下為 cdag30 的模組導入與連結設定
+import programs.cdag30 as cdag30
+root.cdag30 = cdag30.CDAG30()
 
 # 假如在 os 環境變數中存在 'OPENSHIFT_REPO_DIR', 表示程式在 OpenShift 環境中執行
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
