@@ -882,10 +882,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
-<<<<<<< HEAD
-<t tx="kmolII_lite.20140513100409.1741"></t>
-<t tx="kmolII_lite.20140513101057.1749"></t>
-=======
->>>>>>> 32debcc129e7a0e8030cf9c2b869a633fe4499a0
+
 </tnodes>
 </leo_file>
