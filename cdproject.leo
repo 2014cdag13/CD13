@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -37,8 +37,11 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140503125211.2098" a="E"><vh>@path wsgi/programs/cdag1</vh>
 <v t="2014spring.20140503125211.2099"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2100" a="E"><vh>@path wsgi/programs/cdag2</vh>
+<v t="2014spring.20140503125211.2100"><vh>@path wsgi/programs/cdag2</vh>
 <v t="2014spring.20140503125211.2101"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="kmolII_lite.20140513100409.1741" a="E"><vh>@path wsgi/programs/cdag10</vh>
+<v t="kmolII_lite.20140513100409.1742"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
@@ -875,5 +878,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
 <t tx="kmolII_lite.20140430001511.1599"></t>
+<t tx="kmolII_lite.20140513100409.1741"></t>
 </tnodes>
 </leo_file>
