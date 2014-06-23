@@ -186,3 +186,21 @@ W15 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單�
 4.  雲端程式根據使用者的選擇參數進行設計運算
 5.  使用者根據設計運算結果, 準備好近端的設計零件
 6.  使用者根據設計結果所提供的零件自動組立連結, 在近端完成所需的正齒輪減速機零件變更與自動組立
+
+
+期末報告
+
+組員  40123124 林家弘 40123138 陳靖之 40123155鍾宇翔
+
+
+* CMSimply 網站:
+https://python-40123124.rhcloud.com/get_page?heading=期末報告
+
+*  下載網站:
+https://copy.com/Cphd6resSkTh
+
+* HTML網站:
+http://dokuwiki-40123155.rhcloud.com/lib/exe/fetch.php?media=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88%E5%AF%A6%E7%BF%92%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.pdf
+
+* bitbucket網站:
+https://40123155@bitbucket.org/40123155/---.git
